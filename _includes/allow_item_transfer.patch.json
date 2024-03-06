@@ -1,0 +1,47 @@
+{
+    "SeasonTransferInventoryConfig": {
+        "Layout": {
+            "Level": 1,
+            "Seed": [
+                true,
+                "0x1"
+            ],
+            "Slots": 32
+        },
+        "SlotItemFilterIDs": [
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^TECH_PRODS",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12",
+            "^NOT_TECH_S12"
+        ],
+        "Width": 8
+    }
+}

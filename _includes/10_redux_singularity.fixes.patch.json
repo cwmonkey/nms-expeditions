@@ -1,0 +1,38 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Encryption": {
+            "IsEncrypted": true,
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
+          }
+        },
+        {
+          "Encryption": {
+            "IsEncrypted": true,
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
+          }
+        },
+        {
+          "Encryption": {
+            "IsEncrypted": true,
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
+          }
+        }
+      ]
+    }
+  ]
+}

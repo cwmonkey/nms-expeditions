@@ -1,0 +1,3 @@
+local: true
+domain: localhost:4000
+protocol: http

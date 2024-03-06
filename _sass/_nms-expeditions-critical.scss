@@ -1,0 +1,328 @@
+@import "mixins";
+
+/* More */
+body {
+  background: #000;
+  color: #ebebeb;
+  margin: 0;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: geosanslight-nmsregular, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+a {
+  color: #cd4534;
+
+  &:visited {
+    color: #bd3524;
+  }
+
+  &:active {
+    color: red;
+  }
+}
+
+/* General */
+
+.cms {
+  line-height: 1.4;
+
+  @include cms-normalize();
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  padding: 10px;
+}
+
+.headline1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Main */
+
+.main {
+}
+
+/* Intro */
+
+.intro {
+  background: #010d47 url(../images/box-vtile--blue-dark.jpg);
+  background-size: contain;
+  border-bottom: 2px solid #ff8400;
+  color: #b2cfd7;
+
+  h2 {
+    @include visually-hidden();
+  }
+
+  .cms {
+    max-width: 800px;
+  }
+}
+
+/* Steps */
+
+.step_headline {
+  font-size: 24px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.steps  {
+  display: flex;
+  border-bottom: 2px solid #ff8400;
+}
+
+.step {
+  // min-width: 33.333%;
+  flex-grow: 1;
+  padding: 0 10px 20px 10px;
+}
+
+/* Step 1: Select Expedition */
+
+.select_exp {
+  width: 320px;
+  min-width: 320px;
+
+  background: #54121f url(../images/box-vtile-11.png);
+  background-size: contain;
+}
+
+.exp_item {
+  position: relative;
+  overflow: hidden;
+
+  .exp_radio {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+  }
+
+  .exp_label {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4px;
+    transition: all .1s ease-in-out;
+    background: rgb(93,93,93);
+    // background: radial-gradient(circle, rgba(162,162,162,1) 11%, rgba(108,108,108,1) 94%, rgba(93,93,93,1) 100%);
+    display: block;
+    padding: 6px 6px 6px 80px;
+    border: 3px solid black;
+    color: #ebebeb;
+
+    &:hover {
+      border-color: #fff;
+    }
+
+    * {
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    transform: translate(0, -20%);
+    right: 220px;
+    top: 0;
+    height: 130px;
+    filter: grayscale(1);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .exp_name {
+    font-family: geosanslight-nmsregular, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    text-shadow: 0px 2px 0 rgba(0,0,0,0.4);
+  }
+
+  .exp_desc {
+    line-height: 1.4;
+    font-size: 15px;
+    color: #b2cfd7;
+  }
+
+  .exp_radio:checked ~ .exp_label {
+    background: rgb(209,185,104);
+    background: radial-gradient(circle, rgba(209,185,104,1) 11%, rgba(185,124,24,1) 94%, rgba(179,94,6,1) 100%);
+    border-color: white;
+    color: #352025;
+
+    .exp_name {
+      text-shadow: none;
+    }
+
+    .badge {
+      filter: grayscale(0);
+    }
+
+    .exp_desc {
+      color: #352025;
+    }
+  }
+
+}
+
+/* Step 2: Customize */
+
+.customize {
+  background: #004a61 url(../images/box-vtile-1.png);
+  background-size: contain;
+
+  .cust_headline {
+    color: #ff8400;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .cust_table {
+    width: 100%;
+    margin: 15px 0;
+
+    th {
+      font-weight: bold;
+      padding: 5px;
+      text-align: center;
+    }
+
+    td {
+      padding: 2px 5px;
+    }
+
+    .cust_item.filled {
+      background: rgba(255,255,255,.25);
+    }
+
+    .default,
+    .override {
+      width: 1px;
+      white-space: nowrap;
+    }
+
+    .override input {
+      max-width: 84px;
+
+      &.unknown {
+
+      }
+    }
+
+    .cust_property {
+    }
+  }
+
+  .notes {
+
+  }
+}
+
+/* Step 3: Download */
+
+.download_section {
+  flex-shrink: 1;
+  background: #0f181d url(../images/bg-long-huge.jpg);
+  background-size: cover;
+
+  dl {
+    display: block;
+
+    dt {
+      white-space: nowrap;
+    }
+
+    dd {
+      word-break: break-all;
+      margin: 0 0 .5em .5em;
+    }
+  }
+
+  .download {
+    display: table;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #ff8400;
+    transition: background-color 0.5s ease;
+    font-family: "geosanslight-nmsregular", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-shadow: 0px 2px 0 rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+
+    &:hover:not([disabled]) {
+      background-color: #ff8400;
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      border-color: #848484;
+      color: #848484;
+    }
+  }
+
+  .debug {
+    margin-top: 200px;
+    opacity: .25;
+
+    .toggle_debug {
+      @include button-reset();
+      color: #fff;
+      padding: 5px 10px;
+      border: 2px solid white;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        background: rgba(255,255,255,.25);
+      }
+    }
+
+    .debug_panel {
+      display: none;
+      font-family: monospace;
+      white-space: pre;
+      margin: 20px 0;
+    }
+
+    &.open {
+      margin-top: 20px;
+      opacity: 1;
+
+      .debug_panel {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Footer */
+
+.footer {
+  background: #162238 url(../images/box-vtile-2.png);
+  background-size: contain;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .image img {
+    width: 48px;
+  }
+}

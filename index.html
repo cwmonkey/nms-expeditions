@@ -1,0 +1,257 @@
+---
+layout: null
+---
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/global.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body data-touched="false">
+
+<header class="header">
+  <h1 class="headline1">{{ site.title }}</h1>
+</header>
+
+<main class="main">
+  <section class="intro"><div class="content cms">
+    <h2 class="visibly-hidden">Introduction</h2>
+    <p>
+      This is a simple app to generate custom SEASON_DATA_CACHE.JSON for No Man's Sky expeditions (while that's still a thing). The concept and JSON files are from Leodium. You can <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline" target="_blank">view more information on Leodium's github</a>.
+    </p>
+  </div></section>
+
+  <div class="steps">
+    <section class="step select_exp">
+      <h3 class="step_headline">Step 1: Select Expedition</h3>
+
+      <ol>
+        {% for exp in site.expeditions %}
+          <li class="exp_item">
+            <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
+            <label for="{{ exp.id }}_radio" class="exp_label">
+              <img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge">
+              <h4 class="exp_name">{{ exp.name }}</h4>
+              <p class="exp_desc">
+                {{ exp.description }}
+              </p>
+            </label>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="step customize">
+      <h3 class="step_headline">Step 2: Customize</h3>
+
+      <div class="cms">
+        <p><strong>Note:</strong> I have no idea what could happen by messing with these values. I'm still in the process of testing stuff.</p>
+      </div>
+
+      <ul>
+        {% for csection in site.customizations %}
+          <li class="cust_section">
+            <h4 class="cust_headline">{{ csection.name }}</h4>
+            <table class="cust_table">
+              <tr>
+                <th>Property</th>
+                <th>Default</th>
+                <th>Override</th>
+              </tr>
+              {% for cust in csection.customizations %}
+                <tr class="cust_item">
+                  <td class="property">
+                    <p class="cust_property">{{ cust.prop }}</p>
+                    {% if cust.description %}
+                      <p class="cust_desc">{{ cust.description }}</p>
+                    {% endif %}
+                  </td>
+                  <td class="default"></td>
+                  <td class="override">
+                    {% if cust.type == "bool" %}
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}">
+                        <option value="">DEFAULT</option>
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                      </select>
+                    {% elsif cust.type == "int" %}
+                      <input type="number" class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT">
+                    {% else %}
+                      <input type="text" class="cust_prop_input unknown" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT">*
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="notes cms">
+        <p>*'s on inputs denote that the possible values are unknown at this time. I'll add a dropdown when I know what can be selected.</p>
+      </div>
+    </section>
+
+    <section class="step download_section">
+      <h3 class="step_headline">Step 3: Download</h3>
+
+      <div class="cms">
+        <p>Save to the appropriate directory:</p>
+
+        <dl>
+          <dt>Steam PC:</dt>
+          <dd>%APPDATA%\HelloGames\NMS\{steam id}\cache</dd>
+
+          <dt>Steam Mac:</dt>
+          <dd>~/Library/Application Support/HelloGames/NMS/cache</dd>
+
+          <dt>MS Store/GOG:</dt>
+          <dd>%APPDATA%\HelloGames\NMS\cache</dd>
+
+          <dt>SteamDeck:</dt>
+          <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/cache</dd>
+        </dl>
+
+        <p>Note: These directories may be somewhat different on your machine.</p>
+
+        <p><button class="download" disabled>DOWNLOAD</button></p>
+      </div>
+
+      <div class="debug">
+        <button class="toggle_debug" data-hide-text="Hide Debug">Show Debug</button>
+        <div class="debug_panel">
+
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="cms">
+    <p>
+      This is a work in progress, so feel free to hit me up on GitHub with any issues: <a href="https://github.com/cwmonkey/nms-expeditions">https://github.com/cwmonkey/nms-expeditions</a>.
+    </p>
+    <p>
+      I am also available on the <a href="https://discord.gg/nomanssky" target="_blank">No Man's Sky Discord</a>.
+    </p>
+  </div>
+  <div class="image">
+    <img src="images/monkey-head-graffiti.png" alt="cwmonkey avatar">
+  </div>
+</footer>
+
+{% for exp in site.expeditions %}
+  <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
+{% endfor %}
+
+
+<script src="js/nms.js"></script>
+
+
+<script id="e10" type="application/json">
+  {% include 10_redux_singularity.json %}
+</script>
+
+<script id="e10cwm" type="application/json">
+  {% include 10_redux_singularity_cwm.json %}
+</script>
+
+<script id="e10fixes" type="application/json">
+  {% include 10_redux_singularity.fixes.patch.json %}
+</script>
+
+<!-- script>
+
+var a = JSON.parse(document.getElementById('e10').textContent);
+var f = JSON.parse(document.getElementById('e10fixes').textContent);
+
+// https://stackoverflow.com/questions/31295545/how-to-get-only-the-changed-values-from-two-json-objects
+
+function isArray(obj) {
+  return (Object.prototype.toString.call(obj) === '[object Array]');
+}
+
+function log(msg, indent) {
+  indent = (typeof indent == 'undefined' ? 0 : indent);
+  for(var i = 0; i<indent; i++){
+    msg = '  '+msg;
+  }
+  //$("#console").append(msg+'\n');
+  console.log(msg);
+}
+
+function dump(obj) {
+  log(JSON.stringify(obj));
+}
+
+function debug(msg, indent) {
+  // log(msg, indent);
+}
+
+var b = JSON.parse(document.getElementById('e10cwm').textContent);
+
+// var diff should be inside getDiff(), 
+// but then we couldn't show it working
+var diff;
+function getDiff(a, b) {
+  diff = (isArray(a) ? [] : {});
+  recursiveDiff(a, b, diff);
+  return diff;
+}
+
+function recursiveDiff(a, b, node) {
+  // dump(diff);
+  var checked = [];
+
+  for (var prop in a) {
+    debug(prop, 1);
+    if (typeof b[prop] == 'undefined') {
+      addNode(prop, '[[removed]]', node);
+    } else if (JSON.stringify(a[prop]) != JSON.stringify(b[prop])) {
+      debug(typeof b[prop], 2);
+      // if value
+      if (typeof b[prop] != 'object' || b[prop] == null) {
+        addNode(prop, b[prop], node);
+        debug("(added)", 3);
+      } else {
+        // if array
+        if (isArray(b[prop])) {
+         addNode(prop, [], node);
+         recursiveDiff(a[prop], b[prop], node[prop]);
+        // if object
+        } else {
+          addNode(prop, {}, node);
+          recursiveDiff(a[prop], b[prop], node[prop]);
+        }
+      }
+    }
+  }
+}
+
+function addNode(prop, value, parent) {
+  parent[prop] = value;
+}
+
+
+log('Input:');
+//dump(a);
+//dump(b);
+log('');
+log('Progress:');
+var result = getDiff(b, afixed);
+log('\n============================\n');
+log('Result:');
+dump(result);
+
+</script -->
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+# Handling Reading
+exclude: [Gemfile, run.bat]
+
+name: cwmonkey/nms-expeditions
+title: No Man's Sky Expedition Generator
+description: Generates SEASON_DATA_CACHE.JSON files for No Man's Sky expeditions.
+# repository: cwmonkey/kotir2
+
+# Conversion
+# markdown:    kramdown
+highlighter: rouge
+excerpt_separator: "\n\n\n"
+
+# Outputting
+baseurl: /nms-expeditions
+
+sass:
+  style: compressed
+
+# Custom
+domain: cwmonkey.github.com
+url: /nms-expeditions
+author:
+  name: cwmonkey
+  email: monkey@mysmilies.com
+github:
+  username: cwmonkey
+plugins_dir:
+ - jekyll-coffeescript
+
+expeditions:
+ - id: e01
+   name: '01: Pioneers (Redux)'
+   description: The first one.
+   image: e01_pioneers.png
+   json: 01_redux_the_pioneers.json
+ - id: e02
+   name: '02: Beachhead (Redux)'
+   description: The one with the Mass Effect crossover.
+   image: e02_beachhead.png
+   json: 02_redux_beachhead.json
+ - id: e03
+   name: '03: Cartographers (Redux)'
+   description: The one where you're stuck on the first planet.
+   image: e03_cartographers.png
+   json: 03_redux_cartographers.json
+ - id: e03b
+   name: '03b: Cartographers (Redux)'
+   description: The one where you're stuck on the first planet and has rewards from 01 and 02.
+   image: e03_cartographers.png
+   json: 03b_redux_cartographers.json
+ - id: e04
+   name: '04: Emergence (Redux)'
+   description: The one with the sand worms.
+   image: e04_emergence.png
+   json: 04_redux_emergence.json
+ - id: e05
+   name: '05: Exobiology (Redux)'
+   description: The one about pets.
+   image: e05_exobiology.png
+   json: 05_redux_exobiology.json
+ - id: e06
+   name: '06: The Blighted (Redux)'
+   description: The one about pirates.
+   image: e06_the_blighted.png
+   json: 06_redux_the_blighted.json
+ - id: e07
+   name: '07: Leviathan (Redux)'
+   description: The one about the space leviathan.
+   image: e07_leviathan.png
+   json: 07_redux_leviathan.json
+ - id: e08
+   name: '08: Polestar (Redux)'
+   description: The one about freighters.
+   image: e08_polestar.png
+   json: 08_redux_polestar.json
+ - id: e09
+   name: '09: Utopia (Redux)'
+   description: The one where you rebuild one solar system.
+   image: e09_utopia.png
+   json: 09_redux_utopia.json
+ - id: e010
+   name: '10: Singularity (Redux)'
+   description: The one about Harmonic entities.
+   image: e10_singularity.png
+   json: 10_redux_singularity.json
+ - id: e011
+   name: '11: Voyagers (Redux)'
+   description: The one where you just find a whole bunch of stuff.
+   image: e11_voyagers.png
+   json: 11_redux_voyagers.json
+ - id: e012
+   name: '12: Omega'
+   description: The one with more of the same.
+   image: e12_omega.png
+   json: 12_omega.json
+
+customizations:
+ - name: General
+   customizations:
+    - prop: DistanceFromShipAtStartOfGame
+      type: int
+    - prop: StartNextToShip
+      type: bool
+    - prop: BlockAggressiveSentinelsInStartSystem
+      type: bool
+    - prop: BlockStormsAtStart
+      type: bool
+    - prop: DefaultToPvPOff
+      type: bool
+    - prop: DifficultySettingPreset
+      subprop: DifficultyPresetType
+      type: DifficultyPresetType
+    - prop: ForceStartSystemAbandoned
+      type: bool
+    - prop: HazardProtectionDrainMultiplier
+      type: float
+    - prop: ResetSaveOnDeath
+      type: bool
+    - prop: StartAboardFreighter
+      type: bool
+    - prop: StartWithFreighter
+      type: bool
+    - prop: UseRandomPet
+      type: bool
+ - name: Difficulty Minimums
+   prop: DifficultyMinimums
+   customizations:
+    - prop: ActiveSurvivalBars
+      subprop: ActiveSurvivalBarsDifficulty
+      type: ActiveSurvivalBarsDifficulty
+    - prop: AllSlotsUnlocked
+      type: bool
+    - prop: BaseAutoPower
+      type: bool
+    - prop: BreakTechOnDamage
+      subprop: BreakTechOnDamageProbability
+      type: BreakTechOnDamageProbability
+    - prop: ChargingRequirements
+      subprop: ChargingRequirementsDifficulty
+      type: ChargingRequirementsDifficulty
+    - prop: CraftingIsFree
+      type: bool
+    - prop: CreatureHostility
+      subprop: CreatureHostilityDifficulty
+      type: CreatureHostilityDifficulty
+    - prop: CurrencyCost
+      subprop: CurrencyCostDifficulty
+      type: CurrencyCostDifficulty
+    - prop: DamageGiven
+      subprop: DamageGivenDifficulty
+      type: DamageGivenDifficulty
+    - prop: DamageReceived
+      subprop: DamageReceivedDifficulty
+      type: DamageReceivedDifficulty
+    - prop: DeathConsequences
+      subprop: DeathConsequencesDifficulty
+      type: DeathConsequencesDifficulty
+    - prop: EnergyDrain
+      subprop: EnergyDrainDifficulty
+      type: EnergyDrainDifficulty
+    - prop: FuelUse
+      subprop: FuelUseDifficulty
+      type: FuelUseDifficulty
+    - prop: GroundCombatTimers
+      subprop: CombatTimerDifficultyOption
+      type: CombatTimerDifficultyOption
+    - prop: HazardDrain
+      subprop: HazardDrainDifficulty
+      type: HazardDrainDifficulty
+    - prop: InventoriesAlwaysInRange
+      type: bool
+    - prop: InventoryStackLimits
+      subprop: InventoryStackLimitsDifficulty
+      type: InventoryStackLimitsDifficulty
+    - prop: ItemShopAvailability
+      subprop: ItemShopAvailabilityDifficulty
+      type: ItemShopAvailabilityDifficulty
+    - prop: LaunchFuelCost
+      subprop: LaunchFuelCostDifficulty
+      type: LaunchFuelCostDifficulty
+    - prop: ReputationGain
+      subprop: ReputationGainDifficulty
+      type: ReputationGainDifficulty
+    - prop: ScannerRecharge
+      subprop: ScannerRechargeDifficulty
+      type: ScannerRechargeDifficulty
+    - prop: SettingsLocked
+      type: bool
+    - prop: SpaceCombatTimers
+      subprop: CombatTimerDifficultyOption
+      type: CombatTimerDifficultyOption
+    - prop: SprintingCost
+      subprop: SprintingCostDifficulty
+      type: SprintingCostDifficulty
+    - prop: StartWithAllItemsKnown
+      type: bool
+    - prop: SubstanceCollection
+      subprop: SubstanceCollectionDifficulty
+      type: SubstanceCollectionDifficulty
+    - prop: TutorialEnabled
+      type: bool
+    - prop: WarpDriveRequirements
+      type: bool
+
+
+
