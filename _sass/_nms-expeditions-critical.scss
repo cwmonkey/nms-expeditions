@@ -230,7 +230,9 @@ a {
       }
     }
 
-    .cust_property {
+    .cust_prop_input[type=number]::-webkit-inner-spin-button,
+    .cust_prop_input[type=number]::-webkit-outer-spin-button {
+      opacity: 1;
     }
   }
 
