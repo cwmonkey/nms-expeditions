@@ -3,10 +3,6 @@
    - prop: AbandonedFreighterHazardProtectionMul
      type: float
      description: Turn this down for more challenge
-   - prop: DistanceFromShipAtStartOfGame
-     type: int
-   - prop: StartNextToShip
-     type: bool
    - prop: BlockAggressiveSentinelsInStartSystem
      type: bool
    - prop: BlockStormsAtStart
@@ -16,6 +12,8 @@
    - prop: DifficultySettingPreset
      subprop: DifficultyPresetType
      type: DifficultyPresetType
+   - prop: DistanceFromShipAtStartOfGame
+     type: int
    - prop: EnergyDrainMultiplier
      type: float
    - prop: FarmPlantsTimerMul
@@ -24,12 +22,30 @@
      type: bool
    - prop: HazardProtectionDrainMultiplier
      type: float
+   - prop: RemixNumber
+     type: int
+     description: "I have a theory this number is used to allow people to replay expeditions when they are re-released. If so, and you want to replay an expedition on your main save, you should probably change the number to something really high, like 10000 so it won't block you from playing future re-releases of expeditions."
+     warning: Changing this number *could* affect your ability to play future expeditions on your main save.
    - prop: ResetSaveOnDeath
      type: bool
+   - prop: ShipStartsDamaged
+     type: bool
+   - prop: ShipType
+     subprop: ShipClass
+     type: ShipClass
    - prop: StartAboardFreighter
+     type: bool
+   - prop: StartingSuitSlots
+     type: int
+   - prop: StartingSuitTechSlots
+     type: int
+   - prop: StartNextToShip
      type: bool
    - prop: StartWithFreighter
      type: bool
+   - prop: TechCostMultiplier
+     type: float
+     description: Increase this to make Technology modules cost more
    - prop: UseRandomPet
      type: bool
 - name: Difficulty Minimums
