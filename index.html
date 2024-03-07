@@ -37,7 +37,7 @@ layout: null
           <li class="exp_item">
             <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
             <label for="{{ exp.id }}_radio" class="exp_label">
-              <img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge">
+              <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
               <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
               <p class="exp_desc">
                 {{ exp.description }}

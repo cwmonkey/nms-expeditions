@@ -134,15 +134,24 @@ a {
     }
   }
 
-  .badge {
-    position: absolute;
-    transform: translate(0, -20%);
-    right: 250px;
-    top: 0;
-    height: 130px;
-    filter: grayscale(1);
+  .image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 125px;
+    height: 170%;
+    right: 255px;
     position: absolute;
     z-index: 1;
+    top: -10px;
+  }
+
+  .badge {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    filter: grayscale(1);
   }
 
   .exp_name {
