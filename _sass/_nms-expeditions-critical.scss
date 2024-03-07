@@ -222,12 +222,39 @@ a {
       white-space: nowrap;
     }
 
-    .override input {
-      max-width: 84px;
-
-      &.unknown {
-
+    .override {
+      select,
+      input {
+        max-width: 84px;
+        width: 84px;
       }
+    }
+
+    .override:before {
+      display: inline-block;
+      content: "llll";
+      width: 5px;
+      height: 10px;
+      transform: rotate(-90deg);
+      font-size: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .type_bool .override:before {
+      content: " ";
+      background: linear-gradient(180deg, rgba(0,255,0,1) 50%, rgba(255,0,0,1) 50%);
+      transform: rotate(0deg);
+    }
+
+    .type_int .override:before {
+      content: "int";
+      transform: rotate(-90deg);
+    }
+
+    .type_float .override:before {
+      content: "float";
+      transform: rotate(-90deg);
+      vertical-align: bottom;
     }
 
     .cust_prop_input[type=number]::-webkit-inner-spin-button,

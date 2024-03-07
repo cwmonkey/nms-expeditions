@@ -69,7 +69,7 @@ layout: null
                 {% capture attrs %}
                   class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}" placeholder="DEFAULT"
                 {% endcapture %}
-                <tr class="cust_item">
+                <tr class="cust_item type_{{ cust.type }}">
                   <td class="property">
                     <p class="cust_property">{{ cust.prop }}</p>
                     {% if cust.description %}
