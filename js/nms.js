@@ -53,12 +53,15 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
     const property = $el.attr('name');
     const subproperty = $el.data('subprop');
     const parentProperty = $el.data('parentprop');
+    const type = $el.data('type');
     let defaultValue = '--';
 
     const parent = (parentProperty) ? exp[parentProperty] : exp;
     if (parent && ((subproperty && parent[property] && parent[property][subproperty]) || (!subproperty && parent[property]))) {
       defaultValue = (subproperty) ? parent[property][subproperty] : parent[property];
     }
+
+    if (defaultValue !== '--' && type === 'float') defaultValue = parseFloat(defaultValue).toFixed(2);
 
     const $defaultEl = $el.closest('.cust_item').find('.default');
     $defaultEl.text(defaultValue);
