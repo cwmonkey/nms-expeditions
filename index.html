@@ -59,6 +59,9 @@ layout: null
         {% for csection in site.customizations %}
           <li class="cust_section">
             <h4 class="cust_headline">{{ csection.name }}</h4>
+            {% if csection.description %}
+              <div class="cms"><p class="cust_desc">{{ csection.description }}</p></div>
+            {% endif %}
             <table class="cust_table">
               <tr>
                 <th>Property</th>
@@ -136,7 +139,7 @@ layout: null
                       </select>
                     {% elsif cust.type == "ChargingRequirementsDifficulty" %}
                       {% comment %}
-                        There are probably more settings here, but I'm not really sure what setting this is in the menu.
+                        TODO: There are probably more settings here, but I'm not really sure what setting this is in the menu.
                       {% endcomment %}
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
@@ -150,6 +153,151 @@ layout: null
                         <option value="FullEcosystem">FullEcosystem</option>
                         <option value="AttackIfProvoked">AttackIfProvoked</option>
                       </select>
+                    {% elsif cust.type == "CurrencyCostDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Cheap">Cheap</option>
+                        <option value="Normal">Normal</option>
+                      </select>
+                    {% elsif cust.type == "DamageGivenDifficulty" %}
+                      {% comment %}
+                        TODO: Test, and possibly make a generic "low normal high" type
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="High">High</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Low">Low</option>
+                      </select>
+                    {% elsif cust.type == "DamageReceivedDifficulty" %}
+                      {% comment %}
+                        TODO: Test, and possibly make a generic "low normal high" type
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Low">Low</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                      </select>
+                    {% elsif cust.type == "DeathConsequencesDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="ItemGrave">ItemGrave</option>
+                        <option value="DestroyItems">DestroyItems</option>
+                      </select>
+                    {% elsif cust.type == "EnergyDrainDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Slow">Slow</option>
+                        <option value="Normal">Normal</option>
+                      </select>
+                    {% elsif cust.type == "FuelUseDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Cheap">Cheap</option>
+                        <option value="Normal">Normal</option>
+                      </select>
+                    {% elsif cust.type == "CombatTimerDifficultyOption" %}
+                      {% comment %}
+                        TODO: Test and find more values?
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Off">Off</option>
+                        <option value="Slow">Slow</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Fast">Fast</option>
+                      </select>
+                    {% elsif cust.type == "HazardDrainDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Slow">Slow</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Fast">Fast</option>
+                      </select>
+                    {% elsif cust.type == "InventoryStackLimitsDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Normal">Normal</option>
+                      </select>
+                    {% elsif cust.type == "ItemShopAvailabilityDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Low">Low</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                      </select>
+                    {% elsif cust.type == "LaunchFuelCostDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Low">Low</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High*</option>{% comment %}Guessing here{% endcomment %}
+                      </select>
+                    {% elsif cust.type == "ReputationGainDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Fast">Fast</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Slow">Slow*</option>{% comment %}Guessing here{% endcomment %}
+                      </select>
+                    {% elsif cust.type == "ScannerRechargeDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="VeryFast">VeryFast</option>
+                        <option value="Fast">Fast</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Slow">Slow*</option>{% comment %}Guessing here{% endcomment %}
+                      </select>
+                    {% elsif cust.type == "SprintingCostDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Low">Low</option>
+                        <option value="Full">Full</option>
+                      </select>
+                    {% elsif cust.type == "SubstanceCollectionDifficulty" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="High">High</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Low">Low*</option>{% comment %}Guessing here{% endcomment %}
+                      </select>
                     {% else %}
                       <input type="text" {{ attrs }}>*
                     {% endif %}
@@ -162,7 +310,7 @@ layout: null
       </ul>
 
       <div class="notes cms">
-        <p>*'s on inputs denote that the possible values are unknown at this time. I'll add a dropdown when I know what can be selected.</p>
+        <p>*'s denote I'm guessing that this setting works.</p>
       </div>
     </section>
 

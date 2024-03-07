@@ -136,6 +136,7 @@ customizations:
       type: bool
  - name: Difficulty Minimums
    prop: DifficultyMinimums
+   description: These settings only affect the minimum setting that can be selected in the options menu, they do not actually set the difficulty
    customizations:
     - prop: ActiveSurvivalBars
       subprop: ActiveSurvivalBarsDifficulty
