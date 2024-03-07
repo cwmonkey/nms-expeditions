@@ -1,0 +1,110 @@
+- name: General
+  customizations:
+   - prop: AbandonedFreighterHazardProtectionMul
+     type: float
+     description: Turn this down for more challenge
+   - prop: DistanceFromShipAtStartOfGame
+     type: int
+   - prop: StartNextToShip
+     type: bool
+   - prop: BlockAggressiveSentinelsInStartSystem
+     type: bool
+   - prop: BlockStormsAtStart
+     type: bool
+   - prop: DefaultToPvPOff
+     type: bool
+   - prop: DifficultySettingPreset
+     subprop: DifficultyPresetType
+     type: DifficultyPresetType
+   - prop: ForceStartSystemAbandoned
+     type: bool
+   - prop: HazardProtectionDrainMultiplier
+     type: float
+   - prop: ResetSaveOnDeath
+     type: bool
+   - prop: StartAboardFreighter
+     type: bool
+   - prop: StartWithFreighter
+     type: bool
+   - prop: UseRandomPet
+     type: bool
+- name: Difficulty Minimums
+  prop: DifficultyMinimums
+  description: These settings only affect the minimum setting that can be selected in the options menu, they do not actually set the difficulty
+  customizations:
+   - prop: ActiveSurvivalBars
+     subprop: ActiveSurvivalBarsDifficulty
+     type: ActiveSurvivalBarsDifficulty
+   - prop: AllSlotsUnlocked
+     type: bool
+   - prop: BaseAutoPower
+     type: bool
+   - prop: BreakTechOnDamage
+     subprop: BreakTechOnDamageProbability
+     type: BreakTechOnDamageProbability
+   - prop: ChargingRequirements
+     subprop: ChargingRequirementsDifficulty
+     type: ChargingRequirementsDifficulty
+   - prop: CraftingIsFree
+     type: bool
+   - prop: CreatureHostility
+     subprop: CreatureHostilityDifficulty
+     type: CreatureHostilityDifficulty
+   - prop: CurrencyCost
+     subprop: CurrencyCostDifficulty
+     type: CurrencyCostDifficulty
+   - prop: DamageGiven
+     subprop: DamageGivenDifficulty
+     type: DamageGivenDifficulty
+   - prop: DamageReceived
+     subprop: DamageReceivedDifficulty
+     type: DamageReceivedDifficulty
+   - prop: DeathConsequences
+     subprop: DeathConsequencesDifficulty
+     type: DeathConsequencesDifficulty
+   - prop: EnergyDrain
+     subprop: EnergyDrainDifficulty
+     type: EnergyDrainDifficulty
+   - prop: FuelUse
+     subprop: FuelUseDifficulty
+     type: FuelUseDifficulty
+   - prop: GroundCombatTimers
+     subprop: CombatTimerDifficultyOption
+     type: CombatTimerDifficultyOption
+   - prop: HazardDrain
+     subprop: HazardDrainDifficulty
+     type: HazardDrainDifficulty
+   - prop: InventoriesAlwaysInRange
+     type: bool
+   - prop: InventoryStackLimits
+     subprop: InventoryStackLimitsDifficulty
+     type: InventoryStackLimitsDifficulty
+   - prop: ItemShopAvailability
+     subprop: ItemShopAvailabilityDifficulty
+     type: ItemShopAvailabilityDifficulty
+   - prop: LaunchFuelCost
+     subprop: LaunchFuelCostDifficulty
+     type: LaunchFuelCostDifficulty
+   - prop: ReputationGain
+     subprop: ReputationGainDifficulty
+     type: ReputationGainDifficulty
+   - prop: ScannerRecharge
+     subprop: ScannerRechargeDifficulty
+     type: ScannerRechargeDifficulty
+   - prop: SettingsLocked
+     type: bool
+   - prop: SpaceCombatTimers
+     subprop: CombatTimerDifficultyOption
+     type: CombatTimerDifficultyOption
+   - prop: SprintingCost
+     subprop: SprintingCostDifficulty
+     type: SprintingCostDifficulty
+   - prop: StartWithAllItemsKnown
+     type: bool
+   - prop: SubstanceCollection
+     subprop: SubstanceCollectionDifficulty
+     type: SubstanceCollectionDifficulty
+   - prop: TutorialEnabled
+     type: bool
+   - prop: WarpDriveRequirements
+     type: bool

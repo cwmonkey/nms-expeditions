@@ -33,7 +33,7 @@ layout: null
       <h3 class="step_headline">Step 1: Select Expedition</h3>
 
       <ol>
-        {% for exp in site.expeditions %}
+        {% for exp in site.data.expeditions %}
           <li class="exp_item">
             <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
             <label for="{{ exp.id }}_radio" class="exp_label">
@@ -56,7 +56,7 @@ layout: null
       </div>
 
       <ul>
-        {% for csection in site.customizations %}
+        {% for csection in site.data.customizations %}
           <li class="cust_section">
             <h4 class="cust_headline">{{ csection.name }}</h4>
             {% if csection.description %}
@@ -367,14 +367,17 @@ layout: null
   </div>
 </footer>
 
-{% for exp in site.expeditions %}
+{% for exp in site.data.expeditions %}
   <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
 {% endfor %}
 
 
 <script src="js/nms.js"></script>
 
-
+{% comment %}
+  TODO: implement this crap
+{% endcomment %}
+{% if 1 == 0 %}
 <script id="e10" type="application/json">
   {% include 10_redux_singularity.json %}
 </script>
@@ -387,7 +390,7 @@ layout: null
   {% include 10_redux_singularity.fixes.patch.json %}
 </script>
 
-<!-- script>
+<script>
 
 var a = JSON.parse(document.getElementById('e10').textContent);
 var f = JSON.parse(document.getElementById('e10fixes').textContent);
@@ -470,7 +473,8 @@ log('\n============================\n');
 log('Result:');
 dump(result);
 
-</script -->
+</script>
+{% endif %}
 
 </body>
 </html>
