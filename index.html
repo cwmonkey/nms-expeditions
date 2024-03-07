@@ -74,8 +74,8 @@ layout: null
                 {% endcapture %}
                 <tr class="cust_item type_{{ cust.type }}">
                   <td class="property">
-                    <p class="cust_property">{{ cust.prop }}</p>
-                    {% if cust.description %}
+                    <p class="cust_property" {% if cust.description %}title="{{ cust.description }}"{% endif %}>{{ cust.prop }}</p>
+                    {% if cust.description == 0 %}
                       <p class="cust_desc">{{ cust.description }}</p>
                     {% endif %}
                   </td>
