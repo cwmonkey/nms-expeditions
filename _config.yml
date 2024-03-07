@@ -23,8 +23,7 @@ url: /nms-expeditions
 author:
   name: cwmonkey
   email: monkey@mysmilies.com
-github:
-  username: cwmonkey
+github: [metadata]
 plugins_dir:
  - jekyll-coffeescript
 
