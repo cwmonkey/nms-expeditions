@@ -38,7 +38,7 @@ layout: null
             <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
             <label for="{{ exp.id }}_radio" class="exp_label">
               <img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge">
-              <h4 class="exp_name">{{ exp.name }}</h4>
+              <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
               <p class="exp_desc">
                 {{ exp.description }}
               </p>
@@ -76,15 +76,47 @@ layout: null
                   <td class="default"></td>
                   <td class="override">
                     {% if cust.type == "bool" %}
-                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}">
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
                         <option value="">DEFAULT</option>
                         <option value="true">true</option>
                         <option value="false">false</option>
                       </select>
+                    {% elsif cust.type == "ActiveSurvivalBarsDifficulty" %}
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
+                        <option value="">DEFAULT</option>
+                        <option value="None">None</option>
+                        <option value="Health">Health</option>
+                        <option value="HealthAndHazard">HealthAndHazard</option>
+                        <option value="All">All</option>
+                      </select>
+                    {% elsif cust.type == "BreakTechOnDamageProbability" %}
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
+                        <option value="">DEFAULT</option>
+                        <option value="None">None</option>
+                        <option value="Low">Low</option>
+                        <option value="High">High</option>
+                      </select>
+                    {% elsif cust.type == "UNSURE-ChargingRequirementsDifficulty" %}
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
+                        <option value="">DEFAULT</option>
+                        <option value="None">None</option>
+                        <option value="Low">Low</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                      </select>
+                    {% elsif cust.type == "DifficultyPresetType" %}
+                      <select class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
+                        <option value="">DEFAULT</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Creative">Creative</option>
+                        <option value="Relaxed">Relaxed</option>
+                        <option value="Survival">Survival</option>
+                        <option value="Permadeath">Permadeath</option>
+                      </select>
                     {% elsif cust.type == "int" %}
-                      <input type="number" class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT">
+                      <input type="number" class="cust_prop_input" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">
                     {% else %}
-                      <input type="text" class="cust_prop_input unknown" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT">*
+                      <input type="text" class="cust_prop_input unknown" name="{{ cust.prop }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" placeholder="DEFAULT" title="{{ csection.prop }}.{{ cust.prop }}.{{ cust.subprop }}">*
                     {% endif %}
                   </td>
                 </tr>
@@ -121,7 +153,7 @@ layout: null
 
         <p>Note: These directories may be somewhat different on your machine.</p>
 
-        <p>You must be <strong>OFFLINE</strong> when you start NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end.</p>
+        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet) when you start NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end.</p>
 
         <p><button class="download" disabled>DOWNLOAD</button></p>
       </div>

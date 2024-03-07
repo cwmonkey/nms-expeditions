@@ -95,8 +95,8 @@ a {
 /* Step 1: Select Expedition */
 
 .select_exp {
-  width: 320px;
-  min-width: 320px;
+  width: 350px;
+  min-width: 350px;
 
   background: #54121f url(../images/box-vtile-11.png);
   background-size: contain;
@@ -137,7 +137,7 @@ a {
   .badge {
     position: absolute;
     transform: translate(0, -20%);
-    right: 220px;
+    right: 250px;
     top: 0;
     height: 130px;
     filter: grayscale(1);
@@ -151,6 +151,11 @@ a {
     font-weight: 700;
     margin-bottom: 3px;
     text-shadow: 0px 2px 0 rgba(0,0,0,0.4);
+    letter-spacing: .08em;
+  }
+
+  .redux {
+    font-size: 12px;
   }
 
   .exp_desc {
