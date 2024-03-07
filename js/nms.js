@@ -137,6 +137,16 @@ $props.each((index, el) => {
   $el.val(value);
 });
 
+// Reset values to default
+$('.cust_reset').on('click', () => {
+  $props.each((index, el) => {
+    const $el = $(el);
+    $el.val('');
+  });
+
+  updateProps();
+});
+
 ///////////////////////////////
 // Download
 ///////////////////////////////

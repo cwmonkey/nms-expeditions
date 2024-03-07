@@ -48,3 +48,17 @@
     content: "";
   }
 }
+
+// Custom
+
+@mixin ghost-button() {
+  @include button-reset();
+  color: #fff;
+  padding: 5px 10px;
+  border: 2px solid white;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background: rgba(255,255,255,.25);
+  }
+}
