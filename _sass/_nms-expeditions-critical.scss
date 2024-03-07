@@ -208,15 +208,39 @@ a {
     text-align: center;
   }
 
-  .cust_desc {
-    color: #b2cfd7;
+  .cust_desc,
+  .cust_warning {
     line-height: 1.4;
     margin-top: 4px;
+  }
+
+  .cust_desc {
+    color: #b2cfd7;
+  }
+
+  .cust_warning {
+    color: #e66;
   }
 
   .cust_table {
     width: 100%;
     margin: 15px 0;
+
+    .cust_item_warning {
+      border: 1px solid #e66;
+      border-bottom: none;
+
+      & + .cust_row_desc {
+        border: 1px solid #e66;
+        border-left: none;
+        border-right: none;
+      }
+    }
+
+    .cust_row_warning {
+      border: 1px solid #e66;
+      border-top: none;
+    }
 
     th {
       font-weight: bold;

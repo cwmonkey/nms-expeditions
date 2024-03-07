@@ -72,12 +72,9 @@ layout: null
                 {% capture attrs %}
                   class="cust_prop_input" name="{{ cust.prop }}" data-type="{{ cust.type }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}" placeholder="DEFAULT"
                 {% endcapture %}
-                <tr class="cust_item type_{{ cust.type }}">
+                <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
                   <td class="property">
                     <p class="cust_property" {% if cust.description %}title="{{ cust.description }}"{% endif %}>{{ cust.prop }}</p>
-                    {% if cust.description == 0 %}
-                      <p class="cust_desc">{{ cust.description }}</p>
-                    {% endif %}
                   </td>
                   <td class="default"></td>
                   <td class="override">
@@ -116,6 +113,16 @@ layout: null
                         <option value="Relaxed">Relaxed</option>
                         <option value="Survival">Survival</option>
                         <option value="Permadeath">Permadeath</option>
+                      </select>
+                    {% elsif cust.type == "ShipClass" %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="Scientific">Scientific</option>
+                        <option value="Sail">Sail</option>
+                        <option value="Dropship">Dropship</option>
+                        <option value="Shuttle">Shuttle</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Royal">Royal</option>
                       </select>
 
                     {% comment %}
@@ -303,6 +310,12 @@ layout: null
                     {% endif %}
                   </td>
                 </tr>
+                {% if cust.description == 0 %}
+                  <tr class="cust_row_desc"><td colspan="3"><p class="cust_desc">{{ cust.description }}</p></td></tr>
+                {% endif %}
+                {% if cust.warning %}
+                  <tr class="cust_row_warning"><td colspan="3"><p class="cust_warning"><strong>Warning:</strong> {{ cust.warning }}</p></td></tr>
+                {% endif %}
               {% endfor %}
             </table>
           </li>
