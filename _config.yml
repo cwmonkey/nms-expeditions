@@ -30,79 +30,79 @@ plugins_dir:
 expeditions:
  - id: e01
    name: '01: Pioneers'
-   description: The first one.
+   description: The one where it all began
    image: e01_pioneers.png
    json: 01_redux_the_pioneers.json
    redux: 1
  - id: e02
    name: '02: Beachhead'
-   description: The one with the Mass Effect crossover.
+   description: The one with the Mass Effect crossover
    image: e02_beachhead.png
    json: 02_redux_beachhead.json
    redux: 1
  - id: e03
    name: '03: Cartographers'
-   description: The one where you're stuck on the first planet.
+   description: The one where you're stuck on the first planet
    image: e03_cartographers.png
    json: 03_redux_cartographers.json
    redux: 1
  - id: e03b
    name: '03b: Cartographers'
-   description: The one where you're stuck on the first planet and has rewards from 01 and 02.
+   description: The one where you're stuck on the first planet and has rewards from 01 and 02
    image: e03_cartographers.png
    json: 03b_redux_cartographers.json
    redux: 1
  - id: e04
    name: '04: Emergence'
-   description: The one with the sand worms.
+   description: The one with the sand worms
    image: e04_emergence.png
    json: 04_redux_emergence.json
    redux: 1
  - id: e05
    name: '05: Exobiology'
-   description: The one about pets.
+   description: The one about pets
    image: e05_exobiology.png
    json: 05_redux_exobiology.json
    redux: 1
  - id: e06
    name: '06: The Blighted'
-   description: The one about pirates.
+   description: The one about pirates
    image: e06_the_blighted.png
    json: 06_redux_the_blighted.json
    redux: 1
  - id: e07
    name: '07: Leviathan'
-   description: The one about the space leviathan.
+   description: The one about the space leviathan
    image: e07_leviathan.png
    json: 07_redux_leviathan.json
    redux: 1
  - id: e08
    name: '08: Polestar'
-   description: The one about freighters.
+   description: The one about freighters
    image: e08_polestar.png
    json: 08_redux_polestar.json
    redux: 1
  - id: e09
    name: '09: Utopia'
-   description: The one where you rebuild one solar system.
+   description: The one where you rebuild one solar system
    image: e09_utopia.png
    json: 09_redux_utopia.json
    redux: 1
  - id: e010
    name: '10: Singularity'
-   description: The one about Harmonic entities.
+   description: The one about Harmonic entities
    image: e10_singularity.png
    json: 10_redux_singularity.json
    redux: 1
  - id: e011
    name: '11: Voyagers'
-   description: The one where you just find a whole bunch of stuff.
+   description: The one where you just find a whole bunch of stuff
    image: e11_voyagers.png
    json: 11_redux_voyagers.json
    redux: 1
  - id: e012
    name: '12: Omega'
-   description: The one with more of the same.
+   description: The one with more of the same
    image: e12_omega.png
    json: 12_omega.json
 
