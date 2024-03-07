@@ -16,6 +16,10 @@
    - prop: DifficultySettingPreset
      subprop: DifficultyPresetType
      type: DifficultyPresetType
+   - prop: EnergyDrainMultiplier
+     type: float
+   - prop: FarmPlantsTimerMul
+     type: float
    - prop: ForceStartSystemAbandoned
      type: bool
    - prop: HazardProtectionDrainMultiplier
