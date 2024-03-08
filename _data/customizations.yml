@@ -56,6 +56,7 @@
 - name: Difficulty Minimums
   id: DifficultyMinimums
   prop: DifficultyMinimums
+  defaultoff: 1
   description: These settings only affect the minimum setting that can be selected in the options menu, they do not actually set the difficulty
   customizations:
    - prop: ActiveSurvivalBars
