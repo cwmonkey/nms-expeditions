@@ -50,8 +50,6 @@
      type: bool
    - prop: StartWithFreighter
      type: bool
-   - prop: SwitchContextSaveDataMask
-     type: SwitchContextSaveDataMask
    - prop: TechCostMultiplier
      type: float
      description: Increase this to make Technology modules cost more

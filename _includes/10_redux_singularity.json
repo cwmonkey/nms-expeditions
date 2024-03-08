@@ -87,6 +87,8 @@
       "BreakTechOnDamageProbability": "None"
     }
   },
+  "CreateContextSaveDataMask": "^DEFAULT",
+  "SwitchContextSaveDataMask": "^DEFAULT",
   "SeasonalUAOverride": "005071000b23a665",
   "UAOverrideValue": "0x5071000B23A665",
   "FinalReward": "^RS_S10_COMPLETE",

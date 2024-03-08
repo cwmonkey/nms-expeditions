@@ -11,6 +11,8 @@
   "GameMode": {
     "PresetGameMode": "Normal"
   },
+  "CreateContextSaveDataMask": "^DEFAULT",
+  "SwitchContextSaveDataMask": "^DEFAULT",
   "SeasonalUAOverride": "00516b00fea97478",
   "UAOverrideValue": "0x516B00FEA97478",
   "FinalReward": "^RS_S3_COMPLETE",
