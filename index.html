@@ -364,8 +364,8 @@ layout: null
         <p><button type="button" class="download" disabled>DOWNLOAD</button></p>
       </div>
 
-      <div class="debug">
-        <button type="button" class="toggle_debug" data-hide-text="Hide Debug">Show Debug</button>
+      <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
+        <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-hide-text="Hide Debug" data-toggle-target="#debug_container">Show Debug</button>
         <div class="debug_panel">
 
         </div>

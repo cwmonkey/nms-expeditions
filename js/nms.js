@@ -2,6 +2,8 @@
 
 "use strict";
 
+const $body = $(document.body);
+
 ///////////////////////////////
 // Merge JSON
 ///////////////////////////////
@@ -35,10 +37,73 @@ function recursiveFix(target, fixer) {
 }
 
 ///////////////////////////////
+// Toggler
+///////////////////////////////
+
+const $toggles = $('[data-toggler]');
+
+function toggle(el) {
+  const $el = $(el);
+  const name = 'toggle-' + $el.data('toggle-name');
+  const hideText = $el.data('toggle-hide-text');
+  let showText = $el.data('toggle-show-text');
+  const $target = $($el.data('toggle-target'));
+  const defaultHide = $target.data('toggle-default') === 'off';
+  const showing = defaultHide ? $target.is('.toggle-on') : !$target.is('.toggle-off');
+
+  if (!showText) {
+    showText = $el.text();
+    $el.data('toggle-show-text', showText);
+  }
+
+  if (showing) {
+    if (defaultHide) {
+      $target.removeClass('toggle-on');
+      localStorage.removeItem(name);
+    } else {
+      $target.addClass('toggle-off');
+      localStorage.setItem(name, 0);
+    }
+  } else {
+    if (defaultHide) {
+      $target.addClass('toggle-on');
+      localStorage.setItem(name, 1);
+    } else {
+      $target.removeClass('toggle-off');
+      localStorage.removeItem(name);
+    }
+  }
+}
+
+// bind clicks
+$body.on('click', '[data-toggler]', function() { // es5 because "this"
+  toggle(this);
+});
+
+// set saved states
+$toggles.each((index, el) => {
+  // TODO: DRY
+  const $el = $(el);
+  const name = 'toggle-' + $el.data('toggle-name');
+  const $target = $($el.data('toggle-target'));
+  const defaultHide = $target.data('toggle-default') === 'off';
+  const show = localStorage.getItem(name);
+
+  if (defaultHide) {
+    if (show === '1') {
+      toggle(el);
+    }
+  } else {
+    if (show === '0') {
+      toggle(el);
+    }
+  }
+});
+
+///////////////////////////////
 // Expedition Selection
 ///////////////////////////////
 
-const $body = $(document.body);
 const $props = $('.cust_prop_input');
 const $download = $('.download');
 let exp = null;
@@ -179,31 +244,10 @@ $download.on('click', () => {
 // Debug
 ///////////////////////////////
 
-const $toggleDebug = $('.toggle_debug');
-const $debug = $('.debug');
 const $debugPanel = $('.debug_panel');
-const debugOpen = $toggleDebug.text();
-
-$toggleDebug.on('click', toggleDebug);
-
-function toggleDebug() {
-  if ($debug.is('.open')) {
-    $debug.removeClass('open');
-    $toggleDebug.text(debugOpen);
-    localStorage.removeItem('debug_open');
-  } else {
-    $debug.addClass('open');
-    $toggleDebug.text($toggleDebug.data('hide-text'));
-    localStorage.setItem('debug_open', 1);
-  }
-}
 
 function updateDebug() {
   $debugPanel.text('// Expedition JSON overrides:' + "\n" + JSON.stringify(overrides, null, 2));
-}
-
-if (localStorage.getItem('debug_open')) {
-  toggleDebug();
 }
 
 ///////////////////////////////

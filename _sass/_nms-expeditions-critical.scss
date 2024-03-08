@@ -405,7 +405,7 @@ a {
       margin: 20px 0;
     }
 
-    &.open {
+    &.toggle-on {
       margin-top: 20px;
       opacity: 1;
 
@@ -414,6 +414,15 @@ a {
       }
     }
   }
+}
+
+.toggle-off:not([data-toggle-container]),
+[data-toggle-default-off]:not([data-toggle-container]) {
+  display: none;
+}
+
+.toggle-on:not([data-toggle-container]) {
+  display: block;
 }
 
 /* Footer */
