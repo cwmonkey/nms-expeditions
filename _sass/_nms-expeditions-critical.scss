@@ -95,9 +95,7 @@ a {
 /* Step 1: Select Expedition */
 
 .select_exp {
-  width: 350px;
-  min-width: 350px;
-
+  flex: 0 0 350px;
   background: #54121f url(../images/box-vtile-11.png);
   background-size: contain;
 }
@@ -447,5 +445,51 @@ a {
 
   .image img {
     width: 48px;
+  }
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1100px) {
+  .steps {
+    display: grid;
+    grid-template-columns: 350px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "select_exp customize"
+      "download_section download_section";
+  }
+
+  .select_exp {
+    grid-area: select_exp;
+  }
+
+  .customize {
+    grid-area: customize;
+
+    .property {
+      word-break: break-all;
+    }
+  }
+
+  .download_section {
+    grid-area: download_section;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .steps {
+    display: block;
+  }
+
+  .select_exp {
+    width: auto;
+
+    .image[class][class] {
+      width: 70px;
+      left: 5px;
+      top: 5px;
+    }
   }
 }
