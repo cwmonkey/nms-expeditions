@@ -213,14 +213,20 @@ a {
   background-size: contain;
 
   .cust_headline {
-    color: #ff8400;
-    font-family: Raleway, Helvetica, Arial, sans-serif;
-    font-weight: bold;
     margin-top: 15px;
-    text-align: center;
     background: #1a0027 url(../images/box-vtile--purple.jpg);
     background-size: contain;
-    padding: 10px;
+
+    button {
+      @include button-reset();
+
+      color: #ff8400;
+      font-family: Raleway, Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
   }
 
   .cust_desc,
@@ -233,7 +239,6 @@ a {
     color: #b2cfd7;
     border: 1px solid #1a0027;
     border-top: none;
-    border-bottom: none;
     margin: 0;
     padding: 5px;
   }
@@ -246,6 +251,7 @@ a {
     width: 100%;
     margin-bottom: 15px;
     border: 1px solid #1a0027;
+    border-top: none;
 
     .cust_item_warning {
       border: 1px solid #e66;
@@ -264,6 +270,7 @@ a {
       text-align: center;
       border: 1px solid #1a0027;
       border-bottom: none;
+      border-top: none;
     }
 
     td {
@@ -417,7 +424,7 @@ a {
 }
 
 .toggle-off:not([data-toggle-container]),
-[data-toggle-default-off]:not([data-toggle-container]) {
+[data-toggle-default="off"]:not([data-toggle-container]) {
   display: none;
 }
 

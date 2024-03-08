@@ -45,15 +45,16 @@ const $toggles = $('[data-toggler]');
 function toggle(el) {
   const $el = $(el);
   const name = 'toggle-' + $el.data('toggle-name');
-  const hideText = $el.data('toggle-hide-text');
-  let showText = $el.data('toggle-show-text');
+  const hideText = $el.data('toggle-off-text');
+  let onText = $el.data('toggle-on-text');
+  const offText = $el.data('toggle-off-text');
   const $target = $($el.data('toggle-target'));
   const defaultHide = $target.data('toggle-default') === 'off';
   const showing = defaultHide ? $target.is('.toggle-on') : !$target.is('.toggle-off');
 
-  if (!showText) {
-    showText = $el.text();
-    $el.data('toggle-show-text', showText);
+  if (!onText) {
+    onText = $el.text();
+    $el.data('toggle-on-text', onText);
   }
 
   if (showing) {
@@ -64,6 +65,8 @@ function toggle(el) {
       $target.addClass('toggle-off');
       localStorage.setItem(name, 0);
     }
+
+    $el.text(offText);
   } else {
     if (defaultHide) {
       $target.addClass('toggle-on');
@@ -72,6 +75,8 @@ function toggle(el) {
       $target.removeClass('toggle-off');
       localStorage.removeItem(name);
     }
+
+    $el.text(onText);
   }
 }
 
@@ -85,17 +90,30 @@ $toggles.each((index, el) => {
   // TODO: DRY
   const $el = $(el);
   const name = 'toggle-' + $el.data('toggle-name');
+  const hideText = $el.data('toggle-off-text');
+  let onText = $el.data('toggle-on-text');
+  const offText = $el.data('toggle-off-text');
   const $target = $($el.data('toggle-target'));
   const defaultHide = $target.data('toggle-default') === 'off';
+  const showing = defaultHide ? $target.is('.toggle-on') : !$target.is('.toggle-off');
+
+  if (!onText) {
+    onText = $el.text();
+    $el.data('toggle-on-text', onText);
+  }
+
   const show = localStorage.getItem(name);
 
   if (defaultHide) {
     if (show === '1') {
       toggle(el);
+    } else {
+      $el.text(offText);
     }
   } else {
     if (show === '0') {
       toggle(el);
+      $el.text(offText);
     }
   }
 });

@@ -1,4 +1,5 @@
 - name: General
+  id: general
   customizations:
    - prop: AbandonedFreighterHazardProtectionMul
      type: float
@@ -53,6 +54,7 @@
    - prop: UseRandomPet
      type: bool
 - name: Difficulty Minimums
+  id: DifficultyMinimums
   prop: DifficultyMinimums
   description: These settings only affect the minimum setting that can be selected in the options menu, they do not actually set the difficulty
   customizations:
@@ -133,7 +135,8 @@
    - prop: WarpDriveRequirements
      type: bool
 - name: Experimental
-  collapsed: 1
+  id: experimental
+  defaultoff: 1
   customizations:
    - prop: RemixNumber
      type: int

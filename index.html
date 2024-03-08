@@ -58,11 +58,11 @@ layout: null
       <ul>
         {% for csection in site.data.customizations %}
           <li class="cust_section">
-            <h4 class="cust_headline">{{ csection.name }}</h4>
+            <h4 class="cust_headline"><button type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table">- {{ csection.name }}</button></h4>
             {% if csection.description %}
               <div class="cms"><p class="cust_desc">{{ csection.description }}</p></div>
             {% endif %}
-            <table class="cust_table">
+            <table class="cust_table" id="{{ csection.id }}-table" {% if csection.defaultoff %}data-toggle-default="off"{% endif %}>
               <tr>
                 <th>Property</th>
                 <th>Default</th>
@@ -365,7 +365,7 @@ layout: null
       </div>
 
       <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
-        <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-hide-text="Hide Debug" data-toggle-target="#debug_container">Show Debug</button>
+        <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-target="#debug_container">Hide Debug</button>
         <div class="debug_panel">
 
         </div>
