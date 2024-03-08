@@ -23,6 +23,7 @@
    - prop: GameMode
      subprop: PresetGameMode
      type: DifficultyPresetType
+     warning: If you choose Permadeath and die in the expedition, your main save will be deleted as well.
    - prop: HazardProtectionDrainMultiplier
      type: float
    - prop: MustCraftInBases
