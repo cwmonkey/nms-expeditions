@@ -305,6 +305,14 @@ layout: null
                         <option value="Normal">Normal</option>
                         <option value="Low">Low*</option>{% comment %}Guessing here{% endcomment %}
                       </select>
+                    {% elsif cust.type == "SwitchContextSaveDataMask" %}
+                      {% comment %}
+                        TODO: Test and find more values
+                      {% endcomment %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        <option value="^DEFAULT">^DEFAULT</option>
+                      </select>
                     {% else %}
                       <input type="text" {{ attrs }}>*
                     {% endif %}

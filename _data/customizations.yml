@@ -20,14 +20,21 @@
      type: float
    - prop: ForceStartSystemAbandoned
      type: bool
+   - prop: GameMode
+     subprop: PresetGameMode
+     type: DifficultyPresetType
    - prop: HazardProtectionDrainMultiplier
      type: float
+   - prop: MustCraftInBases
+     type: bool
    - prop: RemixNumber
      type: int
      description: "I have a theory this number is used to allow people to replay expeditions when they are re-released. If so, and you want to replay an expedition on your main save, you should probably change the number to something really high, like 10000 so it won't block you from playing future re-releases of expeditions."
      warning: Changing this number *could* affect your ability to play future expeditions on your main save.
    - prop: ResetSaveOnDeath
      type: bool
+   - prop: SeasonType
+     type: int
    - prop: ShipStartsDamaged
      type: bool
    - prop: ShipType
@@ -43,6 +50,8 @@
      type: bool
    - prop: StartWithFreighter
      type: bool
+   - prop: SwitchContextSaveDataMask
+     type: SwitchContextSaveDataMask
    - prop: TechCostMultiplier
      type: float
      description: Increase this to make Technology modules cost more
