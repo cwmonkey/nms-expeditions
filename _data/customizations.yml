@@ -3,7 +3,7 @@
   customizations:
    - prop: AbandonedFreighterHazardProtectionMul
      type: float
-     description: Turn this down for more challenge
+     description: Turn this down for more challenge?
    - prop: BlockAggressiveSentinelsInStartSystem
      type: bool
    - prop: BlockStormsAtStart
@@ -13,12 +13,15 @@
    - prop: DifficultySettingPreset
      subprop: DifficultyPresetType
      type: DifficultyPresetType
+     description: This won't actually set you to Permadeath if you select it, see GameMode below.
    - prop: DistanceFromShipAtStartOfGame
      type: int
    - prop: EnergyDrainMultiplier
      type: float
+     description: Turn this up for more challenge?
    - prop: FarmPlantsTimerMul
      type: float
+     description: Turn this up for more challenge?
    - prop: ForceStartSystemAbandoned
      type: bool
    - prop: GameMode
@@ -27,12 +30,12 @@
      warning: If you choose Permadeath and die in the expedition, your main save will be deleted as well.
    - prop: HazardProtectionDrainMultiplier
      type: float
+     description: Turn this up for more challenge?
    - prop: MustCraftInBases
      type: bool
    - prop: ResetSaveOnDeath
      type: bool
-   - prop: SeasonType
-     type: int
+     description: I believe this resets your expedition milestones, equipment and items when you die, like the Leviathan expedition.
    - prop: ShipStartsDamaged
      type: bool
    - prop: ShipType
@@ -143,3 +146,5 @@
      type: int
      description: "I have a theory this number is used to allow people to replay expeditions when they are re-released. If so, and you want to replay an expedition on your main save, you should probably change the number to something really high, like 10000 so it won't block you from playing future re-releases of expeditions."
      warning: Changing this number *could* affect your ability to play future expeditions on your main save.
+   - prop: SeasonType
+     type: int
