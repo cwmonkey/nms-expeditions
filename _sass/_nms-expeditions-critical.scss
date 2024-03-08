@@ -257,17 +257,6 @@ a {
     border: 1px solid #1a0027;
     border-top: none;
 
-    .cust_item_warning {
-      border: 1px solid #e66;
-      border-bottom: none;
-
-      & + .cust_row_desc {
-        border: 1px solid #e66;
-        border-left: none;
-        border-right: none;
-      }
-    }
-
     th {
       font-weight: bold;
       padding: 5px;
@@ -287,6 +276,17 @@ a {
 
     tr + tr:not(.cust_item_warning, .cust_row_warning) {
       border-top: 1px solid #1a0027;
+    }
+
+    .cust_item_warning {
+      border: 1px solid #e66;
+      border-bottom: none;
+
+      & + .cust_row_desc {
+        border: 1px solid #e66;
+        border-left: none;
+        border-right: none;
+      }
     }
 
     .cust_row_warning {
