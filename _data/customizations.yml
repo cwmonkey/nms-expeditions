@@ -38,6 +38,7 @@
      description: I believe this resets your expedition milestones, equipment and items when you die, like the Leviathan expedition.
    - prop: ShipStartsDamaged
      type: bool
+     warning: If you set this to true and start on a freighter, you will be stuck
    - prop: ShipType
      subprop: ShipClass
      type: ShipClass
