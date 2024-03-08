@@ -117,16 +117,16 @@ layout: null
                     {% elsif cust.type == "ShipClass" %}
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
-                        <option value="Freighter">Freighter</option>
+                        {% comment %}<option value="Freighter">Freighter</option>{% endcomment %}
                         <option value="Dropship">Dropship</option>
                         <option value="Fighter">Fighter</option>
                         <option value="Scientific">Scientific</option>
                         <option value="Shuttle">Shuttle</option>
-                        <option value="PlayerFreighter">PlayerFreighter</option>
+                        {% comment %}<option value="PlayerFreighter">PlayerFreighter</option>{% endcomment %}
                         <option value="Royal">Royal</option>
                         <option value="Alien">Alien</option>
                         <option value="Sail">Sail</option>
-                        <option value="Robot">Robot</option>
+                        <option value="Robot">Robot (Doesn't work?)</option>
                       </select>
 
                     {% comment %}
