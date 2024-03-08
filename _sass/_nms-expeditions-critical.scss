@@ -154,6 +154,18 @@ a {
     filter: grayscale(1);
   }
 
+  &.exp_item_e02 .image {
+    width: 200px;
+    top: -20px;
+  }
+  &.exp_item_e03 .image {
+    top: -20px;
+  }
+  &.exp_item_e05 .image {
+    width: 170px;
+    top: -20px;
+  }
+
   .exp_name {
     font-family: geosanslight-nmsregular, Helvetica, Arial, sans-serif;
     font-size: 20px;

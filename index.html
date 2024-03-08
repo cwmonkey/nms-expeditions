@@ -34,7 +34,7 @@ layout: null
 
       <ol>
         {% for exp in site.data.expeditions %}
-          <li class="exp_item">
+          <li class="exp_item exp_item_{{ exp.id }}">
             <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
             <label for="{{ exp.id }}_radio" class="exp_label">
               <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
