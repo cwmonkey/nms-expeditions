@@ -245,6 +245,10 @@ a {
 
   .cust_warning {
     color: #e66;
+
+    strong {
+      font-weight: bold;
+    }
   }
 
   .cust_table {
