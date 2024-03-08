@@ -117,12 +117,16 @@ layout: null
                     {% elsif cust.type == "ShipClass" %}
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
-                        <option value="Scientific">Scientific</option>
-                        <option value="Sail">Sail</option>
+                        <option value="Freighter">Freighter</option>
                         <option value="Dropship">Dropship</option>
-                        <option value="Shuttle">Shuttle</option>
                         <option value="Fighter">Fighter</option>
+                        <option value="Scientific">Scientific</option>
+                        <option value="Shuttle">Shuttle</option>
+                        <option value="PlayerFreighter">PlayerFreighter</option>
                         <option value="Royal">Royal</option>
+                        <option value="Alien">Alien</option>
+                        <option value="Sail">Sail</option>
+                        <option value="Robot">Robot</option>
                       </select>
 
                     {% comment %}
@@ -359,7 +363,7 @@ layout: null
 
         <p>Note: These directories may be somewhat different on your machine.</p>
 
-        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet) when you start NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end.</p>
+        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet) when you start NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end when you load the save.</p>
 
         <p><button type="button" class="download" disabled>DOWNLOAD</button></p>
       </div>
