@@ -3,7 +3,7 @@ exclude: [Gemfile, run.bat]
 
 name: cwmonkey/nms-expeditions
 title: No Man's Sky Expedition Generator
-description: Generates SEASON_DATA_CACHE.JSON files for No Man's Sky expeditions.
+description: Generates SEASON_DATA_CACHE.JSON files so you can customize and play No Man's Sky expeditions offline anytime.
 # repository: cwmonkey/kotir2
 
 # Conversion
