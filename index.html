@@ -112,7 +112,7 @@ layout: null
                         <option value="Creative">Creative</option>
                         <option value="Relaxed">Relaxed</option>
                         <option value="Survival">Survival</option>
-                        <option value="Permadeath">Permadeath</option>
+                        <option value="Permadeath">Permadeath{% if cust.prop == "GameMode" %} (Main save deleted on death!){% endif %}</option>
                       </select>
                     {% elsif cust.type == "ShipClass" %}
                       <select {{ attrs }}>
@@ -124,7 +124,7 @@ layout: null
                         <option value="Shuttle">Shuttle</option>
                         {% comment %}<option value="PlayerFreighter">PlayerFreighter</option>{% endcomment %}
                         <option value="Royal">Royal</option>
-                        <option value="Alien">Alien</option>
+                        <option value="Alien">Alien (Has incorrect tech)</option>
                         <option value="Sail">Sail</option>
                         <option value="Robot">Robot (Doesn't work?)</option>
                       </select>
@@ -376,6 +376,20 @@ layout: null
       </div>
     </section>
   </div>
+  <section class="notes_section"><div class="content">
+    <div class="cms">
+      <h2>Notes</h2>
+      <ul>
+        <li>Most of these expeditions start with tech in inventory slots. You need to move them.</li>
+        <li>Some expeditions require us to "auto complete" certain milestones as you cannot complete them offline. We're still trying to figure out a better way to do this other than just giving the reward.</li>
+        <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
+      </ul>
+      <h3>01: Pioneers (Redux)</h3>
+      <ul>
+        <li>You start on a green star and get the green star milestone right away. This seems wrong. Not sure if it's fixable in the JSON, could be that the star flipped green in an update.</li>
+      </ul>
+    </div>
+  </div></section>
 </main>
 
 <footer class="footer">
