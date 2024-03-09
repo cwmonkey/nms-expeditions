@@ -140,7 +140,7 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
     let defaultValue = '--';
 
     const parent = (parentProperty) ? exp[parentProperty] : exp;
-    if (parent && ((subproperty && parent[property] && parent[property][subproperty]) || (!subproperty && parent[property]))) {
+    if (parent && ((subproperty && typeof parent[property] !== 'undefined' && typeof parent[property][subproperty] !== 'undefined') || (!subproperty && typeof parent[property] !== 'undefined'))) {
       defaultValue = (subproperty) ? parent[property][subproperty] : parent[property];
     }
 
