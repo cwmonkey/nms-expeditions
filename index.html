@@ -35,7 +35,7 @@ layout: null
       <ol>
         {% for exp in site.data.expeditions %}
           <li class="exp_item exp_item_{{ exp.id }}">
-            <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-json-id="{{ exp.id }}">
+            <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
             <label for="{{ exp.id }}_radio" class="exp_label">
               <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
               <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
@@ -52,7 +52,35 @@ layout: null
       <h3 class="step_headline">Step 2: Customize</h3>
 
       <div class="cms">
-        <p><strong>Note:</strong> I have no idea what could happen by messing with these values. I'm still in the process of testing stuff.</p>
+        <p><strong>Note:</strong> You may undo these customizations and replace the JSON file at any time during your expedition.</p>
+      </div>
+
+      <div class="notices">
+        {% for exp in site.data.expeditions %}
+          {% if exp.notice %}
+            <section class="notice" id="notice_{{ exp.id }}">
+              <div class="notice_header">
+                <h4 class="notice_headline">Notice</h4>
+                <p class="notice_description">{{ exp.notice }}</p>
+              </div>
+
+              {% if exp.patches %}
+                <ul class="patch_list">
+                  <li><label class="patch_label">
+                    <input type="radio" checked="checked" name="{{ exp.id }}_check" class="patch_check" value="" data-exp-id="{{ exp.id }}">
+                    <span class="patch_description">{{ exp.nopatch }}</span>
+                  </label></li>
+                  {% for patch in exp.patches %}
+                    <li><label class="patch_label">
+                      <input type="radio" name="{{ exp.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}">
+                      <span class="patch_description">{{ patch.description }}</span>
+                    </label></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </section>
+          {% endif %}
+        {% endfor %}
       </div>
 
       <ul>
@@ -370,8 +398,25 @@ layout: null
 
       <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
         <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-target="#debug_container">Hide Debug</button>
-        <div class="debug_panel">
+        <section class="debug_panel">
+          <h4>Debug Info/Tools</h4>
+          
+          <section>
+            <h5>Expedition Overrides/Patches</h5>
+            <div class="debug_output"></div>
+          </section>
 
+          <div class="debug_tools">
+            <section class="create_patch">
+              <h5>Expedition Patch Creator</h5>
+              <textarea id="before" placeholder="Original JSON"></textarea>
+              <textarea id="after" placeholder="JSON After Edits"></textarea>
+              <br>
+              <button type="button" id="make_patch">MAKE PATCH</button>
+              <br>
+              <textarea id="patch"></textarea>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -387,6 +432,10 @@ layout: null
       <h3>01: Pioneers (Redux)</h3>
       <ul>
         <li>You start on a green star and get the green star milestone right away. This seems wrong. Not sure if it's fixable in the JSON, could be that the star flipped green in an update.</li>
+      </ul>
+      <h3>12: Omega</h3>
+      <ul>
+        <li>All the optional missions can't be done offline. They are trivial once you get to the planet, so unlocking them for "free" seems fine.</li>
       </ul>
     </div>
   </div></section>
@@ -408,112 +457,14 @@ layout: null
 
 {% for exp in site.data.expeditions %}
   <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
+
+  {% for patch in exp.patches %}
+    <script id="{{ exp.id }}_{{ patch.id }}" type="application/json" data-patch-parent="{{ exp.id }}" data-patch-description="{{ patch.description | xml_escape }}">{% include {{ patch.json }} %}</script>
+  {% endfor %}
 {% endfor %}
 
 
 <script src="js/nms.js"></script>
-
-{% comment %}
-  TODO: implement this crap
-{% endcomment %}
-{% if 1 == 0 %}
-<script id="e10" type="application/json">
-  {% include 10_redux_singularity.json %}
-</script>
-
-<script id="e10cwm" type="application/json">
-  {% include 10_redux_singularity_cwm.json %}
-</script>
-
-<script id="e10fixes" type="application/json">
-  {% include 10_redux_singularity.fixes.patch.json %}
-</script>
-
-<script>
-
-var a = JSON.parse(document.getElementById('e10').textContent);
-var f = JSON.parse(document.getElementById('e10fixes').textContent);
-
-// https://stackoverflow.com/questions/31295545/how-to-get-only-the-changed-values-from-two-json-objects
-
-function isArray(obj) {
-  return (Object.prototype.toString.call(obj) === '[object Array]');
-}
-
-function log(msg, indent) {
-  indent = (typeof indent == 'undefined' ? 0 : indent);
-  for(var i = 0; i<indent; i++){
-    msg = '  '+msg;
-  }
-  //$("#console").append(msg+'\n');
-  console.log(msg);
-}
-
-function dump(obj) {
-  log(JSON.stringify(obj));
-}
-
-function debug(msg, indent) {
-  // log(msg, indent);
-}
-
-var b = JSON.parse(document.getElementById('e10cwm').textContent);
-
-// var diff should be inside getDiff(), 
-// but then we couldn't show it working
-var diff;
-function getDiff(a, b) {
-  diff = (isArray(a) ? [] : {});
-  recursiveDiff(a, b, diff);
-  return diff;
-}
-
-function recursiveDiff(a, b, node) {
-  // dump(diff);
-  var checked = [];
-
-  for (var prop in a) {
-    debug(prop, 1);
-    if (typeof b[prop] == 'undefined') {
-      addNode(prop, '[[removed]]', node);
-    } else if (JSON.stringify(a[prop]) != JSON.stringify(b[prop])) {
-      debug(typeof b[prop], 2);
-      // if value
-      if (typeof b[prop] != 'object' || b[prop] == null) {
-        addNode(prop, b[prop], node);
-        debug("(added)", 3);
-      } else {
-        // if array
-        if (isArray(b[prop])) {
-         addNode(prop, [], node);
-         recursiveDiff(a[prop], b[prop], node[prop]);
-        // if object
-        } else {
-          addNode(prop, {}, node);
-          recursiveDiff(a[prop], b[prop], node[prop]);
-        }
-      }
-    }
-  }
-}
-
-function addNode(prop, value, parent) {
-  parent[prop] = value;
-}
-
-
-log('Input:');
-//dump(a);
-//dump(b);
-log('');
-log('Progress:');
-var result = getDiff(b, afixed);
-log('\n============================\n');
-log('Result:');
-dump(result);
-
-</script>
-{% endif %}
 
 </body>
 </html>

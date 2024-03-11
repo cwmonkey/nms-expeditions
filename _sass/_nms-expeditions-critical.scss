@@ -221,7 +221,45 @@ a {
 .customize {
   background: #004a61 url(../images/box-vtile-1.png);
   background-size: contain;
+  flex: 1 0 455px;
 
+  // Notice/Patches section
+  .notice {
+    border: 1px solid yellow;
+    margin: 20px 0;
+    display: none;
+
+    &.selected {
+      display: block;
+    }
+
+    .notice_header {
+      display: flex;
+      color: #000;
+      background: yellow;
+      padding: 5px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+
+      .notice_headline {
+        font-weight: bold;
+        margin-right: 6px;
+      }
+    }
+
+    .patch_label {
+      display: flex;
+      padding: 5px;
+      align-items: flex-start;
+      line-height: 1.4;
+
+      .patch_check {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  // Customization Section
   .cust_headline {
     margin-top: 15px;
     background: #1a0027 url(../images/box-vtile--purple.jpg);
@@ -369,7 +407,6 @@ a {
 /* Step 3: Download */
 
 .download_section {
-  flex-shrink: 1;
   background: #0f181d url(../images/bg-long-huge.jpg);
   background-size: cover;
 
@@ -421,9 +458,24 @@ a {
 
     .debug_panel {
       display: none;
-      font-family: monospace;
-      white-space: pre;
-      margin: 20px 0;
+
+      h4 {
+        font-weight: bold;
+        font-size: 16;
+        margin: 10px 0;
+      }
+
+      h5 {
+        font-weight: bold;
+        font-size: 14;
+        margin: 10px 0;
+      }
+
+      .debug_output {
+        font-family: monospace;
+        white-space: pre;
+        margin: 20px 0;
+      }
     }
 
     &.toggle-on {

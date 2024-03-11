@@ -4,6 +4,12 @@
   image: e01_pioneers.png
   json: 01_redux_the_pioneers.json
   redux: 1
+  notice: This expedition starts on a green star. I think this is a bug, since the "Emerald dreams" milestone (go to a green star) triggers instantly.
+  nopatch: Allow milestone to automatically complete at the start of the expedition.
+  patches:
+   - id: encrypt0307
+     json: 01_redux_the_pioneers.encrypt0307.patch.json
+     description: Encrypt the milestone so it cannot be completed until you reach Rendezvous 3.  Side effect - it will all appear as completed in your log and on the expeditions page.
 - id: e02
   name: '02: Beachhead'
   description: The one with the Mass Effect crossover
@@ -75,3 +81,12 @@
   description: The one with more of the same
   image: e12_omega.png
   json: 12_omega.json
+  notice: It is not possible to complete the optional milestones in this expedition since they require you to be online UNLESS you choose an option below.
+  nopatch: Do nothing (you won't be able to complete the optional milestones).
+  patches:
+   - id: autocomplete12optionals
+     json: 12_omega.autocomplete12optionals.patch.json
+     description: Automatically complete the optional milestones when starting the expedition. You need to save and reload your game at least once.
+   - id: encrypt12optionals
+     json: 12_omega.encrypt12optionals.patch.json
+     description: Encrypt the optional milestones so they can be completed once you arrive at the appropriate rendezvous. You need to save and reload your game at least once. Side effect - they will all appear as completed in your log and on the expeditions page.

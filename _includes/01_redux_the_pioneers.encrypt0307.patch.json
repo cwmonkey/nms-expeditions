@@ -1,0 +1,31 @@
+{
+  "Stages": [
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Encryption": {
+            "IsEncrypted": true,
+            "TitleUpper": "^UI_EXPED_PIRATE_MAP1_SUB_CRYPT",
+            "Subtitle": "^UI_EXPED_SAVE_FREIGHT_S_CRYPT",
+            "Description": "^UI_EXPED_PIRATE_MAP2_SUB_CRYPT",
+            "Patch": {
+              "Filename": "textures/ui/frontend/icons/expedition/encrypted.patch.3.dds"
+            },
+            "HoverPopupIcon": {
+              "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
+            },
+            "DecryptMissionId": "^PARTY_PLANET3"
+          }
+        }
+      ]
+    }
+  ]
+}
