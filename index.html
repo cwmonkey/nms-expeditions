@@ -86,7 +86,12 @@ layout: null
       <ul>
         {% for csection in site.data.customizations %}
           <li class="cust_section">
-            <h4 class="cust_headline"><button type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table">- {{ csection.name }}</button></h4>
+            <h4 class="cust_headline">
+              <button type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
+                <span id="{{ csection.id }}-text">- {{ csection.name }}</span>
+                <span id="{{ csection.id }}-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
+              </button>
+            </h4>
             {% if csection.description %}
               <div class="cms"><p class="cust_desc">{{ csection.description }}</p></div>
             {% endif %}
@@ -98,7 +103,14 @@ layout: null
               </tr>
               {% for cust in csection.customizations %}
                 {% capture attrs %}
-                  class="cust_prop_input" name="{{ cust.prop }}" data-type="{{ cust.type }}" data-subprop="{{ cust.subprop }}" data-parentprop="{{ csection.prop }}" title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}" placeholder="DEFAULT"
+                  class="cust_prop_input"
+                  name="{{ cust.prop }}"
+                  data-type="{{ cust.type }}"
+                  data-subprop="{{ cust.subprop }}"
+                  data-parentprop="{{ csection.prop }}"
+                  title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}"
+                  placeholder="DEFAULT"
+                  data-section-id="{{ csection.id }}"
                 {% endcapture %}
                 <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
                   <td class="property">

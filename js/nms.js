@@ -51,9 +51,11 @@ function toggle(el) {
   const $target = $($el.data('toggle-target'));
   const defaultHide = $target.data('toggle-default') === 'off';
   const showing = defaultHide ? $target.is('.toggle-on') : !$target.is('.toggle-off');
+  const textTarget = $el.data('toggle-text-target');
+  const $text = textTarget ? $(textTarget) : $el;
 
   if (!onText) {
-    onText = $el.text();
+    onText = $text.text();
     $el.data('toggle-on-text', onText);
   }
 
@@ -66,7 +68,7 @@ function toggle(el) {
       localStorage.setItem(name, 0);
     }
 
-    $el.text(offText);
+    $text.text(offText);
   } else {
     if (defaultHide) {
       $target.addClass('toggle-on');
@@ -76,7 +78,7 @@ function toggle(el) {
       localStorage.removeItem(name);
     }
 
-    $el.text(onText);
+    $text.text(onText);
   }
 }
 
@@ -96,6 +98,8 @@ $toggles.each((index, el) => {
   const $target = $($el.data('toggle-target'));
   const defaultHide = $target.data('toggle-default') === 'off';
   const showing = defaultHide ? $target.is('.toggle-on') : !$target.is('.toggle-off');
+  const textTarget = $el.data('toggle-text-target');
+  const $text = textTarget ? $(textTarget) : $el;
 
   if (!onText) {
     onText = $el.text();
@@ -108,12 +112,12 @@ $toggles.each((index, el) => {
     if (show === '1') {
       toggle(el);
     } else {
-      $el.text(offText);
+      $text.text(offText);
     }
   } else {
     if (show === '0') {
       toggle(el);
-      $el.text(offText);
+      $text.text(offText);
     }
   }
 });
@@ -169,9 +173,11 @@ let overrides = null;
 function updateProps() {
   overrides = {};
   let hasUpdates = false;
+  const counts = {};
 
   $props.each((index, el) => {
     const $el = $(el);
+    const sectionId = $el.data('section-id');
     const $row = $el.closest('.cust_item');
     let value = $el.val();
     const property = $el.attr('name');
@@ -179,6 +185,7 @@ function updateProps() {
     const parentProperty = $el.data('parentprop');
     let obj = overrides;
     const storageName = 'property-' + property;
+    counts[sectionId] = counts[sectionId] || 0;
 
     if (value === '') {
       $row.removeClass('filled');
@@ -196,6 +203,8 @@ function updateProps() {
 
     hasUpdates = true;
 
+    counts[sectionId]++;
+
     if (parentProperty) {
       if (typeof overrides[parentProperty] === 'undefined') overrides[parentProperty] = {};
       obj = overrides[parentProperty];
@@ -208,6 +217,19 @@ function updateProps() {
       obj[property] = value;
     }
   });
+
+  for (const sectionId in counts) {
+    const count = counts[sectionId];
+    const $text = $('#' + sectionId + '-count');
+    let tpl = $text.data('count-template-other');
+    if (!count) {
+      tpl = $text.data('count-template-0');
+    } else if (count === 1) {
+      tpl = $text.data('count-template-1');
+    }
+
+    $text.text(tpl.replace('%n', count));
+  }
 
   if (!hasUpdates) {
     overrides = null;
