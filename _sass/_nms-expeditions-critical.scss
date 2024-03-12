@@ -265,7 +265,7 @@ a {
     background: #1a0027 url(../images/box-vtile--purple.jpg);
     background-size: contain;
 
-    button {
+    .cust_headline_text {
       @include button-reset();
 
       color: #ff8400;
@@ -274,21 +274,30 @@ a {
       width: 100%;
       text-align: center;
       padding: 10px;
+      display: block;
     }
+  }
+
+  .cust_content {
+    border: 1px solid #1a0027;
+    border-top: none;
+    padding: 5px;
   }
 
   .cust_desc,
   .cust_warning {
     line-height: 1.4;
-    margin-top: 4px;
   }
 
   .cust_desc {
     color: #b2cfd7;
     border: 1px solid #1a0027;
     border-top: none;
-    margin: 0;
     padding: 5px;
+
+    p {
+      margin: 0;
+    }
   }
 
   .cust_warning {
@@ -297,6 +306,16 @@ a {
     strong {
       font-weight: bold;
     }
+  }
+
+  .cust_tool {
+    @include ghost-button();
+    margin: auto;
+    display: inline-block;
+  }
+
+  .cust_presets {
+    text-align: center;
   }
 
   .cust_table {
@@ -324,6 +343,13 @@ a {
 
     tr + tr:not(.cust_item_warning, .cust_row_warning) {
       border-top: 1px solid #1a0027;
+    }
+
+    .cust_property_desc {
+      font-size: 12px;
+      color: #b2cfd7;
+      margin-top: 3px;
+      line-height: 1.2;
     }
 
     .cust_item_warning {
@@ -393,10 +419,28 @@ a {
     }
   }
 
-  .cust_reset {
-    @include ghost-button();
-    display: table;
-    margin: 20px auto;
+  .cust_tools {
+    text-align: center;
+
+    .cust_tool_section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cust_import {
+      position: relative;
+    }
+
+    #upload {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0;
+    }
   }
 
   .notes {

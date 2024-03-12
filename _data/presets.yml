@@ -1,0 +1,6 @@
+- id: preset-hard-mode
+  name: Hard Mode (Permadeath)
+  json: customizations.hard_mode.json
+- id: preset-easy-mode
+  name: Easy Mode
+  json: customizations.easy_mode.json

@@ -61,84 +61,267 @@
   id: DifficultyMinimums
   prop: DifficultyMinimums
   defaultoff: 1
-  description: These settings only affect the minimum setting that can be selected in the options menu, they do not actually set the difficulty
+  description: These settings only affect the minimum setting that can be selected in the options menu, **you will still need to set the difficulty options after you start the expedition.**
   customizations:
+# SURVIVAL SETTINGS
    - prop: ActiveSurvivalBars
      subprop: ActiveSurvivalBarsDifficulty
      type: ActiveSurvivalBarsDifficulty
-   - prop: AllSlotsUnlocked
-     type: bool
-   - prop: BaseAutoPower
-     type: bool
-   - prop: BreakTechOnDamage
-     subprop: BreakTechOnDamageProbability
-     type: BreakTechOnDamageProbability
-   - prop: ChargingRequirements
-     subprop: ChargingRequirementsDifficulty
-     type: ChargingRequirementsDifficulty
-   - prop: CraftingIsFree
-     type: bool
-   - prop: CreatureHostility
-     subprop: CreatureHostilityDifficulty
-     type: CreatureHostilityDifficulty
-   - prop: CurrencyCost
-     subprop: CurrencyCostDifficulty
-     type: CurrencyCostDifficulty
-   - prop: DamageGiven
-     subprop: DamageGivenDifficulty
-     type: DamageGivenDifficulty
-   - prop: DamageReceived
-     subprop: DamageReceivedDifficulty
-     type: DamageReceivedDifficulty
-   - prop: DeathConsequences
-     subprop: DeathConsequencesDifficulty
-     type: DeathConsequencesDifficulty
-   - prop: EnergyDrain
-     subprop: EnergyDrainDifficulty
-     type: EnergyDrainDifficulty
-   - prop: FuelUse
-     subprop: FuelUseDifficulty
-     type: FuelUseDifficulty
-   - prop: GroundCombatTimers
-     subprop: CombatTimerDifficultyOption
-     type: CombatTimerDifficultyOption
+     display: Survival Elements
+     options:
+      - value: None
+        text: None
+      - value: Health
+        text: Health Only
+      - value: HealthAndHazard
+        text: Hazard & Health
+      - value: All
+        text: Full
    - prop: HazardDrain
      subprop: HazardDrainDifficulty
      type: HazardDrainDifficulty
-   - prop: InventoriesAlwaysInRange
-     type: bool
-   - prop: InventoryStackLimits
-     subprop: InventoryStackLimitsDifficulty
-     type: InventoryStackLimitsDifficulty
-   - prop: ItemShopAvailability
-     subprop: ItemShopAvailabilityDifficulty
-     type: ItemShopAvailabilityDifficulty
-   - prop: LaunchFuelCost
-     subprop: LaunchFuelCostDifficulty
-     type: LaunchFuelCostDifficulty
-   - prop: ReputationGain
-     subprop: ReputationGainDifficulty
-     type: ReputationGainDifficulty
-   - prop: ScannerRecharge
-     subprop: ScannerRechargeDifficulty
-     type: ScannerRechargeDifficulty
-   - prop: SettingsLocked
-     type: bool
-   - prop: SpaceCombatTimers
-     subprop: CombatTimerDifficultyOption
-     type: CombatTimerDifficultyOption
-   - prop: SprintingCost
-     subprop: SprintingCostDifficulty
-     type: SprintingCostDifficulty
-   - prop: StartWithAllItemsKnown
-     type: bool
+     display: Survival Difficulty
+     options:
+      - value: Slow
+        text: Relaxed
+      - value: Normal
+        text: Standard
+      - value: Fast
+        text: Challenging
    - prop: SubstanceCollection
      subprop: SubstanceCollectionDifficulty
      type: SubstanceCollectionDifficulty
-   - prop: TutorialEnabled
+     display: Natural Resources
+     options:
+      - value: High
+        text: Abundant
+      - value: Normal
+        text: Standard
+      - value: Low
+        text: Scarce
+   - prop: SprintingCost
+     subprop: SprintingCostDifficulty
+     type: SprintingCostDifficulty
+     display: Sprinting
+     options:
+      - value: None
+        text: Infinite
+      - value: Low
+        text: Relaxed
+      - value: Full
+        text: Standard
+   - prop: ScannerRecharge
+     subprop: ScannerRechargeDifficulty
+     type: ScannerRechargeDifficulty
+     display: Scanner Recharge
+     options:
+      - value: VeryFast
+        text: Very Fast
+      - value: Fast
+        text: Fast
+      - value: Normal
+        text: Standard
+      - value: Slow
+        text: Challenging
+   - prop: DamageReceived
+     subprop: DamageReceivedDifficulty
+     type: DamageReceivedDifficulty
+     display: Damage Levels
+     description: Damage taken from environment
+     options:
+      - value: None
+        text: None
+      - value: Low
+        text: Minimal
+      - value: Normal
+        text: Standard
+      - value: High
+        text: Challenging
+   - prop: BreakTechOnDamage
+     subprop: BreakTechOnDamageProbability
+     type: BreakTechOnDamageProbability
+     display: Technology Damage
+     description: Liklihood of suit modules breaking when recieving damage
+     options:
+      - value: None
+        text: None
+      - value: Low
+        text: Minimal
+      - value: High
+        text: Challenging
+   - prop: DeathConsequences
+     subprop: DeathConsequencesDifficulty
+     type: DeathConsequencesDifficulty
+     display: Death Consequences
+     options:
+      - value: None
+        text: No Item Loss
+      - value: ItemGrave
+        text: Standard
+      - value: DestroyItems
+        text: Items Destroyed
+      - value: DestroySave
+        text: Save Deleted
+# CRAFTING AND ITEMS SETTINGS
+   - prop: ChargingRequirements
+     subprop: ChargingRequirementsDifficulty
+     type: ChargingRequirementsDifficulty
+     display: Fuel Usage
+     description: How much it takes to recharge stuff
+     options:
+      - value: None
+        text: Free
+      - value: Low
+        text: Discounted
+      - value: Normal
+        text: Standard
+      - value: High
+        text: Expensive
+   - prop: CraftingIsFree
      type: bool
+     display: Crafting
+     options:
+      - value: true
+        text: Free
+      - value: false
+        text: Standard
+   - prop: CurrencyCost
+     subprop: CurrencyCostDifficulty
+     type: CurrencyCostDifficulty
+     display: Purchases
+     options:
+      - value: None
+        text: Free
+      - value: Cheap
+        text: Discounted
+      - value: Normal
+        text: Standard
+      - value: Expensive
+        text: Expensive
+   - prop: ItemShopAvailability
+     subprop: ItemShopAvailabilityDifficulty
+     type: ItemShopAvailabilityDifficulty
+     display: Goods Availability
+     description: How common items are in shops
+     options:
+      - value: High
+        text: Abundant
+      - value: Normal
+        text: Standard
+      - value: Low
+        text: Scarce
+#   - prop: InventoryStackLimits
+#     subprop: InventoryStackLimitsDifficulty
+#     type: InventoryStackLimitsDifficulty
+#     description: Pointless, can't be changed once game starts
+# COMBAT SETTINGS
+   - prop: DamageGiven
+     subprop: DamageGivenDifficulty
+     type: DamageGivenDifficulty
+     display: Enemy Strength
+     options:
+      - value: High
+        text: Weak
+      - value: Normal
+        text: Standard
+      - value: Low
+        text: Challenging
+   - prop: GroundCombatTimers
+     subprop: CombatTimerDifficultyOption
+     type: CombatTimerDifficultyOption
+     display: On-Foot Combat
+     options:
+      - value: Off
+        text: None
+      - value: Slow
+        text: Minimal
+      - value: Normal
+        text: Standard
+      - value: Fast
+        text: Hostile
+   - prop: SpaceCombatTimers
+     subprop: CombatTimerDifficultyOption
+     type: CombatTimerDifficultyOption
+     display: "Space Combat"
+     options:
+      - value: Off
+        text: None
+      - value: Slow
+        text: Minimal
+      - value: Normal
+        text: Standard
+      - value: Fast
+        text: Hostile
+   - prop: CreatureHostility
+     subprop: CreatureHostilityDifficulty
+     type: CreatureHostilityDifficulty
+     display: Creatures
+     options:
+      - value: NeverAttack
+        text: Passive
+      - value: AttackIfProvoked
+        text: Defensive
+      - value: FullEcosystem
+        text: Predators On
+# EASE OF USE
+   - prop: InventoriesAlwaysInRange
+     type: bool
+     display: Inventory Transfer Range
+     options:
+      - value: true
+        text: Infinite
+      - value: false
+        text: Nearby
    - prop: WarpDriveRequirements
      type: bool
+     display: Hyperdrive System Access
+     options:
+      - value: false
+        text: Unrestricted
+      - value: true
+        text: Specialised
+   - prop: BaseAutoPower
+     type: bool
+     display: Base Power
+     options:
+      - value: true
+        text: Free
+      - value: false
+        text: Standard
+   - prop: ReputationGain
+     subprop: ReputationGainDifficulty
+     type: ReputationGainDifficulty
+     display: Reputation & Standing Gain
+     options:
+      - value: VeryFast
+        text: Very Fast
+      - value: Fast
+        text: Fast
+      - value: Normal
+        text: Standard
+      - value: Slow
+        text: Challenging
+#   - prop: SettingsLocked
+#     type: bool
+#     description: Pointless
+# ????
+#   - prop: AllSlotsUnlocked
+#     type: bool
+#     description: Doesn't work
+#   - prop: EnergyDrain
+#     subprop: EnergyDrainDifficulty
+#     type: EnergyDrainDifficulty
+#   - prop: FuelUse
+#     subprop: FuelUseDifficulty
+#     type: FuelUseDifficulty
+#     description: "Fuel Usage??"
+#   - prop: LaunchFuelCost
+#     subprop: LaunchFuelCostDifficulty
+#     type: LaunchFuelCostDifficulty
+#   - prop: StartWithAllItemsKnown
+#     type: bool
+#   - prop: TutorialEnabled
+#     type: bool
 - name: Experimental
   id: experimental
   defaultoff: 1

@@ -83,17 +83,38 @@ layout: null
         {% endfor %}
       </div>
 
+      <section class="cust_section cust_presets_section">
+        <h4 class="cust_headline"><span class="cust_headline_text">Presets</span></h4>
+
+        <div class="cms">
+          <div class="cust_desc">
+            <p>Click a button below to load a customization preset. </p>
+          </div>
+        </div>
+
+        <div class="cust_presets cust_content cms">
+          <p>
+            <button type="button" class="cust_tool cust_reset">Reset to Expedition Defaults</button>
+          </p>
+          <p>
+            {% for preset in site.data.presets %}
+              <button type="button" class="cust_tool cust_preset" data-id="{{ preset.id }}">{{ preset.name }}</button>
+            {% endfor %}
+          </p>
+        </div>
+      </section>
+
       <ul>
         {% for csection in site.data.customizations %}
           <li class="cust_section">
             <h4 class="cust_headline">
-              <button type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
+              <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
                 <span id="{{ csection.id }}-text">- {{ csection.name }}</span>
                 <span id="{{ csection.id }}-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
               </button>
             </h4>
             {% if csection.description %}
-              <div class="cms"><p class="cust_desc">{{ csection.description }}</p></div>
+              <div class="cms"><div class="cust_desc">{{ csection.description | markdownify }}</div></div>
             {% endif %}
             <table class="cust_table" id="{{ csection.id }}-table" {% if csection.defaultoff %}data-toggle-default="off"{% endif %}>
               <tr>
@@ -114,7 +135,8 @@ layout: null
                 {% endcapture %}
                 <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
                   <td class="property">
-                    <p class="cust_property" {% if cust.description %}title="{{ cust.description }}"{% endif %}>{{ cust.prop }}</p>
+                    <p class="cust_property" {% if cust.description %}title="{{ cust.description | xml_escape }}"{% endif %}>{% if cust.display %}{{ cust.display }}{% else %}{{ cust.prop }}{% endif %}</p>
+                    {% if cust.description %}<p class="cust_property_desc">{{ cust.description }}</p>{% endif %}
                   </td>
                   <td class="default"></td>
                   <td class="override">
@@ -124,7 +146,14 @@ layout: null
                     ////////////////////////////////
                     {% endcomment %}
 
-                    {% if cust.type == "bool" %}
+                    {% if cust.options %}
+                      <select {{ attrs }}>
+                        <option value="">DEFAULT</option>
+                        {% for opt in cust.options %}
+                          <option value="{{ opt.value }}">{{ opt.text }}</option>
+                        {% endfor %}
+                      </select>
+                    {% elsif cust.type == "bool" %}
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
                         <option value="true">true</option>
@@ -169,79 +198,9 @@ layout: null
                         <option value="Robot">Robot (Doesn't work?)</option>
                       </select>
 
-                    {% comment %}
+                    {% comment %}<!--
                     // Difficulty Minimums //
-                    {% endcomment %}
 
-                    {% elsif cust.type == "ActiveSurvivalBarsDifficulty" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="None">None</option>
-                        <option value="Health">Health</option>
-                        <option value="HealthAndHazard">HealthAndHazard</option>
-                        <option value="All">All</option>
-                      </select>
-                    {% elsif cust.type == "BreakTechOnDamageProbability" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="None">None</option>
-                        <option value="Low">Low</option>
-                        <option value="High">High</option>
-                      </select>
-                    {% elsif cust.type == "ChargingRequirementsDifficulty" %}
-                      {% comment %}
-                        TODO: There are probably more settings here, but I'm not really sure what setting this is in the menu.
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Low">Low</option>
-                        <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "CreatureHostilityDifficulty" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="NeverAttack">NeverAttack</option>
-                        <option value="FullEcosystem">FullEcosystem</option>
-                        <option value="AttackIfProvoked">AttackIfProvoked</option>
-                      </select>
-                    {% elsif cust.type == "CurrencyCostDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Cheap">Cheap</option>
-                        <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "DamageGivenDifficulty" %}
-                      {% comment %}
-                        TODO: Test, and possibly make a generic "low normal high" type
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="High">High</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Low">Low</option>
-                      </select>
-                    {% elsif cust.type == "DamageReceivedDifficulty" %}
-                      {% comment %}
-                        TODO: Test, and possibly make a generic "low normal high" type
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Low">Low</option>
-                        <option value="Normal">Normal</option>
-                        <option value="High">High</option>
-                      </select>
-                    {% elsif cust.type == "DeathConsequencesDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="ItemGrave">ItemGrave</option>
-                        <option value="DestroyItems">DestroyItems</option>
-                      </select>
                     {% elsif cust.type == "EnergyDrainDifficulty" %}
                       {% comment %}
                         TODO: Test and find more values
@@ -257,29 +216,10 @@ layout: null
                       {% endcomment %}
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
+                        <option value="Free">None (Untested)</option>
                         <option value="Cheap">Cheap</option>
                         <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "CombatTimerDifficultyOption" %}
-                      {% comment %}
-                        TODO: Test and find more values?
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Off">Off</option>
-                        <option value="Slow">Slow</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Fast">Fast</option>
-                      </select>
-                    {% elsif cust.type == "HazardDrainDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Slow">Slow</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Fast">Fast</option>
+                        <option value="Expensive">Expensive (Same as Normal)</option>
                       </select>
                     {% elsif cust.type == "InventoryStackLimitsDifficulty" %}
                       {% comment %}
@@ -288,16 +228,6 @@ layout: null
                       <select {{ attrs }}>
                         <option value="">DEFAULT</option>
                         <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "ItemShopAvailabilityDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Low">Low</option>
-                        <option value="Normal">Normal</option>
-                        <option value="High">High</option>
                       </select>
                     {% elsif cust.type == "LaunchFuelCostDifficulty" %}
                       {% comment %}
@@ -309,46 +239,6 @@ layout: null
                         <option value="Normal">Normal</option>
                         <option value="High">High*</option>{% comment %}Guessing here{% endcomment %}
                       </select>
-                    {% elsif cust.type == "ReputationGainDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Fast">Fast</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Slow">Slow*</option>{% comment %}Guessing here{% endcomment %}
-                      </select>
-                    {% elsif cust.type == "ScannerRechargeDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="VeryFast">VeryFast</option>
-                        <option value="Fast">Fast</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Slow">Slow*</option>{% comment %}Guessing here{% endcomment %}
-                      </select>
-                    {% elsif cust.type == "SprintingCostDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Low">Low</option>
-                        <option value="Full">Full</option>
-                      </select>
-                    {% elsif cust.type == "SubstanceCollectionDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="High">High</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Low">Low*</option>{% comment %}Guessing here{% endcomment %}
-                      </select>
                     {% elsif cust.type == "SwitchContextSaveDataMask" %}
                       {% comment %}
                         TODO: Test and find more values
@@ -357,6 +247,8 @@ layout: null
                         <option value="">DEFAULT</option>
                         <option value="^DEFAULT">^DEFAULT</option>
                       </select>
+                    -->{% endcomment %}
+
                     {% else %}
                       <input type="text" {{ attrs }}>*
                     {% endif %}
@@ -374,10 +266,24 @@ layout: null
         {% endfor %}
       </ul>
       
-      <button type="button" class="cust_reset">Reset Customizations to Default</button>
+      <section class="cust_section cust_tools_section">
+        <h4 class="cust_headline"><span class="cust_headline_text">Import/Export</span></h4>
+
+        <div class="cust_tools cust_content cms">
+          <div class="cust_tool_section cust_import_export">
+            <button type="button" class="cust_tool cust_export">Export Customizations</button>
+            <form class="cust_tool cust_import cust_import_form" enctype="multipart/form-data">
+              <label for="upload">
+                Import Customizations
+              </label>
+              <input id="upload" type="file" accept="text/html" name="files">
+            </form>
+          </div>
+        </div>
+      </section>
+
 
       <div class="notes cms">
-        <p>*'s denote I'm guessing that this setting works.</p>
       </div>
     </section>
 
@@ -473,6 +379,10 @@ layout: null
   {% for patch in exp.patches %}
     <script id="{{ exp.id }}_{{ patch.id }}" type="application/json" data-patch-parent="{{ exp.id }}" data-patch-description="{{ patch.description | xml_escape }}">{% include {{ patch.json }} %}</script>
   {% endfor %}
+{% endfor %}
+
+{% for preset in site.data.presets %}
+  <script id="{{ preset.id }}" type="application/json">{% include {{ preset.json }} %}</script>
 {% endfor %}
 
 
