@@ -29,6 +29,12 @@ a {
   }
 }
 
+button:not([disabled]),
+[type="file"],
+label {
+  cursor: pointer; // TODO: Usability?
+}
+
 /* General */
 
 .cms {
@@ -279,6 +285,13 @@ a {
       text-align: center;
       padding: 10px;
       display: block;
+
+      &[type="button"] {
+        transition: all .2s ease-in-out;
+        &:hover {
+          color: lighten(#ff8400, 25);
+        }
+      }
     }
   }
 
