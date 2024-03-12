@@ -1,5 +1,6 @@
 - name: General
   id: general
+  defaultoff: 1
   customizations:
    - prop: AbandonedFreighterHazardProtectionMul
      type: float

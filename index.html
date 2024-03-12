@@ -36,7 +36,7 @@ layout: null
         {% for exp in site.data.expeditions %}
           <li class="exp_item exp_item_{{ exp.id }}">
             <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
-            <label for="{{ exp.id }}_radio" class="exp_label">
+            <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
               <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
               <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
               <p class="exp_desc">
@@ -49,7 +49,7 @@ layout: null
     </section>
 
     <section class="step customize">
-      <h3 class="step_headline">Step 2: Customize</h3>
+      <h3 class="step_headline">Step 2: Customize <small>(Optional)</small></h3>
 
       <div class="cms">
         <p><strong>Note:</strong> You may undo these customizations and replace the JSON file at any time during your expedition.</p>

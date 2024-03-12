@@ -196,6 +196,35 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
 
 let overrides = null;
 
+// Presets //
+
+const presets = {};
+
+// Load preset jsons
+$('.cust_preset').each((index, el) => {
+  const $el = $(el);
+  const id = $el.data('id');
+  const presetData = JSON.parse(document.getElementById(id).textContent);
+
+  presets[id] = presetData;
+});
+
+// Preset button event
+
+$body.on('click', '.cust_preset', function () { // ES5 because of "this"
+  const $el = $(this);
+  const id = $el.data('id');
+  const presetData = presets[id];
+
+  for (const preset in presetData) {
+    const value = presetData[preset];
+    const $input = $('.cust_prop_input[name="' + preset + '"]');
+    $input.val(value);
+  }
+
+  updateProps();
+});
+
 // Data massaging, right now just to calculate UTC
 function filterProp(name, value) {
   if (name === 'EndTimeUTC') {
@@ -220,6 +249,7 @@ function updateProps() {
   overrides = {};
   let hasUpdates = false;
   const counts = {};
+  const currentProps = {};
 
   $props.each((index, el) => {
     const $el = $(el);
@@ -241,6 +271,7 @@ function updateProps() {
 
     $row.addClass('filled');
     localStorage.setItem(storageName, value);
+    currentProps[property] = value;
 
     if (value === 'true') value = true;
     if (value === 'false') value = false;
@@ -277,6 +308,22 @@ function updateProps() {
     $text.text(tpl.replace('%n', count));
   }
 
+  // Mark preset as active if objects match
+  $('.cust_preset').removeClass('selected');
+
+  for (const id in presets) {
+    const preset = presets[id];
+    const diff = getDiff(presets[id], currentProps);
+    delete diff._generatedBy;
+
+    console.log(id, diff);
+
+    if (JSON.stringify(diff) === '{}') {
+      $('.cust_preset[data-id="' + id + '"]').addClass('selected');
+      break;
+    }
+  }
+
   if (!hasUpdates) {
     overrides = null;
   }
@@ -303,22 +350,6 @@ $('.cust_reset').on('click', () => {
     const $el = $(el);
     $el.val('');
   });
-
-  updateProps();
-});
-
-// Presets
-
-$body.on('click', '.cust_preset', function () { // ES5 because of "this"
-  const $el = $(this);
-  const id = $el.data('id');
-  const presets = JSON.parse(document.getElementById(id).textContent);
-
-  for (const preset in presets) {
-    const value = presets[preset];
-    const $input = $('.cust_prop_input[name="' + preset + '"]');
-    $input.val(value);
-  }
 
   updateProps();
 });

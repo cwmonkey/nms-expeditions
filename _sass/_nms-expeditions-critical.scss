@@ -91,6 +91,10 @@ a {
   font-size: 24px;
   padding: 20px 10px;
   text-align: center;
+
+  small {
+    font-size: .5em;
+  }
 }
 
 .steps  {
@@ -312,6 +316,11 @@ a {
     @include ghost-button();
     margin: auto;
     display: inline-block;
+
+    &.selected {
+      border-color: yellow;
+      background: rgba(255,255,0,.25);
+    }
   }
 
   .cust_presets {

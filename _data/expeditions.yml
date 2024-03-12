@@ -16,15 +16,16 @@
   image: e02_beachhead.png
   json: 02_redux_beachhead.json
   redux: 1
+#- id: e03
+#  name: '03: Cartographers'
+#  description: The one where you're stuck on the first planet
+#  image: e03_cartographers.png
+#  json: 03_redux_cartographers.json
+#  redux: 1
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
-  image: e03_cartographers.png
-  json: 03_redux_cartographers.json
-  redux: 1
-- id: e03b
-  name: '03b: Cartographers'
-  description: The one where you're stuck on the first planet and has rewards from 01 and 02
+  note: This has extra rewards from expeditions 01 and 02
   image: e03_cartographers.png
   json: 03b_redux_cartographers.json
   redux: 1
