@@ -196,6 +196,26 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
 
 let overrides = null;
 
+// Data massaging, right now just to calculate UTC
+function filterProp(name, value) {
+  if (name === 'EndTimeUTC') {
+    const matches = value.match(/^\+([0-9]+) ([a-zA-Z]+)$/);
+    const count = parseInt(matches[1]) || 6;
+    const unit = matches[2];
+    let days = 1;
+
+    if (unit === 'Weeks') {
+      days = 7;
+    } else if (unit === 'Months') {
+      days = 30;
+    }
+
+    value = Math.round((Date.now() / 1000)) + (days * count * 24 * 60 * 60);
+  }
+
+  return value;
+}
+
 function updateProps() {
   overrides = {};
   let hasUpdates = false;
@@ -224,8 +244,8 @@ function updateProps() {
 
     if (value === 'true') value = true;
     if (value === 'false') value = false;
-    if (/[0-9]+/.test(value)) value = parseInt(value);
-    if (/[0-9.]+/.test(value)) value = parseFloat(value);
+    if (/^[0-9]+$/.test(value)) value = parseInt(value);
+    if (/^[0-9.]+$/.test(value)) value = parseFloat(value);
 
     hasUpdates = true;
 
@@ -238,9 +258,9 @@ function updateProps() {
 
     if (subproperty) {
       if (typeof obj[property] === 'undefined') obj[property] = {};
-      obj[property][subproperty] = value;
+      obj[property][subproperty] = filterProp(property, value);
     }  else {
-      obj[property] = value;
+      obj[property] = filterProp(property, value);
     }
   });
 

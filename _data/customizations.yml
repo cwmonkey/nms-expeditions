@@ -19,6 +19,20 @@
    - prop: EnergyDrainMultiplier
      type: float
      description: Turn this up for more challenge?
+   - prop: EndTimeUTC
+     type: UTC
+     display: Expedition End Date
+     options:
+      - value: +7 Days
+        text: +7 Days
+      - value: +3 Weeks
+        text: +3 Weeks
+      - value: +6 Weeks
+        text: +6 Weeks
+      - value: +6 Months
+        text: +6 Months
+      - value: +12 Months
+        text: +12 Months
    - prop: FarmPlantsTimerMul
      type: float
      description: Turn this up for more challenge?
