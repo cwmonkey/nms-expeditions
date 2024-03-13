@@ -1287,31 +1287,31 @@
           }
         },
         {
-          "Mission": "^STAR_GREEN",
-          "Title": "^UI_EXPED_STAR_GREEN_NAME",
-          "TitleUpper": "^UI_EXPED_STAR_GREEN_NAME_U",
-          "Description": "^UI_EXPED_STAR_GREEN_DESC",
-          "DescriptionDone": "^UI_EXPED_STAR_GREEN_DESC_D",
+          "Mission": "^GOT_BURIED_PROP",
+          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
+          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
+          "Description": "^UI_EXPED_BURIED_PROP_DESC",
+          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Id": "^",
-          "Amount": 1,
+          "Amount": 6,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.greensystem.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.undergroundtreasure.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.off.dds"
           },
           "Reward": "^RS_S1_S3M7",
           "RewardDescription": "",
