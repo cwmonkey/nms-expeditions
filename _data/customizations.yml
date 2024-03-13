@@ -246,7 +246,7 @@
      type: CombatTimerDifficultyOption
      display: On-Foot Combat
      options:
-      - value: Off
+      - value: None
         text: None
       - value: Slow
         text: Minimal
@@ -259,7 +259,7 @@
      type: CombatTimerDifficultyOption
      display: "Space Combat"
      options:
-      - value: Off
+      - value: None
         text: None
       - value: Slow
         text: Minimal
