@@ -159,7 +159,106 @@
     ]
   },
   "Inventory_TechOnly": {
-    "Slots": [],
+    "Slots": [
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^JET1",
+        "Amount": 1,
+        "MaxAmount": 100,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^PROTECT",
+        "Amount": 80,
+        "MaxAmount": 80,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^ENERGY",
+        "Amount": 100,
+        "MaxAmount": 100,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^UT_JET",
+        "Amount": -1,
+        "MaxAmount": 100,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^UT_HOT",
+        "Amount": -1,
+        "MaxAmount": 100,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^UP_HOT3#35337",
+        "Amount": 80,
+        "MaxAmount": 80,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      },
+      {
+        "Type": {
+          "InventoryType": "Technology"
+        },
+        "Id": "^UP_HAZX#35337",
+        "Amount": -1,
+        "MaxAmount": 100,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      }
+    ],
     "ValidSlotIndices": [],
     "Class": {
       "InventoryClass": "C"
