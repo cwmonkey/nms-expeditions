@@ -13,8 +13,8 @@
   },
   "CreateContextSaveDataMask": "^DEFAULT",
   "SwitchContextSaveDataMask": "^DEFAULT",
-  "SeasonalUAOverride": "00308d00076d2149",
-  "UAOverrideValue": "0x308D00076D2149",
+  "SeasonalUAOverride": "0020d000076d2149",
+  "UAOverrideValue": "0x20D000076D2149",
   "FinalReward": "^RS_S1_COMPLETE",
   "FinalCantRewardMessage": "^INTRCT_NOROOM_L",
   "FinalRewardDescription": "",
@@ -1358,31 +1358,31 @@
           }
         },
         {
-          "Mission": "^GOT_BURIED_PROP",
-          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
-          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
-          "Description": "^UI_EXPED_BURIED_PROP_DESC",
-          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
+          "Mission": "^STAR_GREEN",
+          "Title": "^UI_EXPED_STAR_GREEN_NAME",
+          "TitleUpper": "^UI_EXPED_STAR_GREEN_NAME_U",
+          "Description": "^UI_EXPED_STAR_GREEN_DESC",
+          "DescriptionDone": "^UI_EXPED_STAR_GREEN_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Id": "^",
-          "Amount": 6,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.undergroundtreasure.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.greensystem.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
           },
           "Reward": "^RS_S1_S3M7",
           "RewardDescription": "",
