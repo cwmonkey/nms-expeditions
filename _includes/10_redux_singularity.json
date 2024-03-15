@@ -3328,7 +3328,7 @@
           "IsRendezvous": false,
           "IsStageControl": false,
           "Encryption": {
-            "IsEncrypted": false,
+            "IsEncrypted": true,
             "TitleUpper": "^UI_S10_ENCRYPTED_NAME4_U",
             "Subtitle": "^UI_S10_ENCRYPTED_SUB4",
             "Description": "^UI_S10_ENCRYPTED_DESC",
@@ -3338,8 +3338,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_REMIX_ALL",
-            "DecryptMissionSeed": 0
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
           }
         },
         {
@@ -3378,7 +3378,7 @@
           "IsRendezvous": false,
           "IsStageControl": false,
           "Encryption": {
-            "IsEncrypted": false,
+            "IsEncrypted": true,
             "TitleUpper": "^UI_S10_ENCRYPTED_NAME5_U",
             "Subtitle": "^UI_S10_ENCRYPTED_SUB5",
             "Description": "^UI_S10_ENCRYPTED_DESC",
@@ -3388,8 +3388,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_REMIX_ALL",
-            "DecryptMissionSeed": 0
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
           }
         },
         {
@@ -3428,7 +3428,7 @@
           "IsRendezvous": false,
           "IsStageControl": false,
           "Encryption": {
-            "IsEncrypted": false,
+            "IsEncrypted": true,
             "TitleUpper": "^UI_S10_ENCRYPTED_NAME5_U",
             "Subtitle": "^UI_S10_ENCRYPTED_SUB6",
             "Description": "^UI_S10_ENCRYPTED_DESC",
@@ -3438,8 +3438,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_REMIX_ALL",
-            "DecryptMissionSeed": 0
+            "DecryptMissionId": "^S10_HEAD4",
+            "DecryptMissionSeed": 41
           }
         },
         {
