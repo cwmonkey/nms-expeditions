@@ -248,7 +248,6 @@ label {
       color: #000;
       background: yellow;
       padding: 5px;
-      margin-bottom: 10px;
       line-height: 1.4;
 
       .notice_headline {
@@ -266,6 +265,10 @@ label {
       .patch_check {
         margin-right: 5px;
       }
+    }
+
+    .patch_list {
+      margin-bottom: 10px;
     }
   }
 

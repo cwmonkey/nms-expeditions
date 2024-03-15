@@ -47,6 +47,7 @@
   image: e07_leviathan.png
   json: 07_redux_leviathan.json
   redux: 1
+  notice: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!
 - id: e08
   name: '08: Polestar'
   description: The one about freighters
