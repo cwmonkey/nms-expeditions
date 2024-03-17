@@ -4804,10 +4804,7 @@ exports.uncompress = function (input, output, sIdx, eIdx) {
 			while (i < end) output[j++] = input[i++]
 
 			// End of buffer?
-			if (i === n) {
-				// console.log('j - End of buffer?: ' + j);
-				return j;
-			}
+			if (i === n) return j
 		}
 
 		// Match copy
@@ -4815,11 +4812,7 @@ exports.uncompress = function (input, output, sIdx, eIdx) {
 		var offset = input[i++] | (input[i++] << 8)
 
 		// 0 is an invalid offset value
-		if (offset === 0 || offset > j) {
-			j = -(i-2);
-			// console.log('j - ' + offset + ' - 0 is an invalid offset value: ' + j);
-			return j;
-		}
+		if (offset === 0 || offset > j) return -(i-2)
 
 		// length of match copy
 		var match_length = (token & 0xf)
@@ -4833,10 +4826,8 @@ exports.uncompress = function (input, output, sIdx, eIdx) {
 		var pos = j - offset // position of the match copy in the current output
 		var end = j + match_length + 4 // minmatch = 4
 		while (j < end) output[j++] = output[pos++]
-		// console.log('j - end of loop: ' + j);
 	}
 
-	// console.log('j - end of function: ' + j);
 	return j
 }
 
