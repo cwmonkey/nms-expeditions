@@ -1,0 +1,19 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>No Man's Sky Save Tool</title>
+  <script src="js/libs/node-lz4/lz4.js"></script>
+  <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <input type="file" id="fileInput" accept=".hg">
+  <!-- button id="compressSave">Compress</button -->
+  <button id="decompressSave">Decompress</button>
+
+  <script id="mapping" type="application/json">{% include mapping.json %}</script>
+  <script src="js/hglz4.js"></script>
+</body>
+</html>
