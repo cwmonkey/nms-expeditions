@@ -77,12 +77,10 @@
   description: The one with more of the same
   image: e12_omega.png
   json: 12_omega.json
-  notice: It is not possible to complete the optional milestones in this expedition since they require you to be online UNLESS you choose an option below.
-  nopatch: Do nothing (you won't be able to complete the optional milestones).
+  notice: 'To complete all milestones in this expedition, a patch must be applied:'
+  nopatch: Do not patch (you won't be able to complete the optional milestones)
   patches:
-   - id: autocomplete12optionals
-     json: 12_omega.autocomplete12optionals.patch.json
-     description: Automatically complete the optional milestones when starting the expedition. You need to save and reload your game at least once.
-   - id: encrypt12optionals
-     json: 12_omega.encrypt12optionals.patch.json
-     description: Encrypt the optional milestones so they can be completed once you arrive at the appropriate rendezvous. You need to save and reload your game at least once. Side effect - they will all appear as completed in your log and on the expeditions page.
+   - id: replace_community_research
+     json: 12_omega.replace_community_research.patch.json
+     description: Replace online-only community research milestones with offline-friendly milestones (Recommended)
+     checked: 1

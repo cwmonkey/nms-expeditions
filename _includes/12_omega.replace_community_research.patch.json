@@ -1,0 +1,195 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_PETS",
+          "Title": "^UI_EXPED_GOT_PETS_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_PETS_NAME_U",
+          "Description": "^UI_EXPED_GOT_PETS_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_PETS_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.getpet.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.off.dds"
+          },
+          "RewardSwitchAlt": "[[removed]]",
+          "IsOptional": "[[removed]]",
+          "GreyIfCantStart": "[[removed]]",
+          "BlockRendezvousMilestoneSeed": "[[removed]]",
+          "DontAttemptFallbackTextSubs": "[[removed]]",
+          "Encryption": {
+            "DecryptMissionSeed": "[[removed]]"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_MIN",
+          "Title": "^UI_EXPED_BASIC_SCAN_MIN_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_MIN_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_MIN_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_MIN_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 10,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discovermineral.2.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.discover.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.discover.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.discover.off.dds"
+          },
+          "RewardSwitchAlt": "[[removed]]",
+          "IsOptional": "[[removed]]",
+          "GreyIfCantStart": "[[removed]]",
+          "BlockRendezvousMilestoneSeed": "[[removed]]",
+          "DontAttemptFallbackTextSubs": "[[removed]]",
+          "Encryption": {
+            "DecryptMissionSeed": "[[removed]]"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BUILD_EXOCRAFT",
+          "Title": "^UI_EXPED_BUILD_EXOCRAFT_NAME",
+          "TitleUpper": "^UI_EXPED_BUILD_EXOCRAFT_NAME_U",
+          "Description": "^UI_EXPED_BUILD_EXOCRAFT_DESC",
+          "DescriptionDone": "^UI_EXPED_BUILD_EXOCRAFT_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.mech.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.off.dds"
+          },
+          "RewardSwitchAlt": "[[removed]]",
+          "IsOptional": "[[removed]]",
+          "GreyIfCantStart": "[[removed]]",
+          "BlockRendezvousMilestoneSeed": "[[removed]]",
+          "DontAttemptFallbackTextSubs": "[[removed]]",
+          "Encryption": {
+            "DecryptMissionSeed": "[[removed]]"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^UNWLOOT",
+          "Title": "^UI_EXPED_UNWLOOT_NAME",
+          "TitleUpper": "^UI_EXPED_UNWLOOT_NAME_U",
+          "Description": "^UI_EXPED_UNWLOOT_DESC",
+          "DescriptionDone": "^UI_EXPED_UNWLOOT_DESC_D",
+          "IdToUseInMissionData": "^",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.underwatertreasure.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.off.dds"
+          },
+          "IsOptional": false,
+          "GreyIfCantStart": "[[removed]]",
+          "BlockRendezvousMilestoneSeed": "[[removed]]",
+          "DontAttemptFallbackTextSubs": "[[removed]]"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^RAID_HIVE",
+          "Title": "^UI_EXPED_RAID_HIVE_NAME",
+          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
+          "Description": "^UI_EXPED_RAID_HIVE_DESC",
+          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D",
+          "IdToUseInMissionData": "^",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.counterfire.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+          },
+          "IsOptional": false,
+          "GreyIfCantStart": "[[removed]]",
+          "BlockRendezvousMilestoneSeed": "[[removed]]",
+          "DontAttemptFallbackTextSubs": "[[removed]]"
+        }
+      ]
+    }
+  ]
+}

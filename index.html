@@ -65,17 +65,34 @@ layout: null
               </div>
 
               {% if exp.patches %}
+                {% assign checked=0 %}
                 <ul class="patch_list">
-                  <li><label class="patch_label">
-                    <input type="radio" checked="checked" name="{{ exp.id }}_check" class="patch_check" value="" data-exp-id="{{ exp.id }}">
-                    <span class="patch_description">{{ exp.nopatch }}</span>
-                  </label></li>
-                  {% for patch in exp.patches %}
+                  {% capture patches_items %}
+                    {% for patch in exp.patches %}
+                      {% if patch.checked == 1 %}
+                        {% assign checked=1 %}
+                      {% endif %}
+                      <li><label class="patch_label">
+                        <input type="radio" name="{{ exp.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
+                        <span class="patch_description">{{ patch.description }}</span>
+                      </label></li>
+                    {% endfor %}
+                  {% endcapture %}
+
+                  {% capture nopatch_item %}
                     <li><label class="patch_label">
-                      <input type="radio" name="{{ exp.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}">
-                      <span class="patch_description">{{ patch.description }}</span>
+                      <input type="radio" {% if checked == 0 %}checked="checked"{% endif %} name="{{ exp.id }}_check" class="patch_check" value="" data-exp-id="{{ exp.id }}">
+                      <span class="patch_description">{{ exp.nopatch }}</span>
                     </label></li>
-                  {% endfor %}
+                  {% endcapture %}
+
+                  {% if checked == 0 %}
+                    {{ nopatch_item }}
+                    {{ patches_items }}
+                  {% else %}
+                    {{ patches_items }}
+                    {{ nopatch_item }}
+                  {% endif %}
                 </ul>
               {% endif %}
             </section>
@@ -377,7 +394,7 @@ layout: null
       </ul>
       <h3>12: Omega</h3>
       <ul>
-        <li>All the optional milestones can't be done offline. They are trivial once you get to the planet, so unlocking them for "free" seems fine.</li>
+        <li>The optional research milestones couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
       </ul>
     </div>
   </div></section>
@@ -401,7 +418,7 @@ layout: null
   <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
 
   {% for patch in exp.patches %}
-    <script id="{{ exp.id }}_{{ patch.id }}" type="application/json" data-patch-parent="{{ exp.id }}" data-patch-description="{{ patch.description | xml_escape }}">{% include {{ patch.json }} %}</script>
+    <script id="{{ exp.id }}_{{ patch.id }}" type="application/json" data-patch-parent="{{ exp.id }}" {% if patch.checked %}data-patch-checked="1"{% endif %} data-patch-description="{{ patch.description | xml_escape }}">{% include {{ patch.json }} %}</script>
   {% endfor %}
 {% endfor %}
 
