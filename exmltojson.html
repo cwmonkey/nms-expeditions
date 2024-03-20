@@ -1,0 +1,22 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>No Man's Sky EXML to JSON Tool</title>
+  <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <p>
+    <strong>Warning:</strong> This uses a series of regular expressions to convert No Man's Sky EXML to JSON, it is very fragile.
+  </p>
+
+  <input type="file" id="fileInput" accept=".exml">
+  <button id="convert">Convert EXML to JSON</button>
+  <button id="downloadJson">Download Validated Json</button>
+  <button id="downloadBrokenJson">Download Unvalidated Json</button>
+
+  <script src="js/exmltojson.js"></script>
+</body>
+</html>
