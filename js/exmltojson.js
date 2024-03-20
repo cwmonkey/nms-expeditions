@@ -121,6 +121,8 @@ async function convertExmlToJson() {
   window.jsonText = jsonText;
 
   enableButton($convert);
+  enableButton($downloadBrokenJson);
+  enableButton($downloadJson);
 }
 
 // Download parsed/validated json
@@ -160,5 +162,8 @@ function downloadBrokenJson() {
 const $convert = $('#convert').on('click', convertExmlToJson);
 const $downloadJson = $('#downloadJson').on('click', downloadJson);
 const $downloadBrokenJson = $('#downloadBrokenJson').on('click', downloadBrokenJson);
+
+disableButton($downloadBrokenJson);
+disableButton($downloadJson);
 
 })();
