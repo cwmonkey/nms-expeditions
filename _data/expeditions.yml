@@ -60,6 +60,7 @@
   image: e09_utopia.png
   json: 09_redux_utopia.json
   redux: 1
+  notice: This expedition does not let you go back to the Anomaly after it is completed. Once finished, you must delete the SEASON_DATA_CACHE.JSON file, replace it with another expedition, or go online and restart your game. This will put you on board the Anomaly in your original save, but you will not get a chance to send items back. You will still be able to copy your ship/multitool as normal.
 - id: e010
   name: '10: Singularity'
   description: The one about Harmonic entities
