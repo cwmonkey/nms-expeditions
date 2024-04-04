@@ -47,7 +47,14 @@
   image: e07_leviathan.png
   json: 07_redux_leviathan.json
   redux: 1
-  notice: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!
+  # notice: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!
+  notice: The NMS Orbitals update seems to have broken this expedition. Specifically the "ResetSaveOnDeath" mechanic seems to break your save file. The patch below will remove the "reset save on death" mechanic. If your save is broken, you will need to use a save editor to fix it. Renaming the "ExpeditionContext" key (or deleting the object if you know what you're doing) in the JSON should work. Make a backup of your save first just in case.
+  nopatch: Do not patch (your save will become unuseable if you die)
+  patches:
+   - id: no_reset_on_death
+     json: 07_redux_leviathan.no_reset_on_death.patch.json
+     description: Remove the "reset save on death" mechanic so my save file does not break when I die (Recommended)
+     checked: 1
 - id: e08
   name: '08: Polestar'
   description: The one about freighters
