@@ -51,6 +51,7 @@
    - prop: ResetSaveOnDeath
      type: bool
      description: I believe this resets your expedition milestones, equipment and items when you die, like the Leviathan expedition.
+     warning: The Orbitals update seems to have broken this mechanic. I would not recommend setting this to "TRUE"
    - prop: ShipStartsDamaged
      type: bool
      warning: If you set this to true and start on a freighter, you will be stuck
