@@ -1,0 +1,48 @@
+{
+  "FinalReward": "^RS_S1_COMPLETE",
+  "FinalCantRewardMessage": "^SHIP_EXIT",
+  "Stages": [
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S4_PHASE4"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S5_PHASE4"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S1_PHASE4"
+        }
+      ]
+    }
+  ]
+}

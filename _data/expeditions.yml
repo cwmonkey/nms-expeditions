@@ -16,13 +16,12 @@
   image: e03_cartographers.png
   json: 03_redux_cartographers.json
   redux: 1
-#- id: e03
-#  name: '03: Cartographers'
-#  description: The one where you're stuck on the first planet
-#  note: This has extra rewards from expeditions 01 and 02
-#  image: e03_cartographers.png
-#  json: 03b_redux_cartographers.json
-#  redux: 1
+  notice: The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. You may choose to get the season 3 rewards or the season 3 redux rewards below.
+  nopatch: Get the old season 3 rewards.
+  patches:
+   - id: season_3_other_rewards
+     json: 03_redux_cartographers.other_rewards.json
+     description: Get rewards from season 1, 4 and 5 instead (Golden Vector, Feasting Casque Helmet, Exotic Wingpack, Streamlined Jetpack).
 - id: e04
   name: '04: Emergence'
   description: The one with the sand worms
