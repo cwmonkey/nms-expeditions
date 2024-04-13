@@ -251,8 +251,7 @@ label {
       line-height: 1.4;
 
       .notice_headline {
-        font-weight: bold;
-        margin-right: 6px;
+        @include visually-hidden();
       }
     }
 
