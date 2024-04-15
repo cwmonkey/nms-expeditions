@@ -30,7 +30,7 @@ layout: null
       <strong>Note:</strong> It looks like NMS updates can break older expeditions, which can in turn break your save files. I'll do my best to address these issues as I find them/as thy are reported.
     </p>
     <p>
-      <strong>Note 2:</strong> The reward descriptions for all expedition missions are currently blank. I believe this is due to a recent NMS update that will be fixed at some point. You will still get your rewards, you just can't see what they are beforehand.
+      <strong>Note 2:</strong> The reward descriptions for all expedition milestones are currently blank for some expeditions (Utopia confirmed). I believe this is due to a recent NMS update that will be fixed at some point. You will still get your rewards, you just can't see what they are beforehand.
     </p>
   </div></section>
 
@@ -67,7 +67,7 @@ layout: null
             <section class="notice" id="notice_{{ exp.id }}">
               <div class="notice_header">
                 <h4 class="notice_headline">Notice</h4>
-                <p class="notice_description">{{ exp.notice }}</p>
+                <div class="notice_description cms">{{ exp.notice | markdownify }}</div>
               </div>
 
               {% if exp.patches %}
@@ -366,7 +366,7 @@ layout: null
     <div class="cms">
       <h2>Notes</h2>
       <ul>
-        <li>The reward descriptions for all expedition missions are currently blank. I believe this is due to a recent NMS patch. You will still get your rewards, you just can't see what they are beforehand.</li>
+        <li>The reward descriptions for all expedition milestones are currently blank for some expeditions (Utopia confirmed). I believe this is due to a recent NMS patch. You will still get your rewards, you just can't see what they are beforehand.</li>
         <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
         <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
         <li>If you start your game in online mode after starting an offline expedition, your game will likely crash when you load it. Just close the game and go offline and everything should be fine.</li>
@@ -394,6 +394,7 @@ layout: null
       <h3>09: Utopia (Redux)</h3>
       <ul>
         <li>This expedition does not let you go back to the Anomaly after it is completed. Once finished, you must delete the SEASON_DATA_CACHE.JSON file, replace it with another expedition, or go online and restart your game. This will put you on board the Anomaly in your original save, but you will not get a chance to send items back. You will still be able to copy your ship/multitool as normal.</li>
+        <li>Reward descriptions do not show up, but you will still get the rewards.</li>
         <li>Required "upload your base" milestones have been replaced with other milestones since they cannot be completed offline.</li>
       </ul>
       <h3>10: Singularity</h3>
