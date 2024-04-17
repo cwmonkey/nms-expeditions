@@ -10,6 +10,7 @@
   image: e02_beachhead.png
   json: 02_redux_beachhead.json
   redux: 1
+  notice: Reward descriptions do not show up, but you will still get the rewards.
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
