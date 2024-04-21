@@ -41,6 +41,15 @@ label {
   line-height: 1.4;
 
   @include cms-normalize();
+
+  code {
+    font-size: .9em;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    padding: 1px 2px;
+    background: rgba(0, 0, 0, .8);
+    color: #e4e4e4;
+  }
 }
 
 .content {
