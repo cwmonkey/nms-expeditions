@@ -71,34 +71,16 @@ layout: null
               </div>
 
               {% if exp.patches %}
-                {% assign checked=0 %}
                 <ul class="patch_list">
-                  {% capture patches_items %}
-                    {% for patch in exp.patches %}
-                      {% if patch.checked == 1 %}
-                        {% assign checked=1 %}
-                      {% endif %}
-                      <li><label class="patch_label">
-                        <input type="radio" name="{{ exp.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
-                        <span class="patch_description">{{ patch.description }}</span>
-                      </label></li>
-                    {% endfor %}
-                  {% endcapture %}
-
-                  {% capture nopatch_item %}
+                  {% for patch in exp.patches %}
+                    {% if patch.checked == 1 %}
+                      {% assign checked=1 %}
+                    {% endif %}
                     <li><label class="patch_label">
-                      <input type="radio" {% if checked == 0 %}checked="checked"{% endif %} name="{{ exp.id }}_check" class="patch_check" value="" data-exp-id="{{ exp.id }}">
-                      <span class="patch_description">{{ exp.nopatch }}</span>
+                      <input type="checkbox" name="{{ exp.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
+                      <span class="patch_description">{{ patch.description }}</span>
                     </label></li>
-                  {% endcapture %}
-
-                  {% if checked == 0 %}
-                    {{ nopatch_item }}
-                    {{ patches_items }}
-                  {% else %}
-                    {{ patches_items }}
-                    {{ nopatch_item }}
-                  {% endif %}
+                  {% endfor %}
                 </ul>
               {% endif %}
             </section>
