@@ -17,7 +17,6 @@
   json: 03_redux_cartographers.json
   redux: 1
   notice: The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. You may choose to get the season 3 rewards or the season 3 redux rewards below.
-  nopatch: Get the old season 3 rewards.
   patches:
    - id: season_3_other_rewards
      json: 03_redux_cartographers.other_rewards.json
@@ -48,7 +47,6 @@
   redux: 1
   # notice: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!
   notice: The NMS Orbitals update seems to have broken this expedition. Specifically the "ResetSaveOnDeath" mechanic seems to break your save file. The patch below will remove the "reset save on death" mechanic. If your save is broken, you will need to use a save editor to fix it. Renaming the "ExpeditionContext" key (or deleting the object if you know what you're doing) in the JSON should work. Make a backup of your save first just in case.
-  nopatch: Do not patch (your save will become unuseable if you die)
   patches:
    - id: no_reset_on_death
      json: 07_redux_leviathan.no_reset_on_death.patch.json
@@ -66,12 +64,12 @@
   image: e09_utopia.png
   json: 09_redux_utopia.json
   redux: 1
-  notice: >
-          When starting this expedition from the Anomaly, you cannot go back to the Anomaly after it is completed. Once finished, you have can:
-            * **End the expedition**. This will put you on board the Anomaly in your original save. You will not be able to transfer items to your main save, but you can still copy your ship/multitool. To end the expedition, do one of the folowing:
-              * Delete the SEASON_DATA_CACHE.JSON file/replace it with another expedition
-              * Go online and restart your game
-            * *or* **Use a save editor** (like NomNom or NMSSaveEditor) and look for `"HasAccessToNexus"` and change it from `false` to `true`
+  notice: 'When starting this expedition from an existing save the Nexus anomaly will not show up after the expedition is completed. Use the patch below to fix this issue:'
+  patches:
+   - id: add_nexus_reward
+     json: 09_redux_utopia.add_nexus_reward.patch.json
+     description: Change the final milestone's reward to unlock the Nexus anomaly (recommended if you are staring this expedition from an existing save)
+     checked: 1
 - id: e010
   name: '10: Singularity'
   description: The one about Harmonic entities
@@ -90,7 +88,6 @@
   image: e12_omega.png
   json: 12_omega.json
   notice: 'To complete all milestones in this expedition, a patch must be applied:'
-  nopatch: Do not patch (you won't be able to complete the optional milestones)
   patches:
    - id: replace_community_research
      json: 12_omega.replace_community_research.patch.json
