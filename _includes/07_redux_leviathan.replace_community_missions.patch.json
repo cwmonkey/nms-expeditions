@@ -1,0 +1,94 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 40
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^SPOOKY_EGG",
+          "Title": "^UI_EXPED_WORM19_NAME",
+          "TitleUpper": "^UI_EXPED_WORM19_NAME_U",
+          "Description": "^UI_EXPED_WORM19_DESC",
+          "DescriptionDone": "^UI_EXPED_WORM19_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 3
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_BURIED_PROP",
+          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
+          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
+          "Description": "^UI_EXPED_BURIED_PROP_DESC",
+          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^RAID_HIVE",
+          "Title": "^UI_EXPED_RAID_HIVE_NAME",
+          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
+          "Description": "^UI_EXPED_RAID_HIVE_DESC",
+          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^FLEETMISS",
+          "Title": "^UI_EXPED_FLEETMISS_NAME_S8",
+          "TitleUpper": "^UI_EXPED_FLEETMISS_NAME_U_S8",
+          "Description": "^UI_EXPED_FLEETMISS_DESC",
+          "DescriptionDone": "^UI_EXPED_FLEETMISS_DESC_D",
+          "Amount": 1
+        }
+      ]
+    }
+  ]
+}
