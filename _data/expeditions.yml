@@ -102,3 +102,8 @@
      json: 12_omega.replace_community_research.patch.json
      description: Replace online-only community research milestones with offline-friendly milestones (Recommended)
      checked: 1
+- id: e013
+  name: '13: Adrift'
+  description: The one with no NPC's
+  image: e13_adrift.png
+  json: 13_adrift.json
