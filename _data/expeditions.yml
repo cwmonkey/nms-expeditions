@@ -102,6 +102,10 @@
      json: 12_omega.replace_community_research.patch.json
      description: Replace online-only community research milestones with offline-friendly milestones (Recommended)
      checked: 1
+   - id: replace_p3m6_reward_and_p4m6
+     json: 12_omega.replace_p3m6_reward_and_p4m6.patch.json
+     description: Replace the Phase 3 Milestone 6 reward (it is currently broken/empty), and replace Phase 4 Milestone 6 with a different milestone since we need the P3M6 reward to finish it (Recommended)
+     checked: 1
 - id: e013
   name: '13: Adrift'
   description: The one with no NPC's
