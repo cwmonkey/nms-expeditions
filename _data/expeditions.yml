@@ -103,3 +103,4 @@
   description: The one with no NPC's
   image: e13_adrift.png
   json: 13_adrift.json
+  notice: The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. **Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,** you just can't claim it on the expedition. To end the expedition you must replace the `SEASON_DATA_CACHE.JSON` with one from a different season, or restart the game in online mode.
