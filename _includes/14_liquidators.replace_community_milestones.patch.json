@@ -1,0 +1,161 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 40,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
+          },
+          "IsOptional": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^RAID_HIVE",
+          "Title": "^UI_EXPED_RAID_HIVE_NAME",
+          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
+          "Description": "^UI_EXPED_RAID_HIVE_DESC",
+          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.counterfire.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+          },
+          "IsOptional": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_PETS",
+          "Title": "^UI_EXPED_GOT_PETS_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_PETS_NAME_U",
+          "Description": "^UI_EXPED_GOT_PETS_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_PETS_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturetrust.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.off.dds"
+          },
+          "IsOptional": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^SENTINEL_SHIP",
+          "Title": "^UI_EXPED_SENTINEL_SHIP_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_SHIP_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_SHIP_DESC",
+          "DescriptionDone": "^UI_EXPED_SENTINEL_SHIP_DESC_D",
+          "Amount": 2.5,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINELSHIP.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.OFF.DDS"
+          },
+          "IsOptional": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^EXO_DISTANCE",
+          "Title": "^UI_EXPED_EXO_DISTANCE_NAME",
+          "TitleUpper": "^UI_EXPED_EXO_DISTANCE_NAME_U",
+          "Description": "^UI_EXPED_EXO_DISTANCE_DESC",
+          "DescriptionDone": "^UI_EXPED_EXO_DISTANCE_DESC_D",
+          "Amount": 4500,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.exocraft.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.off.dds"
+          },
+          "IsOptional": false
+        }
+      ]
+    }
+  ]
+}
