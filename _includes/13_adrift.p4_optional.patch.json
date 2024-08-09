@@ -1,0 +1,22 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "IsOptional": true
+        }
+      ]
+    }
+  ]
+}
