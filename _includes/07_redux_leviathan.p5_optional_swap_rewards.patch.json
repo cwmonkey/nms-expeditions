@@ -1,0 +1,24 @@
+{
+  "FinalReward": "^RS_S7_PHASE5",
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S7_COMPLETE",
+          "IsOptional": true
+        }
+      ]
+    }
+  ]
+}
