@@ -1,0 +1,18 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 40
+        }
+      ]
+    }
+  ]
+}
