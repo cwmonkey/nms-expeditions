@@ -76,6 +76,13 @@
   image: e08_polestar.png
   json: 08_redux_polestar.json
   redux: 1
+  notice: >
+          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. Using the patch below will force a civilian freighter.
+  patches:
+   - id: polestar.fix_freighter_race
+     json: 08_redux_polestar.fix_freighter_race.patch.json
+     description: Force civilian freighter to avoid pirate freighter issues (Recommended)
+     checked: 1
 - id: e09
   name: '09: Utopia'
   description: The one where you rebuild one solar system
