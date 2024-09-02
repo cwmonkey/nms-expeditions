@@ -44,11 +44,13 @@
   json: 06_redux_the_blighted.json
   redux: 1
   notice: >
-          * Freighter rescues do not seem to trigger in this expedition, so Phase 1, Milestone 3 has been swapped out for a generic milestone.
+          * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
+
+          * If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.
   patches:
    - id: the_blighted.replace_freighter_rescue
      json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
-     description: Replace P1M3 ("Liberation" freighter rescue mission) with destroy asteroids mission (Recommended)
+     description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
      checked: 1
 - id: e07
   name: '07: Leviathan'

@@ -1,16 +1,25 @@
 {
+  "StartWithFreighter": true,
+  "FreighterRace": {
+    "AlienRace": "Trader"
+  },
   "Stages": [
     {
       "Milestones": [
         null,
         null,
         {
-          "Mission": "^GET_ASTEROIDS",
-          "Title": "^UI_EXPED_ASTEROIDS_NAME",
-          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
-          "Description": "^UI_EXPED_ASTEROIDS_DESC",
-          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
-          "Amount": 40
+          "Mission": "^GOT_BURIED_PROP",
+          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
+          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
+          "Description": "^UI_EXPED_BURIED_PROP_DESC",
+          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
+          "CantRewardMessage": "^INTRCT_NOROOM_L",
+          "Amount": 1,
+          "Reward": "^R_PIRATE_MAP0",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.undergroundtreasure.dds"
+          }
         }
       ]
     }
