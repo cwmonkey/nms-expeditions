@@ -146,3 +146,8 @@
      json: 14_liquidators.replace_community_milestones.patch.json
      description: Replace online-only community milestones with offline-friendly milestones (Recommended)
      checked: 1
+- id: e015
+  name: '15: Aquarius'
+  description: The one where you fish a lot
+  image: e15_aquarius.png
+  json: 15_aquarius.json
