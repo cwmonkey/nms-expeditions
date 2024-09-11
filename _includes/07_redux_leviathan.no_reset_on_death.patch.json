@@ -1,3 +1,11 @@
 {
-  "ResetSaveOnDeath": false
+  "ResetSaveOnDeath": false,
+  "DifficultySettingPreset": {
+    "DifficultyPresetType": "Normal"
+  },
+  "DifficultyMinimums": {
+    "DeathConsequences": {
+      "DeathConsequencesDifficulty": "ItemGrave"
+    }
+  }
 }

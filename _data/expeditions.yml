@@ -63,6 +63,8 @@
           * The community milestones cannot be completed offline. Use the patch below to replace them with other milestones.
 
           * Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional."
+
+          * This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.
   patches:
    - id: leviathan_replace_community_missions
      json: 07_redux_leviathan.replace_community_missions.patch.json
@@ -71,6 +73,10 @@
    - id: leviathan_p5_optional_swap_rewards
      json: 07_redux_leviathan.p5_optional_swap_rewards.patch.json
      description: Swap the overall expedition reward with the Phase 5 reward, and make Phase 5 optional to avoid being stuck in the expedition once it is completed. You cannot claim the Organic Frigate (it will still be unlocked in the QuickSilver vendor account-wide), but you can end the expedition at the Anomaly expedition terminal (Recommended)
+     checked: 1
+   - id: leviathan_no_reset_on_death
+     json: 07_redux_leviathan.no_reset_on_death.patch.json
+     description: Disable "reset save on death" mechanic and reduce difficulty settings (Recommended)
      checked: 1
 - id: e08
   name: '08: Polestar'
