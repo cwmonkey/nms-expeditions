@@ -85,7 +85,7 @@
   json: 08_redux_polestar.json
   redux: 1
   notice: >
-          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. Using the patch below will force a civilian freighter.
+          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. Using the patch below will force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
   patches:
    - id: polestar.fix_freighter_race
      json: 08_redux_polestar.fix_freighter_race.patch.json
