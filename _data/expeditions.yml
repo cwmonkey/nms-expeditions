@@ -62,7 +62,7 @@
   notice: >
           * The community milestones cannot be completed offline. Use the patch below to replace them with other milestones.
 
-          * Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional."
+          * Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.
 
           * This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.
   patches:
