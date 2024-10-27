@@ -14,6 +14,25 @@
           * **Phase 3, Milestone 2 "The Murkey Veil"** - You must land on a swamp planet BEFORE you scan it with your freighter's Scanner Room.
 
           * **Phase 5, Milestone 3 "Collective Consciousness"** - To get the QuickSilver necessary to purchase the Myth Beacon, continue to scan more monoliths for Polo.
+
+          * Due to a world generation update, the starter planet is now in a red star system, which means you cannot summon your freighter. This has been addressed in a patch below.
+
+          * When starting the expedition, there is a "inventory full" error that keeps happening. It also causes you to not receive starting materials. This has been addressed in a patch below.
+
+          * **Phase 5, Milestone 4 "Echo Through The Ages"** - It is no longer possible to complete this milestone in a reasonable amount of time. The required planet seems to be on the other side of the galaxy. This and milestone 5 "Historical Paragon" have unfortunately been replaced with generic milestones in a patch below.
+  patches:
+   - id: beachhead.fix_starting_planet
+     json: 02_redux_beachhead.fix_starting_planet.patch.json
+     description: Change starting planet to one with a yellow star (Recommended)
+     checked: 1
+   - id: beachhead.fix_inventory
+     json: 02_redux_beachhead.fix_inventory.patch.json
+     description: Add more tech inventory slots (Recommended)
+     checked: 1
+   - id: beachhead.replace_myth_becon_milestones
+     json: 02_redux_beachhead.replace_myth_becon_milestones.patch.json
+     description: Replace phase 5, milestones 4 and 5 with generic milestones (Recommended)
+     checked: 1
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
