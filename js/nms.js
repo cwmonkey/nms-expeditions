@@ -34,10 +34,19 @@ function fix(target, fixer) {
 }
 
 function recursiveFix(target, fixer) {
-  for (var prop in fixer) {
+  let keys = Object.keys(fixer);
+
+  // loop backwards in case we have an array to avoid issues when deleting items
+  for (let i = keys.length - 1; i >= 0; i--) {
+    let prop = keys[i];
+
     if (fixer[prop] === '[[removed]]') {
-      // remove property
-      delete target[prop];
+      if (isArray(fixer)) {
+        target.splice(prop, 1);
+      } else {
+        // remove property
+        delete target[prop];
+      }
     } else if (fixer[prop] === null) {
       // skip
     } else if (typeof target[prop] === 'undefined') {
