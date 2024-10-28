@@ -325,8 +325,6 @@ function updateProps() {
     const diff = getDiff(presets[id], currentProps);
     delete diff._generatedBy;
 
-    console.log(id, diff);
-
     if (JSON.stringify(diff) === '{}') {
       $('.cust_preset[data-id="' + id + '"]').addClass('selected');
       break;
