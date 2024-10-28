@@ -67,19 +67,42 @@ label {
   display: block;
 }
 
-/* Header */
+/* Top */
+
 .header {
-  padding: 10px;
+  grid-area: header;
 }
 
+.select_exp {
+  grid-area: step1;
+  overflow-y: auto;
+}
+
+.customize {
+  grid-area: step2;
+  overflow-y: auto;
+}
+
+.download_section {
+  grid-area: step3;
+  overflow-y: auto;
+}
+
+.top {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "step1 step2 step3";
+  grid-template-columns: 350px auto auto;
+}
+
+/* Header */
 .headline1 {
+  padding: 10px;
   margin: 0;
   font-size: 20px;
-}
-
-/* Main */
-
-.main {
 }
 
 /* Intro */
@@ -100,6 +123,11 @@ label {
   }
 }
 
+/* Main */
+
+.main {
+}
+
 /* Steps */
 
 .step_headline {
@@ -112,15 +140,9 @@ label {
   }
 }
 
-.steps  {
-  display: flex;
-  border-bottom: 2px solid #ff8400;
-}
-
 .step {
-  // min-width: 33.333%;
-  flex-grow: 1;
   padding: 0 10px 20px 10px;
+  border-bottom: 2px solid #ff8400;
 }
 
 /* Step 1: Select Expedition */
@@ -537,7 +559,7 @@ label {
   }
 
   .debug {
-    margin-top: 200px;
+    margin-top: 150px;
     opacity: .25;
 
     .toggle_debug {

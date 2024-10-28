@@ -16,398 +16,397 @@ layout: null
 </head>
 <body data-touched="false">
 
-<header class="header">
-  <h1 class="headline1">{{ site.title }}</h1>
-</header>
+<div class="top">
+  <header class="header">
+    <h1 class="headline1">{{ site.title }}</h1>
 
-<main class="main">
-  <section class="intro"><div class="content cms">
-    <h2 class="visibly-hidden">Introduction</h2>
-    <p>
-      You can use this app to customize and generate SEASON_DATA_CACHE.JSON to play No Man's Sky expeditions <strong>offline</strong> (while that's still a thing). The concept and JSON files are from Leodium. You can <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline" target="_blank">view more information on Leodium's github</a>.
-    </p>
-    <p>
-      <strong>Note:</strong> NMS updates can break older expeditions, which can in turn break your save files. I'll do my best to address these issues as I find them/<a href="https://github.com/cwmonkey/nms-expeditions/issues" target="_blank">as they are reported</a>.
-    </p>
-  </div></section>
+    <section class="intro"><div class="content cms">
+      <h2 class="visibly-hidden">Introduction</h2>
+      <p>
+        You can use this app to customize and generate SEASON_DATA_CACHE.JSON to play No Man's Sky expeditions <strong>offline</strong> (while that's still a thing). The concept and JSON files are from Leodium. You can <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline" target="_blank">view more information on Leodium's github</a>.
+      </p>
+      <p>
+        <strong>Note:</strong> NMS updates can break older expeditions, which can in turn break your save files. I'll do my best to address these issues as I find them/<a href="https://github.com/cwmonkey/nms-expeditions/issues" target="_blank">as they are reported</a>.
+      </p>
+    </div></section>
+  </header>
 
-  <div class="steps">
-    <section class="step select_exp">
-      <h3 class="step_headline">Step 1: Select Expedition</h3>
+  <section class="step select_exp">
+    <h3 class="step_headline">Step 1: Select Expedition</h3>
 
-      <ol>
-        {% for exp in site.data.expeditions %}
-          <li class="exp_item exp_item_{{ exp.id }}">
-            <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
-            <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
-              <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
-              <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
-              <p class="exp_desc">
-                {{ exp.description }}
-              </p>
-            </label>
-          </li>
-        {% endfor %}
-      </ol>
-    </section>
+    <ol>
+      {% for exp in site.data.expeditions %}
+        <li class="exp_item exp_item_{{ exp.id }}">
+          <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
+          <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
+            <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
+            <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
+            <p class="exp_desc">
+              {{ exp.description }}
+            </p>
+          </label>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
 
-    <section class="step customize">
-      <h3 class="step_headline">Step 2: Customize <small>(Optional)</small></h3>
+  <section class="step customize">
+    <h3 class="step_headline">Step 2: Customize <small>(Optional)</small></h3>
 
-      <div class="cms">
-        <p><strong>Note:</strong> You may undo these customizations and replace the JSON file at any time during your expedition.</p>
-      </div>
-
-      <div class="notices">
-        {% for exp in site.data.expeditions %}
-          {% if exp.notice %}
-            <section class="notice" id="notice_{{ exp.id }}">
-              <div class="notice_header">
-                <h4 class="notice_headline">Notice</h4>
-                <div class="notice_description cms">{{ exp.notice | markdownify }}</div>
-              </div>
-
-              {% if exp.patches %}
-                <ul class="patch_list">
-                  {% for patch in exp.patches %}
-                    {% if patch.checked == 1 %}
-                      {% assign checked=1 %}
-                    {% endif %}
-                    <li><label class="patch_label">
-                      <input type="checkbox" name="{{ exp.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
-                      <span class="patch_description">{{ patch.description }}</span>
-                    </label></li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </section>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <section class="cust_section cust_presets_section">
-        <h4 class="cust_headline"><span class="cust_headline_text">Presets</span></h4>
-
-        <div class="cms">
-          <div class="cust_desc">
-            <p>Click a button below to load a customization preset. </p>
-          </div>
-        </div>
-
-        <div class="cust_presets cust_content cms">
-          <p>
-            <button type="button" class="cust_tool cust_reset">Reset to Expedition Defaults</button>
-          </p>
-          <p>
-            {% for preset in site.data.presets %}
-              <button type="button" class="cust_tool cust_preset" data-id="{{ preset.id }}">{{ preset.name }}</button>
-            {% endfor %}
-          </p>
-        </div>
-      </section>
-
-      <ul>
-        {% for csection in site.data.customizations %}
-          <li class="cust_section">
-            <h4 class="cust_headline">
-              <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
-                <span id="{{ csection.id }}-text">- {{ csection.name }}</span>
-                <span id="{{ csection.id }}-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
-              </button>
-            </h4>
-            {% if csection.description %}
-              <div class="cms"><div class="cust_desc">{{ csection.description | markdownify }}</div></div>
-            {% endif %}
-            <table class="cust_table" id="{{ csection.id }}-table" {% if csection.defaultoff %}data-toggle-default="off"{% endif %}>
-              <tr>
-                <th>Property</th>
-                <th>Default</th>
-                <th>Override</th>
-              </tr>
-              {% for cust in csection.customizations %}
-                {% capture attrs %}
-                  class="cust_prop_input"
-                  name="{{ cust.prop }}"
-                  data-type="{{ cust.type }}"
-                  data-subprop="{{ cust.subprop }}"
-                  data-parentprop="{{ csection.prop }}"
-                  title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}"
-                  placeholder="DEFAULT"
-                  data-section-id="{{ csection.id }}"
-                {% endcapture %}
-                <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
-                  <td class="property">
-                    <p class="cust_property" {% if cust.description %}title="{{ cust.description | xml_escape }}"{% endif %}>{% if cust.display %}{{ cust.display }}{% else %}{{ cust.prop }}{% endif %}</p>
-                    {% if cust.description %}<p class="cust_property_desc">{{ cust.description }}</p>{% endif %}
-                  </td>
-                  <td class="default"></td>
-                  <td class="override">
-                    {% comment %}
-                    ////////////////////////////////
-                    // GENERIC
-                    ////////////////////////////////
-                    {% endcomment %}
-
-                    {% if cust.options %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        {% for opt in cust.options %}
-                          <option value="{{ opt.value }}">{{ opt.text }}</option>
-                        {% endfor %}
-                      </select>
-                    {% elsif cust.type == "bool" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="true">true</option>
-                        <option value="false">false</option>
-                      </select>
-                    {% elsif cust.type == "int" %}
-                      <input type="number" {{ attrs }}>
-                    {% elsif cust.type == "float" %}
-                      <input step=".01" type="number" {{ attrs }}>
-
-                    {% comment %}
-                    ////////////////////////////////
-                    // SPECIFIC
-                    ////////////////////////////////
-                    {% endcomment %}
-
-                    {% comment %}
-                    // General //
-                    {% endcomment %}
-
-                    {% elsif cust.type == "DifficultyPresetType" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Creative">Creative</option>
-                        <option value="Relaxed">Relaxed</option>
-                        <option value="Survival">Survival</option>
-                        <option value="Permadeath">Permadeath{% if cust.prop == "GameMode" %} (Main save deleted on death!){% endif %}</option>
-                      </select>
-                    {% elsif cust.type == "ShipClass" %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        {% comment %}<option value="Freighter">Freighter</option>{% endcomment %}
-                        <option value="Dropship">Dropship</option>
-                        <option value="Fighter">Fighter</option>
-                        <option value="Scientific">Scientific</option>
-                        <option value="Shuttle">Shuttle</option>
-                        {% comment %}<option value="PlayerFreighter">PlayerFreighter</option>{% endcomment %}
-                        <option value="Royal">Royal</option>
-                        <option value="Alien">Alien (Has incorrect tech)</option>
-                        <option value="Sail">Sail</option>
-                        <option value="Robot">Robot (Doesn't work?)</option>
-                      </select>
-
-                    {% comment %}<!--
-                    // Difficulty Minimums //
-
-                    {% elsif cust.type == "EnergyDrainDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Slow">Slow</option>
-                        <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "FuelUseDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Free">None (Untested)</option>
-                        <option value="Cheap">Cheap</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Expensive">Expensive (Same as Normal)</option>
-                      </select>
-                    {% elsif cust.type == "InventoryStackLimitsDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Normal">Normal</option>
-                      </select>
-                    {% elsif cust.type == "LaunchFuelCostDifficulty" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="Low">Low</option>
-                        <option value="Normal">Normal</option>
-                        <option value="High">High*</option>{% comment %}Guessing here{% endcomment %}
-                      </select>
-                    {% elsif cust.type == "SwitchContextSaveDataMask" %}
-                      {% comment %}
-                        TODO: Test and find more values
-                      {% endcomment %}
-                      <select {{ attrs }}>
-                        <option value="">DEFAULT</option>
-                        <option value="^DEFAULT">^DEFAULT</option>
-                      </select>
-                    -->{% endcomment %}
-
-                    {% else %}
-                      <input type="text" {{ attrs }}>*
-                    {% endif %}
-                  </td>
-                </tr>
-                {% if cust.description == 0 %}
-                  <tr class="cust_row_desc"><td colspan="3"><p class="cust_desc">{{ cust.description }}</p></td></tr>
-                {% endif %}
-                {% if cust.warning %}
-                  <tr class="cust_row_warning"><td colspan="3"><p class="cust_warning"><strong>Warning:</strong> {{ cust.warning }}</p></td></tr>
-                {% endif %}
-              {% endfor %}
-            </table>
-          </li>
-        {% endfor %}
-      </ul>
-      
-      <section class="cust_section cust_tools_section">
-        <h4 class="cust_headline"><span class="cust_headline_text">Import/Export</span></h4>
-
-        <div class="cust_tools cust_content cms">
-          <div class="cust_tool_section cust_import_export">
-            <button type="button" class="cust_tool cust_export">Export Customizations</button>
-            <form class="cust_tool cust_import cust_import_form" enctype="multipart/form-data">
-              <label for="upload">
-                Import Customizations
-              </label>
-              <input id="upload" type="file" accept="text/html" name="files">
-            </form>
-          </div>
-        </div>
-      </section>
-
-
-      <div class="notes cms">
-      </div>
-    </section>
-
-    <section class="step download_section">
-      <h3 class="step_headline">Step 3: Download</h3>
-
-      <div class="cms">
-        <p>Save to the appropriate directory:</p>
-
-        <dl>
-          <dt>Steam PC:</dt>
-          <dd>%APPDATA%\HelloGames\NMS\{steam id}\cache</dd>
-
-          <dt>Steam Mac:</dt>
-          <dd>~/Library/Application Support/HelloGames/NMS/cache</dd>
-
-          <dt>MS Store/GOG:</dt>
-          <dd>%APPDATA%\HelloGames\NMS\cache</dd>
-
-          <dt>SteamDeck:</dt>
-          <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/cache</dd>
-        </dl>
-
-        <p>Note: These directories may be somewhat different on your machine.</p>
-
-        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to block NMS via a firewall) when you play NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end when you load the save. If you go online while in an expedition, the expedition will abruptly end.</p>
-      </div>
-
-      <div class="download_container">
-        <button type="button" class="download" disabled>DOWNLOAD</button>
-      </div>
-
-      <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
-        <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-target="#debug_container">Hide Debug</button>
-        <section class="debug_panel">
-          <h4>Debug Info/Tools</h4>
-          
-          <section>
-            <h5>Expedition Overrides/Patches</h5>
-            <div class="debug_output"></div>
-          </section>
-
-          <div class="debug_tools">
-            <section class="create_patch">
-              <h5>Expedition Patch Creator</h5>
-              <textarea id="before" placeholder="Original JSON"></textarea>
-              <textarea id="after" placeholder="JSON After Edits"></textarea>
-              <br>
-              <button type="button" id="make_patch">MAKE PATCH</button>
-              <br>
-              <textarea id="patch"></textarea>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <section class="notes_section"><div class="content">
     <div class="cms">
-      <h2>Notes</h2>
-      <ul>
-        <li>At the start of any expedition the reward descriptions are blank. Simply save your game and reload it to make the descriptions show up.</li>
-        <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
-        <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
-        <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
-      </ul>
-      <h3>01: Pioneers (Redux)</h3>
-      <ul>
-        <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-      </ul>
-      <h3>02: Beachhead (Redux)</h3>
-      <ul>
-        <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-      </ul>
-      <h3>04: Emergence (Redux)</h3>
-      <ul>
-        <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-      </ul>
-      <h3>06: The Blighted (Redux)</h3>
-      <ul>
-        <li>Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter.</li>
-        <li>This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.</li>
-        <li>If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.</li>
-      </ul>
-      <h3>07: Leviathan (Redux)</h3>
-      <ul>
-        <li>Warning: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!</li>
-        <li>Community missions replaced so they can be completed offline.</li>
-        <li>Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.</li>
-        <li>This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.</li>
-      </ul>
-      <h3>08: Polestar (Redux)</h3>
-      <ul>
-        <li>The optional milestone to board another player's freighter has been replaced with a nautical themed milestone to go along with crafting a Nautilus</li>
-        <li>In a certain scenario you could start with a pirate freighter, which would cause issues trying to read the ship's log. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.</li>
-      </ul>
-      <h3>09: Utopia (Redux)</h3>
-      <ul>
-        <li>When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been added to change the final milestone reward to unlock The Anomaly.</li>
-        <li>Required "upload your base" milestones have been replaced with other milestones since they cannot be completed offline.</li>
-      </ul>
-      <h3>10: Singularity</h3>
-      <ul>
-        <li>Both optional milestones and one required milestone can't be done offline, so they will auto complete once you do the second milestone in phase 5 and save/reload once.</li>
-      </ul>
-      <h3>12: Omega</h3>
-      <ul>
-        <li>The optional research milestones couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
-        <li>The Phase 3 Milestone 6 reward broke (it became blank), so it needed to be replaced with something similar. Unfortunately that meant Phase 4 Milestone 6 could not be completed, so that milestone was replaced with a different milestone to allow progression through the expedition.</li>
-      </ul>
-      <h3>13: Adrift</h3>
-      <ul>
-        <li>The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. <strong>Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,</strong> you just can't claim it on the expedition. To end the expedition you must replace the <code>SEASON_DATA_CACHE.JSON</code> with one from a different season, or restart the game in online mode.</li>
-      </ul>
-      <h3>14: Liquidators</h3>
-      <ul>
-        <li>The optional bug/sentinel killing milestons couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
-      </ul>
+      <p><strong>Note:</strong> You may undo these customizations and replace the JSON file at any time during your expedition.</p>
     </div>
-  </div></section>
-</main>
 
+    <div class="notices">
+      {% for exp in site.data.expeditions %}
+        {% if exp.notice %}
+          <section class="notice" id="notice_{{ exp.id }}">
+            <div class="notice_header">
+              <h4 class="notice_headline">Notice</h4>
+              <div class="notice_description cms">{{ exp.notice | markdownify }}</div>
+            </div>
+
+            {% if exp.patches %}
+              <ul class="patch_list">
+                {% for patch in exp.patches %}
+                  {% if patch.checked == 1 %}
+                    {% assign checked=1 %}
+                  {% endif %}
+                  <li><label class="patch_label">
+                    <input type="checkbox" name="{{ exp.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
+                    <span class="patch_description">{{ patch.description }}</span>
+                  </label></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <section class="cust_section cust_presets_section">
+      <h4 class="cust_headline"><span class="cust_headline_text">Presets</span></h4>
+
+      <div class="cms">
+        <div class="cust_desc">
+          <p>Click a button below to load a customization preset. </p>
+        </div>
+      </div>
+
+      <div class="cust_presets cust_content cms">
+        <p>
+          <button type="button" class="cust_tool cust_reset">Reset to Expedition Defaults</button>
+        </p>
+        <p>
+          {% for preset in site.data.presets %}
+            <button type="button" class="cust_tool cust_preset" data-id="{{ preset.id }}">{{ preset.name }}</button>
+          {% endfor %}
+        </p>
+      </div>
+    </section>
+
+    <ul>
+      {% for csection in site.data.customizations %}
+        <li class="cust_section">
+          <h4 class="cust_headline">
+            <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
+              <span id="{{ csection.id }}-text">- {{ csection.name }}</span>
+              <span id="{{ csection.id }}-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
+            </button>
+          </h4>
+          {% if csection.description %}
+            <div class="cms"><div class="cust_desc">{{ csection.description | markdownify }}</div></div>
+          {% endif %}
+          <table class="cust_table" id="{{ csection.id }}-table" {% if csection.defaultoff %}data-toggle-default="off"{% endif %}>
+            <tr>
+              <th>Property</th>
+              <th>Default</th>
+              <th>Override</th>
+            </tr>
+            {% for cust in csection.customizations %}
+              {% capture attrs %}
+                class="cust_prop_input"
+                name="{{ cust.prop }}"
+                data-type="{{ cust.type }}"
+                data-subprop="{{ cust.subprop }}"
+                data-parentprop="{{ csection.prop }}"
+                title="{% if csection.prop %}{{ csection.prop }}.{% endif %}{{ cust.prop }}{% if cust.subprop %}.{{ cust.subprop }}{% endif %}"
+                placeholder="DEFAULT"
+                data-section-id="{{ csection.id }}"
+              {% endcapture %}
+              <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
+                <td class="property">
+                  <p class="cust_property" {% if cust.description %}title="{{ cust.description | xml_escape }}"{% endif %}>{% if cust.display %}{{ cust.display }}{% else %}{{ cust.prop }}{% endif %}</p>
+                  {% if cust.description %}<p class="cust_property_desc">{{ cust.description }}</p>{% endif %}
+                </td>
+                <td class="default"></td>
+                <td class="override">
+                  {% comment %}
+                  ////////////////////////////////
+                  // GENERIC
+                  ////////////////////////////////
+                  {% endcomment %}
+
+                  {% if cust.options %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      {% for opt in cust.options %}
+                        <option value="{{ opt.value }}">{{ opt.text }}</option>
+                      {% endfor %}
+                    </select>
+                  {% elsif cust.type == "bool" %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="true">true</option>
+                      <option value="false">false</option>
+                    </select>
+                  {% elsif cust.type == "int" %}
+                    <input type="number" {{ attrs }}>
+                  {% elsif cust.type == "float" %}
+                    <input step=".01" type="number" {{ attrs }}>
+
+                  {% comment %}
+                  ////////////////////////////////
+                  // SPECIFIC
+                  ////////////////////////////////
+                  {% endcomment %}
+
+                  {% comment %}
+                  // General //
+                  {% endcomment %}
+
+                  {% elsif cust.type == "DifficultyPresetType" %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Creative">Creative</option>
+                      <option value="Relaxed">Relaxed</option>
+                      <option value="Survival">Survival</option>
+                      <option value="Permadeath">Permadeath{% if cust.prop == "GameMode" %} (Main save deleted on death!){% endif %}</option>
+                    </select>
+                  {% elsif cust.type == "ShipClass" %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      {% comment %}<option value="Freighter">Freighter</option>{% endcomment %}
+                      <option value="Dropship">Dropship</option>
+                      <option value="Fighter">Fighter</option>
+                      <option value="Scientific">Scientific</option>
+                      <option value="Shuttle">Shuttle</option>
+                      {% comment %}<option value="PlayerFreighter">PlayerFreighter</option>{% endcomment %}
+                      <option value="Royal">Royal</option>
+                      <option value="Alien">Alien (Has incorrect tech)</option>
+                      <option value="Sail">Sail</option>
+                      <option value="Robot">Robot (Doesn't work?)</option>
+                    </select>
+
+                  {% comment %}<!--
+                  // Difficulty Minimums //
+
+                  {% elsif cust.type == "EnergyDrainDifficulty" %}
+                    {% comment %}
+                      TODO: Test and find more values
+                    {% endcomment %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="Slow">Slow</option>
+                      <option value="Normal">Normal</option>
+                    </select>
+                  {% elsif cust.type == "FuelUseDifficulty" %}
+                    {% comment %}
+                      TODO: Test and find more values
+                    {% endcomment %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="Free">None (Untested)</option>
+                      <option value="Cheap">Cheap</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Expensive">Expensive (Same as Normal)</option>
+                    </select>
+                  {% elsif cust.type == "InventoryStackLimitsDifficulty" %}
+                    {% comment %}
+                      TODO: Test and find more values
+                    {% endcomment %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="Normal">Normal</option>
+                    </select>
+                  {% elsif cust.type == "LaunchFuelCostDifficulty" %}
+                    {% comment %}
+                      TODO: Test and find more values
+                    {% endcomment %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="Low">Low</option>
+                      <option value="Normal">Normal</option>
+                      <option value="High">High*</option>{% comment %}Guessing here{% endcomment %}
+                    </select>
+                  {% elsif cust.type == "SwitchContextSaveDataMask" %}
+                    {% comment %}
+                      TODO: Test and find more values
+                    {% endcomment %}
+                    <select {{ attrs }}>
+                      <option value="">DEFAULT</option>
+                      <option value="^DEFAULT">^DEFAULT</option>
+                    </select>
+                  -->{% endcomment %}
+
+                  {% else %}
+                    <input type="text" {{ attrs }}>*
+                  {% endif %}
+                </td>
+              </tr>
+              {% if cust.description == 0 %}
+                <tr class="cust_row_desc"><td colspan="3"><p class="cust_desc">{{ cust.description }}</p></td></tr>
+              {% endif %}
+              {% if cust.warning %}
+                <tr class="cust_row_warning"><td colspan="3"><p class="cust_warning"><strong>Warning:</strong> {{ cust.warning }}</p></td></tr>
+              {% endif %}
+            {% endfor %}
+          </table>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <section class="cust_section cust_tools_section">
+      <h4 class="cust_headline"><span class="cust_headline_text">Import/Export</span></h4>
+
+      <div class="cust_tools cust_content cms">
+        <div class="cust_tool_section cust_import_export">
+          <button type="button" class="cust_tool cust_export">Export Customizations</button>
+          <form class="cust_tool cust_import cust_import_form" enctype="multipart/form-data">
+            <label for="upload">
+              Import Customizations
+            </label>
+            <input id="upload" type="file" accept="text/html" name="files">
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="notes cms">
+    </div>
+  </section>
+
+  <section class="step download_section">
+    <h3 class="step_headline">Step 3: Download</h3>
+
+    <div class="cms">
+      <p>Save to the appropriate directory:</p>
+
+      <dl>
+        <dt>Steam PC:</dt>
+        <dd>%APPDATA%\HelloGames\NMS\{steam id}\cache</dd>
+
+        <dt>Steam Mac:</dt>
+        <dd>~/Library/Application Support/HelloGames/NMS/cache</dd>
+
+        <dt>MS Store/GOG:</dt>
+        <dd>%APPDATA%\HelloGames\NMS\cache</dd>
+
+        <dt>SteamDeck:</dt>
+        <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/cache</dd>
+      </dl>
+
+      <p>Note: These directories may be somewhat different on your machine.</p>
+
+      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to block NMS via a firewall) when you play NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end when you load the save. If you go online while in an expedition, the expedition will abruptly end.</p>
+    </div>
+
+    <div class="download_container">
+      <button type="button" class="download" disabled>DOWNLOAD</button>
+    </div>
+
+    <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
+      <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-target="#debug_container">Hide Debug</button>
+      <section class="debug_panel">
+        <h4>Debug Info/Tools</h4>
+        
+        <section>
+          <h5>Expedition Overrides/Patches</h5>
+          <div class="debug_output"></div>
+        </section>
+
+        <div class="debug_tools">
+          <section class="create_patch">
+            <h5>Expedition Patch Creator</h5>
+            <textarea id="before" placeholder="Original JSON"></textarea>
+            <textarea id="after" placeholder="JSON After Edits"></textarea>
+            <br>
+            <button type="button" id="make_patch">MAKE PATCH</button>
+            <br>
+            <textarea id="patch"></textarea>
+          </section>
+        </div>
+      </section>
+    </div>
+  </section>
+
+</div>
+
+<section class="notes_section"><div class="content">
+  <div class="cms">
+    <h2>Notes</h2>
+    <ul>
+      <li>At the start of any expedition the reward descriptions are blank. Simply save your game and reload it to make the descriptions show up.</li>
+      <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
+      <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
+      <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
+    </ul>
+    <h3>01: Pioneers (Redux)</h3>
+    <ul>
+      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
+    </ul>
+    <h3>02: Beachhead (Redux)</h3>
+    <ul>
+      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
+    </ul>
+    <h3>04: Emergence (Redux)</h3>
+    <ul>
+      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
+    </ul>
+    <h3>06: The Blighted (Redux)</h3>
+    <ul>
+      <li>Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter.</li>
+      <li>This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.</li>
+      <li>If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.</li>
+    </ul>
+    <h3>07: Leviathan (Redux)</h3>
+    <ul>
+      <li>Warning: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!</li>
+      <li>Community missions replaced so they can be completed offline.</li>
+      <li>Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.</li>
+      <li>This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.</li>
+    </ul>
+    <h3>08: Polestar (Redux)</h3>
+    <ul>
+      <li>The optional milestone to board another player's freighter has been replaced with a nautical themed milestone to go along with crafting a Nautilus</li>
+      <li>In a certain scenario you could start with a pirate freighter, which would cause issues trying to read the ship's log. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.</li>
+    </ul>
+    <h3>09: Utopia (Redux)</h3>
+    <ul>
+      <li>When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been added to change the final milestone reward to unlock The Anomaly.</li>
+      <li>Required "upload your base" milestones have been replaced with other milestones since they cannot be completed offline.</li>
+    </ul>
+    <h3>10: Singularity</h3>
+    <ul>
+      <li>Both optional milestones and one required milestone can't be done offline, so they will auto complete once you do the second milestone in phase 5 and save/reload once.</li>
+    </ul>
+    <h3>12: Omega</h3>
+    <ul>
+      <li>The optional research milestones couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
+      <li>The Phase 3 Milestone 6 reward broke (it became blank), so it needed to be replaced with something similar. Unfortunately that meant Phase 4 Milestone 6 could not be completed, so that milestone was replaced with a different milestone to allow progression through the expedition.</li>
+    </ul>
+    <h3>13: Adrift</h3>
+    <ul>
+      <li>The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. <strong>Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,</strong> you just can't claim it on the expedition. To end the expedition you must replace the <code>SEASON_DATA_CACHE.JSON</code> with one from a different season, or restart the game in online mode.</li>
+    </ul>
+    <h3>14: Liquidators</h3>
+    <ul>
+      <li>The optional bug/sentinel killing milestons couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
+    </ul>
+  </div>
+</div></section>
 <footer class="footer">
   <div class="cms">
     <p>
