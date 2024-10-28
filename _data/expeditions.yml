@@ -166,7 +166,7 @@
   description: The one where you kill bugs
   image: e14_liquidators.png
   json: 14_liquidators.json
-  notice: Community missions have not been replaced and cannot be completed while offline.
+  notice: Community milestones cannot be completed while offline. A patch below replaces them with offline milestones.
   patches:
    - id: liquidators_replace_community_milestones
      json: 14_liquidators.replace_community_milestones.patch.json
