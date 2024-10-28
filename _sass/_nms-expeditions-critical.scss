@@ -27,6 +27,10 @@ a {
   &:active {
     color: red;
   }
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 button:not([disabled]),
@@ -41,6 +45,10 @@ label {
   line-height: 1.4;
 
   @include cms-normalize();
+
+  a:hover {
+    text-decoration: none;
+  }
 
   code {
     font-size: .9em;
