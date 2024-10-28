@@ -75,37 +75,6 @@ label {
   display: block;
 }
 
-/* Top */
-
-.header {
-  grid-area: header;
-}
-
-.select_exp {
-  grid-area: step1;
-  overflow-y: auto;
-}
-
-.customize {
-  grid-area: step2;
-  overflow-y: auto;
-}
-
-.download_section {
-  grid-area: step3;
-  overflow-y: auto;
-}
-
-.top {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header header"
-    "step1 step2 step3";
-  grid-template-columns: 350px auto auto;
-}
-
 /* Header */
 .headline1 {
   padding: 10px;
@@ -164,6 +133,8 @@ label {
 .exp_item {
   position: relative;
   overflow: hidden;
+  width: 330px;
+  margin: auto;
 
   .exp_radio {
     position: absolute;
@@ -635,45 +606,59 @@ label {
 
 /* Responsive */
 
-@media screen and (max-width: 1100px) {
-  .steps {
+.header {
+  grid-area: header;
+}
+
+.select_exp {
+  grid-area: step1;
+}
+
+.customize {
+  grid-area: step2;
+}
+
+.download_section {
+  grid-area: step3;
+}
+
+@media screen and (width >= 1310px) {
+  .select_exp,
+  .customize,
+  .download_section {
+    overflow-y: auto;
+  }
+
+  .top {
+    height: 100vh;
     display: grid;
-    grid-template-columns: 350px auto;
     grid-template-rows: auto;
     grid-template-areas: 
-      "select_exp customize"
-      "download_section download_section";
-  }
-
-  .select_exp {
-    grid-area: select_exp;
-  }
-
-  .customize {
-    grid-area: customize;
-
-    .property {
-      word-break: break-all;
-    }
-  }
-
-  .download_section {
-    grid-area: download_section;
+      "header header header"
+      "step1 step2 step3";
+    grid-template-columns: auto auto auto;
   }
 }
 
-@media screen and (max-width: 700px) {
-  .steps {
-    display: block;
+@media screen and (width < 1310px) and (width >= 650px) {
+  .top {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header"
+      "step1 step2"
+      "step3 step3";
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .select_exp {
-    width: auto;
+  .customize {
+    > .inner {
+      position: sticky;
+      top: 10px;
+    }
 
-    .image[class][class] {
-      width: 70px;
-      left: 5px;
-      top: 5px;
+    .property {
+      word-break: break-all;
     }
   }
 }
