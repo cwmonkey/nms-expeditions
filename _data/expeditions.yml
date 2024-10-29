@@ -177,3 +177,8 @@
   description: The one where you fish a lot
   image: e15_aquarius.png
   json: 15_aquarius.json
+- id: e016
+  name: '16: The Cursed'
+  description: The one with the ghosts
+  image: e16_the_cursed.png
+  json: 16_the_cursed.json
