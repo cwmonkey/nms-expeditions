@@ -10,36 +10,14 @@
   image: e02_beachhead.png
   json: 02_redux_beachhead.json
   redux: 1
-  notice: >
-          * **Phase 3, Milestone 2 "The Murkey Veil"** - You must land on a swamp planet BEFORE you scan it with your freighter's Scanner Room.
-
-          * **Phase 5, Milestone 3 "Collective Consciousness"** - To get the QuickSilver necessary to purchase the Myth Beacon, continue to scan more monoliths for Polo.
-
-          * Due to a world generation update, the starter planet is now in a red star system, which means you cannot summon your freighter. This has been addressed in a patch below.
-
-          * When starting the expedition, there is a "inventory full" error that keeps happening. It also causes you to not receive starting materials. This has been addressed in a patch below.
-
-          * **Phase 5, Milestone 4 "Echo Through The Ages"** - It is no longer possible to complete this milestone in a reasonable amount of time. The required planet seems to be on the other side of the galaxy. This and milestone 5 "Historical Paragon" have unfortunately been replaced with generic milestones in a patch below.
-  patches:
-   - id: beachhead.fix_starting_planet
-     json: 02_redux_beachhead.fix_starting_planet.patch.json
-     description: Change starting planet to one with a yellow star (Recommended)
-     checked: 1
-   - id: beachhead.fix_inventory
-     json: 02_redux_beachhead.fix_inventory.patch.json
-     description: Add more tech inventory slots (Recommended)
-     checked: 1
-   - id: beachhead.replace_myth_becon_milestones
-     json: 02_redux_beachhead.replace_myth_becon_milestones.patch.json
-     description: Replace phase 5, milestones 4 and 5 with generic milestones (Recommended)
-     checked: 1
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
   image: e03_cartographers.png
   json: 03_redux_cartographers.json
   redux: 1
-  notice: The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. You may choose to get the season 3 rewards or the season 3 redux rewards below.
+  notice: >
+          * The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created so you can choose which rewards you get.
   patches:
    - id: season_3_other_rewards
      json: 03_redux_cartographers.other_rewards.json
@@ -77,9 +55,8 @@
   image: e07_leviathan.png
   json: 07_redux_leviathan.json
   redux: 1
-  # notice: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!
   notice: >
-          * The community milestones cannot be completed offline. Use the patch below to replace them with other milestones.
+          * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones.
 
           * Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.
 
@@ -104,7 +81,7 @@
   json: 08_redux_polestar.json
   redux: 1
   notice: >
-          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. Using the patch below will force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
+          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
   patches:
    - id: polestar.fix_freighter_race
      json: 08_redux_polestar.fix_freighter_race.patch.json
@@ -116,7 +93,8 @@
   image: e09_utopia.png
   json: 09_redux_utopia.json
   redux: 1
-  notice: 'When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. Use the patch below to fix this issue:'
+  notice: >
+          * 'When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue:'
   patches:
    - id: add_nexus_reward
      json: 09_redux_utopia.add_nexus_reward.patch.json
@@ -134,13 +112,15 @@
   image: e11_voyagers.png
   json: 11_redux_voyagers.json
   redux: 1
-  notice: Many planets have changed, so most guides are no longer going to have correct information. <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/39" target="_blank">bedev0001's post</a> has some portal glyphs for various types of fauna.
+  notice: >
+          * Many planets have changed, so most guides are no longer going to have correct information. <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/39" target="_blank">bedev0001's post</a> has some portal glyphs for various types of fauna.
 - id: e012
   name: '12: Omega'
   description: The one with more of the same
   image: e12_omega.png
   json: 12_omega.json
-  notice: 'To complete all milestones in this expedition, a patch must be applied:'
+  notice: >
+          * 'To complete all milestones in this expedition, a patch must be applied:'
   patches:
    - id: replace_community_research
      json: 12_omega.replace_community_research.patch.json
@@ -155,7 +135,8 @@
   description: The one with no NPC's
   image: e13_adrift.png
   json: 13_adrift.json
-  notice: "The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. **Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,** you just can't claim it on the expedition."
+  notice: >
+          * "The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. **Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,** you just can't claim it on the expedition."
   patches:
    - id: adrift_p4_optional.patch
      json: 13_adrift.p4_optional.patch.json
@@ -166,7 +147,8 @@
   description: The one where you kill bugs
   image: e14_liquidators.png
   json: 14_liquidators.json
-  notice: Community milestones cannot be completed while offline. A patch below replaces them with offline milestones.
+  notice: >
+          * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
   patches:
    - id: liquidators_replace_community_milestones
      json: 14_liquidators.replace_community_milestones.patch.json
@@ -179,6 +161,6 @@
   json: 15_aquarius.json
 - id: e016
   name: '16: The Cursed'
-  description: The one with the ghosts
+  description: The one with the spoooky ghosts
   image: e16_the_cursed.png
   json: 16_the_cursed.json

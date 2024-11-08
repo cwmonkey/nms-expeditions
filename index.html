@@ -347,64 +347,22 @@ layout: null
 <section class="notes_section"><div class="content">
   <div class="cms">
     <h2>Notes</h2>
+
+    <h3>General</h3>
+
     <ul>
       <li>At the start of any expedition the reward descriptions are blank. Simply save your game and reload it to make the descriptions show up.</li>
       <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
       <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
       <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
     </ul>
-    <h3>01: Pioneers (Redux)</h3>
-    <ul>
-      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-    </ul>
-    <h3>02: Beachhead (Redux)</h3>
-    <ul>
-      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-    </ul>
-    <h3>04: Emergence (Redux)</h3>
-    <ul>
-      <li>Couldn't move all the suit/ship modules to the tech slots, so you will need to move them manually.</li>
-    </ul>
-    <h3>06: The Blighted (Redux)</h3>
-    <ul>
-      <li>Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter.</li>
-      <li>This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.</li>
-      <li>If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.</li>
-    </ul>
-    <h3>07: Leviathan (Redux)</h3>
-    <ul>
-      <li>Warning: This expedition has a milestone to die. If you do the milestone on Permadeath, your expedition and main save will be deleted!</li>
-      <li>Community missions replaced so they can be completed offline.</li>
-      <li>Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.</li>
-      <li>This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.</li>
-    </ul>
-    <h3>08: Polestar (Redux)</h3>
-    <ul>
-      <li>The optional milestone to board another player's freighter has been replaced with a nautical themed milestone to go along with crafting a Nautilus</li>
-      <li>In a certain scenario you could start with a pirate freighter, which would cause issues trying to read the ship's log. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.</li>
-    </ul>
-    <h3>09: Utopia (Redux)</h3>
-    <ul>
-      <li>When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been added to change the final milestone reward to unlock The Anomaly.</li>
-      <li>Required "upload your base" milestones have been replaced with other milestones since they cannot be completed offline.</li>
-    </ul>
-    <h3>10: Singularity</h3>
-    <ul>
-      <li>Both optional milestones and one required milestone can't be done offline, so they will auto complete once you do the second milestone in phase 5 and save/reload once.</li>
-    </ul>
-    <h3>12: Omega</h3>
-    <ul>
-      <li>The optional research milestones couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
-      <li>The Phase 3 Milestone 6 reward broke (it became blank), so it needed to be replaced with something similar. Unfortunately that meant Phase 4 Milestone 6 could not be completed, so that milestone was replaced with a different milestone to allow progression through the expedition.</li>
-    </ul>
-    <h3>13: Adrift</h3>
-    <ul>
-      <li>The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. <strong>Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,</strong> you just can't claim it on the expedition. To end the expedition you must replace the <code>SEASON_DATA_CACHE.JSON</code> with one from a different season, or restart the game in online mode.</li>
-    </ul>
-    <h3>14: Liquidators</h3>
-    <ul>
-      <li>The optional bug/sentinel killing milestons couldn't be done offline, so a patch was created to replace them with other milestones from previous expeditions.</li>
-    </ul>
+
+    {% for exp in site.data.expeditions %}
+      {% if exp.notice %}
+        <h3>{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h3>
+        {{ exp.notice | markdownify }}
+      {% endif %}
+    {% endfor %}
   </div>
 </div></section>
 <footer class="footer">
