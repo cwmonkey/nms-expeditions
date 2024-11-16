@@ -56,9 +56,9 @@
   json: 07_redux_leviathan.json
   redux: 1
   notice: >
-          * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones.
+          * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
 
-          * Claiming frigate rewards currently crashes the game. To get around this a patch has been created to swap some rewards around and make Phase 5 "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly.
+          * Claiming frigate rewards currently crashes the game. A patch has been created to swap some rewards around and make the frigate reward milestone "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly. **To end the expedition and transfer items to your primary save:** go to the Anomaly, open the expedition terminal, click "End Expedition"
 
           * This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.
   patches:
@@ -68,7 +68,7 @@
      checked: 1
    - id: leviathan_p5_optional_swap_rewards
      json: 07_redux_leviathan.p5_optional_swap_rewards.patch.json
-     description: Swap the overall expedition reward with the Phase 5 reward, and make Phase 5 optional to avoid being stuck in the expedition once it is completed. You cannot claim the Organic Frigate (it will still be unlocked in the QuickSilver vendor account-wide), but you can end the expedition at the Anomaly expedition terminal (Recommended)
+     description: Rearrange rewards and make frigate milestone optional (Recommended)
      checked: 1
    - id: leviathan_no_reset_on_death
      json: 07_redux_leviathan.no_reset_on_death.patch.json

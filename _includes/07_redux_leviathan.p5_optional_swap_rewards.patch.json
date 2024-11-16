@@ -12,11 +12,13 @@
         null,
         null,
         null,
-        null,
-        null,
         {
           "Reward": "^RS_S7_COMPLETE",
           "IsOptional": true
+        },
+        null,
+        {
+          "Reward": "^RS_S7_S5M5"
         }
       ]
     }
