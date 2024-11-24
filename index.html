@@ -69,9 +69,6 @@ layout: null
             {% if exp.patches %}
               <ul class="patch_list">
                 {% for patch in exp.patches %}
-                  {% if patch.checked == 1 %}
-                    {% assign checked=1 %}
-                  {% endif %}
                   <li><label class="patch_label">
                     <input type="checkbox" name="{{ exp.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
                     <span class="patch_description">{{ patch.description }}</span>

@@ -468,7 +468,7 @@ $body.on('change', '.patch_check', function() { // es5 because "this"
 });
 
 // load patch selections
-$('.patch_check').each((index, el) => {
+/*$('.patch_check').each((index, el) => {
   const $el = $(el);
   const name = $el.attr('name');
   const value = $el.val();
@@ -477,7 +477,7 @@ $('.patch_check').each((index, el) => {
   if (sValue === value) {
     $el.prop('checked', true);
   }
-});
+});*/
 
 ///////////////////////////////
 // Download
