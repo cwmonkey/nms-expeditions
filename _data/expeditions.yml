@@ -56,13 +56,13 @@
   json: 07_redux_leviathan.json
   redux: 1
   notice: >
-          * **Do not play this on permadeath.** It used to be possible to finish this expedition on permadeath, but a recent change has made that impossible.
+          * **Permadeath warning:** It may not be possible to finish this expedition in permadeath mode. If you can avoid death until the final milestone, your save may or may not be deleted by "submitting."
 
           * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
 
           * Claiming frigate rewards currently crashes the game. A patch has been created to swap some rewards around and make the frigate reward milestone "optional." You cannot claim the frigate from the milestone, but after completing the expedition you can claim it from the QuickSilver vendor on the Anomaly. **To end the expedition and transfer items to your primary save:** go to the Anomaly, open the expedition terminal, click "End Expedition"
 
-          * This expedition breaks a lot, in particular the "reset save on death" mechanic. It is currently broken, so it has been disabled by default. Additionally, the difficulty settings were reduced to avoid getting stuck in a death loop.
+          * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
   patches:
    - id: leviathan_replace_community_missions
      json: 07_redux_leviathan.replace_community_missions.patch.json
@@ -74,8 +74,8 @@
      checked: 1
    - id: leviathan_no_reset_on_death
      json: 07_redux_leviathan.no_reset_on_death.patch.json
-     description: Disable "reset save on death" mechanic and reduce difficulty settings (Recommended)
-     checked: 1
+     description: Disable "reset save on death" mechanic and reduce difficulty settings
+     checked: 0
 - id: e08
   name: '08: Polestar'
   description: The one about freighters
