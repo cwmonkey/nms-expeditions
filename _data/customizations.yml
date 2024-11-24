@@ -9,6 +9,9 @@
      type: bool
    - prop: BlockStormsAtStart
      type: bool
+   - prop: CarnageMode
+     type: bool
+     description: Makes Biological Horrors pop up at every location you go to
    - prop: DefaultToPvPOff
      type: bool
    - prop: DifficultySettingPreset
@@ -50,8 +53,8 @@
      type: bool
    - prop: ResetSaveOnDeath
      type: bool
-     description: I believe this resets your expedition milestones, equipment and items when you die, like the Leviathan expedition.
-     warning: The Orbitals update seems to have broken this mechanic. I would not recommend setting this to "TRUE"
+     description: Resets your expedition milestones, equipment and items when you die, like the Leviathan expedition.
+     warning: This mechanic breaks from time to time and can lock your save file. To fix this you can use a save editor to edit the raw JSON of your save file and change `ActiveContext` from `Season` to `Main`.
    - prop: ShipStartsDamaged
      type: bool
      warning: If you set this to true and start on a freighter, you will be stuck
@@ -73,6 +76,9 @@
      description: Increase this to make Technology modules cost more
    - prop: UseRandomPet
      type: bool
+   - prop: UseSpookHazardOnly
+     type: bool
+     description: Replaces all hazards on planets with the ghost effect from The Cursed
 - name: Difficulty Minimums
   id: DifficultyMinimums
   prop: DifficultyMinimums
