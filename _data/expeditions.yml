@@ -4,6 +4,8 @@
   image: e01_pioneers.png
   json: 01_redux_the_pioneers.json
   redux: 1
+  notice: >
+          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
 - id: e02
   name: '02: Beachhead'
   description: The one with the Mass Effect crossover
@@ -28,6 +30,8 @@
   image: e04_emergence.png
   json: 04_redux_emergence.json
   redux: 1
+  notice: >
+          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
 - id: e05
   name: '05: Exobiology'
   description: The one about pets
