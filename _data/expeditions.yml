@@ -125,6 +125,7 @@
   description: The one with more of the same
   image: e12_omega.png
   json: 12_omega.json
+  redux: 1
   notice: >
           * 'To complete all milestones in this expedition, a patch must be applied:'
   patches:

@@ -1,10 +1,8 @@
 {
-  "SeasonId": 25,
-  "Label": "Omega Expedition",
-  "Name": "Expedition 12(Public)",
-  "StartTimeUTC": 1708005600,
+  "SeasonId": 31,
+  "StartTimeUTC": 1732716000,
   "EndTimeUTC": 2893423600,
-  "Hash": 3465647597,
+  "Hash": 537742427,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
   "Description": "UI_EXPED12_MAIN_DESC",
@@ -89,12 +87,15 @@
     },
     "BreakTechOnDamage": {
       "BreakTechOnDamageProbability": "None"
+    },
+    "Fishing": {
+      "FishingDifficulty": "NormalCatchWindow"
     }
   },
   "CreateContextSaveDataMask": "^DEFAULT",
   "SwitchContextSaveDataMask": "^DEFAULT",
-  "SeasonalUAOverride": "0040620002900054",
-  "UAOverrideValue": "0x40620002900054",
+  "SeasonalUAOverride": "004014000349954c",
+  "UAOverrideValue": "0x4014000349954C",
   "FinalReward": "^RS_S12_COMPLETE",
   "FinalRewardSwitchAlt": "^",
   "FinalCantRewardMessage": "^UI_CANNOT_COLLECT_IN_SHIP",
@@ -102,8 +103,8 @@
   "MainIcon": {
     "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.EXPEDITION.12.DDS"
   },
-  "SeasonNumber": 25,
-  "RemixNumber": 0,
+  "SeasonNumber": 31,
+  "RemixNumber": 25,
   "DisplayNumber": 12,
   "SeasonName": "^UI_SEASON_12_NAME",
   "SeasonNameUpper": "^UI_SEASON_12_NAME_U",
@@ -198,6 +199,7 @@
   "ShipType": {
     "ShipClass": "Sail"
   },
+  "OverrideMTFilename": "",
   "StartWithFreighter": false,
   "FreighterBaseOverrideFilename": "",
   "FreighterRace": {
@@ -206,7 +208,9 @@
   "StartAboardFreighter": false,
   "ForceStartSystemTernary": false,
   "ForceStartSystemAbandoned": false,
+  "ForceAllSystemsAbandoned": false,
   "IntroSequencePOI": "^S12_STARTUP",
+  "CarnageMode": false,
   "ValidSpawnBuildings": [
     {
       "BuildingClass": "GameStartSpawn"
@@ -1429,7 +1433,9 @@
   "BuildingRadiusShipOffsetMultiplier": 0.8500000238418579,
   "ShipStartsDamaged": true,
   "BlockStormsAtStart": true,
+  "AlwaysStormy": false,
   "BlockAggressiveSentinelsInStartSystem": true,
+  "BlockExtremeWeatherInStartSystem": false,
   "AllowMissionDetailMessages": true,
   "UseStartPlanetObjectListOverrides": false,
   "StartPlanetRareSubstanceOverride": "^",
@@ -1819,7 +1825,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH1_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH1_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_85",
+          "IdToUseInMissionData": "^COMM_EXPED_94",
           "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -2034,7 +2040,7 @@
           "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 55,
+          "Amount": 30,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -2293,7 +2299,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH2_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH2_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_85",
+          "IdToUseInMissionData": "^COMM_EXPED_94",
           "Amount": 2,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -2508,7 +2514,7 @@
           "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 12,
+          "Amount": 8,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -2611,7 +2617,7 @@
           "Description": "^UI_EXPED_FARM_N_CRAFT_DESC",
           "DescriptionDone": "^UI_EXPED_FARM_N_CRAFT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^FARMPROD7",
+          "IdToUseInMissionData": "^FARMPROD6",
           "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -2767,7 +2773,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH3_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH3_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_85",
+          "IdToUseInMissionData": "^COMM_EXPED_94",
           "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -3034,7 +3040,7 @@
           "DescriptionDone": "^UI_EXPED_SENTINEL_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 25,
+          "Amount": 15,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3241,7 +3247,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH4_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH4_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_85",
+          "IdToUseInMissionData": "^COMM_EXPED_94",
           "Amount": 4,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -3404,7 +3410,7 @@
           "DescriptionDone": "^UI_EXPED_WORDS_ALL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 16,
+          "Amount": 12,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3715,7 +3721,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH5_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH5_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_85",
+          "IdToUseInMissionData": "^COMM_EXPED_94",
           "Amount": 5,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -3822,9 +3828,11 @@
       {
         "Name": "^SE_PARTY_PLANET1",
         "ForceInteraction": "^",
+        "UseSeasonDataAsInteraction": false,
         "ForceInteractionType": {
           "InteractionType": "LibraryMainTerminal"
         },
+        "NPCReactsToPlayer": false,
         "RequireInteractionRace": {
           "AlienRace": "None"
         },
@@ -3834,11 +3842,13 @@
         "MustMatchStoryUtilityPuzzle": "^",
         "ForceBroken": false,
         "ForceFixed": false,
+        "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
         "ClearForcedInteractionOnCompletion": false,
-        "BuildingPreventionRadius": 600,
+        "BuildingPreventionRadius": 1800,
         "UseMissionTradingDataOverride": false,
         "AlwaysShow": false,
         "NeverShow": false,
@@ -3846,6 +3856,7 @@
         "PlanetLabelText": "^",
         "SurveyDistance": 400,
         "SurveyDiscoveryOSDMessage": "^UI_PARTY_PLANET_SURVEY_OSD",
+        "SurveyHUDName": "^UI_MISSIONSURVEY_HUD_SUB",
         "EventStartType": "Special",
         "EventEndType": "Interact",
         "EventPriority": "Regular",
@@ -3900,6 +3911,7 @@
           "NeverAllowExtremeSentinelPlanet": true,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -3908,15 +3920,24 @@
             "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "Variant_B"
+            "BiomeSubType": "Variant_A"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": 5
         },
         "SolarSystemAttributesFallback": {
           "UseStarType": false,
@@ -3954,6 +3975,7 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -3968,11 +3990,21 @@
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": -1
         },
         "ForceRestartInteraction": true,
+        "ForceResetPortal": false,
         "HasReward": "^",
         "NextOption": "^",
         "TriggerActions": {
@@ -4020,9 +4052,11 @@
       {
         "Name": "^SE_PARTY_PLANET2",
         "ForceInteraction": "^",
+        "UseSeasonDataAsInteraction": false,
         "ForceInteractionType": {
           "InteractionType": "Portal"
         },
+        "NPCReactsToPlayer": false,
         "RequireInteractionRace": {
           "AlienRace": "None"
         },
@@ -4032,11 +4066,13 @@
         "MustMatchStoryUtilityPuzzle": "^",
         "ForceBroken": false,
         "ForceFixed": false,
+        "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
         "ClearForcedInteractionOnCompletion": false,
-        "BuildingPreventionRadius": 600,
+        "BuildingPreventionRadius": 1800,
         "UseMissionTradingDataOverride": false,
         "AlwaysShow": false,
         "NeverShow": false,
@@ -4044,6 +4080,7 @@
         "PlanetLabelText": "^",
         "SurveyDistance": 400,
         "SurveyDiscoveryOSDMessage": "^UI_PARTY_PLANET_SURVEY_OSD",
+        "SurveyHUDName": "^UI_MISSIONSURVEY_HUD_SUB",
         "EventStartType": "Special",
         "EventEndType": "Interact",
         "EventPriority": "Regular",
@@ -4087,8 +4124,8 @@
             }
           },
           "AllowUnsafeMatches": false,
-          "NeverAllowEmpty": true,
-          "NeverAllowAbandoned": true,
+          "NeverAllowEmpty": false,
+          "NeverAllowAbandoned": false,
           "RequireUndiscovered": false,
           "NeedsWaterPlanet": true,
           "NeedsPrimePlanet": false,
@@ -4098,6 +4135,7 @@
           "NeverAllowExtremeSentinelPlanet": true,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4106,15 +4144,24 @@
             "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "HugeLush"
+            "BiomeSubType": "HugeToxic"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": 3
         },
         "SolarSystemAttributesFallback": {
           "UseStarType": false,
@@ -4152,6 +4199,7 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4166,11 +4214,21 @@
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": -1
         },
         "ForceRestartInteraction": true,
+        "ForceResetPortal": false,
         "HasReward": "^",
         "NextOption": "^",
         "TriggerActions": {
@@ -4218,9 +4276,11 @@
       {
         "Name": "^SE_PARTY_PLANET3",
         "ForceInteraction": "^",
+        "UseSeasonDataAsInteraction": false,
         "ForceInteractionType": {
           "InteractionType": "CrashedFreighter"
         },
+        "NPCReactsToPlayer": false,
         "RequireInteractionRace": {
           "AlienRace": "None"
         },
@@ -4230,11 +4290,13 @@
         "MustMatchStoryUtilityPuzzle": "^",
         "ForceBroken": false,
         "ForceFixed": false,
+        "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
         "ClearForcedInteractionOnCompletion": false,
-        "BuildingPreventionRadius": 600,
+        "BuildingPreventionRadius": 1800,
         "UseMissionTradingDataOverride": false,
         "AlwaysShow": false,
         "NeverShow": false,
@@ -4242,6 +4304,7 @@
         "PlanetLabelText": "^",
         "SurveyDistance": 400,
         "SurveyDiscoveryOSDMessage": "^UI_PARTY_PLANET_SURVEY_OSD",
+        "SurveyHUDName": "^UI_MISSIONSURVEY_HUD_SUB",
         "EventStartType": "Special",
         "EventEndType": "Interact",
         "EventPriority": "Regular",
@@ -4296,6 +4359,7 @@
           "NeverAllowExtremeSentinelPlanet": true,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4304,15 +4368,24 @@
             "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "HugeToxic"
+            "BiomeSubType": "Variant_B"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": 5
         },
         "SolarSystemAttributesFallback": {
           "UseStarType": false,
@@ -4350,6 +4423,7 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4364,11 +4438,21 @@
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": -1
         },
         "ForceRestartInteraction": true,
+        "ForceResetPortal": false,
         "HasReward": "^",
         "NextOption": "^",
         "TriggerActions": {
@@ -4416,9 +4500,11 @@
       {
         "Name": "^SE_PARTY_PLANET4",
         "ForceInteraction": "^",
+        "UseSeasonDataAsInteraction": false,
         "ForceInteractionType": {
           "InteractionType": "Portal"
         },
+        "NPCReactsToPlayer": false,
         "RequireInteractionRace": {
           "AlienRace": "None"
         },
@@ -4428,11 +4514,13 @@
         "MustMatchStoryUtilityPuzzle": "^",
         "ForceBroken": false,
         "ForceFixed": false,
+        "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
         "ClearForcedInteractionOnCompletion": false,
-        "BuildingPreventionRadius": 600,
+        "BuildingPreventionRadius": 1800,
         "UseMissionTradingDataOverride": false,
         "AlwaysShow": false,
         "NeverShow": false,
@@ -4440,6 +4528,7 @@
         "PlanetLabelText": "^",
         "SurveyDistance": 400,
         "SurveyDiscoveryOSDMessage": "^UI_PARTY_PLANET_SURVEY_OSD",
+        "SurveyHUDName": "^UI_MISSIONSURVEY_HUD_SUB",
         "EventStartType": "Special",
         "EventEndType": "Interact",
         "EventPriority": "Regular",
@@ -4494,6 +4583,7 @@
           "NeverAllowExtremeSentinelPlanet": true,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4502,15 +4592,24 @@
             "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "Bubble"
+            "BiomeSubType": "HydroGarden"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": 5
         },
         "SolarSystemAttributesFallback": {
           "UseStarType": false,
@@ -4548,6 +4647,7 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4562,11 +4662,21 @@
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": -1
         },
         "ForceRestartInteraction": true,
+        "ForceResetPortal": false,
         "HasReward": "^",
         "NextOption": "^",
         "TriggerActions": {
@@ -4614,9 +4724,11 @@
       {
         "Name": "^SE_PARTY_PLANET5",
         "ForceInteraction": "^",
+        "UseSeasonDataAsInteraction": false,
         "ForceInteractionType": {
           "InteractionType": "Portal"
         },
+        "NPCReactsToPlayer": false,
         "RequireInteractionRace": {
           "AlienRace": "None"
         },
@@ -4626,11 +4738,13 @@
         "MustMatchStoryUtilityPuzzle": "^",
         "ForceBroken": false,
         "ForceFixed": false,
+        "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
         "ClearForcedInteractionOnCompletion": false,
-        "BuildingPreventionRadius": 600,
+        "BuildingPreventionRadius": 1800,
         "UseMissionTradingDataOverride": false,
         "AlwaysShow": false,
         "NeverShow": false,
@@ -4638,6 +4752,7 @@
         "PlanetLabelText": "^",
         "SurveyDistance": 400,
         "SurveyDiscoveryOSDMessage": "^UI_PARTY_PLANET_SURVEY_OSD",
+        "SurveyHUDName": "^UI_MISSIONSURVEY_HUD_SUB",
         "EventStartType": "Special",
         "EventEndType": "Interact",
         "EventPriority": "Regular",
@@ -4692,23 +4807,33 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
           "NeedsBiome": true,
           "NeedsBiomeType": {
-            "Biome": "Blue"
+            "Biome": "Green"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "HugeRing"
+            "BiomeSubType": "HugeRock"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": 3
         },
         "SolarSystemAttributesFallback": {
           "UseStarType": false,
@@ -4746,6 +4871,7 @@
           "NeverAllowExtremeSentinelPlanet": false,
           "NeedsExtremeWeatherPlanet": false,
           "NeedsExtremeHazardPlanet": false,
+          "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
           "AnyRGBBiome": false,
           "AnyInfestedBiome": false,
@@ -4760,11 +4886,21 @@
           "NeedsAbandonedSystem": false,
           "NeedsResourceHint": "^",
           "SuitableForCreatureDiscovery": false,
+          "SuitableForWeirdCreatureDiscovery": false,
+          "SuitableForRobotCreatureDiscovery": false,
           "SuitableForCreatureTaming": false,
           "SamePlanetAsEvent": "^",
-          "SamePlanetAsSeasonParty": 0
+          "SamePlanetAsSeasonParty": 0,
+          "SystemNeedsResourceHint": "^",
+          "SystemNeedsWater": false,
+          "SystemNeedsWeirdPlanet": false,
+          "SystemNeedsInfestedPlanet": false,
+          "SystemNeedsCorruptSentinelPlanet": false,
+          "SystemNeedsExtremeStormPlanet": false,
+          "MinPlanets": -1
         },
         "ForceRestartInteraction": true,
+        "ForceResetPortal": false,
         "HasReward": "^",
         "NextOption": "^",
         "TriggerActions": {
@@ -5663,5 +5799,7 @@
       0
     ]
   },
-  "UseSeasonalUAStationTradeData": false
+  "UseSeasonalUAStationTradeData": false,
+  "AlwaysUseSeasonalStationTradeData": false,
+  "UseSpookHazardOnly": false
 }
