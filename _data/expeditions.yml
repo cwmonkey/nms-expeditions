@@ -138,13 +138,7 @@
   description: The one with no NPC's
   image: e13_adrift.png
   json: 13_adrift.json
-  notice: >
-          * "The Phase 4 reward (the Ship of the Damned freighter) is broken. Claiming this reward will crash your game. **Unlocking this reward will still unlock the Ship of the Damned freighter in the Quicksilver vendor,** you just can't claim it on the expedition."
-  patches:
-   - id: adrift_p4_optional.patch
-     json: 13_adrift.p4_optional.patch.json
-     description: "Make Phase 4 optional so you can end the expedition (due to the issue with the Ship of the Damned milestone being unclaimable). (Recommended)"
-     checked: 1
+  redux: 1
 - id: e014
   name: '14: Liquidators'
   description: The one where you kill bugs
