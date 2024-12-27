@@ -138,6 +138,7 @@
   description: The one where you kill bugs
   image: e14_liquidators.png
   json: 14_liquidators.json
+  redux: 1
   notice: >
           * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
   patches:
