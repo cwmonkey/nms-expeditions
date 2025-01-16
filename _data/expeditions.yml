@@ -151,6 +151,7 @@
   description: The one where you fish a lot
   image: e15_aquarius.png
   json: 15_aquarius.json
+  redux: 1
 - id: e016
   name: '16: The Cursed'
   description: The one with the spoooky ghosts
