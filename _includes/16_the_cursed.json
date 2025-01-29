@@ -1,8 +1,8 @@
 {
-  "SeasonId": 29,
-  "StartTimeUTC": 1729688400,
+  "SeasonId": 35,
+  "StartTimeUTC": 1737554400,
   "EndTimeUTC": 2893423600,
-  "Hash": 2146352758,
+  "Hash": 476100121,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
   "Description": "UI_EXPED16_MAIN_DESC",
@@ -94,8 +94,8 @@
   },
   "CreateContextSaveDataMask": "^DEFAULT",
   "SwitchContextSaveDataMask": "^DEFAULT",
-  "SeasonalUAOverride": "00210300fca77448",
-  "UAOverrideValue": "0x210300FCA77448",
+  "SeasonalUAOverride": "00214a00fe6d6e83",
+  "UAOverrideValue": "0x214A00FE6D6E83",
   "FinalReward": "^RS_S16_COMPLETE",
   "FinalRewardSwitchAlt": "^",
   "FinalCantRewardMessage": "^INTRCT_NOROOM_L",
@@ -103,8 +103,8 @@
   "MainIcon": {
     "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.EXPEDITION.16.DDS"
   },
-  "SeasonNumber": 29,
-  "RemixNumber": 0,
+  "SeasonNumber": 35,
+  "RemixNumber": 29,
   "DisplayNumber": 16,
   "SeasonName": "^UI_SEASON_16_NAME",
   "SeasonNameUpper": "^UI_SEASON_16_NAME_U",
@@ -2602,7 +2602,7 @@
           "DescriptionDone": "^UI_GET_TAINT_MET_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 600,
+          "Amount": 400,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -2810,7 +2810,7 @@
           "DescriptionDone": "^UI_EXPED_SPIDER_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 8,
+          "Amount": 2,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3405,6 +3405,7 @@
         "ForceBroken": false,
         "ForceFixed": true,
         "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
@@ -3481,7 +3482,7 @@
             "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "HydroGarden"
+            "BiomeSubType": "HugePlant"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
@@ -3628,6 +3629,7 @@
         "ForceBroken": false,
         "ForceFixed": false,
         "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
@@ -3697,14 +3699,14 @@
           "NeedsExtremeHazardPlanet": false,
           "NeverAllowExtremeWeatherPlanet": false,
           "AnyBiomeNotWeirdOrDead": false,
-          "AnyRGBBiome": false,
+          "AnyRGBBiome": true,
           "AnyInfestedBiome": false,
-          "NeedsBiome": true,
+          "NeedsBiome": false,
           "NeedsBiomeType": {
-            "Biome": "Blue"
+            "Biome": "Lush"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "HugeLush"
+            "BiomeSubType": "None"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
@@ -3851,6 +3853,7 @@
         "ForceBroken": false,
         "ForceFixed": false,
         "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
@@ -3924,10 +3927,10 @@
           "AnyInfestedBiome": false,
           "NeedsBiome": true,
           "NeedsBiomeType": {
-            "Biome": "Frozen"
+            "Biome": "Scorched"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "Variant_A"
+            "BiomeSubType": "Worlds"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
@@ -4074,6 +4077,7 @@
         "ForceBroken": false,
         "ForceFixed": false,
         "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
@@ -4150,7 +4154,7 @@
             "Biome": "Radioactive"
           },
           "UseBiomeSubType": {
-            "BiomeSubType": "Worlds"
+            "BiomeSubType": "Variant_C"
           },
           "NeedsEmptySystem": false,
           "NeedsAbandonedSystem": false,
@@ -4297,6 +4301,7 @@
         "ForceBroken": false,
         "ForceFixed": false,
         "ReplacementMaintData": "^",
+        "ForceReplaceStoryPortalSeed": false,
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
@@ -4354,7 +4359,7 @@
           },
           "AllowUnsafeMatches": true,
           "NeverAllowEmpty": true,
-          "NeverAllowAbandoned": true,
+          "NeverAllowAbandoned": false,
           "RequireUndiscovered": false,
           "NeedsWaterPlanet": true,
           "NeedsPrimePlanet": false,
@@ -4370,7 +4375,7 @@
           "AnyInfestedBiome": false,
           "NeedsBiome": true,
           "NeedsBiomeType": {
-            "Biome": "Lush"
+            "Biome": "Green"
           },
           "UseBiomeSubType": {
             "BiomeSubType": "HugePlant"
