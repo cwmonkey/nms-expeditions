@@ -113,7 +113,7 @@
   json: 11_redux_voyagers.json
   redux: 1
   notice: >
-          * Many planets have changed, so most guides are no longer going to have correct information. <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/39" target="_blank">bedev0001's post</a> has some portal glyphs for various types of fauna.
+          * Many planets have changed, so most guides are no longer going to have correct information.
 - id: e012
   name: '12: Omega'
   description: The one with more of the same
