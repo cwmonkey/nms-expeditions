@@ -133,6 +133,13 @@
   image: e13_adrift.png
   json: 13_adrift.json
   redux: 1
+  notice: >
+          * HG changed how abandoned galaxies work. There is no longer any way to find synthetic life forms in them. A patch has been created to replace the "scan synthetic life forms" milestone.
+  patches:
+   - id: adrift_synthetic_creature_scan_replace
+     json: 13_adrift.synthetic_creature_scan_replace.patch.json
+     description: Replace "scan synthetic life forms" milestone with a milestone to visit a red star (Recommended)
+     checked: 1
 - id: e014
   name: '14: Liquidators'
   description: The one where you kill bugs
