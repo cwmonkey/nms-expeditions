@@ -32,6 +32,8 @@
   redux: 1
   notice: >
           * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+
+          * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
 - id: e05
   name: '05: Exobiology'
   description: The one about pets
