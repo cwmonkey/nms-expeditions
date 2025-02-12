@@ -173,3 +173,11 @@
   image: e16_the_cursed.png
   json: 16_the_cursed.json
   redux: 1
+- id: e017
+  name: '17: Titan'
+  description: The one with lots of water
+  image: e17_titan.png
+  json: 17_titan.json
+  redux: 1
+  notice: >
+          * This expedition is brand-new and untested, I just wanted to get it out quick so people could grab the json file if necessary. Only the end date has been changed.
