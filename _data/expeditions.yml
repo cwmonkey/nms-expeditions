@@ -8,10 +8,12 @@
           * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
 - id: e02
   name: '02: Beachhead'
-  description: The one with the Mass Effect crossover
+  description: (Currently Broken) The one with the Mass Effect crossover
   image: e02_beachhead.png
   json: 02_redux_beachhead.json
   redux: 1
+  notice: >
+          * This expedition is currently broken (the dosimeter milestone doesn't work). I'm working on a patch for it.
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
@@ -42,21 +44,17 @@
   redux: 1
 - id: e06
   name: '06: The Blighted'
-  description: The one about pirates
+  description: (Currently Broken) The one about pirates
   image: e06_the_blighted.png
   json: 06_redux_the_blighted.json
   redux: 1
   notice: >
-          * It may be impossible to finish this expedition since leaving the galaxy requires an Atlantid drive, which you cannot obtain. A patch has been made to allow you to remove the warp drive requirements. You'll need to go into the difficulty settings and manually change it.
+          * This expedition is currently broken (you cannot reach the center of the galaxy since you need an Atlantid Drive but can't make one). I'm working on a patch for it.
 
           * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
 
           * If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.
   patches:
-   - id: the_blighted.no_warp_drive_reqs
-     json: 06_redux_the_blighted.no_warp_drive_reqs.patch.json
-     description: Remove warp requirements so you can leave the galaxy (Recommended)
-     checked: 1
    - id: the_blighted.replace_freighter_rescue
      json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
      description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
