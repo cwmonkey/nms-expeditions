@@ -59,6 +59,10 @@
      json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
      description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
      checked: 1
+   - id: the_blighted.no_warp_drive_reqs
+     json: 06_redux_the_blighted.no_warp_drive_reqs.patch.json
+     description: Remove warp requirements so you can leave the galaxy (Recommended)
+     checked: 1
 - id: e07
   name: '07: Leviathan'
   description: The one about the space leviathan
