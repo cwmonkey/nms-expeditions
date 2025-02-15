@@ -1,0 +1,41 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_CASH",
+          "Title": "^UI_EXPED_GOT_CASH_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_CASH_NAME_U",
+          "Description": "^UI_EXPED_GOT_CASH_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_CASH_DESC_D",
+          "Amount": 8000000,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.units.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.off.dds"
+          }
+        },
+        {
+          "Mission": "^S9_BUILD_BASE",
+          "Title": "^UI_EXPED_BUILD_BASE_NAME",
+          "TitleUpper": "^UI_EXPED_BUILD_BASE_NAME_U",
+          "Description": "^UI_EXPED_BUILD_BASE_DESC"
+        }
+      ]
+    }
+  ]
+}

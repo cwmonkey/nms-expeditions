@@ -42,12 +42,12 @@
   redux: 1
 - id: e06
   name: '06: The Blighted'
-  description: (Currently Broken) The one about pirates
+  description: The one about pirates
   image: e06_the_blighted.png
   json: 06_redux_the_blighted.json
   redux: 1
   notice: >
-          * This expedition is currently broken (you cannot reach the center of the galaxy since you need an Atlantid Drive but can't make one). I'm working on a patch for it.
+          * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone.
 
           * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
 
@@ -57,9 +57,9 @@
      json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
      description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
      checked: 1
-   - id: the_blighted.no_warp_drive_reqs
-     json: 06_redux_the_blighted.no_warp_drive_reqs.patch.json
-     description: Remove warp requirements so you can leave the galaxy (Recommended)
+   - id: 06_redux_the_blighted.replace_leave_galaxy_milestone
+     json: 06_redux_the_blighted.replace_leave_galaxy_milestone.patch.json
+     description: Replace the leave-galaxy milestone (Recommended)
      checked: 1
 - id: e07
   name: '07: Leviathan'
