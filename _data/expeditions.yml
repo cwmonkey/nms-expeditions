@@ -8,12 +8,10 @@
           * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
 - id: e02
   name: '02: Beachhead'
-  description: (Currently Broken) The one with the Mass Effect crossover
+  description: The one with the Mass Effect crossover
   image: e02_beachhead.png
   json: 02_redux_beachhead.json
   redux: 1
-  notice: >
-          * This expedition is currently broken (the dosimeter milestone doesn't work). I'm working on a patch for it.
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
