@@ -138,7 +138,7 @@ layout: null
               <tr class="cust_item type_{{ cust.type }} {% if cust.warning %}cust_item_warning{% endif %}">
                 <td class="property">
                   <p class="cust_property" {% if cust.description %}title="{{ cust.description | xml_escape }}"{% endif %}>{% if cust.display %}{{ cust.display }}{% else %}{{ cust.prop }}{% endif %}</p>
-                  {% if cust.description %}<p class="cust_property_desc">{{ cust.description }}</p>{% endif %}
+                  {% if cust.description %}<div class="cust_property_desc">{{ cust.description | markdownify }}</div>{% endif %}
                 </td>
                 <td class="default"></td>
                 <td class="override">

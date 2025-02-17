@@ -45,6 +45,8 @@
    - prop: GameMode
      subprop: PresetGameMode
      type: DifficultyPresetType
+     description: >
+                  **Note:** Setting this to "Creative" may make some expeditions impossible to finish. You may need to adjust your difficulty settings for certain milestones.
      warning: If you choose Permadeath and die in the expedition, your main save will be deleted as well.
    - prop: HazardProtectionDrainMultiplier
      type: float

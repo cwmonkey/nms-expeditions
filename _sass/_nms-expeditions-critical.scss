@@ -387,11 +387,15 @@ label {
       border-top: 1px solid #1a0027;
     }
 
-    .cust_property_desc {
+    .cust_property_desc p {
       font-size: 12px;
       color: #b2cfd7;
       margin-top: 3px;
       line-height: 1.2;
+
+      strong {
+        font-weight: bold;
+      }
     }
 
     .cust_item_warning {
