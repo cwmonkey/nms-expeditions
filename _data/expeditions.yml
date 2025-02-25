@@ -40,6 +40,8 @@
   image: e05_exobiology.png
   json: 05_redux_exobiology.json
   redux: 1
+  notice: >
+          * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
 - id: e06
   name: '06: The Blighted'
   description: The one about pirates
