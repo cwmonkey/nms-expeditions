@@ -92,8 +92,8 @@
       "FishingDifficulty": "NormalCatchWindow"
     }
   },
-  "CreateContextSaveDataMask": "^",
-  "SwitchContextSaveDataMask": "^",
+  "CreateContextSaveDataMask": "^DEFAULT",
+  "SwitchContextSaveDataMask": "^DEFAULT",
   "SeasonalUAOverride": "006015000399bd3c",
   "UAOverrideValue": "0x6015000399BD3C",
   "FinalReward": "^RS_S13_COMPLETE",
