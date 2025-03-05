@@ -1,0 +1,47 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        {
+          "Mission": "^SENTINEL_KILL",
+          "Title": "^UI_EXPED_SENTINEL_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_KILL_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_SENTINEL_KILL_DESC_D",
+          "Amount": 8
+        },
+        {
+          "Mission": "^GOT_BURIED_PROP",
+          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
+          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
+          "Description": "^UI_EXPED_BURIED_PROP_DESC",
+          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
+          "Amount": 3
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^RAID_HIVE",
+          "Title": "^UI_EXPED_RAID_HIVE_NAME",
+          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
+          "Description": "^UI_EXPED_RAID_HIVE_DESC",
+          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D",
+          "Amount": 1
+        },
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 50
+        }
+      ]
+    }
+  ]
+}

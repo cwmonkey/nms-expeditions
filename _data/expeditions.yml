@@ -31,9 +31,16 @@
   json: 04_redux_emergence.json
   redux: 1
   notice: >
-          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+          * For some reason you cannot get to the rendezvous 4 and 5 planets. A patch has been created to replace missions requiring those planets.
+
+          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You will need to move them.
 
           * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
+  patches:
+    - id: 04_redux_emergence_replace_rdv4-5_milestones
+      json: 04_redux_emergence.replace_rdv4-5_milestones.patch.json
+      description: Replace rendezvous 4-5 and related milestones (Recommended)
+      checked: 1
 - id: e05
   name: '05: Exobiology'
   description: The one about pets
