@@ -111,8 +111,14 @@
   json: 09_redux_utopia.json
   redux: 1
   notice: >
-          * 'When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue:'
+          * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a Visceral Synthesiser).
+
+          * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue:
   patches:
+   - id: 09_redux_utopia_replace_online_base_building
+     json: 09_redux_utopia.replace_online_base_building.patch.json
+     description: Replace online-only milestones (Recommended)
+     checked: 1
    - id: add_nexus_reward
      json: 09_redux_utopia.add_nexus_reward.patch.json
      description: Change the final milestone's reward to unlock The Anomaly (recommended if you are staring this expedition from an existing save)

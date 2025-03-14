@@ -1,0 +1,155 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_CRE",
+          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          }
+        },
+        {
+          "Mission": "^FIND_SHIP_NOM",
+          "Title": "^UI_EXPED_FIND_SHIP_NOM_NAME",
+          "TitleUpper": "^UI_EXPED_FIND_SHIP_NOM_NAME_U",
+          "Description": "^UI_EXPED_FIND_SHIP_NOM_DESC",
+          "DescriptionDone": "^UI_EXPED_FIND_SHIP_NOM_DESC_D",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.exocraft.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^PROC_PRODS",
+          "Title": "^UI_EXPED_PROC_PRODS_S12_NAME",
+          "TitleUpper": "^UI_EXPED_PROC_PRODS_S12_NAME_U",
+          "Description": "^UI_EXPED_PROC_PRODS_DESC",
+          "DescriptionDone": "^UI_EXPED_PROC_PRODS_DESC_D",
+          "IdToUseInMissionData": "^",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.VISITBUILDING2.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "IdToUseInMissionData": "^",
+          "Amount": 30,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
+          },
+          "GreyIfCantStart": "[[removed]]"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^SPOOKY_EGG",
+          "Title": "^UI_EXPED_WORM19_NAME",
+          "TitleUpper": "^UI_EXPED_WORM19_NAME_U",
+          "Description": "^UI_EXPED_WORM19_DESC",
+          "DescriptionDone": "^UI_EXPED_WORM19_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/spookworm/patch.spooky.wormeggs.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.off.dds"
+          },
+          "RewardSwitchAlt": "[[removed]]",
+          "IsOptional": "[[removed]]",
+          "GreyIfCantStart": "[[removed]]"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^SENTINEL_KILL",
+          "Title": "^UI_EXPED_SENTINEL_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_KILL_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_SENTINEL_KILL_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.kill.sentinels.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+          },
+          "RewardSwitchAlt": "[[removed]]",
+          "IsOptional": "[[removed]]",
+          "GreyIfCantStart": "[[removed]]"
+        }
+      ]
+    }
+  ]
+}
