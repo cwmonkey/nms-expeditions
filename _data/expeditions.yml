@@ -193,3 +193,8 @@
   description: The one with gas giants
   image: e17_titan.png
   json: 17_titan.json
+- id: e018
+  name: '18: Relics'
+  description: The one with bones
+  image: e18_relics.png
+  json: 18_relics.json
