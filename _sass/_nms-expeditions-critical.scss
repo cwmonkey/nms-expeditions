@@ -120,6 +120,12 @@ label {
 .step {
   padding: 0 10px 20px 10px;
   border-bottom: 2px solid #ff8400;
+
+  > * {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Step 1: Select Expedition */
@@ -134,6 +140,7 @@ label {
   position: relative;
   overflow: hidden;
   width: 330px;
+  max-width: 100%;
   margin: auto;
 
   .exp_radio {
@@ -514,9 +521,8 @@ label {
   }
 
   .download_container {
-    position: sticky;
-    top: 20px;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .download {
@@ -629,25 +635,36 @@ label {
   grid-area: step3;
 }
 
-@media screen and (width >= 1310px) {
-  .select_exp,
-  .customize,
-  .download_section {
-    overflow-y: auto;
+@media screen and (width < 1315px) and (width >= 650px) {
+  .exp_item {
+    width: 250px;
+
+    .exp_label {
+      padding-left: 50px
+    }
+
+    .exp_name {
+      font-size: 16px;
+    }
+
+    .image[class] {
+      right: auto;
+      left: 5px;
+      width: 40px;
+      top: 5px;
+
+      .badge {
+        width: 100%;
+      }
+    }
   }
 
-  .top {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header header"
-      "step1 step2 step3";
-    grid-template-columns: auto auto auto;
+  .step_headline {
+    font-size: 20px;
   }
 }
 
-@media screen and (width < 1310px) and (width >= 650px) {
+@media screen and (width < 1236px) and (width >= 650px) {
   .top {
     display: grid;
     grid-template-rows: auto;
@@ -668,4 +685,27 @@ label {
       word-break: break-all;
     }
   }
+}
+
+@media screen and (width >= 1236px) {
+  .select_exp,
+  .customize,
+  .download_section {
+    overflow-y: auto;
+  }
+
+  .top {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header"
+      "step1 step2 step3";
+    grid-template-columns: auto minmax(0 1fr);
+  }
+
+  /* .download_container {
+    position: sticky;
+    top: 20px;
+  } */
 }
