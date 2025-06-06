@@ -198,3 +198,10 @@
   description: The one with bones
   image: e18_relics.png
   json: 18_relics.json
+  notice: >
+          * The latest NMS patch seems to have broken the bone collecting milestones, there does not seem to be a way to turn them in. The milestones have been replaced in a patch below.
+  patches:
+   - id: relics_replace_first_bones_milestone
+     json: 18_relics.replace_bone_hunt_milestones.patch.json
+     description: Replace the bone collection milestones (Recommended)
+     checked: 1

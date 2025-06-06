@@ -1,0 +1,139 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_BURIED_PROP",
+          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
+          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
+          "Description": "^UI_EXPED_BURIED_PROP_DESC",
+          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.UNDERGROUNDTREASURE.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.OFF.DDS"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 50,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SHIPSHOOT.DDS"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.OFF.DDS"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^SENTINEL_KILL",
+          "Title": "^UI_EXPED_SENTINEL_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_KILL_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_SENTINEL_KILL_DESC_D",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.kill.sentinels.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^RAID_HIVE",
+          "Title": "^UI_EXPED_RAID_HIVE_NAME",
+          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
+          "Description": "^UI_EXPED_RAID_HIVE_DESC",
+          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.counterfire.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^WALKER",
+          "Title": "^UI_EXPED_WALKER_NAME",
+          "TitleUpper": "^UI_EXPED_WALKER_NAME_U",
+          "Description": "^UI_EXPED_WALKER_DESC",
+          "DescriptionDone": "^UI_EXPED_WALKER_DESC_D",
+          "CantRewardMessage": "^INTRCT_NOROOM_L",
+          "Id": "^",
+          "Amount": 8000,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.walker.dds"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}
