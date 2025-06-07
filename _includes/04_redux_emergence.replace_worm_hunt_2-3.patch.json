@@ -1,0 +1,55 @@
+{
+  "Stages": [
+    null,
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^BASIC_SCAN_CRE",
+          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^GOT_PETS",
+          "Title": "^UI_EXPED_GOT_PETS_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_PETS_NAME_U",
+          "Description": "^UI_EXPED_GOT_PETS_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_PETS_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturetrust.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}
