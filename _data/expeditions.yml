@@ -199,6 +199,8 @@
   description: The one with gas giants
   image: e17_titan.png
   json: 17_titan.json
+  notice: >
+          * As of the Beacon patch all rendezvous milestones seem to complete as soon as you warp to the designated system. To complete the photograph milestones, simply go to the designated planet and take a picture anywhere.
 - id: e018
   name: '18: Relics'
   description: The one with bones
