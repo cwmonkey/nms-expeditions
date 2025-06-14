@@ -312,6 +312,19 @@
         text: Free
       - value: false
         text: Standard
+   - prop: Fishing
+     subprop: FishingDifficulty
+     type: FishingDifficulty
+     display: Fishing Timing
+     options:
+      - value: AutoCatch
+        text: Auto-Catch
+      - value: LongCatchWindow
+        text: Relaxed
+      - value: NormalCatchWindow
+        text: Standard
+      - value: ShortCatchWindow
+        text: Challenging
    - prop: ReputationGain
      subprop: ReputationGainDifficulty
      type: ReputationGainDifficulty

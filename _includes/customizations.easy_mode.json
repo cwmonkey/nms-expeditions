@@ -23,5 +23,6 @@
   "InventoriesAlwaysInRange": "true",
   "WarpDriveRequirements": "false",
   "BaseAutoPower": "true",
-  "ReputationGain": "VeryFast"
+  "ReputationGain": "VeryFast",
+  "Fishing": "AutoCatch"
 }
