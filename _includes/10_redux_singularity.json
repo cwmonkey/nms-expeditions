@@ -3150,7 +3150,7 @@
           "DescriptionDone": "^UI_S10_CONTRIB_ALL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 0,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3300,7 +3300,7 @@
           "DescriptionDone": "^UI_S10_ASSEMBLY5_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S10_REMIX_ALL",
-          "Amount": 0,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3338,8 +3338,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_HEAD4",
-            "DecryptMissionSeed": 41
+            "DecryptMissionId": "^S10_REMIX_ALL",
+            "DecryptMissionSeed": 42
           }
         },
         {
@@ -3350,7 +3350,7 @@
           "DescriptionDone": "^UI_S10_IGNITION_A_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S10_REMIX_ALL",
-          "Amount": 0,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3388,8 +3388,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_HEAD4",
-            "DecryptMissionSeed": 41
+            "DecryptMissionId": "^S10_REMIX_ALL",
+            "DecryptMissionSeed": 42
           }
         },
         {
@@ -3400,7 +3400,7 @@
           "DescriptionDone": "^UI_S10_IGNITION_B_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S10_REMIX_ALL",
-          "Amount": 0,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -3438,8 +3438,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S10_HEAD4",
-            "DecryptMissionSeed": 41
+            "DecryptMissionId": "^S10_REMIX_ALL",
+            "DecryptMissionSeed": 42
           }
         },
         {

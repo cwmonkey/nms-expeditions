@@ -148,6 +148,13 @@
   image: e10_singularity.png
   json: 10_redux_singularity.json
   redux: 1
+  notice: >
+          * The community milestones cannot be completed offline. A patch has been created to replace them.
+  patches:
+   - id: 10_redux_singularity_replace_community_milestones
+     json: 10_redux_singularity.replace_community_milestones.patch.json
+     description: Replace community milestones (Recommended)
+     checked: 1
 - id: e011
   name: '11: Voyagers'
   description: The one where you just find a whole bunch of stuff

@@ -1,0 +1,158 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^BUILD_EXOCRAFT",
+          "Title": "^UI_EXPED_BUILD_EXOCRAFT_NAME",
+          "TitleUpper": "^UI_EXPED_BUILD_EXOCRAFT_NAME_U",
+          "Description": "^UI_EXPED_BUILD_EXOCRAFT_DESC",
+          "DescriptionDone": "^UI_EXPED_BUILD_EXOCRAFT_DESC_D",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.mech.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.off.dds"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0
+          }
+        },
+        null,
+        null,
+        {
+          "Mission": "^GET_TAINT_MET",
+          "Title": "^UI_GET_TAINT_MET_NAME",
+          "TitleUpper": "^UI_GET_TAINT_MET_NAME_U",
+          "Description": "^UI_GET_TAINT_MET_DESC",
+          "DescriptionDone": "^UI_GET_TAINT_MET_DESC_D",
+          "Amount": 400,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.FREIGHTER2.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHTER.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHTER.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FREIGHTER.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0
+          }
+        },
+        {
+          "Mission": "^SPIDER_KILL",
+          "Title": "^UI_EXPED_SPIDER_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_SPIDER_KILL_NAME_U",
+          "Description": "^UI_EXPED_SPIDER_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_SPIDER_KILL_DESC_D",
+          "Amount": 4,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.COUNTERFIRE.DDS"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ATLASPATH.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ATLASPATH.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.ATLASPATH.OFF.DDS"
+          },
+          "IsOptional": false,
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0
+          }
+        },
+        {
+          "Mission": "^SENTINEL_SHIP",
+          "Title": "^UI_EXPED_SENTINEL_SHIP_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_SHIP_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_SHIP_DESC",
+          "Amount": 2.5,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINELSHIP.DDS"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.OFF.DDS"
+          },
+          "IsOptional": false,
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0
+          }
+        }
+      ]
+    }
+  ]
+}
