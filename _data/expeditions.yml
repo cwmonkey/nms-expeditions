@@ -132,11 +132,17 @@
   notice: >
           * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a Visceral Synthesiser).
 
-          * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue:
+          * The "Beacon" update made all rendezvous milestones auto complete when you enter a system, and since you are already in the system with all the rendezvous locations, they all auto complete upon starting the expedition. Also it seems like some planet-specific milestones no longer work properly. A patch has been created to replace all rendezvous and planet-specific milestones in this expedition.
+
+          * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue.
   patches:
    - id: 09_redux_utopia_replace_online_base_building
      json: 09_redux_utopia.replace_online_base_building.patch.json
      description: Replace online-only milestones (Recommended)
+     checked: 1
+   - id: 09_redux_utopia_replace_rdv_milestones
+     json: 09_redux_utopia.replace_rdv_milestones.patch.json
+     description: Replace rendezvous and planet-specific milestones (Recommended)
      checked: 1
    - id: add_nexus_reward
      json: 09_redux_utopia.add_nexus_reward.patch.json

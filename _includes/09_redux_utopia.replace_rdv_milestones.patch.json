@@ -1,0 +1,195 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^LEAVE_PLANET",
+          "Title": "^UI_EXPED_LEAVE_PLANET_NAME",
+          "TitleUpper": "^UI_EXPED_LEAVE_PLANET_NAME_U",
+          "Description": "^UI_EXPED_LEAVE_PLANET_DESC",
+          "DescriptionDone": "^UI_EXPED_LEAVE_PLANET_DESC_D",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.firstplanet.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.off.dds"
+          },
+          "IsRendezvous": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^DISC_WAYPOINT",
+          "Title": "^UI_EXPED_DISC_WAYPOINT_NAME",
+          "TitleUpper": "^UI_EXPED_DISC_WAYPOINT_NAME_U",
+          "Description": "^UI_EXPED_DISC_WAYPOINT_DESC",
+          "DescriptionDone": "^UI_EXPED_DISC_WAYPOINT_DESC_D",
+          "Amount": 4,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoverwaypoint.1.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.off.dds"
+          },
+          "IsRendezvous": false
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^FLYER",
+          "Title": "^UI_EXPED_FLYER_NAME",
+          "TitleUpper": "^UI_EXPED_FLYER_NAME_U",
+          "Description": "^UI_EXPED_FLYER_DESC",
+          "DescriptionDone": "^UI_EXPED_FLYER_DESC_D",
+          "Amount": 100000,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.ship1.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.off.dds"
+          },
+          "IsRendezvous": false
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_PLA",
+          "Title": "^UI_EXPED_SCAN_PLA2_NAME",
+          "TitleUpper": "^UI_EXPED_SCAN_PLA2_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_PLA_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_PLA_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.PLANTS.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.OFF.DDS"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^FIEND_KILL",
+          "Title": "^UI_EXPED14_FIEND_KILL_NAME",
+          "TitleUpper": "^UI_EXPED14_FIEND_KILL_NAME_U",
+          "Description": "^UI_EXPED_FIEND_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/SPOOKWORM/PATCH.SPOOKY.FIENDEGG.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.OFF.DDS"
+          },
+          "IsRendezvous": false
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Encryption": {
+            "DecryptMissionId": "^FIEND_KILL"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^WORDS_ALL",
+          "Title": "^UI_EXPED_WORDS_ALL_NAME",
+          "TitleUpper": "^UI_EXPED_WORDS_ALL_NAME_U",
+          "Description": "^UI_EXPED_WORDS_ALL_DESC",
+          "DescriptionDone": "^UI_EXPED_WORDS_ALL_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.learn.1.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.off.dds"
+          },
+          "IsRendezvous": false
+        },
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_CRE",
+          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}
