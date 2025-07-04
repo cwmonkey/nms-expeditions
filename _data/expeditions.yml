@@ -214,6 +214,10 @@
   image: e15_aquarius.png
   json: 15_aquarius.json
   redux: 1
+  notice: >
+          * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
+
+          * For the "Ice Cold" milestone, you must catch 5 uncommon **frozen** fish on a frozen planet.
 - id: e016
   name: '16: The Cursed'
   description: The one with the spoooky ghosts
