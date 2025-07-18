@@ -75,7 +75,7 @@
   json: 06_redux_the_blighted.json
   redux: 1
   notice: >
-          * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone.
+          * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
 
           * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
 
