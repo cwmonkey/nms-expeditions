@@ -23,7 +23,7 @@ layout: null
     <section class="intro"><div class="content cms">
       <h2 class="visibly-hidden">Introduction</h2>
       <p>
-        You can use this app to customize and generate SEASON_DATA_CACHE.JSON to play No Man's Sky expeditions <strong>offline</strong>.
+        You can use this app to customize and generate <code>SEASON_DATA_CACHE.JSON</code> to play No Man's Sky expeditions <strong>offline</strong>.
         Any rewards you unlock, and ships/multitools/items you transfer will remain on your account/saves after going back online.
       </p>
       <p>
@@ -355,9 +355,9 @@ layout: null
 
 <section class="notes_section"><div class="content">
   <div class="cms">
-    <h2>Notes</h2>
+    <h2 class="expedition_notes_header">Expedition Notes</h2>
 
-    <h3>General</h3>
+    <h3 id="expedition_notes_general"><a href="#expedition_notes_general">General</a></h3>
 
     <ul>
       <li>At the start of any expedition the reward descriptions are blank. Simply save your game and reload it to make the descriptions show up.</li>
@@ -366,9 +366,24 @@ layout: null
       <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
     </ul>
 
+    <h3 id="expedition_notes_replaying_restarting"><a href="#expedition_notes_replaying_restarting">Replaying/Restarting Expeditions</a></h3>
+
+    <p>You can replay expeditions you've already completed, however you cannot play the same expedition twice in a row (without a little work). If you want to play the same expedition again, or if you need to restart an expedition, you must do the following:</p>
+
+    <ol>
+      <li>With NMS closed, download the <code>SEASON_DATA_CACHE.JSON</code> for a <strong>different</strong> expedition and put it in your cache folder (make sure to override the old one if it's still there)</li>
+      <li>Open NMS, load your game and start the new expedition from the terminal</li>
+      <li>Save (either by entering and exiting your ship or waiting for an auto save to happen), then close NMS</li>
+      <li>Download the <code>SEASON_DATA_CACHE.JSON</code> for the expedition you want to play and put it in your cache folder</li>
+    </ol>
+
+    <p>You should now be able to replay/restart your desired expedition.</p>
+
+    <p>Note: If you are familiar with save editing, you can just remove the <code>ExpeditionContext</code> entry from your save file (that's how the game knows which expedition you played last).</p>
+
     {% for exp in site.data.expeditions %}
       {% if exp.notice %}
-        <h3>{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h3>
+        <h3 id="{{exp.id}}"><a href="#{{exp.id}}">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
         {{ exp.notice | markdownify }}
       {% endif %}
     {% endfor %}
@@ -387,7 +402,7 @@ layout: null
     </p>
   </div>
   <div class="image">
-    <img src="images/monkey-head-graffiti.png" alt="cwmonkey avatar">
+    <img src="images/monkey-head-graffiti.png" alt="cwmonkey avatar" title="That's me">
   </div>
 </footer>
 

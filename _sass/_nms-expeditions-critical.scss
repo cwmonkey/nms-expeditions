@@ -595,10 +595,43 @@ label {
 
 .notes_section {
   border-bottom: 2px solid #ff8400;
+  background: #1b002b url(../images/box-vtile--purple.jpg);
+  background-size: contain;
+
+  .content {
+    padding-top: 40px;
+  }
 
   .cms {
     max-width: 850px;
     margin: auto;
+
+    h3 {
+      font-size: 20px;
+      color: #ff8400;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      margin-left: 23px;
+    }
+  }
+
+  .expedition_notes_header {
+    text-transform: uppercase;
+    font-size: 32px;
+    background: no-repeat url(../images/heading-border-centered-3.png) center bottom;
+    background-size: contain;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
