@@ -383,7 +383,7 @@ layout: null
 
     {% for exp in site.data.expeditions %}
       {% if exp.notice %}
-        <h3 id="{{exp.id}}"><a href="#{{exp.id}}">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
+        <h3 id="{{exp.id}}_headline"><a href="#{{exp.id}}_headline">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
         {{ exp.notice | markdownify }}
       {% endif %}
     {% endfor %}
