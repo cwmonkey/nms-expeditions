@@ -2471,31 +2471,31 @@
           }
         },
         {
-          "Mission": "^FIEND_EGG",
-          "Title": "^UI_EXPED14_FIEND_EGG_NAME",
-          "TitleUpper": "^UI_EXPED14_FIEND_EGG_NAME_U",
-          "Description": "^UI_EXPED_FIEND_EGG_DESC",
-          "DescriptionDone": "^UI_EXPED_FIEND_EGG_DESC_D",
+          "Mission": "^BASIC_SCAN_CRE",
+          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 8,
+          "Amount": 6,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.EGGS.DDS"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.OFF.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
           },
           "Reward": "^RS_S14_S3M4",
           "RewardSwitchAlt": "^",

@@ -2364,11 +2364,11 @@
           }
         },
         {
-          "Mission": "^FIEND_EGG",
-          "Title": "^UI_EXPED_ROGUE_FIEND_EGG_NAME",
-          "TitleUpper": "^UI_EXPED_ROGUE_FIEND_EGG_NAME_U",
-          "Description": "^UI_EXPED_FIEND_EGG_DESC",
-          "DescriptionDone": "^UI_EXPED_FIEND_EGG_DESC_D",
+          "Mission": "^FIEND_KILL",
+          "Title": "^UI_EXPED14_FIEND_KILL_NAME",
+          "TitleUpper": "^UI_EXPED14_FIEND_KILL_NAME_U",
+          "Description": "^UI_EXPED_FIEND_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
           "Amount": 3,

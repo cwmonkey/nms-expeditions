@@ -1,0 +1,19 @@
+{
+  "Stages": [
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^FIEND_KILL",
+          "Title": "^UI_EXPED14_FIEND_KILL_NAME",
+          "TitleUpper": "^UI_EXPED14_FIEND_KILL_NAME_U",
+          "Description": "^UI_EXPED_FIEND_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D"
+        }
+      ]
+    }
+  ]
+}

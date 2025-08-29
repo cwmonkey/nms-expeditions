@@ -1,0 +1,36 @@
+{
+  "Stages": [
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_CRE",
+          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
+          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}

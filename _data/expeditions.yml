@@ -6,6 +6,13 @@
   redux: 1
   notice: >
           * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+
+          * Larval Eggs are currently broken. A patch has been created to replace Fiend Egg collection milestones.
+  patches:
+    - id: 01_redux_the_pioneers_replace_fiend_eggs
+      json: 01_redux_the_pioneers.replace_fiend_eggs.patch.json
+      description: Replace Fiend Egg collection milestone (Recommended)
+      checked: 1
 - id: e02
   name: '02: Beachhead'
   description: The one with the Mass Effect crossover
@@ -45,6 +52,8 @@
           * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You will need to move them.
 
           * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
+
+          * Larval Eggs are currently broken. A patch has been created to replace Fiend Egg collection milestones.
   patches:
     - id: 04_redux_emergence_replace_worm_hunt_2-3
       json: 04_redux_emergence.replace_worm_hunt_2-3.patch.json
@@ -53,6 +62,10 @@
     - id: 04_redux_emergence_replace_rdv4-5_milestones
       json: 04_redux_emergence.replace_rdv4-5_milestones.patch.json
       description: Replace rendezvous 4-5 and related milestones (Recommended)
+      checked: 1
+    - id: 04_redux_emergence_replace_fiend_eggs
+      json: 04_redux_emergence.replace_fiend_eggs.patch.json
+      description: Replace Fiend Egg collection milestone (Recommended)
       checked: 1
 - id: e05
   name: '05: Exobiology'
@@ -101,10 +114,16 @@
           * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
 
           * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
+
+          * Larval Eggs are currently broken. A patch has been created to replace Fiend Egg collection milestones.
   patches:
    - id: leviathan_replace_community_missions
      json: 07_redux_leviathan.replace_community_missions.patch.json
      description: Replace community milestones since they cannot be completed offline (Recommended)
+     checked: 1
+   - id: 07_redux_leviathan_replace_fiend_eggs
+     json: 07_redux_leviathan.replace_fiend_eggs.patch.json
+     description: Replace Fiend Egg collection milestone (Recommended)
      checked: 1
    - id: leviathan_no_reset_on_death
      json: 07_redux_leviathan.no_reset_on_death.patch.json
@@ -190,10 +209,16 @@
   redux: 1
   notice: >
           * HG changed how abandoned galaxies work. There is no longer any way to find synthetic life forms in them. A patch has been created to replace the "scan synthetic life forms" milestone.
+
+          * Larval Eggs are currently broken. A patch has been created to replace Fiend Egg collection milestones.
   patches:
    - id: adrift_synthetic_creature_scan_replace
      json: 13_adrift.synthetic_creature_scan_replace.patch.json
      description: Replace "scan synthetic life forms" milestone with a milestone to visit a red star (Recommended)
+     checked: 1
+   - id: 13_adrift_replace_fiend_eggs
+     json: 13_adrift.replace_fiend_eggs.patch.json
+     description: Replace Fiend Egg collection milestone (Recommended)
      checked: 1
 - id: e014
   name: '14: Liquidators'
@@ -203,10 +228,16 @@
   redux: 1
   notice: >
           * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
+
+          * Larval Eggs are currently broken. A patch has been created to replace Fiend Egg collection milestones.
   patches:
    - id: liquidators_replace_community_milestones
      json: 14_liquidators.replace_community_milestones.patch.json
      description: Replace online-only community milestones with offline-friendly milestones (Recommended)
+     checked: 1
+   - id: 14_liquidators_replace_fiend_eggs
+     json: 14_liquidators.replace_fiend_eggs.patch.json
+     description: Replace Fiend Egg collection milestone (Recommended)
      checked: 1
 - id: e015
   name: '15: Aquarius'
