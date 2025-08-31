@@ -12,7 +12,9 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/global.css?{{ site.github.build_revision }}">
+  <link rel="stylesheet" href="css/modal.css?{{ site.github.build_revision }}">
   <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/libs/micromodal/0.6.1/micromodal.min.js"></script>
 </head>
 <body data-touched="false" class="{% if site.local %}local{% else %}public{% endif %}">
 
@@ -22,7 +24,7 @@ layout: null
 
     <section class="intro">
       <div class="intro_toggle_container">
-        <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section" data-toggle-off-text="Show More Info" data-toggle-target="#header">
+        <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section_{% for post in site.posts limit: 1 %}{{ post.url | slugify }}{% endfor %}" data-toggle-off-text="Show More Info" data-toggle-target="#header">
           Hide
         </button>
       </div>
@@ -39,6 +41,13 @@ layout: null
         <p>
           If you feel we should all be able to replay expeditions online at any time, please <a href="https://hellogames.zendesk.com/hc/en-us/requests/new" target="_blank">tell Hello Games</a>.
         </p>
+        {% for post in site.posts limit: 1 %}
+          <section id="news" data-news-id="{{ post.url | slugify }}">
+            <h3>News:</h3>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time> -
+            {{ post.excerpt }}
+          </section>
+        {% endfor %}
       </div>
     </section>
   </header>
@@ -458,6 +467,25 @@ layout: null
   <script id="{{ preset.id }}" type="application/json">{% include {{ preset.json }} %}</script>
 {% endfor %}
 
+<div class="micromodal-slide modal" id="modal-news" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-news-title">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-news-title">New Version Available!</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <div class="modal__content" id="modal-news-content"><div class="cms">
+        <h3 id="modal-news-title"></h3>
+        <p id="modal-news-excerpt"></p>
+        <p>Please refresh the page to download the latest version of the expedition configs</p>
+      </div></div>
+      <footer class="modal__footer">
+        <button class="modal__btn modal__btn-primary" id="refresh">Refresh</button>
+        <button class="modal__btn" data-micromodal-close="" aria-label="Close this dialog window">Close</button>
+      </footer>
+    </div>
+  </div>
+</div>
 
 <script src="js/nms.js?{{ site.github.build_revision }}"></script>
 

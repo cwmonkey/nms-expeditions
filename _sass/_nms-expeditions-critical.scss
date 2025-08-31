@@ -162,6 +162,21 @@ label {
   }
 }
 
+/* News */
+
+#news {
+  h3, p, time {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  time {
+    font-style: italic;
+  }
+}
+
 /* Main */
 
 .main {

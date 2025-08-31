@@ -586,6 +586,56 @@ function addNode(prop, value, parent) {
 }
 
 ///////////////////////////////
+// Check for updates
+///////////////////////////////
+
+async function checkForUpdates() {
+  const url = 'latest.json';
+
+  clearTimeout(checkForUpdatesTO);
+
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const result = await response.json();
+
+    if (result.post && result.post.id !== newsId) {
+      console.log('News IDs do not match, refreshing...');
+      newsId = result.post.id;
+      $newsTitle.text(result.post.title);
+      $newsExerpt.html(result.post.excerpt);
+      MicroModal.show('modal-news');
+    }
+
+    checkForUpdatesTO = setTimeout(checkForUpdates, 1000 * 60 * 10);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+let checkForUpdatesTO = null;
+const $news = $('#news');
+let newsId = $news.data('news-id');
+
+const $newsTitle = $('#modal-news-title');
+const $newsExerpt = $('#modal-news-excerpt');
+
+$('#refresh').on('click', () => {
+  window.location.reload(true);
+});
+
+window.addEventListener("focus", function(event) {
+  checkForUpdates();
+});
+
+checkForUpdates();
+
+
+///////////////////////////////
 // On page load
 ///////////////////////////////
 

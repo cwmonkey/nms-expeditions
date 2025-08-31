@@ -1,0 +1,13 @@
+---
+layout: null
+---
+
+{
+{% for post in site.posts limit: 1 %}
+	"post": {
+		"title": "{{ post.title | escape }}",
+		"excerpt": "{{ post.excerpt | strip_html | escape | strip_newlines }}",
+		"id": "{{ post.url | slugify }}"
+	}
+{% endfor %}
+}

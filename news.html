@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>News - {{ site.title }}</title>
+  <meta name="description" content="News">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/global.css?{{ site.github.build_revision }}">
+  <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body data-touched="false" class="{% if site.local %}local{% else %}public{% endif %}">
+
+{% for post in site.posts %}
+	<article>
+		<h1>{{post.title}}</h1>
+		{{ post.excerpt }}
+	</article>
+{% endfor %}
