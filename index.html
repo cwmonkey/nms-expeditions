@@ -40,14 +40,14 @@ layout: null
 
     <ol class="exp_items">
       {% for exp in site.data.expeditions %}
-        <li class="exp_item exp_item_{{ exp.id }}">
+        <li class="exp_item exp_item_{{ exp.id }}" title="{{ exp.description }}">
           <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
           <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
             <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
             <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
-            <p class="exp_desc">
+            {% comment %}<p class="exp_desc">
               {{ exp.description }}
-            </p>
+            </p>{% endcomment %}
           </label>
         </li>
       {% endfor %}
