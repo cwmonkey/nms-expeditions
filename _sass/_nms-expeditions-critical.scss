@@ -41,6 +41,18 @@ label {
 
 /* General */
 
+@keyframes targeted {
+  0% { outline: 10px dashed rgba(0, 255, 0, 0) }
+  10% { outline: 10px dashed rgba(0, 255, 0, 1) }
+  90% { outline: 10px dashed rgba(0, 255, 0, 1) }
+  100% { outline: 10px dashed rgba(0, 255, 0, 0) }
+}
+
+:target {
+  animation-name: targeted;
+  animation-duration: 4s;
+}
+
 .cms {
   line-height: 1.4;
 
@@ -80,20 +92,70 @@ label {
   padding: 10px;
   margin: 0;
   font-size: 20px;
+  display: inline-block;
 }
 
 /* Intro */
+
+#header.toggle-off {
+  border-bottom: 2px solid #ff8400;
+
+  .intro {
+    border: 0;
+
+    .content {
+      display: none;
+    }
+  }
+
+  .intro_toggle_button {
+    bottom: 0;
+    top: auto;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+  }
+}
+
+.intro_toggle_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include button-reset();
+  padding: 3px 6px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  color: #fff;
+  opacity: .8;
+  transition: opacity .5s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.intro_toggle_container {
+  position: relative;
+}
 
 .intro {
   background: #010d47 url(../images/box-vtile--blue-dark.jpg);
   background-size: contain;
   border-bottom: 2px solid #ff8400;
+  border-top: 1px solid rgba(255, 255, 255, .8);
   color: #b2cfd7;
+  position: relative;
 
   h2 {
     @include visually-hidden();
   }
 
+  .intro_toggle_container,
   .cms {
     max-width: 850px;
     margin: auto;
@@ -205,6 +267,11 @@ label {
     filter: grayscale(1);
   }
 
+  &.exp_item_e01 .image {
+    width: 114px;
+    top: -5px;
+    right: 245px;
+  }
   &.exp_item_e02 .image {
     width: 114px;
     top: -5px;
@@ -596,6 +663,10 @@ label {
     dd {
       word-break: break-all;
       margin: 0 0 .5em .5em;
+
+      &.non_path {
+        word-break: normal;
+      }
     }
   }
 
