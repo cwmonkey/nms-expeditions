@@ -43,7 +43,7 @@ layout: null
         </p>
         {% for post in site.posts limit: 1 %}
           <section id="news" data-news-id="{{ post.url | slugify }}">
-            <h3>News:</h3>
+            <h3><a href="#expedition_notes_news">News</a>:</h3>
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time> -
             {{ post.excerpt }}
           </section>
