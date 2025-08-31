@@ -14,7 +14,7 @@ layout: null
   <link rel="stylesheet" href="css/global.css?{{ site.github.build_revision }}">
   <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body data-touched="false">
+<body data-touched="false" class="{% if site.local %}local{% else %}public{% endif %}">
 
 <div class="top">
   <header class="header">
