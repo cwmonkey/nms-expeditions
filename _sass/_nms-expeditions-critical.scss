@@ -136,12 +136,26 @@ label {
   background-size: contain;
 }
 
+.exp_items {
+  background: #000;
+  display: table;
+}
+
 .exp_item {
   position: relative;
   overflow: hidden;
   width: 330px;
   max-width: 100%;
-  margin: auto;
+  margin: 0 auto -3px;
+  z-index: 1;
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .exp_radio {
     position: absolute;
@@ -152,13 +166,13 @@ label {
   .exp_label {
     position: relative;
     overflow: hidden;
-    margin-bottom: 4px;
     transition: all .1s ease-in-out;
     background: rgb(93,93,93);
+    background-clip: padding-box;
     // background: radial-gradient(circle, rgba(162,162,162,1) 11%, rgba(108,108,108,1) 94%, rgba(93,93,93,1) 100%);
     display: block;
-    padding: 6px 6px 6px 80px;
-    border: 3px solid black;
+    padding: 16px 8px 16px 80px;
+    border: 3px solid transparent;
     color: #ebebeb;
 
     &:hover {
@@ -177,7 +191,7 @@ label {
     align-items: flex-start;
     width: 125px;
     height: 170%;
-    right: 255px;
+    right: 245px;
     position: absolute;
     z-index: 1;
     top: -10px;
@@ -192,21 +206,85 @@ label {
   }
 
   &.exp_item_e02 .image {
-    width: 200px;
-    top: -20px;
+    width: 114px;
+    top: -5px;
+    right: 245px;
   }
   &.exp_item_e03 .image {
-    top: -20px;
+    top: -19px;
+    right: 240px;
+    width: 132px;
+    height: 102px;
+  }
+  &.exp_item_e04 .image {
+    top: -7px;
+    right: 246px;
+    width: 100px;
   }
   &.exp_item_e05 .image {
-    width: 170px;
-    top: -20px;
+    width: 135px;
+    top: -9px;
+    right: 244px;
+  }
+  &.exp_item_e06 .image {
+    width: 135px;
+    top: -26px;
+    right: 244px;
+  }
+  &.exp_item_e07 .image {
+    width: 78px;
+    top: -10px;
+    right: 253px;
+  }
+  &.exp_item_e08 .image {
+    width: 91px;
+    top: 1px;
+    right: 247px;
+  }
+  &.exp_item_e09 .image {
+    width: 104px;
+    top: -26px;
+    right: 247px;
+    height: 100px;
+  }
+  &.exp_item_e010 .image {
+    width: 123px;
+    top: -40px;
+    right: 229px;
+    height: 150px;
+  }
+  &.exp_item_e011 .image {
+    width: 85px;
+    top: -34px;
+    right: 247px;
+    height: 150px;
   }
   &.exp_item_e013 .image {
     top: -20px;
   }
+  &.exp_item_e015 .image {
+    width: 132px;
+    top: -5px;
+    right: 248px;
+    height: 150px;
+  }
   &.exp_item_e016 .image {
-    top: -27px;
+    width: 104px;
+    top: -43px;
+    right: 243px;
+    height: 150px;
+  }
+  &.exp_item_e017 .image {
+    width: 85px;
+    top: -25px;
+    right: 248px;
+    height: 150px;
+  }
+  &.exp_item_e018 .image {
+    width: 114px;
+    top: -5px;
+    right: 237px;
+    height: 150px;
   }
 
   .exp_name {
@@ -226,12 +304,13 @@ label {
     line-height: 1.4;
     font-size: 15px;
     color: #b2cfd7;
+    display: none;
   }
 
   .exp_radio:checked ~ .exp_label {
     background: rgb(209,185,104);
     background: radial-gradient(circle, rgba(209,185,104,1) 11%, rgba(185,124,24,1) 94%, rgba(179,94,6,1) 100%);
-    border-color: white;
+    background-clip: padding-box;
     color: #352025;
 
     .exp_name {
@@ -673,6 +752,10 @@ label {
 }
 
 @media screen and (width < 1315px) and (width >= 650px) {
+  .exp_items {
+    display: block;
+  }
+
   .exp_item {
     width: 250px;
 
@@ -702,6 +785,10 @@ label {
 }
 
 @media screen and (width < 1236px) and (width >= 650px) {
+  .exp_items {
+    display: block;
+  }
+
   .top {
     display: grid;
     grid-template-rows: auto;
@@ -725,6 +812,10 @@ label {
 }
 
 @media screen and (width >= 1236px) {
+  .exp_items {
+    display: block;
+  }
+
   .select_exp,
   .customize,
   .download_section {

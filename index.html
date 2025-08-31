@@ -38,7 +38,7 @@ layout: null
   <section class="step select_exp">
     <h3 class="step_headline">Step 1: Select Expedition</h3>
 
-    <ol>
+    <ol class="exp_items">
       {% for exp in site.data.expeditions %}
         <li class="exp_item exp_item_{{ exp.id }}">
           <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
