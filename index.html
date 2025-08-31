@@ -382,10 +382,23 @@ layout: null
       <h3><a href="#expedition_notes_general">General</a></h3>
 
       <ul>
-        <li>At the start of any expedition the reward descriptions are blank. Simply save your game and reload it to make the descriptions show up.</li>
         <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
         <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
         <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
+      </ul>
+    </section>
+
+    <section id="expedition_notes_news">
+      <h3><a href="#expedition_notes_news">News</a></h3>
+
+      <ul>
+        {% for post in site.posts %}
+          <li id="expedition_notes_news_{{ post.url | slugify }}">
+            <strong>{{ post.title }}</strong> -
+            <em><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></em>
+            {{ post.excerpt }}
+          </li>
+        {% endfor %}
       </ul>
     </section>
 
