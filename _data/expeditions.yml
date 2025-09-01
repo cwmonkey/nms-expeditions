@@ -33,8 +33,14 @@
   json: 03_redux_cartographers.json
   redux: 1
   notice: >
+          * Due to a bug in NMS 6.0, Larval Cores cannot be collected. A patch has been created to start the player with 3 Larval Cores in their inventory. This will not work on expeditions started before this patch was applied. If you require Larval Cores on an existing save, you'll need to use a save editor.
+
           * The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created so you can choose which rewards you get.
   patches:
+   - id: 03_redux_cartographers_larval_cores_inventory
+     json: 03_redux_cartographers.larval_cores_inventory.patch.json
+     description: Start with 3 Larval Cores in inventory (Recommended)
+     checked: 1
    - id: season_3_other_rewards
      json: 03_redux_cartographers.other_rewards.json
      description: Get rewards from season 1, 4 and 5 instead (Golden Vector, Feasting Casque Helmet, Exotic Wingpack, Streamlined Jetpack).

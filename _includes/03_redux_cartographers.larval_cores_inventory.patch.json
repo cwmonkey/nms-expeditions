@@ -1,0 +1,20 @@
+{
+  "Inventory": {
+    "Slots": [
+      {
+        "Type":{
+          "InventoryType":"Product"
+        },
+        "Id":"^FIENDCORE",
+        "Amount":3,
+        "MaxAmount":10,
+        "DamageFactor":0.0,
+        "FullyInstalled":true,
+        "Index":{
+          "X":0,
+          "Y":0
+        }
+      }
+    ]
+  }
+}
