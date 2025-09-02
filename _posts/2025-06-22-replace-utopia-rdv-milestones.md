@@ -1,6 +1,6 @@
 ---
 category: news
-title: Replacing Utopia Rendezvous and Planet-Specific Milestones
+title: "Replacing Rendezvous and Planet-Specific Milestones in Expedition 9: Utopia"
 tags: [news, refresh]
 ---
 

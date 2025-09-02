@@ -1,6 +1,6 @@
 ---
 category: news
-title: Adding Larval Cores to Inventory in Cartographers
+title: "Adding Larval Cores to Inventory in Expedition 3: Cartographers"
 tags: [news, refresh]
 ---
 
