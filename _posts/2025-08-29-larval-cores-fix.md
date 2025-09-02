@@ -1,6 +1,6 @@
 ---
 category: news
-title: Larval Cores Fix
+title: Replacing Milestones Requiring Larval Cores
 tags: [news, refresh]
 ---
 
