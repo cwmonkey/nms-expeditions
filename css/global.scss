@@ -5,4 +5,154 @@
 @import "reset";
 @import "fonts";
 @import "cms-normalize";
-@import "nms-expeditions-critical";
+@import "mixins";
+
+/* More */
+body {
+  background: #000;
+  color: #ebebeb;
+  margin: 0;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: geosanslight-nmsregular, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+a {
+  color: #cd4534;
+
+  &:visited {
+    color: #bd3524;
+  }
+
+  &:active {
+    color: red;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button:not([disabled]),
+[type="file"],
+label {
+  cursor: pointer; // TODO: Usability?
+}
+
+/* General */
+
+@keyframes targeted {
+  0% { outline: 10px dashed rgba(0, 255, 0, 0) }
+  10% { outline: 10px dashed rgba(0, 255, 0, 1) }
+  90% { outline: 10px dashed rgba(0, 255, 0, 1) }
+  100% { outline: 10px dashed rgba(0, 255, 0, 0) }
+}
+
+:target {
+  animation-name: targeted;
+  animation-duration: 4s;
+}
+
+.cms {
+  line-height: 1.4;
+
+  @include cms-normalize();
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  code {
+    font-size: .9em;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    padding: 1px 2px;
+    background: rgba(0, 0, 0, .8);
+    color: #e4e4e4;
+  }
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Header */
+.headline1 {
+  padding: 10px;
+  margin: 0;
+  font-size: 20px;
+  display: inline-block;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+/* Notes */
+
+.notes_section {
+  border-bottom: 2px solid #ff8400;
+  background: #1b002b url(../images/box-vtile--purple.jpg);
+  background-size: contain;
+
+  .content {
+    padding-top: 40px;
+  }
+
+  .cms {
+    max-width: 850px;
+    margin: auto;
+
+    h3 {
+      a {
+        font-size: 20px;
+        color: #ff8400;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      margin-left: 23px;
+    }
+  }
+
+  .expedition_notes_header {
+    text-transform: uppercase;
+    font-size: 32px;
+    background: no-repeat url(../images/heading-border-centered-3.png) center bottom;
+    background-size: contain;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background: #162238 url(../images/box-vtile-2.png);
+  background-size: contain;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .image img {
+    width: 48px;
+  }
+}

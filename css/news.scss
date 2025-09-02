@@ -1,0 +1,23 @@
+---
+---
+@charset "utf-8";
+
+@import "mixins";
+
+/* Notes */
+
+.notes_section {
+  border-top: 2px solid #ff8400;
+
+  .content {
+    padding-bottom: 40px;
+  }
+
+  time {
+    font-style: italic;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+}

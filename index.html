@@ -1,57 +1,51 @@
 ---
-layout: null
+layout: default
+body_class: page_index
 ---
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{block=head_extra_content}
+  <link rel="stylesheet" href="{{site.baseurl}}/css/index.css?{{ site.github.build_revision }}">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/modal.css?{{ site.github.build_revision }}">
+  <script src="{{site.baseurl}}/js/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/js/libs/micromodal/0.6.1/micromodal.min.js"></script>
+{endblock}
 
-  <link rel="stylesheet" href="css/global.css?{{ site.github.build_revision }}">
-  <link rel="stylesheet" href="css/modal.css?{{ site.github.build_revision }}">
-  <script src="js/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="js/libs/micromodal/0.6.1/micromodal.min.js"></script>
-</head>
-<body data-touched="false" class="{% if site.local %}local{% else %}public{% endif %}">
+{block=below_footer_content}
+  <script src="{{site.baseurl}}/js/nms.js?{{ site.github.build_revision }}"></script>
+{endblock}
 
-<div class="top">
-  <header class="header" id="header" data-toggle-container data-toggle-default="on">
-    <h1 class="headline1">{{ site.title }}</h1>
+{block=intro_content}
+  <section class="intro">
+    <div class="intro_toggle_container">
+      <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section_{% for post in site.posts limit: 1 %}{{ post.url | slugify }}{% endfor %}" data-toggle-off-text="Show More Info" data-toggle-target="#header">
+        Hide
+      </button>
+    </div>
+    <div class="content cms">
+      <h2 class="visibly-hidden">Introduction</h2>
+      <p>
+        You can use this app to customize and generate <code>SEASON_DATA_CACHE.JSON</code> to play No Man's Sky expeditions <strong>offline</strong> on PC/Mac/SteamDeck (and Switch with some work).
+        Any rewards you unlock, as well as ships/multitools/items you transfer, will remain on your account/saves after going back online.
+        If you JUST want the rewards, <a href="#expedition_notes_just_unlocks">see below</a> for more info.
+      </p>
+      <p>
+        To report bugs or make suggestions, please <a href="https://github.com/cwmonkey/nms-expeditions/issues?q=is%3Aissue" target="_blank">use my GitHub page</a>.
+      </p>
+      <p>
+        If you feel we should all be able to replay expeditions online at any time, please <a href="https://hellogames.zendesk.com/hc/en-us/requests/new" target="_blank">tell Hello Games</a>.
+      </p>
+      {% for post in site.posts limit: 1 %}
+        <section id="news" data-news-id="{{ post.url | slugify }}">
+          <h3><a href="#expedition_notes_news">News</a>:</h3>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time> -
+          {{ post.excerpt }}
+        </section>
+      {% endfor %}
+    </div>
+  </section>
+{endblock}
 
-    <section class="intro">
-      <div class="intro_toggle_container">
-        <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section_{% for post in site.posts limit: 1 %}{{ post.url | slugify }}{% endfor %}" data-toggle-off-text="Show More Info" data-toggle-target="#header">
-          Hide
-        </button>
-      </div>
-      <div class="content cms">
-        <h2 class="visibly-hidden">Introduction</h2>
-        <p>
-          You can use this app to customize and generate <code>SEASON_DATA_CACHE.JSON</code> to play No Man's Sky expeditions <strong>offline</strong> on PC/Mac/SteamDeck (and Switch with some work).
-          Any rewards you unlock, as well as ships/multitools/items you transfer, will remain on your account/saves after going back online.
-          If you JUST want the rewards, <a href="#expedition_notes_just_unlocks">see below</a> for more info.
-        </p>
-        <p>
-          To report bugs or make suggestions, please <a href="https://github.com/cwmonkey/nms-expeditions/issues?q=is%3Aissue" target="_blank">use my GitHub page</a>.
-        </p>
-        <p>
-          If you feel we should all be able to replay expeditions online at any time, please <a href="https://hellogames.zendesk.com/hc/en-us/requests/new" target="_blank">tell Hello Games</a>.
-        </p>
-        {% for post in site.posts limit: 1 %}
-          <section id="news" data-news-id="{{ post.url | slugify }}">
-            <h3><a href="#expedition_notes_news">News</a>:</h3>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time> -
-            {{ post.excerpt }}
-          </section>
-        {% endfor %}
-      </div>
-    </section>
-  </header>
-
+{block=top_content}
   <section class="step select_exp">
     <h3 class="step_headline">Step 1: Select Expedition</h3>
 
@@ -60,7 +54,7 @@ layout: null
         <li class="exp_item exp_item_{{ exp.id }}" title="{{ exp.description }}">
           <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
           <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
-            <span class="image"><img src="images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
+            <span class="image"><img src="{{site.baseurl}}/images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
             <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
             {% comment %}<p class="exp_desc">
               {{ exp.description }}
@@ -371,8 +365,7 @@ layout: null
       </section>
     </div>
   </section>
-
-</div>
+{endblock}
 
 <section class="notes_section"><div class="content">
   <div class="cms">
@@ -392,7 +385,7 @@ layout: null
       <h3><a href="#expedition_notes_news">News</a></h3>
 
       <ul>
-        {% for post in site.posts %}
+        {% for post in site.posts limit: 3 %}
           <li id="expedition_notes_news_{{ post.url | slugify }}">
             <strong>{{ post.title }}</strong> -
             <em><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></em>
@@ -400,6 +393,10 @@ layout: null
           </li>
         {% endfor %}
       </ul>
+
+      <p>
+        <a href="{{site.baseurl}}/news/">More News...</a>
+      </p>
     </section>
 
     <section id="expedition_notes_replaying_restarting">
@@ -419,14 +416,15 @@ layout: null
       <p>Note: If you are familiar with save editing, you can just remove the <code>ExpeditionContext</code> entry from your save file (that's how the game knows which expedition you played last).</p>
     </section>
 
-    {% for exp in site.data.expeditions %}
-      {% if exp.notice %}
-        <section id="{{exp.id}}_headline">
-          <h3><a href="#{{exp.id}}_headline">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
-          {{ exp.notice | markdownify }}
-        </section>
-      {% endif %}
-    {% endfor %}
+    <section id="expedition_notes_static_files">
+      <h3><a href="#expedition_notes_static_files">Static Expedition Config Files for Developers</a></h3>
+
+      <p>This GitHub repositiry now has static <code>SEASON_DATA_CACHE.JSON</code> files with all the recommended patches. I don't require anything if you want to use these files, but credit is always appreciated.</p>
+
+      <p>You can access these files with Git or, you can link to them using the "raw" github links (<a href="https://raw.githubusercontent.com/cwmonkey/nms-expeditions/refs/heads/main/patched/01%20-%20Pioneers%20(Latest)/SEASON_DATA_CACHE.JSON" target="_blank">Example link for Expedition 1, Pioneers</a>).</p>
+
+      <p>You can find all the patched expedition config files <a href="https://github.com/cwmonkey/nms-expeditions/tree/main/patched" target="_blank">in my GitHub project</a>.</p>
+    </section>
 
     <section id="expedition_notes_just_unlocks">
       <h3><a href="#expedition_notes_just_unlocks">Obtaining Expedition Unlocks/Rewards Without Playing Expeditions</a></h3>
@@ -450,27 +448,17 @@ layout: null
         </li>
       </ol>
     </section>
+
+    {% for exp in site.data.expeditions %}
+      {% if exp.notice %}
+        <section id="{{exp.id}}_headline">
+          <h3><a href="#{{exp.id}}_headline">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
+          {{ exp.notice | markdownify }}
+        </section>
+      {% endif %}
+    {% endfor %}
   </div>
 </div></section>
-<footer class="footer">
-  <div class="cms">
-    <p>
-      This is a work in progress, so feel free to <a href="https://github.com/cwmonkey/nms-expeditions/issues?q=is%3Aissue" target="_blank">hit me up on GitHub</a> with any issues.
-    </p>
-    <p>
-      You can also contact <strong>WrasslorMonkey</strong> on Discord.
-    </p>
-    <p>
-      Reddit shadowbanned me for helping too many people with expedition related issues, so I guess don't try to contact me there, lol.
-    </p>
-    <p>
-      Thanks to Leodium (who has retired from this project) for sharing this concept and files to help make this page possible.
-    </p>
-  </div>
-  <div class="image">
-    <img src="images/monkey-head-graffiti.png" alt="cwmonkey avatar" title="That's me">
-  </div>
-</footer>
 
 {% for exp in site.data.expeditions %}
   <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
@@ -503,8 +491,3 @@ layout: null
     </div>
   </div>
 </div>
-
-<script src="js/nms.js?{{ site.github.build_revision }}"></script>
-
-</body>
-</html>
