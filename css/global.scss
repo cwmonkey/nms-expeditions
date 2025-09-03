@@ -85,18 +85,30 @@ label {
 
 /* Header */
 .headline1 {
-  padding: 10px;
   margin: 0;
-  font-size: 20px;
   display: inline-block;
 
   a {
-    color: inherit;
+    // preload
+    &::after {
+      background-image: url(../images/mission.seasonal.on.png);
+      content: "";
+    }
+
+    display: block;
+    padding: 10px 10px 10px 40px;
+    font-size: 20px;
+    background: url(../images/mission.seasonal.off.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     text-decoration: none;
-    transition: color .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    opacity: .9;
 
     &:hover {
-      color: #fff;
+      background-image: url(../images/mission.seasonal.on.png);
+      opacity: 1;
     }
   }
 }
