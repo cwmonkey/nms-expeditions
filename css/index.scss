@@ -163,17 +163,29 @@
   .exp_label {
     position: relative;
     overflow: hidden;
-    transition: all .1s ease-in-out;
-    background: rgb(93,93,93);
+    transition: border .1s ease-in-out, background .2s ease-in-out, color .2s ease-in-out;
+    background: url(../images/exp-background-off.gif) no-repeat;
+    background-size: cover;
+    background-color: rgb(93,93,93);
     background-clip: padding-box;
     // background: radial-gradient(circle, rgba(162,162,162,1) 11%, rgba(108,108,108,1) 94%, rgba(93,93,93,1) 100%);
     display: block;
-    padding: 16px 8px 16px 80px;
+    padding: 18px 8px 14px 80px;
     border: 3px solid transparent;
     color: #ebebeb;
 
+    // preoload
+    &::after {
+      background: url(../images/exp-background-on.jpg);
+      content: "";
+    }
+
     &:hover {
       border-color: #fff;
+
+      .image {
+        transform: scale(1);
+      }
     }
 
     * {
@@ -192,6 +204,8 @@
     position: absolute;
     z-index: 1;
     top: -10px;
+    transform: scale(.9);
+    transition: all .2s ease-in-out;
   }
 
   .badge {
@@ -200,6 +214,7 @@
     width: auto;
     height: auto;
     filter: grayscale(1);
+    transition: all .2s ease-in-out;
   }
 
   &.exp_item_e01 .image {
@@ -283,9 +298,15 @@
     height: 150px;
   }
   &.exp_item_e018 .image {
-    width: 114px;
+    width: 133px;
     top: -5px;
-    right: 237px;
+    right: 231px;
+    height: 150px;
+  }
+  &.exp_item_e019 .image {
+    width: 79px;
+    top: -21px;
+    right: 248px;
     height: 150px;
   }
 
@@ -310,13 +331,15 @@
   }
 
   .exp_radio:checked ~ .exp_label {
-    background: rgb(209,185,104);
-    background: radial-gradient(circle, rgba(209,185,104,1) 11%, rgba(185,124,24,1) 94%, rgba(179,94,6,1) 100%);
+    //background: rgb(209,185,104);
+    //background: radial-gradient(circle, rgba(209,185,104,1) 11%, rgba(185,124,24,1) 94%, rgba(179,94,6,1) 100%);
+    background-image: url(../images/exp-background-on.jpg);
     background-clip: padding-box;
-    color: #352025;
+    //color: #352025;
+    color: #e8e1d1;
 
     .exp_name {
-      text-shadow: none;
+      // text-shadow: 0px 2px 0 rgba(255,255,255,0.4);
     }
 
     .badge {
@@ -325,6 +348,10 @@
 
     .exp_desc {
       color: #352025;
+    }
+
+    .image {
+      transform: scale(1);
     }
   }
 
