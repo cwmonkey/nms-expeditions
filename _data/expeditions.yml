@@ -280,3 +280,10 @@
      json: 18_relics.replace_bone_hunt_milestones.patch.json
      description: Replace the bone collection milestones (Recommended)
      checked: 1
+- id: e019
+  name: '19: Corvette'
+  description: The one with the corvettes
+  image: e19_corvette.png
+  json: 19_corvette.json
+  notice: >
+          * This expedition is currently live. I have not tested to see if it can be fully completed offline.
