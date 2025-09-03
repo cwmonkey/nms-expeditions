@@ -38,6 +38,7 @@ body_class: page_index
         <section id="news" data-news-id="{{ post.url | slugify }}">
           <h3><a href="#expedition_notes_news">News</a>:</h3>
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time> -
+          <strong>{{ post.title }}</strong> -
           {{ post.excerpt }}
         </section>
       {% endfor %}
