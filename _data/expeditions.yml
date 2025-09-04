@@ -286,4 +286,9 @@
   image: e19_corvette.png
   json: 19_corvette.json
   notice: >
-          * This expedition is currently live. I have not tested to see if it can be fully completed offline.
+          * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
+  patches:
+   - id: 19_corvette_replace_community_multiplayer_milestones
+     json: 19_corvette.replace_community_multiplayer_milestones.patch.json
+     description: Replace community and multiplayer milestones (Recommended)
+     checked: 1
