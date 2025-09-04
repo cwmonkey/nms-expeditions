@@ -259,5 +259,5 @@
      checked: 1
    - id: 19_corvette_allow_ship_transfer
      json: 19_corvette.allow_ship_transfer.patch.json
-     description: Allow expedition to primary save ship copying
-     checked: 0
+     description: Allow expedition to primary save ship copying (Recommended)
+     checked: 1
