@@ -1,5 +1,5 @@
 {% capture liquid %}
-  {% assign validblocks = "intro_content},top_content},below_footer_content},head_extra_content}" | split: "," %}
+  {% assign validblocks = "intro_content},top_content},below_footer_content},head_extra_content},below_body_content}" | split: "," %}
 
   {% assign parts = content | split: "{block=" %}
   {% assign page_content = "" %}
@@ -20,6 +20,8 @@
             {% assign below_footer_content = blockparts[1] %}
           {% elsif validblock == "head_extra_content}" %}
             {% assign head_extra_content = blockparts[1] %}
+          {% elsif validblock == "below_body_content}" %}
+            {% assign below_body_content = blockparts[1] %}
           {% endif %}
 
         {% endif %}
@@ -44,6 +46,8 @@
   {{head_extra_content}}
 </head>
 <body data-touched="false" class="{% if site.local %}local {% else %}public {% endif %}{{page.body_class}}">
+
+{{ below_body_content }}
 
 <div class="top">
   <header class="header" id="header" data-toggle-container data-toggle-default="on">

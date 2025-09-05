@@ -10,6 +10,10 @@ body_class: page_index
   <script src="{{site.baseurl}}/js/libs/micromodal/0.6.1/micromodal.min.js"></script>
 {endblock}
 
+{block=below_body_content}
+  <script src="{{site.baseurl}}/js/toggler.js?{{ site.github.build_revision }}"></script>
+{endblock}
+
 {block=below_footer_content}
   <script src="{{site.baseurl}}/js/nms.js?{{ site.github.build_revision }}"></script>
 {endblock}
@@ -44,6 +48,10 @@ body_class: page_index
 {endblock}
 
 {block=top_content}
+  <script>
+    // Check top toggle quickly to prevent flicker
+    window.jQuery && window.jQuery.checkToggles && window.jQuery.checkToggles();
+  </script>
   <section class="step select_exp">
     <h3 class="step_headline">Step 1: Select Expedition</h3>
 
