@@ -250,14 +250,8 @@
   json: 19_corvette.json
   notice: >
           * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
-
-          * This expedition disables the ability to copy your expedition ship back to your primary save. A patch has been created to enable it again. You can apply this patch even after you have completed the expedition to enable copying your corvette to your primary save.
   patches:
    - id: 19_corvette_replace_community_multiplayer_milestones
      json: 19_corvette.replace_community_multiplayer_milestones.patch.json
      description: Replace community and multiplayer milestones (Recommended)
-     checked: 1
-   - id: 19_corvette_allow_ship_transfer
-     json: 19_corvette.allow_ship_transfer.patch.json
-     description: Allow expedition to primary save ship copying (Recommended)
      checked: 1
