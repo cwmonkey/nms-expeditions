@@ -4884,5 +4884,5 @@
   "OnlyCorvetteLauncherCanBeRepaired": true,
   "AllowOnlyCorvetteShipPurchases": true,
   "AllowSaveContextMultitoolTransfer": true,
-  "AllowSaveContextShipTransfer": true
+  "AllowSaveContextShipTransfer": false
 }
