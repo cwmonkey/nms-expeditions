@@ -2,3 +2,4 @@
 /_site
 *.sublime-project
 *.sublime-workspace
+/.jekyll-metadata
