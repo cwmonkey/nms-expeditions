@@ -81,6 +81,23 @@
    - prop: UseSpookHazardOnly
      type: bool
      description: Replaces all hazards on planets with the ghost effect from The Cursed
+   - prop: PurpleSystemsUnlocked
+     type: bool
+     description: Start with purple systems unlocked
+   - prop: OnlyCorvettesSpawnWhenPlayerTeleports
+     type: bool
+   - prop: OnlyCorvetteLauncherCanBeRepaired
+     type: bool
+     description: Starting ship (and other ships?) cannot be repaired
+   - prop: AllowOnlyCorvetteShipPurchases
+     type: bool
+     description: Cannot trade, buy, or claim and other ships
+   - prop: AllowSaveContextMultitoolTransfer
+     type: bool
+     description: Allow Multi-Tool to be transfered TO expedition
+   - prop: AllowSaveContextShipTransfer
+     type: bool
+     description: Allow Ship to be transfered TO expedition
 - name: Difficulty Minimums
   id: DifficultyMinimums
   prop: DifficultyMinimums
