@@ -336,7 +336,7 @@ body_class: page_index
 
       <p>Note 2: The file MUST be named exactly <code>SEASON_DATA_CACHE.JSON</code> (names like <code>SEASON_DATA_CACHE (1).JSON</code> will not work).</p>
 
-      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/48#discussioncomment-11565201" target="_blank">block NMS via a firewall</a>) when you play NMS for this to work, otherwise your expedition JSON will be overwritten and any offline expeditions you were on will end when you load the save. If you go online while in an expedition, the expedition will abruptly end.</p>
+      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/48#discussioncomment-11565201" target="_blank">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
     </div>
 
     <div class="download_container">
@@ -383,9 +383,18 @@ body_class: page_index
       <ul>
         <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
         <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
-        <li>If you start your game in online mode after starting an offline expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you can go offline and resume the expedition.</li>
         <li>To summon the Anomaly after your first warp jump you must now enter then exit the space station (this may be a bug).</li>
         <li>If you feel we should all be able to replay expeditions online at any time, please <a href="https://hellogames.zendesk.com/hc/en-us/requests/new" target="_blank">tell Hello Games</a>.</li>
+      </ul>
+    </section>
+
+    <section id="expedition_notes_online">
+      <h3><a href="#expedition_notes_online">When Can I Go Online?</a></h3>
+
+      <ul>
+        <li>If NMS is <strong>not</strong> running, you can go online without any consequences.</li>
+        <li>If you start NMS in online mode, you may play NON-expedition saves, however you will need to close the game, go offline and re-download the appropriate expedition <code>SEASON_DATA_CACHE.JSON</code> file before loading your expedition save.</li>
+        <li>If you start NMS in online mode and load an expedition save, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you may be able to go offline, re-download the expedition JSON and resume the expedition.</li>
       </ul>
     </section>
 
