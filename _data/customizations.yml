@@ -84,6 +84,8 @@
    - prop: PurpleSystemsUnlocked
      type: bool
      description: Start with purple systems unlocked
+   - prop: ForceAllSentinelsAggressive
+     type: bool
    - prop: OnlyCorvettesSpawnWhenPlayerTeleports
      type: bool
    - prop: OnlyCorvetteLauncherCanBeRepaired
