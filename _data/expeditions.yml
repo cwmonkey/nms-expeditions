@@ -27,6 +27,8 @@
   redux: 1
   notice: >
           * The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created so you can choose which rewards you get.
+
+          * **DO NOT** set `BlockStormsAtStart` to `true` or you will not be able to complete all the milestones. If you start the expedition with `BlockStormsAtStart` set to `true`, simply set it to `false` below and re-download the json.
   patches:
    - id: season_3_other_rewards
      json: 03_redux_cartographers.other_rewards.json
