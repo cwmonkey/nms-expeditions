@@ -28,11 +28,16 @@
   notice: >
           * The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created so you can choose which rewards you get.
 
-          * **DO NOT** set `BlockStormsAtStart` to `true` or you will not be able to complete all the milestones. If you start the expedition with `BlockStormsAtStart` set to `true`, simply set it to `false` below and re-download the json.
+          * If you start the expedition with `BlockStormsAtStart` set to `true`, simply set it to `false` below and re-download the json.
   patches:
    - id: season_3_other_rewards
      json: 03_redux_cartographers.other_rewards.json
      description: Get rewards from season 1, 4 and 5 instead (Golden Vector, Feasting Casque Helmet, Exotic Wingpack, Streamlined Jetpack).
+  warnings:
+   - prop: BlockStormsAtStart
+     value: true
+     message: If you block storms at the start of this expedition, you will not be able to complete all milestones.
+     active: Please change `BlockStormsAtStart` in the `General` section below.
 - id: e04
   name: '04: Emergence'
   description: The one with the sand worms
@@ -98,8 +103,6 @@
   json: 07_redux_leviathan.json
   redux: 1
   notice: >
-          * **Permadeath warning:** It is not possible to finish this expedition in permadeath mode. If you can avoid death until the final milestone, **your expedition AND primary save will be deleted** by "submitting."
-
           * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
 
           * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
@@ -112,6 +115,13 @@
      json: 07_redux_leviathan.no_reset_on_death.patch.json
      description: Disable "reset save on death" mechanic and reduce difficulty settings
      checked: 0
+  warnings:
+    - id: GameMode_Permadeath
+      prop: GameMode
+      subprop: PresetGameMode
+      value: Permadeath
+      message: "This expedition CANNOT be completed on Permadeath. If you make it to the end, your primary save will be wiped. Note: Your primary save mode does not matter."
+      active: Please change `GameMode` in the `General` section below.
 - id: e08
   name: '08: Polestar'
   description: The one about freighters

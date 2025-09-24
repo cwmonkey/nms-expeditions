@@ -82,6 +82,9 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
   $('.notice').removeClass('selected');
   $('#notice_' + expId).addClass('selected');
 
+  $('.warning').removeClass('selected');
+  $('#warning_' + expId).addClass('selected');
+
   $props.each((index, el) => {
     const $el = $(el);
     const property = $el.attr('name');
@@ -110,6 +113,7 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
 
   $download.removeAttr('disabled');
   updatePatches(expId);
+  checkWarnings();
   updateDebug();
 });
 
@@ -130,10 +134,11 @@ $('.cust_preset').each((index, el) => {
   const presetData = JSON.parse(document.getElementById(id).textContent);
 
   presets[id] = presetData;
+
+  checkWarnings();
 });
 
 // Preset button event
-
 $body.on('click', '.cust_preset', function () { // ES5 because of "this"
   const $el = $(this);
   const id = $el.data('id');
@@ -168,6 +173,7 @@ function filterProp(name, value) {
   return value;
 }
 
+// Update overrieds when custom properties are changed
 function updateProps() {
   overrides = {};
   let hasUpdates = false;
@@ -249,10 +255,42 @@ function updateProps() {
     overrides = null;
   }
 
+  checkWarnings();
+
   updateDebug();
 }
 
 $body.on('input', '.cust_prop_input', updateProps);
+
+// Check for warnings
+const $warningContent = $('#modal-warning-content');
+
+function checkWarnings() {
+  $('.warning_message').removeClass('selected');
+
+  if (expId && overrides) {
+    $('#warning_' + expId + ' .warning_message').each((index, el) => {
+      const $el = $(el);
+      const prop = $el.data('prop');
+      const subprop = $el.data('subprop');
+      const value = $el.data('value');
+      let override = null;
+
+      if (prop && subprop) {
+        override = overrides[prop][subprop];
+      } else {
+        override = overrides[prop];
+      }
+
+      if (override === value) {
+        $el.addClass('selected');
+
+        MicroModal.show('modal-warning');
+        $warningContent.html($el.html());
+      }
+    })
+  }
+}
 
 //load saved values
 $props.each((index, el) => {

@@ -359,6 +359,12 @@
 
 /* Step 2: Customize */
 
+@keyframes pulseBorder {
+  0% {border-color: transparent}
+  80% {opacity: #e66}
+  100% {opacity: #e66}
+}
+
 .customize {
   background: #004a61 url(../images/box-vtile-1.png);
   background-size: contain;
@@ -398,6 +404,48 @@
     }
   }
 
+  // Warning section
+  .warning {
+    border: 1px solid #e66;
+    margin: 20px 0;
+    display: none;
+
+    .warning_headline {
+      background-color: #e66;
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      color: #000;
+    }
+
+    .warning_list {
+      margin-right: 5px;
+    }
+
+    &.selected {
+      display: block;
+    }
+
+    .warning_active {
+      display: none;
+    }
+
+    .warning_message.selected .warning_active {
+      p {
+        border: 1px dashed #e66;
+        padding: 3px;
+        animation-name: pulseBorder;
+        animation-duration: .5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      display: block;
+    }
+  }
+
+  // Warning/Notice shared
+  .warning_description,
   .notice_description {
     ol {
       margin-left: 1.5em;

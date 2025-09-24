@@ -102,6 +102,28 @@ body_class: page_index
       {% endfor %}
     </div>
 
+    <div class="warnings">
+      {% for exp in site.data.expeditions %}
+        {% if exp.warnings %}
+          <section class="warning" id="warning_{{ exp.id }}">
+            <div class="notice_description cms">
+              <h4 class="warning_headline">Warning</h4>
+              <ul class="warning_list">
+                {% for warning in exp.warnings %}
+                  <li class="warning_message" data-prop="{{ warning.prop }}" data-subprop="{{ warning.subprop }}" data-value="{{ warning.value }}">
+                    {{ warning.message | markdownify }}
+                    <span class="warning_active">
+                      {{ warning.active | markdownify }}
+                    </span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+
     <section class="cust_section cust_presets_section">
       <h4 class="cust_headline"><span class="cust_headline_text">Presets</span></h4>
 
@@ -513,6 +535,21 @@ body_class: page_index
       <footer class="modal__footer">
         <button class="modal__btn modal__btn-primary" id="refresh">Refresh</button>
         <button class="modal__btn" data-micromodal-close="" aria-label="Close this dialog window">Close</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<div class="micromodal-slide modal" id="modal-warning" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-warning-title">
+      <header class="modal__header">
+        <h2 class="modal__title">WARNING</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <div class="modal__content cms" id="modal-warning-content"></div>
+      <footer class="modal__footer">
+        <button class="modal__btn modal__btn-primary" data-micromodal-close="" aria-label="Close this dialog window">OK</button>
       </footer>
     </div>
   </div>
