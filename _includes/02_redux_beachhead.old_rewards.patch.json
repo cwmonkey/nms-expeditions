@@ -1,0 +1,60 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S2_PHASE1"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S2_PHASE2"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S2_PHASE3"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S2_PHASE4"
+        }
+      ]
+    }
+  ]
+}

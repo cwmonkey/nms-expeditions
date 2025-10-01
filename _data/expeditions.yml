@@ -14,10 +14,16 @@
   redux: 1
   notice: >
           * For some reason you cannot get past 1/3 Dosimeter readings in Phase 5, Milestone 2. A patch has been created to reduce the required number of readings to 1.
+
+          * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
   patches:
     - id: 02_redux_beachhead_reduce_p5m2_amount
       json: 02_redux_beachhead.reduce_p5m2_amount.patch.json
       description: Reduce number of required Dosimeter readings to 1 in Phase 5 Milestone 2 (Recommended)
+      checked: 1
+    - id: 02_redux_beachhead_old_rewards
+      json: 02_redux_beachhead.old_rewards.patch.json
+      description: Give the rewards from the original and redux runs, rather than the 2024 re-redux run (Recommended)
       checked: 1
 - id: e03
   name: '03: Cartographers'
