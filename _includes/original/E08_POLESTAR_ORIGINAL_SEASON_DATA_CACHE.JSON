@@ -7,7 +7,7 @@
   "Hash": 3596214664,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
-  "Description": "DEATH_QUOTE_31",
+  "Description": "UI_EXPED8_MAIN_DESC",
   "FinalStageTitle": "^UI_EXPED_STAGE_TITLE_6",
   "MilestoneWithStageLocId": "^UI_MILESTONE_WITH_STAGE",
   "GameMode": {

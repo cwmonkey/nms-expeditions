@@ -1,0 +1,36 @@
+{
+  "Stages": [
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^UNWLOOT",
+          "Title": "^UI_EXPED_UNWLOOT_NAME",
+          "TitleUpper": "^UI_EXPED_UNWLOOT_NAME_U",
+          "Description": "^UI_EXPED_UNWLOOT_DESC",
+          "DescriptionDone": "^UI_EXPED_UNWLOOT_DESC_D",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.underwatertreasure.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.water.off.dds"
+          },
+          "IsOptional": false
+        }
+      ]
+    }
+  ]
+}

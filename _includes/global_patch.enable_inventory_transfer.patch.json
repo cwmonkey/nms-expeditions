@@ -1,0 +1,51 @@
+{
+  "[[ifundefinedorblank]]": true,
+  "CompatibleWithState": true,
+  "CreateContextSaveDataMask": "^DEFAULT",
+  "SwitchContextSaveDataMask": "^DEFAULT",
+  "SeasonTransferInventoryConfig": {
+    "Width": 8,
+    "Layout": {
+      "Slots": 32,
+      "Seed": [
+        true,
+        "0x1"
+      ],
+      "Level": 1
+    },
+    "SlotItemFilterIDs": [
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^TECH_PRODS",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12",
+      "^NOT_TECH_S12"
+    ]
+  }
+}

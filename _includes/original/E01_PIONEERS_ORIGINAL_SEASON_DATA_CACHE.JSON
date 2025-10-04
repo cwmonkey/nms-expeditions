@@ -7,7 +7,7 @@
   "Hash": "0xFFFFFFFF9E4CD29C",
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
-  "Description": "DEATH_QUOTE_31",
+  "Description": "UI_EXPED1_MAIN_DESC",
   "GameMode": {
     "PresetGameMode": "Normal"
   },

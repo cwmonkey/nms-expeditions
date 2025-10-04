@@ -2,125 +2,191 @@
   name: '01: Pioneers'
   description: The one where it all began
   image: e01_pioneers.png
-  json: 01_redux_the_pioneers.json
-  redux: 1
   notice: >
-          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+    * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+  versions:
+    - id: e01r00
+      json: E01_PIONEERS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1614556800
+      notice: >
+        * **UNTESTED**
+    - id: e01r01
+      json: E01_PIONEERS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1637762400
+      redux: 1
+      notice: >
+        * An update changed the system from a yellow star system to a green star system. A patch has been created to start players in a nearby yellow star system.
+      patches:
+        - id: e01r01_pioneers_change_start_system
+          json: e01r01_pioneers.change_start_system.patch.json
+          description: Change starter system to nearby yellow star system (Recommended)
+          checked: 1
 - id: e02
   name: '02: Beachhead'
   description: The one with the Mass Effect crossover
   image: e02_beachhead.png
-  json: 02_redux_beachhead.json
-  redux: 1
   notice: >
-          * For some reason you cannot get past 1/3 Dosimeter readings in Phase 5, Milestone 2. A patch has been created to reduce the required number of readings to 1.
-
-          * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
+    * For some reason you cannot get past 1/3 Dosimeter readings in Phase 5, Milestone 2. A patch has been created to reduce the required number of readings to 1.
   patches:
     - id: 02_redux_beachhead_reduce_p5m2_amount
       json: 02_redux_beachhead.reduce_p5m2_amount.patch.json
       description: Reduce number of required Dosimeter readings to 1 in Phase 5 Milestone 2 (Recommended)
       checked: 1
-    - id: 02_redux_beachhead_old_rewards
-      json: 02_redux_beachhead.old_rewards.patch.json
-      description: Give the rewards from the original and redux runs, rather than the 2024 re-redux run (Recommended)
-      checked: 1
+  versions:
+    - id: e02r00
+      json: E02_BEACHHEAD_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1621256400
+      notice: >
+        * **UNTESTED**
+      warnings:
+        - message: The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+    - id: e02r01
+      json: E02_BEACHHEAD_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1638972000
+      redux: 1
+      notice: >
+        * **UNTESTED**
+      warnings:
+        - message: The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+    - id: e02r02
+      json: E02_BEACHHEAD_REDUX_2_SEASON_DATA_CACHE.JSON
+      date: 1730988000
+      redux: 1
+      notice: >
+        * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
+      patches:
+        - id: 02_redux_beachhead_old_rewards
+          json: 02_redux_beachhead.old_rewards.patch.json
+          description: Give the rewards from the original and redux runs, rather than the 2024 re-redux run (Recommended)
+          checked: 1
 - id: e03
   name: '03: Cartographers'
   description: The one where you're stuck on the first planet
   image: e03_cartographers.png
-  json: 03_redux_cartographers.json
-  redux: 1
   notice: >
-          * The "redux" version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created so you can choose which rewards you get.
-
-          * If you start the expedition with `BlockStormsAtStart` set to `true`, simply set it to `false` below and re-download the json.
-  patches:
-   - id: season_3_other_rewards
-     json: 03_redux_cartographers.other_rewards.json
-     description: Get rewards from season 1, 4 and 5 instead (Golden Vector, Feasting Casque Helmet, Exotic Wingpack, Streamlined Jetpack).
+    * If you start the expedition with `BlockStormsAtStart` set to `true` you will not be able to complete all the milestones. Simply set it to `false` below and re-download the json.
   warnings:
-   - prop: BlockStormsAtStart
-     value: true
-     message: If you block storms at the start of this expedition, you will not be able to complete all milestones.
-     active: Please change `BlockStormsAtStart` in the `General` section below.
+    - prop: BlockStormsAtStart
+      value: true
+      message: If you block storms at the start of this expedition, you will not be able to complete all milestones.
+      active: Please change `BlockStormsAtStart` in the `General` section below.
+  versions:
+    - id: e03r00
+      json: E03_CARTOGRAPHERS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1631106000
+      notice: >
+        * **UNTESTED**
+    - id: e03r01
+      json: E03_CARTOGRAPHERS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1640181600
+      redux: 1
+      notice: >
+        * **UNTESTED**
+    - id: e03r02
+      json: E03_CARTOGRAPHERS_REDUX_2_SEASON_DATA_CACHE.JSON
+      date: 1703253600
+      redux: 1
+      notice: >
+        * The 2023 redux version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created restore the original rewards.
+      patches:
+       - id: e03r02_cartographers_old_rewards
+         json: e03r02_cartographers.old_rewards.patch.json
+         description: Restore original rewards (Recommended)
+         checked: 1
 - id: e04
   name: '04: Emergence'
   description: The one with the sand worms
   image: e04_emergence.png
-  json: 04_redux_emergence.json
-  redux: 1
-  notice: >
-          * The second and third worm hunt milestone seems to be undoable. A patch has been created to replace those milestones.
+  versions:
+    - id: e04r00
+      json: E04_EMERGENCE_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1634731200
+      notice: >
+            * **UNTESTED**
+    - id: e04r01
+      json: E04_EMERGENCE_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1641391200
+      redux: 1
+      notice: >
+        * **UNTESTED**
 
-          * For some reason you cannot get to the rendezvous 4 and 5 planets. A patch has been created to replace milestones requiring those planets.
+        * The second and third worm hunt milestone seems to be undoable. A patch has been created to replace those milestones.
 
-          * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You will need to move them.
+        * For some reason you cannot get to the rendezvous 4 and 5 planets. A patch has been created to replace milestones requiring those planets.
 
-          * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
-  patches:
-    - id: 04_redux_emergence_replace_worm_hunt_2-3
-      json: 04_redux_emergence.replace_worm_hunt_2-3.patch.json
-      description: Replace worm hunt 2 and 3 milestones (Recommended)
-      checked: 1
-    - id: 04_redux_emergence_replace_rdv4-5_milestones
-      json: 04_redux_emergence.replace_rdv4-5_milestones.patch.json
-      description: Replace rendezvous 4-5 and related milestones (Recommended)
-      checked: 1
+        * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You will need to move them.
+
+        * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
+      patches:
+        - id: 04_redux_emergence_replace_worm_hunt_2-3
+          json: 04_redux_emergence.replace_worm_hunt_2-3.patch.json
+          description: Replace worm hunt 2 and 3 milestones (Recommended)
+          checked: 1
+        - id: 04_redux_emergence_replace_rdv4-5_milestones
+          json: 04_redux_emergence.replace_rdv4-5_milestones.patch.json
+          description: Replace rendezvous 4-5 and related milestones (Recommended)
+          checked: 1
 - id: e05
   name: '05: Exobiology'
   description: The one about pets
   image: e05_exobiology.png
-  json: 05_redux_exobiology.json
-  redux: 1
   notice: >
-          * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
+    * **UNTESTED**
 
-          * Phase 5, Milestone 7 (Recognisable Life) will bug out if you meet a gaseous sentience **without** using a lure and you will be unable to complete the milestone. If this happens to you, check the optional patch and replace your `SEASON_DATA_CACHE.JSON`.
+    * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
+
+    * Phase 5, Milestone 7 (Recognisable Life) will bug out if you meet a gaseous sentience **without** using a lure and you will be unable to complete the milestone. If this happens to you, check the optional patch and replace your `SEASON_DATA_CACHE.JSON`.
   patches:
     - id: 05_redux_exobiology_auto_complete_p5m7
       json: 05_redux_exobiology.auto_complete_p5m7.patch.json
       description: Auto-complete Phase 5, Milestone 7 - Recognisable Life (Only necessary if you meet a gaseous sentience "naturally" without a lure)
+  versions:
+    - id: e05r00
+      json: E05_EXOBIOLOGY_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1645700400
+    - id: e05r01
+      json: E05_EXOBIOLOGY_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1669287600
+      redux: 1
 - id: e06
   name: '06: The Blighted'
   description: The one about pirates
   image: e06_the_blighted.png
-  json: 06_redux_the_blighted.json
-  redux: 1
   notice: >
-          * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
+    * **UNTESTED**
 
-          * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
+    * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
 
-          * If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.
+    * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
+
+    * If you have an existing save in this expedition and need the pirate map fragment 1, use a save editor to give yourself the `PIRATE_MAPPROD0` item.
   patches:
-   - id: the_blighted.replace_freighter_rescue
-     json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
-     description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
-     checked: 1
-   - id: 06_redux_the_blighted.replace_leave_galaxy_milestone
-     json: 06_redux_the_blighted.replace_leave_galaxy_milestone.patch.json
-     description: Replace the leave-galaxy milestone (Recommended)
-     checked: 1
+    - id: the_blighted.replace_freighter_rescue
+      json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
+      description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
+      checked: 1
+    - id: 06_redux_the_blighted.replace_leave_galaxy_milestone
+      json: 06_redux_the_blighted.replace_leave_galaxy_milestone.patch.json
+      description: Replace the leave-galaxy milestone (Recommended)
+      checked: 1
+  versions:
+    - id: e06r00
+      json: E06_BLIGHTED_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1649930400
+    - id: e06r01
+      json: E06_BLIGHTED_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1670497200
+      redux: 1
 - id: e07
   name: '07: Leviathan'
   description: The one about the space leviathan
   image: e07_leviathan.png
-  json: 07_redux_leviathan.json
-  redux: 1
   notice: >
-          * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
+    * **UNTESTED**
 
-          * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
-  patches:
-   - id: leviathan_replace_community_missions
-     json: 07_redux_leviathan.replace_community_missions.patch.json
-     description: Replace community milestones since they cannot be completed offline (Recommended)
-     checked: 1
-   - id: leviathan_no_reset_on_death
-     json: 07_redux_leviathan.no_reset_on_death.patch.json
-     description: Disable "reset save on death" mechanic and reduce difficulty settings
-     checked: 0
+    * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
+
+    * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
   warnings:
     - id: GameMode_Permadeath
       prop: GameMode
@@ -128,148 +194,254 @@
       value: Permadeath
       message: "This expedition CANNOT be completed on Permadeath. If you make it to the end, your primary save will be wiped. Note: Your primary save mode does not matter."
       active: Please change `GameMode` in the `General` section below.
+  patches:
+    - id: leviathan_replace_community_missions
+      json: 07_redux_leviathan.replace_community_missions.patch.json
+      description: Replace community milestones since they cannot be completed offline (Recommended)
+      checked: 1
+    - id: leviathan_no_reset_on_death
+      json: 07_redux_leviathan.no_reset_on_death.patch.json
+      description: Disable "reset save on death" mechanic and reduce difficulty settings
+  versions:
+    - id: e07r00
+      json: E07_LEVIATHAN_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1653480000
+    - id: e07r01
+      json: E07_LEVIATHAN_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1671706800
+      redux: 1
 - id: e08
   name: '08: Polestar'
   description: The one about freighters
   image: e08_polestar.png
-  json: 08_redux_polestar.json
-  redux: 1
   notice: >
-          * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
+    * **UNTESTED**
+
+    * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
+
+    * The multiplayer milestone to visit another player's freighter cannot be completed offline. A patch has been created to replace the milestone.
   patches:
-   - id: polestar.fix_freighter_race
-     json: 08_redux_polestar.fix_freighter_race.patch.json
-     description: Force civilian freighter to avoid pirate freighter issues (Recommended)
-     checked: 1
+    - id: e08_polestar_replace_multiplayer_milestone
+      json: e08_polestar.replace_multiplayer_milestone.patch.json
+      description: Replace multiplayer milestone (Recommended)
+      checked: 1
+    - id: polestar.fix_freighter_race
+      json: 08_redux_polestar.fix_freighter_race.patch.json
+      description: Force civilian freighter to avoid pirate freighter issues (Recommended)
+      checked: 1
+  versions:
+    - id: e08r00
+      json: E08_POLESTAR_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1658916000
+    - id: e08r01
+      json: E08_POLESTAR_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1672916400
+      redux: 1
 - id: e09
   name: '09: Utopia'
   description: The one where you rebuild one solar system
   image: e09_utopia.png
-  json: 09_redux_utopia.json
-  redux: 1
   notice: >
-          * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a Visceral Synthesiser).
+    * **UNTESTED**
 
-          * The "Beacon" update made all rendezvous milestones auto complete when you enter a system, and since you are already in the system with all the rendezvous locations, they all auto complete upon starting the expedition. Also it seems like some planet-specific milestones no longer work properly. A patch has been created to replace all rendezvous and planet-specific milestones in this expedition.
+    * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a Visceral Synthesiser).
 
-          * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue.
+    * The "Beacon" update made all rendezvous milestones auto complete when you enter a system, and since you are already in the system with all the rendezvous locations, they all auto complete upon starting the expedition. Also it seems like some planet-specific milestones no longer work properly. A patch has been created to replace all rendezvous and planet-specific milestones in this expedition.
+
+    * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue.
   patches:
-   - id: 09_redux_utopia_replace_online_base_building
-     json: 09_redux_utopia.replace_online_base_building.patch.json
-     description: Replace online-only milestones (Recommended)
-     checked: 1
-   - id: 09_redux_utopia_replace_rdv_milestones
-     json: 09_redux_utopia.replace_rdv_milestones.patch.json
-     description: Replace rendezvous and planet-specific milestones (Recommended)
-     checked: 1
-   - id: add_nexus_reward
-     json: 09_redux_utopia.add_nexus_reward.patch.json
-     description: Change the final milestone's reward to unlock The Anomaly (recommended if you are staring this expedition from an existing save)
-     checked: 1
+    - id: 09_redux_utopia_replace_online_base_building
+      json: 09_redux_utopia.replace_online_base_building.patch.json
+      description: Replace online-only milestones (Recommended)
+      checked: 1
+    - id: 09_redux_utopia_replace_rdv_milestones
+      json: 09_redux_utopia.replace_rdv_milestones.patch.json
+      description: Replace rendezvous and planet-specific milestones (Recommended)
+      checked: 1
+    - id: add_nexus_reward
+      json: 09_redux_utopia.add_nexus_reward.patch.json
+      description: Change the final milestone's reward to unlock The Anomaly (recommended if you are staring this expedition from an existing save)
+      checked: 1
+  versions:
+    - id: e09r00
+      json: E09_UTOPIA_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1677067200
+    - id: e09r01
+      json: E09_UTOPIA_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1702044000
+      redux: 1
 - id: e010
   name: '10: Singularity'
   description: The one about Harmonic entities
   image: e10_singularity.png
-  json: 10_redux_singularity.json
-  redux: 1
   notice: >
-          * The community milestones cannot be completed offline. A patch has been created to replace them.
+    * The community milestones cannot be completed offline. A patch has been created to replace them.
   patches:
-   - id: 10_redux_singularity_replace_community_milestones
-     json: 10_redux_singularity.replace_community_milestones.patch.json
-     description: Replace community milestones (Recommended)
-     checked: 1
+    - id: 10_redux_singularity_replace_community_milestones
+      json: 10_redux_singularity.replace_community_milestones.patch.json
+      description: Replace community milestones (Recommended)
+      checked: 1
+  versions:
+    - id: e10r00
+      json: E10_SINGULARITY_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1686142800
+      notice: >
+        * **UNTESTED**
+    - id: e10r01
+      json: E10_SINGULARITY_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1702648800
+      redux: 1
 - id: e011
   name: '11: Voyagers'
   description: The one where you just find a whole bunch of stuff
   image: e11_voyagers.png
-  json: 11_redux_voyagers.json
-  redux: 1
   notice: >
-          * Many planets have changed, so most guides are no longer going to have correct information.
+    * Many planets have changed, so most guides are no longer going to have correct information.
+  versions:
+    - id: e11r00
+      json: E11_VOYAGERS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1693486800
+      notice: >
+        * **UNTESTED**
+    - id: e11r01
+      json: E11_VOYAGERS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1703858400
+      redux: 1
 - id: e012
   name: '12: Omega'
   description: The one with more of the same
   image: e12_omega.png
-  json: 12_omega.json
-  redux: 1
   notice: >
-          * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
+    * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
   patches:
-   - id: replace_community_research
-     json: 12_omega.replace_community_research.patch.json
-     description: Replace online-only community research milestones with offline-friendly milestones (Recommended)
-     checked: 1
+    - id: 12_omega.replace_community_research
+      json: 12_omega.replace_community_research.patch.json
+      description: Replace online-only community research milestones with offline-friendly milestones (Recommended)
+      checked: 1
+  versions:
+    - id: e12r00
+      json: E12_OMEGA_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1707238800
+      notice: >
+        * **UNTESTED**
+    - id: e12r01
+      json: E12_OMEGA_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1732716000
+      redux: 1
 - id: e013
   name: '13: Adrift'
   description: The one with no NPC's
   image: e13_adrift.png
-  json: 13_adrift.json
-  redux: 1
   notice: >
-          * HG changed how abandoned galaxies work. There is no longer any way to find synthetic life forms in them. A patch has been created to replace the "scan synthetic life forms" milestone.
+    * HG changed how abandoned galaxies work. There is no longer any way to find synthetic life forms in them. A patch has been created to replace the "scan synthetic life forms" milestone.
   patches:
-   - id: adrift_synthetic_creature_scan_replace
-     json: 13_adrift.synthetic_creature_scan_replace.patch.json
-     description: Replace "scan synthetic life forms" milestone with a milestone to visit a red star (Recommended)
-     checked: 1
+    - id: 13_adrift_synthetic_creature_scan_replace
+      json: 13_adrift.synthetic_creature_scan_replace.patch.json
+      description: Replace "scan synthetic life forms" milestone with a milestone to visit a red star (Recommended)
+      checked: 1
+  versions:
+    - id: e13r00
+      json: E13_ADRIFT_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1716987600
+      notice: >
+        * **UNTESTED**
+    - id: e13r01
+      json: E13_ADRIFT_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1733925600
+      redux: 1
 - id: e014
   name: '14: Liquidators'
   description: The one where you kill bugs
   image: e14_liquidators.png
-  json: 14_liquidators.json
-  redux: 1
   notice: >
-          * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
+    * Community milestones cannot be completed while offline. A patch has been created to replace them with offline milestones.
   patches:
-   - id: liquidators_replace_community_milestones
-     json: 14_liquidators.replace_community_milestones.patch.json
-     description: Replace online-only community milestones with offline-friendly milestones (Recommended)
-     checked: 1
+    - id: liquidators_replace_community_milestones
+      json: 14_liquidators.replace_community_milestones.patch.json
+      description: Replace online-only community milestones with offline-friendly milestones (Recommended)
+      checked: 1
+  versions:
+    - id: e14r00
+      json: E14_LIQUIDATORS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1721826016
+      notice: >
+        * **UNTESTED**
+    - id: e14r01
+      json: E14_LIQUIDATORS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1735135200
+      redux: 1
 - id: e015
   name: '15: Aquarius'
   description: The one where you fish a lot
   image: e15_aquarius.png
-  json: 15_aquarius.json
-  redux: 1
   notice: >
-          * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
+    * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
 
-          * For the "Ice Cold" milestone, you must catch 5 uncommon **frozen** fish on a frozen planet.
+    * For the "Ice Cold" milestone, you must catch 5 uncommon **frozen** fish on a frozen planet.
+  versions:
+    - id: e15r00
+      json: E15_AQUARIUS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1725454800
+      notice: >
+        * **UNTESTED**
+    - id: e15r01
+      json: E15_AQUARIUS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1736344800
+      redux: 1
 - id: e016
   name: '16: The Cursed'
   description: The one with the spoooky ghosts
   image: e16_the_cursed.png
-  json: 16_the_cursed.json
-  redux: 1
+  versions:
+    - id: e16r00
+      json: E16_CURSED_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1729688400
+      notice: >
+        * **UNTESTED**
+    - id: e16r01
+      json: E16_CURSED_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1737554400
+      redux: 1
 - id: e017
   name: '17: Titan'
   description: The one with gas giants
   image: e17_titan.png
   json: 17_titan.json
   notice: >
-          * As of the Beacon patch all rendezvous milestones seem to complete as soon as you warp to the designated system. To complete the photograph milestones, simply go to the designated planet and take a picture anywhere.
+    * As of the Beacon patch all rendezvous milestones seem to complete as soon as you warp to the designated system. To complete the photograph milestones, simply go to the designated planet and take a picture anywhere.
+  versions:
+    - id: e17r00
+      json: E17_TITAN_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1739368800
 - id: e018
   name: '18: Relics'
   description: The one with bones
   image: e18_relics.png
   json: 18_relics.json
   notice: >
-          * The latest NMS patch seems to have broken the bone collecting milestones, there does not seem to be a way to turn them in. The milestones have been replaced in a patch below.
+    * The latest NMS patch seems to have broken the bone collecting milestones, there does not seem to be a way to turn them in. A patch has been created to replace the milestones.
   patches:
-   - id: relics_replace_first_bones_milestone
-     json: 18_relics.replace_bone_hunt_milestones.patch.json
-     description: Replace the bone collection milestones (Recommended)
-     checked: 1
+    - id: relics_replace_first_bones_milestone
+      json: 18_relics.replace_bone_hunt_milestones.patch.json
+      description: Replace the bone collection milestones (Recommended)
+      checked: 1
+  versions:
+    - id: e18r00
+      json: E18_RELICS_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1742997600
 - id: e019
   name: '19: Corvette'
   description: The one with the corvettes
   image: e19_corvette.png
   json: 19_corvette.json
   notice: >
-          * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
+    * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
   patches:
-   - id: 19_corvette_replace_community_multiplayer_milestones
-     json: 19_corvette.replace_community_multiplayer_milestones.patch.json
-     description: Replace community and multiplayer milestones (Recommended)
-     checked: 1
+    - id: 19_corvette_replace_community_multiplayer_milestones
+      json: 19_corvette.replace_community_multiplayer_milestones.patch.json
+      description: Replace community and multiplayer milestones (Recommended)
+      checked: 1
+  versions:
+    - id: e19r00
+      json: E19_CORVETTE_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1756904400

@@ -7,7 +7,8 @@
   "Hash": 3772026939,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
-  "Description": "DEATH_QUOTE_31",
+  "Description": "UI_EXPED2_MAIN_DESC",
+  "Summary": "UI_EXPED2_SUMMARY",
   "GameMode": {
     "PresetGameMode": "Normal"
   },
@@ -105,22 +106,7 @@
   },
   "UseDefaultAppearance": false,
   "Inventory": {
-    "Slots": [
-      {
-        "Type": {
-          "InventoryType": "Product"
-        },
-        "Id": "^MYSTERY_BEACON",
-        "Amount": 1,
-        "MaxAmount": 1,
-        "DamageFactor": 0,
-        "FullyInstalled": true,
-        "Index": {
-          "X": -1,
-          "Y": -1
-        }
-      }
-    ],
+    "Slots": [],
     "ValidSlotIndices": [],
     "Class": {
       "InventoryClass": "C"

@@ -58,14 +58,20 @@ body_class: page_index
     <ol class="exp_items">
       {% for exp in site.data.expeditions %}
         <li class="exp_item exp_item_{{ exp.id }}" title="{{ exp.description }}">
-          <input type="radio" name="expeditions" id="{{ exp.id }}_radio" class="exp_radio" data-id="{{ exp.id }}">
-          <label for="{{ exp.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
+          <label for="{{ exp.versions.last.id }}_radio" class="exp_label"{% if exp.note %} title="{{ exp.note }}"{% endif %}>
             <span class="image"><img src="{{site.baseurl}}/images/expeditions/{{ exp.image }}" class="badge" alt="{{ exp.name }} badge"></span>
-            <h4 class="exp_name">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</h4>
-            {% comment %}<p class="exp_desc">
-              {{ exp.description }}
-            </p>{% endcomment %}
+            <h4 class="exp_name">{{ exp.name }}</h4>
           </label>
+          <ul class="exp_version_items">
+            {% for version in exp.versions %}
+              <li class="exp_version_item">
+                <input type="radio" name="expeditions" id="{{ version.id }}_radio" class="exp_version_radio" data-id="{{ version.id }}">
+                <label for="{{ version.id }}_radio" class="exp_version_label">
+                  <h5 class="exp_version_name">{% if version.redux %}Redux{% else %}Original{% endif %} <span class="date">- {{ version.date | date: "%b, %Y" }}</span></h5>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
         </li>
       {% endfor %}
     </ol>
@@ -80,48 +86,97 @@ body_class: page_index
 
     <div class="notices">
       {% for exp in site.data.expeditions %}
-        {% if exp.notice %}
-          <section class="notice" id="notice_{{ exp.id }}">
-            <div class="notice_header">
-              <h4 class="notice_headline">Notice</h4>
-              <div class="notice_description cms">{{ exp.notice | markdownify }}</div>
-            </div>
+        {% for version in exp.versions %}
+          {% if exp.notice and version.notice %}
+            {% assign notice = exp.notice | append: "" | append: version.notice  %}
+          {% elsif version.notice %}
+            {% assign notice = version.notice %}
+          {% else %}
+            {% assign notice = exp.notice %}
+          {% endif %}
 
-            {% if exp.patches %}
-              <ul class="patch_list">
-                {% for patch in exp.patches %}
-                  <li><label class="patch_label">
-                    <input type="checkbox" name="{{ exp.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ exp.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
-                    <span class="patch_description">{{ patch.description }}</span>
-                  </label></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </section>
-        {% endif %}
+          {% if notice %}
+            <section class="notice" id="notice_{{ version.id }}">
+              <div class="notice_header">
+                <h4 class="notice_headline">Notice</h4>
+                <div class="notice_description cms">{{ notice | markdownify }}</div>
+              </div>
+
+              {% if exp.patches and version.patches %}
+                {% assign patches = exp.patches | concat: version.patches  %}
+              {% elsif version.patches %}
+                {% assign patches = version.patches %}
+              {% else %}
+                {% assign patches = exp.patches %}
+              {% endif %}
+
+              {% if patches %}
+                <ul class="patch_list">
+                  {% for patch in patches %}
+                    <li><label class="patch_label">
+                      <input type="checkbox" name="{{ version.id }}_{{ patch.id }}_check" class="patch_check" value="{{ exp.id }}_{{ patch.id }}" data-exp-id="{{ version.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %}>
+                      <span class="patch_description">{{ patch.description }}</span>
+                    </label></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </section>
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     </div>
 
     <div class="warnings">
       {% for exp in site.data.expeditions %}
-        {% if exp.warnings %}
-          <section class="warning" id="warning_{{ exp.id }}">
-            <div class="notice_description cms">
-              <h4 class="warning_headline">Warning</h4>
-              <ul class="warning_list">
-                {% for warning in exp.warnings %}
-                  <li class="warning_message" data-prop="{{ warning.prop }}" data-subprop="{{ warning.subprop }}" data-value="{{ warning.value }}">
-                    {{ warning.message | markdownify }}
-                    <span class="warning_active">
-                      {{ warning.active | markdownify }}
-                    </span>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </section>
-        {% endif %}
+        {% for version in exp.versions %}
+          {% if exp.warnings and version.warnings %}
+            {% assign warnings = exp.warnings | concat: version.warnings  %}
+          {% elsif version.warnings %}
+            {% assign warnings = version.warnings %}
+          {% else %}
+            {% assign warnings = exp.warnings %}
+          {% endif %}
+
+          {% if warnings %}
+            <section class="warning" id="warning_{{ version.id }}">
+              <div class="notice_description cms">
+                <h4 class="warning_headline">Warning</h4>
+                <ul class="warning_list">
+                  {% for warning in warnings %}
+                    <li class="warning_message" data-prop="{{ warning.prop }}" data-subprop="{{ warning.subprop }}" data-value="{{ warning.value }}">
+                      {{ warning.message | markdownify }}
+                      <span class="warning_active">
+                        {{ warning.active | markdownify }}
+                      </span>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </section>
+          {% endif %}
+        {% endfor %}
       {% endfor %}
+    </div>
+
+    <div class="general_patches">
+      <div class="cust_section">
+        <h4 class="cust_headline">
+          <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-general_patches" data-toggle-off-text="+ General Patches" data-toggle-target="#general_patches-table" data-toggle-text-target="#general_patches-text">
+            <span id="general_patches-text">- General Patches</span>
+            <span id="general_patches-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
+          </button>
+        </h4>
+        <div class="cust_table" id="general_patches-table" data-toggle-default="off">
+          <ul class="patch_list">
+            {% for patch in site.data.global_patches %}
+              <li><label class="patch_label">
+                <input type="checkbox" name="global_patch_{{ patch.id }}_check" class="patch_check" value="global_patch_json_{{ patch.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %} data-exp-id="*" data-onlyifnull="{{ patch.onlyifnull }}">
+                <span class="patch_description">{{ patch.description }}</span>
+              </label></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
 
     <section class="cust_section cust_presets_section">
@@ -371,7 +426,11 @@ body_class: page_index
         <h4>Debug Info/Tools</h4>
 
         <section>
-          <button type="button" id="copy">COPY</button>
+          <input type="checkbox" id="sort">Sort</button>
+        </section>
+
+        <section>
+          <button type="button" id="copy">Copy</button>
         </section>
 
         <section>
@@ -385,7 +444,8 @@ body_class: page_index
             <textarea id="before" placeholder="Original JSON"></textarea>
             <textarea id="after" placeholder="JSON After Edits"></textarea>
             <br>
-            <button type="button" id="make_patch">MAKE PATCH</button>
+            <button type="button" id="make_patch">Make Patch</button>
+            <button type="button" id="sort_left">Sort Left Using Right</button>
             <br>
             <textarea id="patch"></textarea>
           </section>
@@ -492,7 +552,7 @@ body_class: page_index
           The NoMansApp bot can deliver items to you and even unlock rewards on your account. To unlock expedition rewards, you must be on one of their paid Patreon tiers.
         </li>
         <li><strong>Other methods:</strong>
-          If you are on console, you can work with other players to get ships and eggs (possibly more, I've never done it).
+          If you are on console, you can work with other players to get ships, eggs and packaged technology items (possibly more).
         </li>
       </ol>
     </section>
@@ -502,6 +562,12 @@ body_class: page_index
         <section id="{{exp.id}}_headline">
           <h3><a href="#{{exp.id}}_headline">{{ exp.name }} {% if exp.redux %}<span class="redux">(Redux)</span>{% endif %}</a></h3>
           {{ exp.notice | markdownify }}
+          {% for version in exp.versions %}
+            {% if version.notice %}
+              <h4>{% if version.redux %}Redux{% else %}Original{% endif %} <span class="date">- {{ version.date | date: "%b, %Y" }}</span></h4>
+              {{ version.notice | markdownify }}
+            {% endif %}
+          {% endfor %}
         </section>
       {% endif %}
     {% endfor %}
@@ -509,15 +575,29 @@ body_class: page_index
 </div></section>
 
 {% for exp in site.data.expeditions %}
-  <script id="{{ exp.id }}" type="application/json">{% include {{ exp.json }} %}</script>
-
   {% for patch in exp.patches %}
-    <script id="{{ exp.id }}_{{ patch.id }}" type="application/json" data-patch-parent="{{ exp.id }}" {% if patch.checked %}data-patch-checked="1"{% endif %} data-patch-description="{{ patch.description | xml_escape }}">{% include {{ patch.json }} %}</script>
+    {% if patch.json %}
+      <script id="{{ exp.id }}_{{ patch.id }}" type="application/json">{% include {{ patch.json }} %}</script>
+    {% endif %}
+  {% endfor %}
+
+  {% for version in exp.versions %}
+    <script id="{{ version.id }}" type="application/json">{% include original/{{ version.json }} %}</script>
+
+    {% for patch in version.patches %}
+      {% if patch.json %}
+        <script id="{{ exp.id }}_{{ patch.id }}" type="application/json">{% include {{ patch.json }} %}</script>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 {% endfor %}
 
 {% for preset in site.data.presets %}
   <script id="{{ preset.id }}" type="application/json">{% include {{ preset.json }} %}</script>
+{% endfor %}
+
+{% for patch in site.data.global_patches %}
+  <script id="global_patch_json_{{ patch.id }}" type="application/json">{% include {{ patch.json }} %}</script>
 {% endfor %}
 
 <div class="micromodal-slide modal" id="modal-news" aria-hidden="true">

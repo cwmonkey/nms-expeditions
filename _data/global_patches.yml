@@ -1,0 +1,12 @@
+- id: end_date
+  description: Set expedition end date to 2061 (Recommended)
+  json: global_patch.extend_end_date.patch.json
+  checked: 1
+- id: enable_inventory_transfer
+  description: Allow inventory transfer and appearance copy if necessary (expeditions 1-11) (Recommended)
+  json: global_patch.enable_inventory_transfer.patch.json
+  checked: 1
+- id: expand_suit_slots
+  description: Suit tech slots did not exist at the time some expeditions came out. Expand tech slot count to a reasonable size (Recommended)
+  json: global_patch.expand_suit_slots.patch.json
+  checked: 1

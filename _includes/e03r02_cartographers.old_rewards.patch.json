@@ -1,0 +1,49 @@
+{
+  "FinalReward": "^RS_S3_COMPLETE",
+  "FinalRewardSwitchAlt": "[[removed]]",
+  "FinalCantRewardMessage": "^UI_PET_EGG_COST_SLOTS",
+  "Stages": [
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S3_PHASE2"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S3_PHASE3"
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Reward": "^RS_S3_PHASE4"
+        }
+      ]
+    }
+  ]
+}

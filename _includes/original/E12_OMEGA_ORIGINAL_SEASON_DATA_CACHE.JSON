@@ -1,8 +1,10 @@
 {
-  "SeasonId": 24,
-  "StartTimeUTC": 1707238800,
-  "EndTimeUTC": 1707832800,
-  "Hash": 2447001516,
+  "SeasonId": 25,
+  "Label": "Omega Expedition",
+  "Name": "Expedition 12(Public)",
+  "StartTimeUTC": 1708005600,
+  "EndTimeUTC": 1710759600,
+  "Hash": 3465647597,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
   "Description": "UI_EXPED12_MAIN_DESC",
@@ -100,7 +102,7 @@
   "MainIcon": {
     "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.EXPEDITION.12.DDS"
   },
-  "SeasonNumber": 24,
+  "SeasonNumber": 25,
   "RemixNumber": 0,
   "DisplayNumber": 12,
   "SeasonName": "^UI_SEASON_12_NAME",
@@ -1817,7 +1819,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH1_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH1_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_84",
+          "IdToUseInMissionData": "^COMM_EXPED_85",
           "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -2291,7 +2293,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH2_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH2_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_84",
+          "IdToUseInMissionData": "^COMM_EXPED_85",
           "Amount": 2,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -2621,13 +2623,13 @@
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FARMER.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FARMER.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FARMER.OFF.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.OFF.DDS"
           },
           "Reward": "^RS_S12_S3M5",
           "RewardSwitchAlt": "^",
@@ -2765,7 +2767,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH3_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH3_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_84",
+          "IdToUseInMissionData": "^COMM_EXPED_85",
           "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -3239,7 +3241,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH4_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH4_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_84",
+          "IdToUseInMissionData": "^COMM_EXPED_85",
           "Amount": 4,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -3713,7 +3715,7 @@
           "Description": "^UI_EXPED_S12_RESEARCH5_DESC",
           "DescriptionDone": "^UI_EXPED_S12_RESEARCH5_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "IdToUseInMissionData": "^COMM_EXPED_84",
+          "IdToUseInMissionData": "^COMM_EXPED_85",
           "Amount": 5,
           "StageIndex": 0,
           "MilestoneIndex": 0,
@@ -5509,6 +5511,99 @@
       "EggModifierIngredient": false,
       "IsTechbox": false,
       "CanSendToOtherPlayers": true
+    },
+    {
+      "ID": "^FARMPROD1",
+      "Name": "UI_FARMPROD_1_NAME",
+      "NameLower": "UI_FARMPROD_1_NAME_L",
+      "Subtitle": "UI_FARMPROD_SUBTITLE",
+      "Description": "UI_FARMPROD_1_DESC",
+      "Hint": "^",
+      "GroupID": "^",
+      "DebrisFile": {
+        "Filename": "MODELS/EFFECTS/DEBRIS/TERRAINDEBRIS/TERRAINDEBRIS4.SCENE.MBIN"
+      },
+      "BaseValue": 188000,
+      "Level": 0,
+      "Icon": {
+        "Filename": "Textures\\UI\\Frontend\\Icons\\Update3\\FarmProd.1.dds"
+      },
+      "HeroIcon": {
+        "Filename": ""
+      },
+      "Colour": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1
+      ],
+      "Category": {
+        "SubstanceCategory": "Special"
+      },
+      "Type": {
+        "ProductCategory": "Tradeable"
+      },
+      "Rarity": {
+        "Rarity": "Rare"
+      },
+      "Legality": {
+        "Legality": "Legal"
+      },
+      "Consumable": false,
+      "ChargeValue": 0,
+      "StackMultiplier": 1,
+      "DefaultCraftAmount": 1,
+      "CraftAmountStepSize": 1,
+      "CraftAmountMultiplier": 1,
+      "Requirements": [
+        {
+          "ID": "^CREATURE1",
+          "Type": {
+            "InventoryType": "Substance"
+          },
+          "Amount": 25
+        },
+        {
+          "ID": "^PLANT_TOXIC",
+          "Type": {
+            "InventoryType": "Substance"
+          },
+          "Amount": 200
+        }
+      ],
+      "AltRequirements": [],
+      "Cost": {
+        "SpaceStationMarkup": 0,
+        "LowPriceMod": -0.10000000149011612,
+        "HighPriceMod": 0.10000000149011612,
+        "BuyBaseMarkup": 0.20000000298023224,
+        "BuyMarkupMod": 0
+      },
+      "RecipeCost": 1,
+      "SpecificChargeOnly": false,
+      "NormalisedValueOnWorld": 0.012051220051944256,
+      "NormalisedValueOffWorld": 0.012051220051944256,
+      "TradeCategory": {
+        "TradeCategory": "None"
+      },
+      "WikiCategory": "Crafting",
+      "IsCraftable": true,
+      "DeploysInto": "^",
+      "EconomyInfluenceMultiplier": 0.25,
+      "PinObjective": "^UI_CRAFT_OBJ",
+      "PinObjectiveTip": "^UI_PIN_FARMPROD1_OBJ_TIP",
+      "PinObjectiveMessage": "^",
+      "PinObjectiveScannableType": {
+        "ScanIconType": "None"
+      },
+      "PinObjectiveEasyToRefine": false,
+      "CookingIngredient": false,
+      "CookingValue": 0,
+      "GoodForSelling": false,
+      "GiveRewardOnSpecialPurchase": "^",
+      "EggModifierIngredient": true,
+      "IsTechbox": false,
+      "CanSendToOtherPlayers": true
     }
   ],
   "SubstanceTable": [],
@@ -5568,7 +5663,5 @@
       0
     ]
   },
-  "Label": "Omega Expedition",
-  "Name": "Expedition 12(Trial)",
   "UseSeasonalUAStationTradeData": false
 }
