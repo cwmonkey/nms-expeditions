@@ -1,0 +1,96 @@
+{
+  "Inventory": {
+    "Slots": [
+      {
+        "Type":{
+          "InventoryType": "Substance"
+        },
+        "Id": "^TOXIC1",
+        "Amount": 95,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X":2,
+          "Y":0
+        }
+      }
+    ]
+  },
+  "Inventory_TechOnly": {
+    "Slots": [
+        {
+          "Type":{
+            "InventoryType":"Technology"
+          },
+          "Id":"^JET1",
+          "Amount":1,
+          "MaxAmount":100,
+          "DamageFactor":0.0,
+          "FullyInstalled":true,
+          "AddedAutomatically":false,
+          "Index":{
+            "X":0,
+            "Y":0
+          }
+        },
+        {
+          "Type":{
+            "InventoryType":"Technology"
+          },
+          "Id":"^PROTECT",
+          "Amount":80,
+          "MaxAmount":80,
+          "DamageFactor":0.0,
+          "FullyInstalled":true,
+          "AddedAutomatically":false,
+          "Index":{
+            "X":1,
+            "Y":0
+          }
+        },
+        {
+          "Type":{
+            "InventoryType":"Technology"
+          },
+          "Id":"^ENERGY",
+          "Amount":100,
+          "MaxAmount":100,
+          "DamageFactor":0.0,
+          "FullyInstalled":true,
+          "AddedAutomatically":false,
+          "Index":{
+            "X":0,
+            "Y":1
+          }
+        },
+        {
+        "Type":{
+          "InventoryType":"Technology"
+        },
+        "Id":"^UP_TOX3#42926",
+        "Amount": 80,
+        "MaxAmount": 80,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index":{
+          "X": 3,
+          "Y": 0
+        }
+      },
+      {
+        "Type":{
+          "InventoryType":"Technology"
+        },
+        "Id":"^UT_TOX",
+        "Amount": -1,
+        "MaxAmount": 1,
+        "DamageFactor": 0.0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": 2,
+          "Y": 0
+        }
+      }
+    ]
+  }
+}

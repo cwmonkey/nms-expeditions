@@ -1,0 +1,36 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 50,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
+          },
+          "IsRendezvous": false
+        }
+      ]
+    }
+  ]
+}

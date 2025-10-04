@@ -65,23 +65,43 @@
   image: e03_cartographers.png
   notice: >
     * If you start the expedition with `BlockStormsAtStart` set to `true` you will not be able to complete all the milestones. Simply set it to `false` below and re-download the json.
+
+    * A recent patch caused all rendezvous milestones to complete when entering the system. Since you start in the rendezvous system, it automatically completes. A patch has been added to replace the rendezvous milestone.
   warnings:
     - prop: BlockStormsAtStart
       value: true
       message: If you block storms at the start of this expedition, you will not be able to complete all milestones.
       active: Please change `BlockStormsAtStart` in the `General` section below.
+  patches:
+    - id: e03_cartographers_replace_rendezvous
+      json: e03_cartographers.replace_rendezvous.patch.json
+      description: Replace the rendezvous milestone (Recommended)
+      checked: 1
   versions:
     - id: e03r00
       json: E03_CARTOGRAPHERS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1631106000
       notice: >
         * **UNTESTED**
+
+        * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
+      patches:
+        - id: e03r00-r01_cartographers_toxic_tech
+          json: e03r00-r01_cartographers.toxic_tech.patch.json
+          description: Add toxic protection technology (Recommended)
+          checked: 1
     - id: e03r01
       json: E03_CARTOGRAPHERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1640181600
       redux: 1
       notice: >
         * **UNTESTED**
+
+        * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
+      patches:
+        - id: e03r00-r01_cartographers_toxic_tech
+          description: Add toxic protection technology (Recommended)
+          checked: 1
     - id: e03r02
       json: E03_CARTOGRAPHERS_REDUX_2_SEASON_DATA_CACHE.JSON
       date: 1703253600
