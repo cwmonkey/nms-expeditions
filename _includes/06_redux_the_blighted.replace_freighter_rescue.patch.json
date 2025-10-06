@@ -14,11 +14,22 @@
           "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
           "Description": "^UI_EXPED_BURIED_PROP_DESC",
           "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
-          "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "Amount": 1,
-          "Reward": "^R_PIRATE_MAP0",
           "Icon": {
             "Filename": "textures/ui/frontend/icons/expedition/patch.undergroundtreasure.dds"
+          },
+          "Reward": "^R_PIRATE_MAP0",
+          "Encryption": {
+            "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        {
+          "Encryption": {
+            "DecryptMissionId": "^GOT_BURIED_PROP"
           }
         }
       ]
