@@ -1,0 +1,37 @@
+{
+  "Stages": [
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BASIC_SCAN_PLA",
+          "Title": "^UI_EXPED_SCAN_PLA2_NAME",
+          "TitleUpper": "^UI_EXPED_SCAN_PLA2_NAME_U",
+          "Description": "^UI_EXPED_BASIC_SCAN_PLA_DESC",
+          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_PLA_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.PLANTS.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.OFF.DDS"
+          }
+        }
+      ]
+    }
+  ]
+}
