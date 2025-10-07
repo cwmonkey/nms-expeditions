@@ -237,7 +237,7 @@
   notice: >
     * **UNTESTED**
 
-    * A pirate freighter is used as your starting freighter in some scenarios. This causes an issue with the captain not properly allowing you to read the logs. A patch has been created to force a civilian freighter. If you still get a pirate freighter, save, exit to desktop, and start your game again.
+    * Something can cause your freighter captain to not have the `Access ship's log` option. If this happens, save, exit to desktop, and start your game again. You may need to do this multiple times and/or load a different save in-between.
 
     * The multiplayer milestone to visit another player's freighter cannot be completed offline. A patch has been created to replace the milestone.
   patches:
