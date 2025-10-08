@@ -262,8 +262,6 @@
   description: The one where you rebuild one solar system
   image: e09_utopia.png
   notice: >
-    * **UNTESTED**
-
     * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a `Visceral Synthesiser`).
 
     * The "Beacon" update made all rendezvous milestones auto complete when you enter a system, and since you are already in the system with all the rendezvous locations, they all auto complete upon starting the expedition. Also it seems like some planet-specific milestones no longer work properly. Patches have been created to replace all rendezvous and planet-specific milestones in this expedition.
@@ -287,18 +285,18 @@
       json: E09_UTOPIA_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1677067200
       patches:
-        - id: e09r00_utopia_replace_planet_specific_scan_plants
-          json: e09r00_utopia.replace_planet_specific_scan_plants.patch.json
-          description: Replace planet-specific plant scan milestone (s3m8) (Recommended)
+        - id: e09r00_utopia_fix_milestones
+          json: e09r00_utopia.fix_milestones.patch.json
+          description: Fix milestones specific to Original (Recommended)
           checked: 1
     - id: e09r01
       json: E09_UTOPIA_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1702044000
       redux: 1
       patches:
-        - id: e09r01_utopia_replace_planet_specific_scan_plants
-          json: e09r01_utopia.replace_planet_specific_scan_plants.patch.json
-          description: Replace planet-specific plant scan milestone (s3m7) (Recommended)
+        - id: e09r01_utopia_fix_milestones
+          json: e09r01_utopia.fix_milestones.patch.json
+          description: Fix milestones specific to Redux (Recommended)
           checked: 1
 - id: e010
   name: '10: Singularity'

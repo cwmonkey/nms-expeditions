@@ -32,5 +32,20 @@
         }
       ]
     }
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Encryption": {
+            "DecryptMissionId": "^FIEND_KILL"
+          }
+        }
+      ]
+    }
   ]
 }

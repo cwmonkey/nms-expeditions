@@ -1,7 +1,28 @@
 {
   "Stages": [
     null,
-    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^WALKER",
+          "Title": "^UI_EXPED_WALKER_NAME",
+          "TitleUpper": "^UI_EXPED_WALKER_NAME_U",
+          "Description": "^UI_EXPED_WALKER_DESC",
+          "DescriptionDone": "^UI_EXPED_WALKER_DESC_D",
+          "IdToUseInMissionData": "[[removed]]",
+          "Amount": 2000,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.walker.dds"
+          }
+        }
+      ]
+    },
     {
       "Milestones": [
         null,
@@ -29,6 +50,20 @@
           },
           "MissionIconNotSelected": {
             "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.OFF.DDS"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Encryption": {
+            "DecryptMissionId": "^FIEND_KILL"
           }
         }
       ]
