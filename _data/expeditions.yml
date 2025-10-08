@@ -10,6 +10,8 @@
       date: 1614556800
       notice: >
         * **UNTESTED**
+
+        * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
     - id: e01r01
       json: E01_PIONEERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1637762400
