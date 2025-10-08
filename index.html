@@ -67,7 +67,7 @@ body_class: page_index
               <li class="exp_version_item">
                 <input type="radio" name="expeditions" id="{{ version.id }}_radio" class="exp_version_radio" data-id="{{ version.id }}">
                 <label for="{{ version.id }}_radio" class="exp_version_label">
-                  <h5 class="exp_version_name">{% if version.redux %}Redux{% else %}Original{% endif %} <span class="date">- {{ version.date | date: "%b, %Y" }}</span></h5>
+                  <h5 class="exp_version_name">{% if version.redux %}Redux{% else %}Original{% endif %} <span class="date">- {{ version.date | date: "%b, %Y" }}</span>{% if forloop.last %} <span class="recommended">(Recommended)</span>{% endif %}</h5>
                 </label>
               </li>
             {% endfor %}
