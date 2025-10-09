@@ -490,6 +490,77 @@ function updateDebug() {
   );
 }
 
+$('#download_all').on('click', async () => {
+  // Load JSZip dynamically if not already present
+  if (typeof JSZip === "undefined") {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js";
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
+
+  const zip = new JSZip();
+
+  // Helper to pause (useful if clicking triggers async UI updates)
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+  // Get all radio buttons matching [name="expeditions"]
+  const radios = document.querySelectorAll('[name="expeditions"]');
+  if (!radios.length) {
+    console.error('No radio buttons found with name="expeditions"');
+    return;
+  }
+
+  for (const radio of radios) {
+    const expVersion = radio.dataset.version;
+    const expName    = radio.dataset.name;
+    const expLatest  = radio.dataset.latest;
+    const prepend1   = expName.replace(': ', '_').toUpperCase() + '_';
+    const prepend2   = ((expVersion === '0') ? 'ORIGINAL' : 'REDUX_' + expVersion) + '_';
+
+    radio.click(); // trigger the selection
+    // await sleep(300); // wait for data to update (adjust if needed)
+
+    try {
+      const content = typeof getExpeditionJson === "function" ? getExpeditionJson() : null;
+
+      if (!content) {
+        console.warn(`Skipping ${expName}: getExpeditionJson() returned nothing`);
+        continue;
+      }
+
+      // If content is object, serialize to JSON
+      const text = typeof content === "object" ? JSON.stringify(content, null, 2) : String(content);
+
+      zip.file(`${prepend1}${prepend2}SEASON_DATA_CACHE.JSON`, text);
+      console.log(`Added: ${prepend1}${prepend2}SEASON_DATA_CACHE.JSON`);
+
+      if (expLatest) {
+        zip.file(`${prepend1}LATEST_SEASON_DATA_CACHE.JSON`, text);
+        console.log(`Added: ${prepend1}LATEST_SEASON_DATA_CACHE.JSON`);
+      }
+    } catch (err) {
+      console.error("Error processing one expedition:", err);
+    }
+  }
+
+  // Generate ZIP and trigger download
+  const blob = await zip.generateAsync({ type: "blob" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "patched.zip";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+
+  console.log("ZIP download started.");
+});
+
 ///////////////////////////////
 // Patch maker
 ///////////////////////////////
