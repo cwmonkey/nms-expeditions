@@ -12,22 +12,7 @@
     "AlienRace": "None"
   },
   "Inventory": {
-    "Slots": [
-      {
-        "Type": {
-          "InventoryType": "Product"
-        },
-        "Id": "^MYSTERY_BEACON",
-        "Amount": 1,
-        "MaxAmount": 1,
-        "DamageFactor": 0,
-        "FullyInstalled": true,
-        "Index": {
-          "X": -1,
-          "Y": -1
-        }
-      }
-    ]
+    "Slots": []
   },
   "GameMode": {
     "PresetGameMode": "Normal"
