@@ -124,7 +124,9 @@
       json: E04_EMERGENCE_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1634731200
       notice: >
-            * **UNTESTED**
+        * **UNTESTED**
+
+        * Once you have the `Visceral Synthesiser` it seems infested planets/Titan Worm Burrows become difficult to find. Go back to the original planet in the `Koyziylsrus` system.
     - id: e04r01
       json: E04_EMERGENCE_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1641391200
@@ -139,6 +141,8 @@
         * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You will need to move them.
 
         * To find Atlas stations, ask Polo for Black Hole coordinates. That will show BOTH Atlas stations AND Black Hole systems on your galaxy map.
+
+        * Once you have the `Visceral Synthesiser` it seems infested planets/Titan Worm Burrows become difficult to find. Go back to the original planet in the `Elusuu` system.
       patches:
         - id: 04_redux_emergence_replace_worm_hunt_2-3
           json: 04_redux_emergence.replace_worm_hunt_2-3.patch.json
