@@ -13,22 +13,7 @@
     "AlienRace": "None"
   },
   "Inventory": {
-    "Slots": [
-      {
-        "Type": {
-          "InventoryType": "Product"
-        },
-        "Id": "^MYSTERY_BEACON",
-        "Amount": 1,
-        "MaxAmount": 1,
-        "DamageFactor": 0,
-        "FullyInstalled": true,
-        "Index": {
-          "X": -1,
-          "Y": -1
-        }
-      }
-    ]
+    "Slots": []
   },
   "GameMode": {
     "PresetGameMode": "Normal"
@@ -2241,13 +2226,14 @@
           "TitleUpper": "^UI_EXPED_PARTY_PLANET5_NAME_U"
         },
         {
-          "Amount": 1,
+          "Amount": 3,
           "CantClaimRewardDescription": "",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Description": "^UI_EXPED_S2_MYSTERY1_DESC",
           "DescriptionDone": "^UI_EXPED_S2_MYSTERY1_DESC_D",
           "Encryption": {
             "DecryptMissionId": "^PARTY_PLANET5",
+            "DecryptMissionSeed": 40,
             "Description": "^UI_EXPED_ENCRYPTED_DESC_FORMAT",
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
@@ -2293,6 +2279,7 @@
           "DescriptionDone": "^UI_EXPED_S2_MYSTERY2_DESC_D",
           "Encryption": {
             "DecryptMissionId": "^S2_MYSTERY1",
+            "DecryptMissionSeed": 41,
             "Description": "^UI_EXPED_ENCRYPTED_DESC_FORMAT",
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
@@ -2324,7 +2311,7 @@
           "MissionIconSelected": {
             "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
           },
-          "Reward": "^RS_S2_S5M2",
+          "Reward": "^RS_S8_S2M7",
           "RewardDescription": "",
           "StageIndex": 0,
           "Title": "^UI_EXPED_S2_MYSTERY2_NAME",
@@ -2338,6 +2325,7 @@
           "DescriptionDone": "^UI_EXPED_S2_MYSTERY3_DESC_D",
           "Encryption": {
             "DecryptMissionId": "^S2_MYSTERY2",
+            "DecryptMissionSeed": 42,
             "Description": "^UI_EXPED_ENCRYPTED_DESC_FORMAT",
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
@@ -2383,6 +2371,7 @@
           "DescriptionDone": "^UI_EXPED_S2_MYSTERY4_DESC_D",
           "Encryption": {
             "DecryptMissionId": "^S2_MYSTERY3",
+            "DecryptMissionSeed": 43,
             "Description": "^UI_EXPED_ENCRYPTED_DESC_FORMAT",
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"

@@ -3230,7 +3230,7 @@
           "DescriptionDone": "^UI_EXPED_S2_MYSTERY1_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 1,
+          "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,

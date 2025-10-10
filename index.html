@@ -99,7 +99,7 @@ body_class: page_index
             <section class="notice" id="notice_{{ version.id }}">
               <div class="notice_header">
                 <h4 class="notice_headline">Notice</h4>
-                <div class="notice_description cms">{{ notice | markdownify }}</div>
+                <div class="notice_description cms">{{ notice | replace: ":g0", site.data.glyphs.g0 | replace: ":g1", site.data.glyphs.g1 | replace: ":g2", site.data.glyphs.g2 | replace: ":g3", site.data.glyphs.g3 | replace: ":g4", site.data.glyphs.g4 | replace: ":g5", site.data.glyphs.g5 | replace: ":g6", site.data.glyphs.g6 | replace: ":g7", site.data.glyphs.g7 | replace: ":g8", site.data.glyphs.g8 | replace: ":g9", site.data.glyphs.g9 | replace: ":ga", site.data.glyphs.gA | replace: ":gb", site.data.glyphs.gB | replace: ":gc", site.data.glyphs.gC | replace: ":gd", site.data.glyphs.gD | replace: ":ge", site.data.glyphs.gE | replace: ":gf", site.data.glyphs.gF | replace: ":sunset", site.data.glyphs.sunset | replace: ":bird", site.data.glyphs.bird | replace: ":face", site.data.glyphs.face | replace: ":diplo", site.data.glyphs.diplo | replace: ":eclipse", site.data.glyphs.eclipse | replace: ":balloon", site.data.glyphs.balloon | replace: ":boat", site.data.glyphs.boat | replace: ":bug", site.data.glyphs.bug | replace: ":dragonfly", site.data.glyphs.dragonfly | replace: ":galaxy", site.data.glyphs.galaxy | replace: ":voxel", site.data.glyphs.voxel | replace: ":fish", site.data.glyphs.fish | replace: ":tent", site.data.glyphs.tent | replace: ":rocket", site.data.glyphs.rocket | replace: ":tree", site.data.glyphs.tree | replace: ":atlas", site.data.glyphs.atlas | markdownify }}</div>
               </div>
 
               {% if exp.patches and version.patches %}
@@ -169,7 +169,7 @@ body_class: page_index
         <div class="cust_table" id="general_patches-table" data-toggle-default="off">
           <ul class="patch_list">
             {% for patch in site.data.global_patches %}
-              <li><label class="patch_label">
+              <li{% if patch.cheat %} class="cheat"{% endif %}><label class="patch_label">
                 <input type="checkbox" name="global_patch_{{ patch.id }}_check" class="patch_check" value="global_patch_json_{{ patch.id }}" {% if patch.checked == 1 %}checked = "checked"{% endif %} data-exp-id="*" data-onlyifnull="{{ patch.onlyifnull }}">
                 <span class="patch_description">{{ patch.description }}</span>
               </label></li>
@@ -517,6 +517,31 @@ body_class: page_index
       <p>You should now be able to replay/restart your desired expedition.</p>
 
       <p>Note: If you are familiar with save editing, you can just remove the <code>ExpeditionContext</code> entry from your save file (that's how the game knows which expedition you played last).</p>
+    </section>
+
+    <section id="expedition_notes_finding_portals">
+      <h3><a href="#expedition_notes_finding_portals">How to Find Portals</a></h3>
+
+      <ol>
+        <li>
+          Purchase <code>Alien Cartographic Planetary Charts</code> from a space station using <code>Navigation Data</code>
+          <ul>
+            <li>Buy extra <code>Alien Cartographic Planetary Charts</code> in case you fail the monolith's riddle</li>
+          </ul>
+        </li>
+        <li>
+          Find <code>Gek Relic</code>, <code>Korvax Casing</code>, or <code>Vy'keen Dagger</code> depending on the type of system.
+          <ul>
+            <li>These can be found in green containers or</li>
+            <li>You can purchase <code>Commercial Cartographic Data</code> and use them until you find a <code>Trade Outpost</code> where the NPC's will sell you the necessary item.</li>
+          </ul>
+        </li>
+        <li>Use the <code>Alien Cartographic Planetary Charts</code> until you get a <code>Monolith</code></li>
+        <li>
+          Go to the monolith and solve the riddle (<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3208565192" target="_blank">Steam guide with solutions</a>)
+        </li>
+        <li>After successfully solving the riddle, interact with the monolith again and ask it to find a portal (this will cost one <code>Gek Relic</code>, <code>Korvax Casing</code>, or <code>Vy'keen Dagger</code>)</li>
+      </ol>
     </section>
 
     <section id="expedition_notes_rewards">

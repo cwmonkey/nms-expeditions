@@ -8,6 +8,7 @@
     - id: e01r00
       json: E01_PIONEERS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1614556800
+      notes: 0-5 good
       notice: >
         * **UNTESTED**
 
@@ -15,6 +16,7 @@
     - id: e01r01
       json: E01_PIONEERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1637762400
+      notes: 0-5 good
       redux: 1
       notice: >
         * An update changed the system from a yellow star system to a green star system. A patch has been created to start players in a nearby yellow star system.
@@ -27,32 +29,45 @@
   name: '02: Beachhead'
   description: The one with the Mass Effect crossover
   image: e02_beachhead.png
-  notice: >
-    * For some reason you cannot get past 1/3 Dosimeter readings in Phase 5, Milestone 2. A patch has been created to reduce the required number of readings to 1.
-  patches:
-    - id: 02_redux_beachhead_reduce_p5m2_amount
-      json: 02_redux_beachhead.reduce_p5m2_amount.patch.json
-      description: Reduce number of required Dosimeter readings to 1 in Phase 5 Milestone 2 (Recommended)
-      checked: 1
   versions:
     - id: e02r00
       json: E02_BEACHHEAD_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1621256400
+      notes: 0-5 (and final far planet) good, expedition json keys are sorted
       notice: >
         * **UNTESTED**
-      warnings:
-        - message: The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+
+        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
+          For the final milestone you must <a href="#expedition_notes_finding_portals">find a Portal</a>
+
+          Final location glyps:
+          <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
+      patches:
+        - id: e02r00-r01_beachhead_portal_glyphs_reward
+          json: e02r00-r01_beachhead.portal_glyphs_reward.patch.json
+          description: Replace reward with portal glyphs (Recommended)
+          checked: 1
     - id: e02r01
       json: E02_BEACHHEAD_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1638972000
+      notes: 0-5 (and final far planet) good
       redux: 1
       notice: >
         * **UNTESTED**
-      warnings:
-        - message: The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+
+        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
+          For the final milestone you must <a href="#expedition_notes_finding_portals">find a Portal</a>
+
+          Final location glyps:
+          <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
+      patches:
+        - id: e02r00-r01_beachhead_portal_glyphs_reward
+          description: Replace reward with portal glyphs (Recommended)
+          checked: 1
     - id: e02r02
       json: E02_BEACHHEAD_REDUX_2_SEASON_DATA_CACHE.JSON
       date: 1730988000
+      notes: available text good
       redux: 1
       notice: >
         * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.

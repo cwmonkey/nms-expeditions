@@ -1565,7 +1565,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PARTY_PLANET5"
+            "DecryptMissionId": "^PARTY_PLANET5",
+            "DecryptMissionSeed": 40
           }
         },
         {
@@ -1611,7 +1612,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S2_MYSTERY1"
+            "DecryptMissionId": "^S2_MYSTERY1",
+            "DecryptMissionSeed": 41
           }
         },
         {
@@ -1657,7 +1659,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S2_MYSTERY2"
+            "DecryptMissionId": "^S2_MYSTERY2",
+            "DecryptMissionSeed": 42
           }
         },
         {
@@ -1703,7 +1706,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S2_MYSTERY3"
+            "DecryptMissionId": "^S2_MYSTERY3",
+            "DecryptMissionSeed": 43
           }
         },
         {

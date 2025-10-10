@@ -5,3 +5,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'NMS-Glyphs-Tight';
+  src: local('NMS-Glyphs-Tight'),local('NMS-Glyphs-Tight'),url("../fonts/NMS-Glyphs-Tight.woff") format('woff');
+}

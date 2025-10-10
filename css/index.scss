@@ -4,6 +4,14 @@
 
 @import "mixins";
 
+/* Fonts */
+
+.glyph {
+  font-family: NMS-Glyphs-Tight;
+  font-size: 35px;
+  line-height: 35px;
+}
+
 /* Toggle */
 
 .toggle-off:not([data-toggle-container]),
@@ -174,10 +182,11 @@
     border: 3px solid transparent;
     color: #ebebeb;
 
-    // preoload
+    // preload
     &::after {
       background: url(../images/exp-background-on.jpg);
       content: "";
+      font-family: NMS-Glyphs-Tight;
     }
 
     &:hover {
@@ -453,6 +462,10 @@
         @include visually-hidden();
       }
     }
+
+    ul {
+      margin-left: 1.5em;
+    }
   }
 
   .patch_label {
@@ -482,6 +495,7 @@
 
     .warning_list {
       margin-right: 5px;
+      margin-left: 2em;
     }
 
     &.selected {
@@ -819,7 +833,8 @@
   }
 }
 
-.public .debug {
+.public .debug,
+.public .cheat {
   display: none;
 }
 
