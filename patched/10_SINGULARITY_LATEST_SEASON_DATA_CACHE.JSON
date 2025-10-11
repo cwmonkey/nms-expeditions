@@ -3487,10 +3487,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "AbandonedRobotCamp"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3647,7 +3643,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "AbandonedRobotCamp"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3683,10 +3683,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "AbandonedRobotCamp"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3843,7 +3839,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "AbandonedRobotCamp"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -3879,10 +3879,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "AbandonedRobotCamp"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4039,7 +4035,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "AbandonedRobotCamp"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4075,10 +4075,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "AbandonedRobotCamp"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4235,7 +4231,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "AbandonedRobotCamp"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4271,10 +4271,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "AbandonedRobotCamp"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4431,7 +4427,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "AbandonedRobotCamp"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

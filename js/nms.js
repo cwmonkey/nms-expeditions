@@ -35,8 +35,17 @@ function fix(target, fixer) {
 
 function recursiveFix(target, fixer) {
   let keys = Object.keys(fixer);
-  const ifundefined = fixer["[[ifundefinedorblank]]"];
-  const iflessthan = fixer["[[iflessthan]]"];
+  const ifundefined = fixer['[[ifundefinedorblank]]'];
+  const iflessthan = fixer['[[iflessthan]]'];
+  const ifkeyexists = fixer['[[ifkeyexists]]'];
+  const rename = fixer['[[rename]]'];
+
+  if (ifkeyexists && typeof target[ifkeyexists] === 'undefined') {
+    // don't do rename
+  } else if (rename) {
+    target[rename.to] = target[rename.from];
+    delete target[rename.from];
+  }
 
   if (isArray(fixer) && fixer[0] === '[[append]]') {
     // Assume target is an array as well
@@ -52,10 +61,11 @@ function recursiveFix(target, fixer) {
     for (let i = keys.length - 1; i >= 0; i--) {
       let prop = keys[i];
 
-      if (ifundefined && (typeof target[prop] !== "undefined" && target[prop] !== "^")) continue;
+      if (ifundefined && (typeof target[prop] !== 'undefined' && target[prop] !== '^')) continue;
       if (iflessthan && target[prop] && iflessthan <= target[prop]) continue;
+      if (ifkeyexists && typeof target[ifkeyexists] === 'undefined') continue;
 
-      if (prop === "[[ifundefinedorblank]]" || prop === "[[iflessthan]]") {
+      if (prop === '[[ifundefinedorblank]]' || prop === '[[iflessthan]]' || prop === '[[ifkeyexists]]' || prop === '[[rename]]') {
         // skip
       } else if (fixer[prop] === '[[removed]]') {
         if (isArray(fixer)) {
@@ -610,6 +620,7 @@ function getDiff(a, b) {
 function recursiveDiff(a, b, node) {
   var checked = [];
 
+  // Handle updating/removing from b
   for (var prop in a) {
     // debug(prop, 1);
     if (typeof b[prop] == 'undefined') {
@@ -631,6 +642,13 @@ function recursiveDiff(a, b, node) {
           recursiveDiff(a[prop], b[prop], node[prop]);
         }
       }
+    }
+  }
+
+  // Handle adding new keys from b
+  for (var prop in b) {
+    if (typeof a[prop] == 'undefined') {
+      addNode(prop, b[prop], node);
     }
   }
 }

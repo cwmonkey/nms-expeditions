@@ -10,6 +10,10 @@
   json: global_patch.expand_suit_slots.patch.json
   description: Suit tech slots did not exist at the time some expeditions came out. Expand tech slot count to a reasonable size (Recommended)
   checked: 1
+- id: fix_old_rendezvous
+  json: global_patch.fix_old_rendezvous.patch.json
+  description: Fix old Rendezvous milestones so they do not trigger as soon as you enter the system (Recommended)
+  checked: 1
 - id: global_patch_cheat_starter_items
   json: global_patch.cheat.starter_items.patch.json
   description: Maximize tech/cargo slots. Add hyperdrive modules. Add fuel. Add gun/ammo. Add metal. Add portal recharge substances.

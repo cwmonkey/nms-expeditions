@@ -3702,10 +3702,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Debris"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3867,7 +3863,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Debris"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3908,10 +3908,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Ruin"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4073,7 +4069,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Ruin"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -4114,10 +4114,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Plaque"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4279,7 +4275,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Plaque"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4320,10 +4320,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Abandoned"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4485,7 +4481,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Abandoned"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4526,10 +4526,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "WaterTreasureRuins"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4691,7 +4687,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "WaterTreasureRuins"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

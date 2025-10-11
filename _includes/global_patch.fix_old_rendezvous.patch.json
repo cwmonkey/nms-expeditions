@@ -1,0 +1,36 @@
+{
+  "ScanEventTable": {
+    "Events": [
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {"from": "BuildingClass", "to": "SpecificBuildingClass"},
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {"from": "BuildingClass", "to": "SpecificBuildingClass"},
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {"from": "BuildingClass", "to": "SpecificBuildingClass"},
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {"from": "BuildingClass", "to": "SpecificBuildingClass"},
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {"from": "BuildingClass", "to": "SpecificBuildingClass"},
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      }
+    ]
+  }
+}

@@ -3662,10 +3662,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Beacon"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3852,7 +3848,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Beacon"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3894,10 +3894,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4084,7 +4080,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -4126,10 +4126,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "CrashedFreighter"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4316,7 +4312,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "CrashedFreighter"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4358,10 +4358,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Abandoned"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4548,7 +4544,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Abandoned"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4590,10 +4590,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4780,7 +4776,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

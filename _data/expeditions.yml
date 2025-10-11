@@ -38,7 +38,7 @@
         * **UNTESTED**
 
         * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
-          For the final milestone you must <a href="#expedition_notes_finding_portals">find a Portal</a>
+          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
 
           Final location glyps:
           <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
@@ -55,8 +55,9 @@
       notice: >
         * **UNTESTED**
 
-        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
-          For the final milestone you must <a href="#expedition_notes_finding_portals">find a Portal</a>
+        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+          A patch has been created to give portal glyphs as a reward.
+          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
 
           Final location glyps:
           <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
@@ -67,7 +68,7 @@
     - id: e02r02
       json: E02_BEACHHEAD_REDUX_2_SEASON_DATA_CACHE.JSON
       date: 1730988000
-      notes: available text good
+      notes: 0-5 (and final planet) good
       redux: 1
       notice: >
         * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
@@ -82,22 +83,16 @@
   image: e03_cartographers.png
   notice: >
     * If you start the expedition with `BlockStormsAtStart` set to `true` you will not be able to complete all the milestones. Simply set it to `false` below and re-download the json.
-
-    * A recent patch caused all rendezvous milestones to complete when entering the system. Since you start in the rendezvous system, it automatically completes. A patch has been added to replace the rendezvous milestone.
   warnings:
     - prop: BlockStormsAtStart
       value: true
       message: If you block storms at the start of this expedition, you will not be able to complete all milestones.
       active: Please change `BlockStormsAtStart` in the `General` section below.
-  patches:
-    - id: e03_cartographers_replace_rendezvous
-      json: e03_cartographers.replace_rendezvous.patch.json
-      description: Replace the rendezvous milestone (Recommended)
-      checked: 1
   versions:
     - id: e03r00
       json: E03_CARTOGRAPHERS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1631106000
+      notes: 0-2 good
       notice: >
         * **UNTESTED**
 
@@ -111,6 +106,7 @@
       json: E03_CARTOGRAPHERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1640181600
       redux: 1
+      notes: 0-2 good
       notice: >
         * **UNTESTED**
 
@@ -122,6 +118,7 @@
     - id: e03r02
       json: E03_CARTOGRAPHERS_REDUX_2_SEASON_DATA_CACHE.JSON
       date: 1703253600
+      notes: 0-2 good
       redux: 1
       notice: >
         * The 2023 redux version of this expedition changed some rewards to those from expedition 1, 4 and 5. A patch has been created restore the original rewards.
@@ -138,6 +135,7 @@
     - id: e04r00
       json: E04_EMERGENCE_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1634731200
+      notes: 0-2 good, TODO second titan worm does not work, 
       notice: >
         * **UNTESTED**
 
@@ -226,8 +224,6 @@
     * **UNTESTED**
 
     * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
-
-    * This expedition breaks a lot, in particular the "reset save on death" mechanic. It seems to be working now, but if it breaks you can use the patch to disable it.
   warnings:
     - id: GameMode_Permadeath
       prop: GameMode
@@ -240,9 +236,6 @@
       json: 07_redux_leviathan.replace_community_missions.patch.json
       description: Replace community milestones since they cannot be completed offline (Recommended)
       checked: 1
-    - id: leviathan_no_reset_on_death
-      json: 07_redux_leviathan.no_reset_on_death.patch.json
-      description: Disable "reset save on death" mechanic and reduce difficulty settings
   versions:
     - id: e07r00
       json: E07_LEVIATHAN_ORIGINAL_SEASON_DATA_CACHE.JSON
@@ -285,17 +278,11 @@
   notice: >
     * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a `Visceral Synthesiser`).
 
-    * The "Beacon" update made all rendezvous milestones auto complete when you enter a system, and since you are already in the system with all the rendezvous locations, they all auto complete upon starting the expedition. Also it seems like some planet-specific milestones no longer work properly. Patches have been created to replace all rendezvous and planet-specific milestones in this expedition.
-
     * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue.
   patches:
     - id: 09_redux_utopia_replace_online_base_building
       json: 09_redux_utopia.replace_online_base_building.patch.json
       description: Replace online-only milestones (Recommended)
-      checked: 1
-    - id: 09_redux_utopia_replace_rdv_milestones
-      json: 09_redux_utopia.replace_rdv_milestones.patch.json
-      description: Replace rendezvous and planet-specific milestones (Recommended)
       checked: 1
     - id: add_nexus_reward
       json: 09_redux_utopia.add_nexus_reward.patch.json
@@ -305,20 +292,10 @@
     - id: e09r00
       json: E09_UTOPIA_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1677067200
-      patches:
-        - id: e09r00_utopia_fix_milestones
-          json: e09r00_utopia.fix_milestones.patch.json
-          description: Fix milestones specific to Original (Recommended)
-          checked: 1
     - id: e09r01
       json: E09_UTOPIA_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1702044000
       redux: 1
-      patches:
-        - id: e09r01_utopia_fix_milestones
-          json: e09r01_utopia.fix_milestones.patch.json
-          description: Fix milestones specific to Redux (Recommended)
-          checked: 1
 - id: e010
   name: '10: Singularity'
   description: The one about Harmonic entities
@@ -456,8 +433,6 @@
   description: The one with gas giants
   image: e17_titan.png
   json: 17_titan.json
-  notice: >
-    * As of the Beacon patch all rendezvous milestones seem to complete as soon as you warp to the designated system. To complete the photograph milestones, simply go to the designated planet and take a picture anywhere.
   versions:
     - id: e17r00
       json: E17_TITAN_ORIGINAL_SEASON_DATA_CACHE.JSON
@@ -467,13 +442,6 @@
   description: The one with bones
   image: e18_relics.png
   json: 18_relics.json
-  notice: >
-    * The latest NMS patch seems to have broken the bone collecting milestones, there does not seem to be a way to turn them in. A patch has been created to replace the milestones.
-  patches:
-    - id: relics_replace_first_bones_milestone
-      json: 18_relics.replace_bone_hunt_milestones.patch.json
-      description: Replace the bone collection milestones (Recommended)
-      checked: 1
   versions:
     - id: e18r00
       json: E18_RELICS_ORIGINAL_SEASON_DATA_CACHE.JSON

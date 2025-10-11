@@ -3165,10 +3165,6 @@
         "DisableMultiplayerSync": true,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3314,7 +3310,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3341,10 +3341,6 @@
         "DisableMultiplayerSync": true,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Monolith"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3490,7 +3486,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Monolith"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -3517,10 +3517,6 @@
         "DisableMultiplayerSync": true,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Ruin"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3668,7 +3664,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Ruin"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -3695,10 +3695,6 @@
         "DisableMultiplayerSync": true,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "MissionTower"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3844,7 +3840,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "MissionTower"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -3871,10 +3871,6 @@
         "DisableMultiplayerSync": true,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4020,7 +4016,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

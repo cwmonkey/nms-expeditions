@@ -3768,10 +3768,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Shelter"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3950,7 +3946,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Shelter"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3992,10 +3992,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Outpost"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4174,7 +4170,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Outpost"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -4216,10 +4216,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Observatory"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4398,7 +4394,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Observatory"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4440,10 +4440,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "CrashedFreighter"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4622,7 +4618,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "CrashedFreighter"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4664,10 +4664,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DistressSignal"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4846,7 +4842,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DistressSignal"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

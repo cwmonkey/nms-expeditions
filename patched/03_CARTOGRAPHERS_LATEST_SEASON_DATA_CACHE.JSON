@@ -3075,31 +3075,31 @@
           }
         },
         {
-          "Mission": "^GET_ASTEROIDS",
-          "Title": "^UI_EXPED_ASTEROIDS_NAME",
-          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
-          "Description": "^UI_EXPED_ASTEROIDS_DESC",
-          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Mission": "^PARTY_PLANET1",
+          "Title": "^UI_EXPED_PARTY_PLANET1_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY_PLANET1_NAME_U",
+          "Description": "^UI_EXPED_PARTY_PLANET1_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY_PLANET1_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 50,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.party.1.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S3_S5M4",
           "RewardSwitchAlt": "^",
@@ -3107,7 +3107,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -3365,10 +3365,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "StoryGlitch"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3527,7 +3523,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "StoryGlitch"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3563,10 +3563,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3723,7 +3719,38 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {
+          "from": "BuildingClass",
+          "to": "SpecificBuildingClass"
+        },
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {
+          "from": "BuildingClass",
+          "to": "SpecificBuildingClass"
+        },
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
+      },
+      {
+        "[[ifkeyexists]]": "BuildingType",
+        "[[rename]]": {
+          "from": "BuildingClass",
+          "to": "SpecificBuildingClass"
+        },
+        "BuildingType": "[[removed]]",
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

@@ -1653,11 +1653,11 @@
           }
         },
         {
-          "Mission": "^LEAVE_PLANET",
-          "Title": "^UI_EXPED_LEAVE_PLANET_NAME",
-          "TitleUpper": "^UI_EXPED_LEAVE_PLANET_NAME_U",
-          "Description": "^UI_EXPED_LEAVE_PLANET_DESC",
-          "DescriptionDone": "^UI_EXPED_LEAVE_PLANET_DESC_D",
+          "Mission": "^S9_PLANET1",
+          "Title": "^UI_EXPED_PARTY1_S9_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY1_S9_NAME_U",
+          "Description": "^UI_EXPED_PARTY1_S9_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY1_S9_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S9_FIND_SHIP",
           "Amount": 1,
@@ -1665,19 +1665,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.firstplanet.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.systemparty.1.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S9_PARTY1",
           "RewardSwitchAlt": "^",
@@ -1685,7 +1685,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -1759,31 +1759,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^DISC_WAYPOINT",
-          "Title": "^UI_EXPED_DISC_WAYPOINT_NAME",
-          "TitleUpper": "^UI_EXPED_DISC_WAYPOINT_NAME_U",
-          "Description": "^UI_EXPED_DISC_WAYPOINT_DESC",
-          "DescriptionDone": "^UI_EXPED_DISC_WAYPOINT_DESC_D",
+          "Mission": "^S9_PLANET2",
+          "Title": "^UI_EXPED_PARTY2_S9_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY2_S9_NAME_U",
+          "Description": "^UI_EXPED_PARTY2_S9_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY2_S9_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S9_PLANET1",
-          "Amount": 4,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.discoverwaypoint.1.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.systemparty.2.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S9_PARTY2",
           "RewardSwitchAlt": "^",
@@ -1791,7 +1791,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -2165,31 +2165,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^FLYER",
-          "Title": "^UI_EXPED_FLYER_NAME",
-          "TitleUpper": "^UI_EXPED_FLYER_NAME_U",
-          "Description": "^UI_EXPED_FLYER_DESC",
-          "DescriptionDone": "^UI_EXPED_FLYER_DESC_D",
+          "Mission": "^S9_PLANET3",
+          "Title": "^UI_EXPED_PARTY3_S9_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY3_S9_NAME_U",
+          "Description": "^UI_EXPED_PARTY3_S9_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY3_S9_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S9_PLANET2",
-          "Amount": 100000,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.ship1.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.systemparty.3.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leaveplanet.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S9_PARTY3",
           "RewardSwitchAlt": "^",
@@ -2197,7 +2197,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -2464,31 +2464,31 @@
           }
         },
         {
-          "Mission": "^BASIC_SCAN_PLA",
-          "Title": "^UI_EXPED_SCAN_PLA2_NAME",
-          "TitleUpper": "^UI_EXPED_SCAN_PLA2_NAME_U",
-          "Description": "^UI_EXPED_BASIC_SCAN_PLA_DESC",
-          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_PLA_DESC_D",
+          "Mission": "^DISC_PLANT_PP",
+          "Title": "^UI_EXPED_S9_PLANTS_PARTY_NAME",
+          "TitleUpper": "^UI_EXPED_S9_PLANTS_PARTY_NAME_U",
+          "Description": "^UI_EXPED_S9_PLANTS_PARTY_DESC",
+          "DescriptionDone": "^UI_EXPED_S9_PLANTS_PARTY_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 6,
+          "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.PLANTS.DDS"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.plants.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.treescan.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.treescan.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.TREESCAN.OFF.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.treescan.off.dds"
           },
           "Reward": "^RS_S9_S3M7",
           "RewardSwitchAlt": "^",
@@ -2570,31 +2570,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^FIEND_KILL",
-          "Title": "^UI_EXPED14_FIEND_KILL_NAME",
-          "TitleUpper": "^UI_EXPED14_FIEND_KILL_NAME_U",
-          "Description": "^UI_EXPED_FIEND_KILL_DESC",
-          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D",
+          "Mission": "^S9_PLANET4",
+          "Title": "^UI_EXPED_PARTY4_S9_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY4_S9_NAME_U",
+          "Description": "^UI_EXPED_PARTY4_S9_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY4_S9_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S9_PLANET3",
-          "Amount": 6,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/SPOOKWORM/PATCH.SPOOKY.FIENDEGG.DDS"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.systemparty.4.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.OFF.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S9_PARTY4",
           "RewardSwitchAlt": "^",
@@ -2602,7 +2602,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -2911,7 +2911,7 @@
             "HoverPopupIcon": {
               "Filename": ""
             },
-            "DecryptMissionId": "^FIEND_KILL",
+            "DecryptMissionId": "^S9_PLANET4",
             "DecryptMissionSeed": 30
           }
         },
@@ -3022,31 +3022,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^WORDS_ALL",
-          "Title": "^UI_EXPED_WORDS_ALL_NAME",
-          "TitleUpper": "^UI_EXPED_WORDS_ALL_NAME_U",
-          "Description": "^UI_EXPED_WORDS_ALL_DESC",
-          "DescriptionDone": "^UI_EXPED_WORDS_ALL_DESC_D",
+          "Mission": "^S9_PLANET5",
+          "Title": "^UI_EXPED_PARTY5_S9_NAME",
+          "TitleUpper": "^UI_EXPED_PARTY5_S9_NAME_U",
+          "Description": "^UI_EXPED_PARTY5_S9_DESC",
+          "DescriptionDone": "^UI_EXPED_PARTY5_S9_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^S9_PLANET4",
-          "Amount": 6,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.learn.1.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.systemparty.5.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.words.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
           },
           "Reward": "^RS_S9_PARTY5",
           "RewardSwitchAlt": "^",
@@ -3054,7 +3054,7 @@
           "CantClaimRewardDescription": "",
           "IsOptional": false,
           "GreyIfCantStart": false,
-          "IsRendezvous": false,
+          "IsRendezvous": true,
           "IsStageControl": false,
           "Encryption": {
             "IsEncrypted": false,
@@ -3218,31 +3218,31 @@
           }
         },
         {
-          "Mission": "^BASIC_SCAN_CRE",
-          "Title": "^UI_EXPED_BASIC_SCAN_CRE_NAME",
-          "TitleUpper": "^UI_EXPED_BASIC_SCAN_CRE_NAME_U",
-          "Description": "^UI_EXPED_BASIC_SCAN_CRE_DESC",
-          "DescriptionDone": "^UI_EXPED_BASIC_SCAN_CRE_DESC_D",
+          "Mission": "^DISC_CRE_PP",
+          "Title": "^UI_EXPED_S9_CRE_REMIX_NAME",
+          "TitleUpper": "^UI_EXPED_S9_CRE_REMIX_NAME_U",
+          "Description": "^UI_EXPED_S9_CRE_PARTY_DESC",
+          "DescriptionDone": "^UI_EXPED_S9_CRE_PARTY_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 6,
+          "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.discoveranimal.1.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.CREATUREPLANET.2.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.crescan.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.crescan.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.crescan.off.dds"
           },
           "Reward": "^RS_S9_S5M4",
           "RewardSwitchAlt": "^",
@@ -3458,10 +3458,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3620,7 +3616,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3656,10 +3656,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3818,7 +3814,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -3854,10 +3854,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4016,7 +4012,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4052,10 +4052,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "Outpost"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4214,7 +4210,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "Outpost"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4250,10 +4250,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "LargeBuilding"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4412,7 +4408,11 @@
           "ProceduralTexture": {
             "Samplers": []
           }
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "LargeBuilding"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

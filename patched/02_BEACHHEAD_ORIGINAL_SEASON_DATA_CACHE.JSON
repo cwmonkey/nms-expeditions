@@ -30,12 +30,8 @@
         "AllowFriendsBases": false,
         "AllowOverriddenBuildings": true,
         "AlwaysShow": false,
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "BuildingLocation": "PlanetSearch",
         "BuildingPreventionRadius": 800,
-        "BuildingType": "BuildingClass",
         "CanEndFromOutsideMission": false,
         "ClearForcedInteractionOnCompletion": false,
         "DisableMultiplayerSync": true,
@@ -197,18 +193,18 @@
           "Range": 100,
           "Triggers": []
         },
-        "UAsList": []
+        "UAsList": [],
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "AllowFriendsBases": false,
         "AllowOverriddenBuildings": true,
         "AlwaysShow": false,
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "BuildingLocation": "PlanetSearch",
         "BuildingPreventionRadius": 800,
-        "BuildingType": "BuildingClass",
         "CanEndFromOutsideMission": false,
         "ClearForcedInteractionOnCompletion": false,
         "DisableMultiplayerSync": true,
@@ -370,18 +366,18 @@
           "Range": 100,
           "Triggers": []
         },
-        "UAsList": []
+        "UAsList": [],
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "AllowFriendsBases": false,
         "AllowOverriddenBuildings": true,
         "AlwaysShow": false,
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "BuildingLocation": "PlanetSearch",
         "BuildingPreventionRadius": 800,
-        "BuildingType": "BuildingClass",
         "CanEndFromOutsideMission": false,
         "ClearForcedInteractionOnCompletion": false,
         "DisableMultiplayerSync": true,
@@ -543,18 +539,18 @@
           "Range": 100,
           "Triggers": []
         },
-        "UAsList": []
+        "UAsList": [],
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "AllowFriendsBases": false,
         "AllowOverriddenBuildings": true,
         "AlwaysShow": false,
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "BuildingLocation": "PlanetSearch",
         "BuildingPreventionRadius": 800,
-        "BuildingType": "BuildingClass",
         "CanEndFromOutsideMission": false,
         "ClearForcedInteractionOnCompletion": false,
         "DisableMultiplayerSync": true,
@@ -716,18 +712,18 @@
           "Range": 100,
           "Triggers": []
         },
-        "UAsList": []
+        "UAsList": [],
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "AllowFriendsBases": false,
         "AllowOverriddenBuildings": true,
         "AlwaysShow": false,
-        "BuildingClass": {
-          "BuildingClass": "Portal"
-        },
         "BuildingLocation": "PlanetSearch",
         "BuildingPreventionRadius": 800,
-        "BuildingType": "BuildingClass",
         "CanEndFromOutsideMission": false,
         "ClearForcedInteractionOnCompletion": false,
         "DisableMultiplayerSync": true,
@@ -889,7 +885,11 @@
           "Range": 100,
           "Triggers": []
         },
-        "UAsList": []
+        "UAsList": [],
+        "SpecificBuildingClass": {
+          "BuildingClass": "Portal"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },

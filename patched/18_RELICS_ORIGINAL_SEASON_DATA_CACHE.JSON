@@ -1613,31 +1613,31 @@
           }
         },
         {
-          "Mission": "^GOT_BURIED_PROP",
-          "Title": "^UI_EXPED_BURIED_PROP2_NAME",
-          "TitleUpper": "^UI_EXPED_BURIED_PROP2_NAME_U",
-          "Description": "^UI_EXPED_BURIED_PROP_DESC",
-          "DescriptionDone": "^UI_EXPED_BURIED_PROP_DESC_D",
+          "Mission": "^BONE_HUNT",
+          "Title": "^UI_EXPED18_BONE_HUNT_NAME",
+          "TitleUpper": "^UI_EXPED18_BONE_HUNT_NAME_U",
+          "Description": "^UI_EXPED18_BONE_HUNT_DESC",
+          "DescriptionDone": "^UI_EXPED18_BONE_HUNT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 3,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.UNDERGROUNDTREASURE.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONES1.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.OFF.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S18_S1M4",
           "RewardSwitchAlt": "^",
@@ -1931,31 +1931,31 @@
           }
         },
         {
-          "Mission": "^GET_ASTEROIDS",
-          "Title": "^UI_EXPED_ASTEROIDS_NAME",
-          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
-          "Description": "^UI_EXPED_ASTEROIDS_DESC",
-          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Mission": "^BONE_HUNT",
+          "Title": "^UI_EXPED18_BONE_HUNT2_NAME",
+          "TitleUpper": "^UI_EXPED18_BONE_HUNT2_NAME_U",
+          "Description": "^UI_EXPED18_BONE_HUNT_DESC",
+          "DescriptionDone": "^UI_EXPED18_BONE_HUNT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 50,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SHIPSHOOT.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONES2.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.OFF.DDS"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S18_S2M2",
           "RewardSwitchAlt": "^",
@@ -2353,31 +2353,31 @@
           }
         },
         {
-          "Mission": "^SENTINEL_KILL",
-          "Title": "^UI_EXPED_SENTINEL_KILL_NAME",
-          "TitleUpper": "^UI_EXPED_SENTINEL_KILL_NAME_U",
-          "Description": "^UI_EXPED_SENTINEL_KILL_DESC",
-          "DescriptionDone": "^UI_EXPED_SENTINEL_KILL_DESC_D",
+          "Mission": "^BONE_HUNT",
+          "Title": "^UI_EXPED18_BONE_HUNT3_NAME",
+          "TitleUpper": "^UI_EXPED18_BONE_HUNT3_NAME_U",
+          "Description": "^UI_EXPED18_BONE_HUNT_DESC",
+          "DescriptionDone": "^UI_EXPED18_BONE_HUNT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 3,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.kill.sentinels.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONES3.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S18_S3M2",
           "RewardSwitchAlt": "^",
@@ -2775,11 +2775,11 @@
           }
         },
         {
-          "Mission": "^RAID_HIVE",
-          "Title": "^UI_EXPED_RAID_HIVE_NAME",
-          "TitleUpper": "^UI_EXPED_RAID_HIVE_NAME_U",
-          "Description": "^UI_EXPED_RAID_HIVE_DESC",
-          "DescriptionDone": "^UI_EXPED_RAID_HIVE_DESC_D",
+          "Mission": "^BONE_HUNT",
+          "Title": "^UI_EXPED18_BONE_HUNT4_NAME",
+          "TitleUpper": "^UI_EXPED18_BONE_HUNT4_NAME_U",
+          "Description": "^UI_EXPED18_BONE_HUNT_DESC",
+          "DescriptionDone": "^UI_EXPED18_BONE_HUNT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
           "Amount": 1,
@@ -2787,19 +2787,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.counterfire.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONES4.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.robotkill.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S18_S4M2",
           "RewardSwitchAlt": "^",
@@ -3197,31 +3197,31 @@
           }
         },
         {
-          "Mission": "^WALKER",
-          "Title": "^UI_EXPED_WALKER_NAME",
-          "TitleUpper": "^UI_EXPED_WALKER_NAME_U",
-          "Description": "^UI_EXPED_WALKER_DESC",
-          "DescriptionDone": "^UI_EXPED_WALKER_DESC_D",
+          "Mission": "^BONE_HUNT",
+          "Title": "^UI_EXPED18_BONE_HUNT5_NAME",
+          "TitleUpper": "^UI_EXPED18_BONE_HUNT5_NAME_U",
+          "Description": "^UI_EXPED18_BONE_HUNT_DESC",
+          "DescriptionDone": "^UI_EXPED18_BONE_HUNT_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 8000,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.walker.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONES5.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S18_S5M2",
           "RewardSwitchAlt": "^",
@@ -3246,8 +3246,7 @@
             },
             "DecryptMissionId": "^",
             "DecryptMissionSeed": 0
-          },
-          "Id": "^"
+          }
         },
         {
           "Mission": "^MAKE_SKELE",
@@ -3608,10 +3607,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DigSite"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -3799,7 +3794,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DigSite"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET2",
@@ -3841,10 +3840,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DigSite"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4032,7 +4027,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DigSite"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET3",
@@ -4074,10 +4073,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DigSite"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4265,7 +4260,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DigSite"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET4",
@@ -4307,10 +4306,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DigSite"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4498,7 +4493,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DigSite"
+        },
+        "SearchType": "FindBuildingClass"
       },
       {
         "Name": "^SE_PARTY_PLANET5",
@@ -4540,10 +4539,6 @@
         "BlockStartedOnUseEvents": false,
         "ReplaceEventIfAlreadyActive": false,
         "BuildingLocation": "PlanetSearch",
-        "BuildingType": "BuildingClass",
-        "BuildingClass": {
-          "BuildingClass": "DigSite"
-        },
         "AllowFriendsBases": false,
         "ForceWideRandom": false,
         "MustFindSystem": true,
@@ -4731,7 +4726,11 @@
             "Samplers": []
           },
           "AltId": ""
-        }
+        },
+        "SpecificBuildingClass": {
+          "BuildingClass": "DigSite"
+        },
+        "SearchType": "FindBuildingClass"
       }
     ]
   },
