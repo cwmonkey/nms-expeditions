@@ -713,7 +713,7 @@ async function checkForUpdates() {
   clearTimeout(checkForUpdatesTO);
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(`${url}?${Date.now()}`);
 
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
