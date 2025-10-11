@@ -753,6 +753,39 @@ window.addEventListener("focus", function(event) {
 checkForUpdates();
 
 ///////////////////////////////
+// Cheat/debug code
+///////////////////////////////
+
+const code = 'cheater';
+let typed = '';
+
+$body.on('keydown', (e) => {
+  typed += e.key;
+
+  if (typed === code) {
+    if ($body.is('.public')) {
+      localStorage.setItem('ischeater', 'true');
+      $body.removeClass('public');
+    } else {
+      localStorage.setItem('ischeater', 'false');
+      $body.addClass('public');
+    }
+  } else if (code.indexOf(typed) === 0) {
+    // typing code
+  } else {
+    // not typing code
+    typed = '';
+  }
+});
+
+const ischeater = localStorage.getItem('ischeater');
+
+if (ischeater === 'true') {
+  $body.removeClass('public');
+} else if (ischeater === 'false') {
+  $body.addClass('public');
+}
+///////////////////////////////
 // On page load
 ///////////////////////////////
 
