@@ -92,15 +92,21 @@
     - id: e03r00
       json: E03_CARTOGRAPHERS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1631106000
-      notes: 0-2 good
+      notes: 0-2 good, TODO The Archaeologist can't be done on the starter planet
       notice: >
         * **UNTESTED**
 
         * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
+
+        * The starting planet/system no longer has buried bones. A patch has been created to replace the milestone with something more appropriate.
       patches:
         - id: e03r00-r01_cartographers_toxic_tech
           json: e03r00-r01_cartographers.toxic_tech.patch.json
           description: Add toxic protection technology (Recommended)
+          checked: 1
+        - id: e03r00_cartographers_replace_bones.milestone
+          json: e03r00_cartographers.replace_bones.milestone.patch.json
+          description: Replace buried bones milestone (Recommended)
           checked: 1
     - id: e03r01
       json: E03_CARTOGRAPHERS_REDUX_1_SEASON_DATA_CACHE.JSON

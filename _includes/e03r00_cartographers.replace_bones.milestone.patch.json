@@ -1,0 +1,39 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BIGGS_DIG",
+          "Title": "^UI_EXPED_BIGGS_DIG_NAME",
+          "TitleUpper": "^UI_EXPED_BIGGS_DIG_NAME_U",
+          "Description": "^UI_EXPED_BIGGS_DIG_DESC",
+          "DescriptionDone": "^UI_EXPED_BIGGS_DIG_DESC_D",
+          "Id": "[[removed]]",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DIG.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.OFF.DDS"
+          },
+          "IdToUseInMissionData": "^"
+        }
+      ]
+    }
+  ]
+}
