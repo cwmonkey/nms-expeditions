@@ -2,7 +2,15 @@
   "Stages": [
     null,
     null,
-    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Amount": 7
+        }
+      ]
+    },
     {
       "Milestones": [
         null,
