@@ -47,21 +47,6 @@
         "Type":{
           "InventoryType":"Product"
         },
-        "Id":"^UP_BOLTCASTER",
-        "Amount":1,
-        "MaxAmount":10,
-        "DamageFactor":0.0,
-        "FullyInstalled":true,
-        "AddedAutomatically":false,
-        "Index":{
-          "X":-1,
-          "Y":-1
-        }
-      },
-      {
-        "Type":{
-          "InventoryType":"Product"
-        },
         "Id":"^HYPERFUEL2",
         "Amount":20,
         "MaxAmount":20,
@@ -77,7 +62,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^RADIO1",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -105,7 +90,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^STELLAR2",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -119,7 +104,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^RED2",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -133,7 +118,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^GREEN2",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -218,7 +203,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^CATALYST1",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -232,7 +217,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^FUEL1",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -246,7 +231,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^LAUNCHSUB",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -260,7 +245,7 @@
           "InventoryType":"Substance"
         },
         "Id":"^LAND1",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
@@ -274,10 +259,40 @@
           "InventoryType":"Substance"
         },
         "Id":"^ROCKETSUB",
-        "Amount":9999,
+        "Amount":1000,
         "MaxAmount":9999,
         "DamageFactor":0.0,
         "FullyInstalled":true,
+        "Index":{
+          "X":-1,
+          "Y":-1
+        }
+      },
+      {
+        "Type":{
+          "InventoryType":"Product"
+        },
+        "Id":"^COMPUTER",
+        "Amount":20,
+        "MaxAmount":20,
+        "DamageFactor":0.0,
+        "FullyInstalled":true,
+        "AddedAutomatically":false,
+        "Index":{
+          "X":-1,
+          "Y":-1
+        }
+      },
+      {
+        "Type":{
+          "InventoryType":"Product"
+        },
+        "Id":"^STORM_CRYSTAL",
+        "Amount":10,
+        "MaxAmount":10,
+        "DamageFactor":0.0,
+        "FullyInstalled":true,
+        "AddedAutomatically":false,
         "Index":{
           "X":-1,
           "Y":-1
