@@ -13,24 +13,25 @@
         null,
         null,
         {
-          "Mission": "^EGG_PODS",
-          "Title": "^UI_EXPED_EGG_PODS_NAME",
-          "TitleUpper": "^UI_EXPED_EGG_PODS_NAME_U",
-          "Description": "^UI_EXPED_EGG_PODS_DESC",
-          "DescriptionDone": "^UI_EXPED_EGG_PODS_DESC_D",
-          "IdToUseInMissionData": "^",
+          "Mission": "^BIGGS_DIG",
+          "Title": "^UI_EXPED_BIGGS_DIG_NAME",
+          "TitleUpper": "^UI_EXPED_BIGGS_DIG_NAME_U",
+          "Description": "^UI_EXPED_BIGGS_DIG_DESC",
+          "DescriptionDone": "^UI_EXPED_BIGGS_DIG_DESC_D",
+          "Id": "[[removed]]",
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.whisperingeggs.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DIG.DDS"
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.off.dds"
-          }
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.OFF.DDS"
+          },
+          "IdToUseInMissionData": "^"
         }
       ]
     }
