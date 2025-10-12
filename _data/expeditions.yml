@@ -151,6 +151,7 @@
     - id: e04r01
       json: E04_EMERGENCE_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1641391200
+      notes: 0-5 good
       redux: 1
 - id: e05
   name: '05: Exobiology'
@@ -170,6 +171,7 @@
     - id: e05r00
       json: E05_EXOBIOLOGY_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1645700400
+      notes: 0-5 good
     - id: e05r01
       json: E05_EXOBIOLOGY_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1669287600
@@ -179,9 +181,9 @@
   description: The one about pirates
   image: e06_the_blighted.png
   notice: >
-    * **UNTESTED**
+    * **Not fully tested**
 
-    * To leave the galaxy you need an Atlantid drive (and possibly to do the Atlantid quests), which is not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
+    * Leaving the galaxy seems bugged and not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
 
     * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
 
@@ -191,7 +193,7 @@
       json: 06_redux_the_blighted.replace_freighter_rescue.patch.json
       description: Start out with a freighter and replace P1M3 ("Liberation" freighter rescue mission) with find buried treasure mission and give map fragment as a reward (Recommended)
       checked: 1
-    - id: 06_redux_the_blighted.replace_leave_galaxy_milestone
+    - id: 06_redux_the_blighted_replace_leave_galaxy_milestone
       json: 06_redux_the_blighted.replace_leave_galaxy_milestone.patch.json
       description: Replace the leave-galaxy milestone (Recommended)
       checked: 1
@@ -199,9 +201,21 @@
     - id: e06r00
       json: E06_BLIGHTED_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1649930400
+      notice: >
+        * There is no green rendezvous path on the galaxy map, however the rendezvous locations are close, so you should be able to find them easily. If you have trouble, follow the directions below:
+          * **Rendezvous 1:** From the first system, point to the galactic center and go back, slightly down and to the left
+          * **Rendezvous 2:** From Rendezvous 1, point to the galactic center and go forward, down and to the right
+          * **Rendezvous 3:** From Rendezvous 2, point to the galactic center and go forward, up and to the left
+          * **Rendezvous 4:** From Rendezvous 3, point to the galactic center and go forward and down
     - id: e06r01
       json: E06_BLIGHTED_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1670497200
+      notice: >
+        * There is no green rendezvous path on the galaxy map, however the rendezvous locations are close, so you should be able to find them easily. If you have trouble, follow the directions below:
+          * **Rendezvous 1:** From the first system, point to the galactic center and go back, slightly down and to the right
+          * **Rendezvous 2:** From Rendezvous 1, point to the galactic center and go forward, up and to the left
+          * **Rendezvous 3:** From Rendezvous 2, point to the galactic center and go back, down and to the right
+          * **Rendezvous 4:** From Rendezvous 3, point to the galactic center and go forward, up and slightly left
       redux: 1
 - id: e07
   name: '07: Leviathan'

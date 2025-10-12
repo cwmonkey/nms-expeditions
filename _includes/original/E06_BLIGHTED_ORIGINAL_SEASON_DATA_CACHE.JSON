@@ -1380,7 +1380,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^FIX_SHIP_PIRATE"
+            "DecryptMissionId": "^FIX_SHIP_PIRATE",
+            "DecryptMissionSeed": 1
           }
         },
         {
@@ -1619,7 +1620,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^SAVE_FREIGHT"
+            "DecryptMissionId": "^SAVE_FREIGHT",
+            "DecryptMissionSeed": 2
           }
         },
         {
@@ -1950,7 +1952,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PIRATE_MAP1"
+            "DecryptMissionId": "^PIRATE_MAP1",
+            "DecryptMissionSeed": 11
           }
         },
         {
@@ -2327,7 +2330,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PIRATE_MAP2"
+            "DecryptMissionId": "^PIRATE_MAP2",
+            "DecryptMissionSeed": 22
           }
         },
         {
@@ -2566,7 +2570,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PARTY_PLANET5"
+            "DecryptMissionId": "^PARTY_PLANET5",
+            "DecryptMissionSeed": 40
           }
         },
         {
@@ -2612,7 +2617,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PARTY_PLANET5"
+            "DecryptMissionId": "^PARTY_PLANET5",
+            "DecryptMissionSeed": 40
           }
         },
         {
