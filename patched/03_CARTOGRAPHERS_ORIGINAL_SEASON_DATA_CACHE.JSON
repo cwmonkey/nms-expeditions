@@ -1203,7 +1203,7 @@
           "DescriptionDone": "^UI_EXPED_BASIC_SCAN_PLA_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Id": "^",
-          "Amount": 12,
+          "Amount": 7,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
@@ -1803,31 +1803,30 @@
           }
         },
         {
-          "Mission": "^GOT_FOSSILS",
-          "Title": "^UI_EXPED_GOT_FOSSILS_NAME",
-          "TitleUpper": "^UI_EXPED_GOT_FOSSILS_NAME_U",
-          "Description": "^UI_EXPED_GOT_FOSSILS_DESC",
-          "DescriptionDone": "^UI_EXPED_GOT_FOSSILS_DESC_D",
+          "Mission": "^BIGGS_DIG",
+          "Title": "^UI_EXPED_BIGGS_DIG_NAME",
+          "TitleUpper": "^UI_EXPED_BIGGS_DIG_NAME_U",
+          "Description": "^UI_EXPED_BIGGS_DIG_DESC",
+          "DescriptionDone": "^UI_EXPED_BIGGS_DIG_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "Id": "^",
           "Amount": 10,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.getdigging.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DIG.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.digging.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.DIGGING.OFF.DDS"
           },
           "Reward": "^RS_S3_S4M8",
           "RewardDescription": "",
@@ -1846,7 +1845,8 @@
               "Filename": ""
             },
             "DecryptMissionId": "^"
-          }
+          },
+          "IdToUseInMissionData": "^"
         },
         {
           "Mission": "^STAGE4",
