@@ -10,7 +10,7 @@
       date: 1614556800
       notes: 0-5 good
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
 
         * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
     - id: e01r01
@@ -35,7 +35,7 @@
       date: 1621256400
       notes: 0-5 (and final far planet) good, expedition json keys are sorted
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
 
         * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
           For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
@@ -53,7 +53,7 @@
       notes: 0-5 (and final far planet) good
       redux: 1
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
 
         * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
           A patch has been created to give portal glyphs as a reward.
@@ -94,7 +94,7 @@
       date: 1631106000
       notes: 0-2 good, TODO only 7(+?) plants on planet now (12 required for milestone)
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
 
         * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
 
@@ -114,7 +114,7 @@
       redux: 1
       notes: 0-2 good
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
 
         * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
       patches:
@@ -147,7 +147,7 @@
       date: 1634731200
       notes: 0-5 good
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
     - id: e04r01
       json: E04_EMERGENCE_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1641391200
@@ -158,8 +158,6 @@
   description: The one about pets
   image: e05_exobiology.png
   notice: >
-    * **UNTESTED**
-
     * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
 
     * Phase 5, Milestone 7 (Recognisable Life) will bug out if you meet a gaseous sentience **without** using a lure and you will be unable to complete the milestone. If this happens to you, check the optional patch and replace your `SEASON_DATA_CACHE.JSON`.
@@ -172,6 +170,8 @@
       json: E05_EXOBIOLOGY_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1645700400
       notes: 0-5 good
+      notice: >
+        * **Not fully tested, but should work.**
     - id: e05r01
       json: E05_EXOBIOLOGY_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1669287600
@@ -181,8 +181,6 @@
   description: The one about pirates
   image: e06_the_blighted.png
   notice: >
-    * **Not fully tested**
-
     * Leaving the galaxy seems bugged and not possible. A patch has been created to replace the leave-galaxy milestone (ignore the text about Utopia).
 
     * Freighters are very buggy in this expedition and they can be hard to acquire. A patch has been created to start you off with a freighter. This patch also rewards you with the first part of the pirate map as the P1M3 reward, since that can also be very buggy.
@@ -202,6 +200,8 @@
       json: E06_BLIGHTED_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1649930400
       notice: >
+        * **Not fully tested, but should work.**
+
         * There is no green rendezvous path on the galaxy map, however the rendezvous locations are close, so you should be able to find them easily. If you have trouble, follow the directions below:
           * **Rendezvous 1:** From the first system, point to the galactic center and go back, slightly down and to the left
           * **Rendezvous 2:** From Rendezvous 1, point to the galactic center and go forward, down and to the right
@@ -222,8 +222,6 @@
   description: The one about the space leviathan
   image: e07_leviathan.png
   notice: >
-    * **UNTESTED**
-
     * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
   warnings:
     - id: GameMode_Permadeath
@@ -241,6 +239,9 @@
     - id: e07r00
       json: E07_LEVIATHAN_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1653480000
+      notes: 0-5 good
+      notice: >
+        * **Not fully tested, but should work.**
     - id: e07r01
       json: E07_LEVIATHAN_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1671706800
@@ -250,8 +251,6 @@
   description: The one about freighters
   image: e08_polestar.png
   notice: >
-    * **UNTESTED**
-
     * Something can cause your freighter captain to not have the `Access ship's log` option. If this happens, save, exit to desktop, and start your game again. You may need to do this multiple times and/or load a different save in-between.
 
     * The multiplayer milestone to visit another player's freighter cannot be completed offline. A patch has been created to replace the milestone.
@@ -268,6 +267,8 @@
     - id: e08r00
       json: E08_POLESTAR_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1658916000
+      notice: >
+        * **UNTESTED**
     - id: e08r01
       json: E08_POLESTAR_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1672916400
