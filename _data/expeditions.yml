@@ -267,8 +267,9 @@
     - id: e08r00
       json: E08_POLESTAR_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1658916000
+      notes: 0-5 good
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
     - id: e08r01
       json: E08_POLESTAR_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1672916400
