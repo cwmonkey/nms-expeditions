@@ -139,13 +139,23 @@ export function otherMXMLtoJSON(xmlText) {
     .replace(/\[(\n[\t]+"[^"]+":)/g, '{$1')
     ;
 
-  // Fix ending array brace
-  // This works by finding objects with something other than strings after the "{"
-  //  then finding the ending brace with the same amount of indentation to replace
-  for (let i = 2; i <= 64; i += 2) {
-    if (!json.match(new RegExp('\\n\\t{' + i + '}'))) break;
-    const reg = new RegExp('(\\n\\t{' + i + '})"([^"]+)": (\\[[\\s\\S]+?)(\\n\\t{' + i + '})\\}', 'g');
-    json = json.replace(reg, '$1"$2":  $3$4]');
+  // fix } to ] for arrays
+  let maxIndent = 0;
+  // Find biggest indent
+  const matches = json.match(/\n(\t+)[^\t]/g);
+  maxIndent = matches.reduce((acc, cur) => cur.length - 2 > acc ? cur.length - 2 : acc, maxIndent);
+
+  let loop = 0;
+  for (let i = 1; i <= maxIndent; i++) {
+    // Find mismatched brackets and replace them
+    let reg = new RegExp(`(?<=\n)\t{${i}}"[^"]+": \\[`, 'g'); // "
+    let regreplace = new RegExp(`(?<=\n\t{${i}})\\}`); // "
+    const matches = [...json.matchAll(reg)];
+    console.log(matches.length);
+
+    for (let match of matches) {
+      json = json.substring(0, match.index + match[0].length) + json.substring(match.index + match[0].length).replace(regreplace, ']');
+    }
   }
 
   json = json
