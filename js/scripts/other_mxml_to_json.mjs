@@ -11,6 +11,7 @@ for (const file of files) {
   console.log(`Length before: ${content.length}`);
   const formatted = otherMXMLtoJSON(content);
   console.log(`Length after: ${formatted.length}`);
+  formatted = JSON.stringify(JSON.parse(formatted), false, "\t");
   console.log(`Writing "${file.toLowerCase().replace('.mxml', '.MXML.json')}"...`);
   fs.writeFileSync(file.toLowerCase().replace('.mxml', '.MXML.json'), formatted, 'utf8');
 }
