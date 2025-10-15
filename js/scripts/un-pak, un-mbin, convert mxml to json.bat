@@ -32,9 +32,12 @@ set "PROCESS_EXE=F:\Tools\MBINCompiler\MBINCompiler.exe"
 ::   - MASKS: file pattern to process
 ::   - TARGETS: output subpath under PCBANKS directory
 :: ---------------------------------------------------------
-set "SUBDIRS=language metadata\gamestate metadata metadata\reality\tables metadata\simulation\missions\tables metadata\simulation\missions\tables"
-set "MASKS=usenglish.MBIN .MBIN .MBIN .MBIN .MBIN .MBIN"
-set "TARGETS=language metadata\gamestate\defaultseasonaldata.mbin metadata\idlookuppaths.mbin metadata\reality\tables\rewardtable.mbin metadata\simulation\missions\tables\seasonalmissiontable.mbin metadata\simulation\missions\tables\seasonalbespokemissiontable.mbin"
+
+:: TODO: Fix this so it's more readable and easier to change
+
+set "SUBDIRS=language metadata\gamestate metadata metadata\reality\tables metadata\simulation\missions\tables metadata\simulation\missions\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\gamestate\playerdata"
+set "MASKS=usenglish.MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN"
+set "TARGETS=language metadata\gamestate\defaultseasonaldata.mbin metadata\idlookuppaths.mbin metadata\reality\tables\rewardtable.mbin metadata\simulation\missions\tables\seasonalmissiontable.mbin metadata\simulation\missions\tables\seasonalbespokemissiontable.mbin metadata\reality\tables\nms_reality_gcproceduraltechnologytable.mbin metadata\reality\tables\nms_reality_gcproducttable.mbin metadata\reality\tables\nms_reality_gcrecipetable.mbin metadata\reality\tables\nms_reality_gcsubstancetable.mbin metadata\reality\tables\nms_reality_gctechnologytable.mbin metadata\gamestate\playerdata\playertitledata.mbin"
 
 :: ========================================================
 :: START PROCESS
@@ -119,7 +122,6 @@ if exist "%CONVERTED_FILE%" (
         echo.
         echo Processing:
         echo   OUTPUT_DIR: !OUTPUT_DIR!
-        echo   Masks:   !MASKS!
         echo   Mask:   !MASK!
         echo   SRC_PATH: !SRC_PATH!
         echo -----------------------------------------
@@ -152,6 +154,8 @@ echo All tasks completed successfully.
 echo PCBANKS output: %PCBANKS_DIR%
 echo Expeditions output: %EXPEDITIONS_DIR%
 echo =======================================================
+
+pause
 
 exit /b
 
