@@ -9,7 +9,7 @@ metadescription: Convert No Man's Sky MXML to JSON
 {endblock}
 
 {block=below_footer_content}
-  <script src="{{site.baseurl}}/js/mxml-to-json.js?{{ site.github.build_revision }}" type="module"></script>
+  <script src="{{site.baseurl}}/js/tools/mxml-to-json.js?{{ site.github.build_revision }}" type="module"></script>
 {endblock}
 
 <section class="notes_section"><div class="content">
@@ -17,7 +17,7 @@ metadescription: Convert No Man's Sky MXML to JSON
     <h2>MXML to JSON</h2>
 
     <p>Some quick and dirty regular expressions/algos to convert NMS's machine generated .MXML files to .json.</p>
-    <p>For just the formatter functions, see the <a href="../js/shared/mxml-to-json-util.mjs" target="_blank">mxml-to-json-util.mjs</a> file.</p>
+    <p>For just the formatter functions, see the <a href="{{site.baseurl}}/js/shared/mxml-to-json-util.mjs" target="_blank">mxml-to-json-util.mjs</a> file.</p>
 
     <h3>MXML:</h3>
     <p><textarea id="mxml"></textarea> or <input type="file" id="fileInput" accept=".MXML" multiple="multiple"></p>
@@ -25,7 +25,8 @@ metadescription: Convert No Man's Sky MXML to JSON
     <p>
       <button type="button" id="convert">Convert Expedition MXML</button>
       <button type="button" id="download">Download Expedition MXML</button>
-      <code>metadata/gamestate/defaultseasonaldata.MXML</code></p>
+      <code>metadata/gamestate/defaultseasonaldata.MXML</code>
+    </p>
     <p>
       <button type="button" id="convert_language">Convert Language MXML</button>
       <button type="button" id="download_language">Download Language MXML</button>
@@ -33,6 +34,7 @@ metadescription: Convert No Man's Sky MXML to JSON
     </p>
     <p>
       <button type="button" id="convert_other">Convert Other MXML</button>
+      <button type="button" id="format_other">Convert &amp; Format Other MXML</button>
       <button type="button" id="download_other">Download Other MXML</button>
     </p>
 
