@@ -1,0 +1,42 @@
+---
+layout: default
+title: MXML to JSON
+metadescription: Convert No Man's Sky MXML to JSON
+---
+
+{block=head_extra_content}
+  <script src="{{site.baseurl}}/js/libs/jquery/3.7.1/jquery.min.js"></script>
+{endblock}
+
+{block=below_footer_content}
+  <script src="{{site.baseurl}}/js/mxml-to-json.js?{{ site.github.build_revision }}" type="module"></script>
+{endblock}
+
+<section class="notes_section"><div class="content">
+  <div class="cms">
+    <h2>MXML to JSON</h2>
+
+    <p>Some quick and dirty regular expressions/algos to convert NMS's machine generated .MXML files to .json.</p>
+    <p>For just the formatter functions, see the <a href="../js/shared/mxml-to-json-util.mjs" target="_blank">mxml-to-json-util.mjs</a> file.</p>
+
+    <h3>MXML:</h3>
+    <p><textarea id="mxml"></textarea> or <input type="file" id="fileInput" accept=".MXML" multiple="multiple"></p>
+
+    <p>
+      <button type="button" id="convert">Convert Expedition MXML</button>
+      <button type="button" id="download">Download Expedition MXML</button>
+      <code>metadata/gamestate/defaultseasonaldata.MXML</code></p>
+    <p>
+      <button type="button" id="convert_language">Convert Language MXML</button>
+      <button type="button" id="download_language">Download Language MXML</button>
+      <code>language/*.MXML</code>
+    </p>
+    <p>
+      <button type="button" id="convert_other">Convert Other MXML</button>
+      <button type="button" id="download_other">Download Other MXML</button>
+    </p>
+
+    <h3>JSON:</h3>
+    <p><textarea id="json" style="width:90%; height: 500px"></textarea></p>
+  </div>
+</div></section>
