@@ -85,9 +85,30 @@ export function languageMXMLtoJSON(xmlText) {
     .replace(/<\?xml.+?\?>\n/, '')
     .replace(/<!--.+?-->\n/, '')
     .replace(/\t+<Property name="Table"[^>]*>\n/g, '')
-    .replace(/\t+<Property name="Id" value="([^"]+)"[\s\S]+?name="USEnglish" value="([^"]+)" \/>/g, '"$1": "$2",')
+    .replace(/\t+<Property name="Id" value="([^"]+)"[\s\S]+?name="USEnglish" value="([^"]+)" \/>/g, '"$1":"$2",')
     .replace(/\t+<\/Property>\n/g, '')
+    .replace(/\\/g, '\\\\') // Fix broken escapes
     .replace(/<Data.+?>/, '{')
+    .replace(/<\/Data>/, '}')
+    .replace(/,\n}/, "\n}")
+    ;
+}
+
+////////////////////////////////
+// Convert item/title MXMLs to key:value .json
+////////////////////////////////
+
+export function itemsMXMLtoJSON(xmlText) {
+  return xmlText
+    .replace(/[\r\0]/g, '')
+    .replace(/<\?xml.+?\?>\n/, '')
+    .replace(/<!--.+?-->\n/, '')
+    .replace(/<Data.+?>/, '{')
+    .replace(/(?<=\n)\t\t<Property name="Table" value="[^"]+" _id="([^"]+)">[\s\S]+?<Property name="NameLower" value="([^"]+)" \/>[\s\S]+?\n\t\t<\/Property>/g, '"$1": "$2",')
+    .replace(/(?<=\n)\t\t<Property name="Titles" value="[^"]+" _id="([^"]+)">[\s\S]+?<Property name="Title" value="([^"]+)" \/>[\s\S]+?\n\t\t<\/Property>/g, '"$1": "$2",')
+    .replace(/(?<=\n)\t<Property name="[^"]+" \/>\n/, '')
+    .replace(/(?<=\n)\t<\/Property>\n/, '')
+    .replace(/(?<=\n)\t<Property name="(Table|Titles)">\n/, '')
     .replace(/<\/Data>/, '}')
     .replace(/,\n}/, "\n}")
     ;
