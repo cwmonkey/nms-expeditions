@@ -139,11 +139,13 @@ if exist "%CONVERTED_FILE%" (
 :: ========================================================
 echo Running Node commands...
 
-:: node language_mxmls_to_json.mjs "%EXPEDITIONS_DIR%\language"
+node language_mxmls_to_json.mjs "%EXPEDITIONS_DIR%\language"
 
-:: node defaultseasonaldata_mxml_to_json.mjs "%EXPEDITIONS_DIR%\metadata\gamestate\defaultseasonaldata.MXML"
+node defaultseasonaldata_mxml_to_json.mjs "%EXPEDITIONS_DIR%\metadata\gamestate\defaultseasonaldata.MXML"
 
 node other_mxml_to_json.mjs "%EXPEDITIONS_DIR%\metadata\reality\tables\rewardtable.MXML"
+
+node item_mxmls_to_json.mjs "%EXPEDITIONS_DIR%"
 
 :: ========================================================
 :: Done
