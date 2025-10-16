@@ -1,0 +1,94 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Misc No Man's Sky Data Tools</title>
+  <link rel="stylesheet" href="{{site.baseurl}}/old/js/jquery.combo.css?{{ site.github.build_revision }}">
+
+  <script src="{{site.baseurl}}/js/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/old/js/utils.js?{{ site.github.build_revision }}"></script>
+</head>
+<body>
+
+<p>
+  .json files used on this pages were made with <a href="https://github.com/cwmonkey/nms-expeditions/tree/main/js/scripts" target="_blank">these scripts</a>.
+</p>
+
+<p>
+  <label for="autocomplete">Autocomplete:</label>
+  <input id="autocomplete"
+    data-combo
+    data-combo-value-selector="#combo_value"
+    data-combo-dropdown-selector="#combo_dropdown"
+    data-combo-count-selector="#count"
+    data-combo-showing-selector="#showing"
+  > (To search id's use `id:`. Example: id:EXPD_SHIP_12)<br>
+  <span id="combo_value"></span>
+  <span id="combo_dropdown"></span><br>
+
+  <label for="field">Search:</label>
+  <select id="field">
+    <option value="value">Values</option>
+    <option value="key">Keys</option>
+    {% comment %}<option value="both">Both</option>{% endcomment %}
+  </select>
+
+  {% comment %}<label for="exact">
+    <input type="checkbox" id="exact" checked="checked"> Exact Match
+  </label>{% endcomment %}
+</p>
+<p>
+  Advanced search options:<br>
+</p>
+<p>
+  Found: <span id="count">0</span>
+  Showing: <span id="showing">0</span>
+  <span id="key"></span>
+  <span id="value"></span>
+</p>
+
+<pre id="keyvalue"></pre>
+
+<p>
+  <button id="showRewards">Show Reward Tables</button>
+</p>
+
+<style>
+  #rewardContainer {
+    display: flex;
+  }
+
+  #rewardInfo {
+    position: sticky;
+    white-space: pre;
+    top: 0;
+    height: 100%;
+    min-height: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    font-family: monospace;
+  }
+</style>
+
+<div id="rewardContainer">
+  <div id="rewardTables"></div>
+  <div id="rewardInfo"></div>
+</div>
+
+<script id="combined_english" type="application/json">{% include PCBANKS/language/nms_all_usenglish.sorted.json %}</script>
+
+<script id="combined_items" type="application/json">{% include PCBANKS/metadata/reality/tables/nms_reality_all_items_titles.sorted.json %}</script>
+
+<script id="rewards_table" type="application/json">{% include PCBANKS/metadata/reality/tables/rewardtable.MXML.json %}</script>
+
+{% for exp in site.data.expeditions %}
+  <script id="{{ exp.id }}" data-json-type="expedition" type="application/json">{% include original/{{ exp.versions.last.json }} %}</script>
+{% endfor %}
+
+<script src="{{site.baseurl}}/old/js/jquery.combo.js?{{ site.github.build_revision }}"></script>
+<script src="{{site.baseurl}}/old/js/misc.js?{{ site.github.build_revision }}"></script>
+
+</body>
+</html>

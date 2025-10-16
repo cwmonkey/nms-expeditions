@@ -1,0 +1,24 @@
+[data-combo-dropdown] {
+	position: fixed;
+	max-width: 500px;
+	min-width: 250px;
+	min-height: 100px;
+	max-height: 500px;
+	z-index: 10000;
+	background: #efefef;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: none;
+}
+
+[data-combo-dropdown-item] {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	display: block;
+}
+
+[data-combo-selected] {
+	outline: 2px dashed yellow;
+}
