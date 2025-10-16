@@ -26,18 +26,21 @@ set "EXPEDITIONS_BASE=F:\Games\No Man's Sky\Projects"
 :: MBINCompiler EXE command to run on Expedition subdirectories
 set "PROCESS_EXE=F:\Tools\MBINCompiler\MBINCompiler.exe"
 
-:: Mappings: Each index corresponds (subdir, mask, target)
-:: ---------------------------------------------------------
-::   - SUBDIRS: path under Expeditions
-::   - MASKS: file pattern to process
-::   - TARGETS: output subpath under PCBANKS directory
-:: ---------------------------------------------------------
+:: Mappings: Each index corresponds (OUTPUT_DIR|MASK|SRC_PATH)
 
-:: TODO: Fix this so it's more readable and easier to change
-
-set "SUBDIRS=language metadata\gamestate metadata metadata\reality\tables metadata\simulation\missions\tables metadata\simulation\missions\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\reality\tables metadata\gamestate\playerdata"
-set "MASKS=usenglish.MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN .MBIN"
-set "TARGETS=language metadata\gamestate\defaultseasonaldata.mbin metadata\idlookuppaths.mbin metadata\reality\tables\rewardtable.mbin metadata\simulation\missions\tables\seasonalmissiontable.mbin metadata\simulation\missions\tables\seasonalbespokemissiontable.mbin metadata\reality\tables\nms_reality_gcproceduraltechnologytable.mbin metadata\reality\tables\nms_reality_gcproducttable.mbin metadata\reality\tables\nms_reality_gcrecipetable.mbin metadata\reality\tables\nms_reality_gcsubstancetable.mbin metadata\reality\tables\nms_reality_gctechnologytable.mbin metadata\gamestate\playerdata\playertitledata.mbin"
+set "ENTRIES="
+set "ENTRIES=!ENTRIES!language|usenglish.MBIN|language "
+set "ENTRIES=!ENTRIES!metadata\gamestate|.MBIN|metadata\gamestate\defaultseasonaldata.mbin "
+set "ENTRIES=!ENTRIES!metadata|.MBIN|metadata\idlookuppaths.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\rewardtable.mbin "
+set "ENTRIES=!ENTRIES!metadata\simulation\missions\tables|.MBIN|metadata\simulation\missions\tables\seasonalmissiontable.mbin "
+set "ENTRIES=!ENTRIES!metadata\simulation\missions\tables|.MBIN|metadata\simulation\missions\tables\seasonalbespokemissiontable.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcproceduraltechnologytable.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcproducttable.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcrecipetable.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcsubstancetable.mbin "
+set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gctechnologytable.mbin "
+set "ENTRIES=!ENTRIES!metadata\gamestate\playerdata|.MBIN|metadata\gamestate\playerdata\playertitledata.mbin "
 
 :: ========================================================
 :: START PROCESS
@@ -104,29 +107,26 @@ if exist "%CONVERTED_FILE%" (
 ) else (
     echo Running %PROCESS_EXE% for MBIN to MXML conversion...
 
-    set i=0
-    for %%S in (%SUBDIRS%) do (
-        set /a i+=1
-        call :getItem MASK !i! MASKS
-        call :getItem TARGET !i! TARGETS
+    for %%A in (!ENTRIES!) do (
+        for /f "tokens=1-3 delims=|" %%B in ("%%~A") do (
+            set "OUTPUT_DIR=%EXPEDITIONS_DIR%\%%~B"
+            set "MASK=%%~C"
+            set "SRC_PATH=%PCBANKS_DIR%\%%~D"
 
-        set "OUTPUT_DIR=%EXPEDITIONS_DIR%\%%S"
-        set "MASK=!MASK!"
-        set "SRC_PATH=%PCBANKS_DIR%\!TARGET!"
+            if not exist "%~dp0%SRC_PATH%" (
+                echo [WARNING] Source directory not found: "%SRC_PATH%"
+                goto :continueLoop
+            )
 
-        if not exist "%~dp0%SRC_DIR%" (
-            echo [WARNING] Source directory not found: "%SRC_DIR%"
-            goto :continueLoop
+            echo.
+            echo Processing:
+            echo   OUTPUT_DIR: !OUTPUT_DIR!
+            echo   Mask:   !MASK!
+            echo   SRC_PATH: !SRC_PATH!
+            echo -----------------------------------------
+
+            "%PROCESS_EXE%" convert --overwrite --output-dir="!OUTPUT_DIR!" --include="*!MASK!" "!SRC_PATH!"
         )
-
-        echo.
-        echo Processing:
-        echo   OUTPUT_DIR: !OUTPUT_DIR!
-        echo   Mask:   !MASK!
-        echo   SRC_PATH: !SRC_PATH!
-        echo -----------------------------------------
-
-        "%PROCESS_EXE%" convert --overwrite --output-dir="!OUTPUT_DIR!" --include="*!MASK!" "!SRC_PATH!"
     )
 
     echo Creating conversion marker file...
@@ -160,20 +160,3 @@ echo =======================================================
 pause
 
 exit /b
-
-:: ========================================================
-:: Helper function to extract Nth item from a list
-:: ========================================================
-:getItem
-setlocal enabledelayedexpansion
-set "INDEX=%2"
-set "LIST=%3"
-set /a count=0
-for %%A in (!%LIST%!) do (
-    set /a count+=1
-    if !count! equ %INDEX% (
-        endlocal & set "%1=%%A" & goto :eof
-    )
-)
-endlocal & set "%1="
-goto :eof
