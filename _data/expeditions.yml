@@ -315,7 +315,7 @@
       json: E10_SINGULARITY_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1686142800
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
     - id: e10r01
       json: E10_SINGULARITY_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1702648800
