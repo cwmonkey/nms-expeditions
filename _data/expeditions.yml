@@ -331,7 +331,16 @@
       json: E11_VOYAGERS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1693486800
       notice: >
-        * **UNTESTED**
+        * **Not fully tested, but should work.**
+
+        * The green "Expedition Route" line does not show up for some reason. Below are directions/glyphs to rendezvous systems (See <a href="#expedition_notes_finding_portals">How to Find Portals</a> below):
+          * **Rendezvous 1:** From the starting system, point towards the galactic center and go up, forward and slightly to the right.
+          * **Rendezvous 2:** From rendezvous 1, point towards the galactic center and it will be behind you and down.
+          * **Rendezvous 3:** From rendezvous 2, point towards the galactic center and it will be far to the right.
+            <br>:balloon:face:bird:bug:atlas:fish:balloon:face:bug:eclipse:dragonfly:balloon
+          * **Rendezvous 4:** From rendezvous 3, point towards the galactic center and it will be far to the right and back a little.
+            <br>:boat:sunset:bird:diplo:atlas:fish:balloon:face:bug:eclipse:dragonfly:bug
+          * **Rendezvous 5:** From rendezvous 4, point towards the galactic center and go up and to the left.
     - id: e11r01
       json: E11_VOYAGERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1703858400
