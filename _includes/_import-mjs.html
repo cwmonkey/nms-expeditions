@@ -1,0 +1,8 @@
+<script type="importmap">
+  {
+    "imports": {
+      "{{site.baseurl}}{{include.file}}": "{{site.baseurl}}{{include.file}}?{{ site.github.build_revision }}"
+    }
+  }
+</script>
+<script src="{{site.baseurl}}{{include.file}}?{{ site.github.build_revision }}" type="module"></script>
