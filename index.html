@@ -413,7 +413,7 @@ body_class: page_index
 
       <p>Note 2: The file MUST be named exactly <code>SEASON_DATA_CACHE.JSON</code> (names like <code>SEASON_DATA_CACHE (1).JSON</code> will not work).</p>
 
-      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/48#discussioncomment-11565201" target="_blank">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
+      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
     </div>
 
     <div class="download_container">
@@ -460,9 +460,9 @@ body_class: page_index
 {endblock}
 
 <section class="notes_section"><div class="content">
-  <div class="cms">
-    <h2 class="expedition_notes_header">Expedition Notes</h2>
+  <h2 class="expedition_notes_header">Expedition Notes</h2>
 
+  <div class="cms">
     <section id="expedition_notes_general">
       <h3><a href="#expedition_notes_general">General</a></h3>
 
@@ -518,6 +518,26 @@ body_class: page_index
       <p>You should now be able to replay/restart your desired expedition.</p>
 
       <p>Note: If you are familiar with save editing, you can just remove the <code>ExpeditionContext</code> entry from your save file (that's how the game knows which expedition you played last).</p>
+    </section>
+
+    <section id="expedition_notes_block_nms_with_firewall">
+      <h3><a href="#expedition_notes_block_nms_with_firewall">How To Block NMS.exe With Windows Firewall</a></h3>
+      <ol>
+        <li>Open the windows menu</li>
+        <li>Type <code>WF.msc</code> and hit enter</li>
+        <li>Click <code>Outbound Rules</code></li>
+        <li>Click <code>Action</code> > <code>New Rule...</code></li>
+        <li><code>Program</code> > <code>Next ></code></li>
+        <li><code>This program path:</code> and find <code>NMS.exe</code> somewhere like <code>C:\Program Files (x86)\Steam\steamapps\common</code></li>
+        <li><code>Block the connection</code> > <code>Next ></code></li>
+        <li>Probably only <code>Public</code> is needed, but doesn't hurt to check them all, <code>Next ></code></li>
+        <li>Name it and click <code>Finish</code></li>
+        <li>
+          You can now open <code>WF.msc</code> at any time and go to your <code>Outbound Rules</code> to turn your NMS rule on and off easily by checking/unchecking <code>Enabled</code> and clicking <code>OK</code>/<code>Apply</code>:<br>
+          <img src="{{site.baseurl}}/images/firewall-setting.png" alt="Firewall setting interface" width="433" height="581">
+        </li>
+      </ol>
+      <p>Note: These instructions are based on my now-end-of-life Windows 10 system, so they may vary from current systems.</p>
     </section>
 
     <section id="expedition_notes_finding_portals">

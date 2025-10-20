@@ -28,6 +28,7 @@ function toggle(el) {
       $target.removeClass('toggle-on');
       localStorage.removeItem(name);
     } else {
+      $target.removeClass('toggle-on');
       $target.addClass('toggle-off');
       localStorage.setItem(name, 0);
     }
