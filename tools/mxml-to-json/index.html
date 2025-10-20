@@ -9,6 +9,9 @@ metadescription: Convert No Man's Sky MXML to JSON
 {endblock}
 
 {block=below_footer_content}
+  {% include _import-mjs.html file="/js/shared/mxml-to-json-util.mjs" %}
+  {% include _import-mjs.html file="/js/shared/tools-util.mjs" %}
+
   <script src="{{site.baseurl}}/js/tools/mxml-to-json.js?{{ site.github.build_revision }}" type="module"></script>
 {endblock}
 
