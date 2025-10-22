@@ -9,7 +9,7 @@ for (const file of files) {
   const content = fs.readFileSync(file, 'utf8');
   console.log(`${file}...`);
   console.log(`Length before: ${content.length}`);
-  const formatted = otherMXMLtoJSON(content);
+  let formatted = otherMXMLtoJSON(content);
   console.log(`Length after: ${formatted.length}`);
   formatted = JSON.stringify(JSON.parse(formatted), false, "\t");
   console.log(`Writing "${file.toLowerCase().replace('.mxml', '.MXML.json')}"...`);

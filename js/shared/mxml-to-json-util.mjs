@@ -172,7 +172,6 @@ export function otherMXMLtoJSON(xmlText) {
     let reg = new RegExp(`(?<=\n)\t{${i}}"[^"]+": \\[`, 'g'); // "
     let regreplace = new RegExp(`(?<=\n\t{${i}})\\}`); // "
     const matches = [...json.matchAll(reg)];
-    console.log(matches.length);
 
     for (let match of matches) {
       json = json.substring(0, match.index + match[0].length) + json.substring(match.index + match[0].length).replace(regreplace, ']');
