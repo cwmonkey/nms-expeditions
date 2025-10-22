@@ -444,7 +444,6 @@
   name: '17: Titan'
   description: The one with gas giants
   image: e17_titan.png
-  json: 17_titan.json
   versions:
     - id: e17r00
       json: E17_TITAN_ORIGINAL_SEASON_DATA_CACHE.JSON
@@ -453,7 +452,6 @@
   name: '18: Relics'
   description: The one with bones
   image: e18_relics.png
-  json: 18_relics.json
   versions:
     - id: e18r00
       json: E18_RELICS_ORIGINAL_SEASON_DATA_CACHE.JSON
@@ -462,7 +460,6 @@
   name: '19: Corvette'
   description: The one with the corvettes
   image: e19_corvette.png
-  json: 19_corvette.json
   notice: >
     * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
   patches:
@@ -474,3 +471,13 @@
     - id: e19r00
       json: E19_CORVETTE_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1756904400
+- id: e020
+  name: '20: Breach'
+  description: The new one
+  image: e20_breach.png
+  notice: >
+    * **UNTESTED**
+  versions:
+    - id: e20r00
+      json: E20_BREACH_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1761138000
