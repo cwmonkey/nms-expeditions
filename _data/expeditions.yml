@@ -475,8 +475,6 @@
   name: '20: Breach'
   description: The new one
   image: e20_breach.png
-  notice: >
-    * **UNTESTED**
   versions:
     - id: e20r00
       json: E20_BREACH_ORIGINAL_SEASON_DATA_CACHE.JSON
