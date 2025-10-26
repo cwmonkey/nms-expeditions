@@ -473,7 +473,7 @@
       date: 1756904400
 - id: e020
   name: '20: Breach'
-  description: The new one
+  description: The one with even more of the same
   image: e20_breach.png
   versions:
     - id: e20r00
