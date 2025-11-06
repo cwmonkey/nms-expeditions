@@ -35,7 +35,9 @@
       date: 1621256400
       notes: 0-5 (and final far planet) good, expedition json keys are sorted
       notice: >
-        * **Not fully tested, but should work.**
+        * **BROKEN** - Currently there is no way to summon your freighter to the blue system you start in. Working on a fix...
+
+        * The first milestone requires you to make a `Roamer Geobay`, but gives you the recipe for a `Nomad Geobay`. A patch has been created to replace the milestone with the appropriate exocraft type.
 
         * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
           For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
@@ -46,6 +48,10 @@
         - id: e02r00-r01_beachhead_portal_glyphs_reward
           json: e02r00-r01_beachhead.portal_glyphs_reward.patch.json
           description: Replace reward with portal glyphs (Recommended)
+          checked: 1
+        - id: e02r00_beacchead_fix_milestones
+          json: e02r00_beacchead.fix_milestones.patch.json
+          description: Fix milestone to make an exocraft (Recommended)
           checked: 1
     - id: e02r01
       json: E02_BEACHHEAD_REDUX_1_SEASON_DATA_CACHE.JSON

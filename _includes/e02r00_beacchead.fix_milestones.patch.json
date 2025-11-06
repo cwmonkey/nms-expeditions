@@ -1,0 +1,31 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        {
+          "Mission": "^FIND_SHIP_NOM",
+          "Title": "^UI_EXPED_FIND_SHIP_NOM_NAME",
+          "TitleUpper": "^UI_EXPED_FIND_SHIP_NOM_NAME_U",
+          "Description": "^UI_EXPED_FIND_SHIP_NOM_DESC",
+          "DescriptionDone": "^UI_EXPED_FIND_SHIP_NOM_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.exocraft.dds"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.exocraft.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}
