@@ -107,7 +107,21 @@
   },
   "UseDefaultAppearance": false,
   "Inventory": {
-    "Slots": [],
+    "Slots": [
+      {
+        "Type": {
+          "InventoryType": "Product"
+        },
+        "Id": "^MYSTERY_BEACON",
+        "Amount": 1,
+        "DamageFactor": 0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      }
+    ],
     "ValidSlotIndices": [],
     "Class": {
       "InventoryClass": "C"
@@ -1524,6 +1538,58 @@
           }
         },
         {
+          "Mission": "^CRE_WEIRD",
+          "Title": "^UI_EXPED16_CRE_WEIRD_NAME",
+          "TitleUpper": "^UI_EXPED16_CRE_WEIRD_NAME_U",
+          "Description": "^UI_EXPED_CRE_WEIRD_DESC",
+          "DescriptionDone": "^UI_EXPED_CRE_WEIRD_DESC_D",
+          "CantRewardMessage": "^INTRCT_NOROOM_L",
+          "Amount": 1,
+          "StageIndex": 0,
+          "MilestoneIndex": 0,
+          "RendezvousIndex": -1,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.CREATUREPLANET.2.DDS"
+          },
+          "IconGrey": {
+            "Filename": ""
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          },
+          "Reward": "^RS_S8_S2M7",
+          "RewardDescription": "",
+          "CantClaimRewardDescription": "",
+          "IsRendezvous": false,
+          "IsStageControl": false,
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0
+          },
+          "DontAttemptFallbackTextSubs": false,
+          "BlockRendezvousMilestoneSeed": -1,
+          "GreyIfCantStart": false,
+          "IsOptional": false,
+          "RewardSwitchAlt": "^",
+          "IdToUseInMissionData": "^"
+        },
+        {
           "Mission": "^S2_MYSTERY1",
           "Title": "^UI_EXPED_S2_MYSTERY1_NAME",
           "TitleUpper": "^UI_EXPED_S2_MYSTERY1_NAME_U",
@@ -1550,7 +1616,7 @@
           "MissionIconNotSelected": {
             "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.off.dds"
           },
-          "Reward": "^RS_S2_S5M1",
+          "Reward": "^RS_S8_S2M7",
           "RewardDescription": "",
           "CantClaimRewardDescription": "",
           "IsRendezvous": false,
@@ -1568,53 +1634,6 @@
             },
             "DecryptMissionId": "^PARTY_PLANET5",
             "DecryptMissionSeed": 40
-          }
-        },
-        {
-          "Mission": "^S2_MYSTERY2",
-          "Title": "^UI_EXPED_S2_MYSTERY2_NAME",
-          "TitleUpper": "^UI_EXPED_S2_MYSTERY2_NAME_U",
-          "Description": "^UI_EXPED_S2_MYSTERY2_DESC",
-          "DescriptionDone": "^UI_EXPED_S2_MYSTERY2_DESC_D",
-          "CantRewardMessage": "^INTRCT_NOROOM_L",
-          "Id": "^",
-          "Amount": 1,
-          "StageIndex": 0,
-          "MilestoneIndex": 0,
-          "RendezvousIndex": -1,
-          "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.beacon.1.dds"
-          },
-          "IconGrey": {
-            "Filename": ""
-          },
-          "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
-          },
-          "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
-          },
-          "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.off.dds"
-          },
-          "Reward": "^RS_S8_S2M7",
-          "RewardDescription": "",
-          "CantClaimRewardDescription": "",
-          "IsRendezvous": false,
-          "IsStageControl": false,
-          "Encryption": {
-            "IsEncrypted": true,
-            "TitleUpper": "^UI_EXPED_ENCRYPTED_NAME2_U",
-            "Subtitle": "^UI_EXPED_ENCRYPTED_DESC2",
-            "Description": "^UI_EXPED_ENCRYPTED_DESC_FORMAT",
-            "Patch": {
-              "Filename": "textures/ui/frontend/icons/expedition/encrypted.patch.1.dds"
-            },
-            "HoverPopupIcon": {
-              "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
-            },
-            "DecryptMissionId": "^S2_MYSTERY1",
-            "DecryptMissionSeed": 41
           }
         },
         {
@@ -1660,7 +1679,7 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^S2_MYSTERY2",
+            "DecryptMissionId": "^S2_MYSTERY1",
             "DecryptMissionSeed": 42
           }
         },
@@ -2666,30 +2685,30 @@
       "^TECH_PRODS",
       "^TECH_PRODS",
       "^TECH_PRODS",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12",
-      "^NOT_TECH_S12"
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH",
+      "^NOT_TECH"
     ]
   },
   "SwitchContextSaveDataMask": "^DEFAULT",

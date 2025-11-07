@@ -1,0 +1,97 @@
+{
+  "Inventory": {
+    "Slots": [
+      "[[append]]",
+      {
+        "Type": {
+          "InventoryType": "Product"
+        },
+        "Id": "^MYSTERY_BEACON",
+        "Amount": 1,
+        "DamageFactor": 0,
+        "FullyInstalled": true,
+        "Index":{
+          "X": -1,
+          "Y": -1
+        }
+      }
+    ]
+  },
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        {
+          "Amount": 1,
+          "Description": "^UI_EXPED_CRE_WEIRD_DESC",
+          "DescriptionDone": "^UI_EXPED_CRE_WEIRD_DESC_D",
+          "Encryption": {
+            "DecryptMissionId": "^",
+            "DecryptMissionSeed": 0,
+            "Description": "^",
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "IsEncrypted": false,
+            "Patch": {
+              "Filename": ""
+            },
+            "Subtitle": "^",
+            "TitleUpper": "^"
+          },
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.CREATUREPLANET.2.DDS"
+          },
+          "Id": "[[removed]]",
+          "Mission": "^CRE_WEIRD",
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "Reward": "^RS_S8_S2M7",
+          "Title": "^UI_EXPED16_CRE_WEIRD_NAME",
+          "TitleUpper": "^UI_EXPED16_CRE_WEIRD_NAME_U",
+          "IdToUseInMissionData": "^",
+          "RendezvousIndex": -1,
+          "RewardSwitchAlt": "^",
+          "IsOptional": false,
+          "GreyIfCantStart": false,
+          "BlockRendezvousMilestoneSeed": -1,
+          "DontAttemptFallbackTextSubs": false
+        },
+        {
+          "Amount": 3,
+          "Description": "^UI_EXPED_S2_MYSTERY1_DESC",
+          "DescriptionDone": "^UI_EXPED_S2_MYSTERY1_DESC_D",
+          "Encryption": {
+            "DecryptMissionId": "^PARTY_PLANET5",
+            "DecryptMissionSeed": 40,
+            "Subtitle": "^UI_EXPED_ENCRYPTED_DESC1",
+            "TitleUpper": "^UI_EXPED_ENCRYPTED_NAME1_U"
+          },
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.dosimeter.1.dds"
+          },
+          "Mission": "^S2_MYSTERY1",
+          "Reward": "^RS_S2_S5M1",
+          "Title": "^UI_EXPED_S2_MYSTERY1_NAME",
+          "TitleUpper": "^UI_EXPED_S2_MYSTERY1_NAME_U"
+        },
+        {
+          "Encryption": {
+            "DecryptMissionId": "^S2_MYSTERY1"
+          }
+        }
+      ]
+    }
+  ]
+}

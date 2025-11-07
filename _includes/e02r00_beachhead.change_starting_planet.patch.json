@@ -1,0 +1,22 @@
+{
+  "Inventory": {
+    "Slots": [
+      {
+        "Type":{
+          "InventoryType": "Product"
+        },
+        "Id": "^REPAIRKIT",
+        "Amount": 1,
+        "DamageFactor": 0,
+        "FullyInstalled": true,
+        "Index": {
+          "X": -1,
+          "Y": -1
+        }
+      }
+    ]
+  },
+  "SeasonalUAOverride": "0021a200029842b2",
+  "UAOverrideValue": "0x21A200029842B2",
+  "ForceStartSystemAbandoned": true
+}

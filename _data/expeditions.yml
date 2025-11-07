@@ -35,23 +35,35 @@
       date: 1621256400
       notes: 0-5 (and final far planet) good, expedition json keys are sorted
       notice: >
-        * **BROKEN** - Currently there is no way to summon your freighter to the blue system you start in. Working on a fix...
+        * **Not fully tested, but should work.**
 
         * The first milestone requires you to make a `Roamer Geobay`, but gives you the recipe for a `Nomad Geobay`. A patch has been created to replace the milestone with the appropriate exocraft type.
 
-        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
-          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
+        * Starting freighters have been changed to not have an Indium Hyperdrive, so it cannot be summoned to the starting system. A patch has been created to change the starting system to a nearby yellow system.
+
+        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+
+        * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
+          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
 
           Final location glyps:
-          <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
+          <br>:eclipse:bird:dragonfly:eclipse:sunset:balloon:atlas:face:atlas:boat:tree:voxel
       patches:
+        - id: e02r00_beachhead_fix_milestones
+          json: e02r00_beachhead.fix_milestones.patch.json
+          description: Fix milestone to make an exocraft (Recommended)
+          checked: 1
+        - id: e02r00_beachhead_change_starting_planet
+          json: e02r00_beachhead.change_starting_planet.patch.json
+          description: Change starting system (Recommended)
+          checked: 1
+        - id: e02r00-r03_beachhead_give_myth_beacon
+          json: e02r00-r03_beachhead.give_myth_beacon.patch.json
+          description: Give Myth Beacon at the start (Recommended)
+          checked: 1
         - id: e02r00-r01_beachhead_portal_glyphs_reward
           json: e02r00-r01_beachhead.portal_glyphs_reward.patch.json
-          description: Replace reward with portal glyphs (Recommended)
-          checked: 1
-        - id: e02r00_beacchead_fix_milestones
-          json: e02r00_beacchead.fix_milestones.patch.json
-          description: Fix milestone to make an exocraft (Recommended)
+          description: Replace a milestone reward with portal glyphs (Recommended)
           checked: 1
     - id: e02r01
       json: E02_BEACHHEAD_REDUX_1_SEASON_DATA_CACHE.JSON
@@ -61,13 +73,19 @@
       notice: >
         * **Not fully tested, but should work.**
 
-        * The final system is hard-coded to be the one from the 2024 redux, which will be **FAR** away.
+        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+
+        * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away.
           A patch has been created to give portal glyphs as a reward.
-          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a>.
+          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
 
           Final location glyps:
-          <br>:face:bird:voxel:tent:atlas:rocket:boat:atlas:tent:atlas:balloon:face
+          <br>:eclipse:bird:dragonfly:eclipse:sunset:balloon:atlas:face:atlas:boat:tree:voxel
       patches:
+        - id: e02r00-r03_beachhead_give_myth_beacon
+          json: e02r00-r03_beachhead.give_myth_beacon.patch.json
+          description: Give Myth Beacon at the start (Recommended)
+          checked: 1
         - id: e02r00-r01_beachhead_portal_glyphs_reward
           description: Replace reward with portal glyphs (Recommended)
           checked: 1
@@ -77,11 +95,39 @@
       notes: 0-5 (and final planet) good
       redux: 1
       notice: >
+        * **Not fully tested, but should work.**
+
         * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
+
+        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+
+        * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
+          For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
+
+          Final location glyps:
+          <br>:eclipse:bird:dragonfly:eclipse:sunset:balloon:atlas:face:atlas:boat:tree:voxel
       patches:
         - id: 02_redux_beachhead_old_rewards
           json: 02_redux_beachhead.old_rewards.patch.json
           description: Give the rewards from the original and redux runs, rather than the 2024 re-redux run (Recommended)
+          checked: 1
+        - id: e02r00-r03_beachhead_give_myth_beacon
+          json: e02r00-r03_beachhead.give_myth_beacon.patch.json
+          description: Give Myth Beacon at the start (Recommended)
+          checked: 1
+        - id: e02r00-r01_beachhead_portal_glyphs_reward
+          description: Replace reward with portal glyphs (Recommended)
+          checked: 1
+    - id: e02r03
+      json: E02_BEACHHEAD_REDUX_3_SEASON_DATA_CACHE.JSON
+      date: 1762437600
+      redux: 1
+      notice: >
+        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+      patches:
+        - id: e02r00-r03_beachhead_give_myth_beacon
+          json: e02r00-r03_beachhead.give_myth_beacon.patch.json
+          description: Give Myth Beacon at the start (Recommended)
           checked: 1
 - id: e03
   name: '03: Cartographers'
