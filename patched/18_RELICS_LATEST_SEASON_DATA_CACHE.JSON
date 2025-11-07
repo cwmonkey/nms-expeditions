@@ -1613,7 +1613,7 @@
           }
         },
         {
-          "Mission": "^BONE_HUNT",
+          "Mission": "^S18_BONE_HUNT",
           "Title": "^UI_EXPED18_BONE_HUNT_NAME",
           "TitleUpper": "^UI_EXPED18_BONE_HUNT_NAME_U",
           "Description": "^UI_EXPED18_BONE_HUNT_DESC",
@@ -1931,7 +1931,7 @@
           }
         },
         {
-          "Mission": "^BONE_HUNT",
+          "Mission": "^S18_BONE_HUNT",
           "Title": "^UI_EXPED18_BONE_HUNT2_NAME",
           "TitleUpper": "^UI_EXPED18_BONE_HUNT2_NAME_U",
           "Description": "^UI_EXPED18_BONE_HUNT_DESC",
@@ -2353,7 +2353,7 @@
           }
         },
         {
-          "Mission": "^BONE_HUNT",
+          "Mission": "^S18_BONE_HUNT",
           "Title": "^UI_EXPED18_BONE_HUNT3_NAME",
           "TitleUpper": "^UI_EXPED18_BONE_HUNT3_NAME_U",
           "Description": "^UI_EXPED18_BONE_HUNT_DESC",
@@ -2775,7 +2775,7 @@
           }
         },
         {
-          "Mission": "^BONE_HUNT",
+          "Mission": "^S18_BONE_HUNT",
           "Title": "^UI_EXPED18_BONE_HUNT4_NAME",
           "TitleUpper": "^UI_EXPED18_BONE_HUNT4_NAME_U",
           "Description": "^UI_EXPED18_BONE_HUNT_DESC",
@@ -3197,7 +3197,7 @@
           }
         },
         {
-          "Mission": "^BONE_HUNT",
+          "Mission": "^S18_BONE_HUNT",
           "Title": "^UI_EXPED18_BONE_HUNT5_NAME",
           "TitleUpper": "^UI_EXPED18_BONE_HUNT5_NAME_U",
           "Description": "^UI_EXPED18_BONE_HUNT_DESC",
