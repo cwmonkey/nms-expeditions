@@ -500,6 +500,10 @@
     - id: e17r00
       json: E17_TITAN_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1739368800
+    - id: e17r01
+      json: E17_TITAN_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1763560800
+      redux: 1
 - id: e018
   name: '18: Relics'
   description: The one with bones
