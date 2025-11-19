@@ -37,7 +37,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{% if page.site_title_override %}{{ page.site_title_override }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.metadescription %}{{ page.metadescription }}{% else %}{{ site.description }}{% endif %}">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +51,7 @@
 
 <div class="top">
   <header class="header" id="header" data-toggle-container data-toggle-default="on">
-    <h1 class="headline1"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
+    <h1 class="headline1"><a href="{{site.baseurl}}/">{% if page.site_title_override %}{{ page.site_title_override }}{% else %}{{ site.title }}{% endif %}</a></h1>
 
     {{ intro_content }}
   </header>
@@ -67,7 +67,7 @@
       This is a work in progress, so feel free to <a href="https://github.com/cwmonkey/nms-expeditions/issues?q=is%3Aissue" target="_blank">hit me up on GitHub</a> with any issues.
     </p>
     <p>
-      You can also contact <strong>WrasslorMonkey</strong> on Discord.
+      You can also contact me on Discord as <strong>WrasslorMonkey</strong>.
     </p>
     <p>
       Reddit shadowbanned me for helping too many people with expedition related issues, so I guess don't try to contact me there, lol.
