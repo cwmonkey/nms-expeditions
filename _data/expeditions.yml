@@ -512,6 +512,9 @@
     - id: e18r00
       json: E18_RELICS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1742997600
+    - id: e18r01
+      json: E18_RELICS_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1764770400
 - id: e019
   name: '19: Corvette'
   description: The one with the corvettes
