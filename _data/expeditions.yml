@@ -515,6 +515,7 @@
     - id: e18r01
       json: E18_RELICS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1764770400
+      redux: 1
 - id: e019
   name: '19: Corvette'
   description: The one with the corvettes
@@ -530,6 +531,10 @@
     - id: e19r00
       json: E19_CORVETTE_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1756904400
+    - id: e19r01
+      json: E19_CORVETTE_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1765980000
+      redux: 1
 - id: e020
   name: '20: Breach'
   description: The one with even more of the same
