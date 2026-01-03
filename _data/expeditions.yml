@@ -543,3 +543,7 @@
     - id: e20r00
       json: E20_BREACH_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1761138000
+    - id: e20r01
+      json: E20_BREACH_REDUX_1_SEASON_DATA_CACHE.JSON
+      date: 1767189600
+      redux: 1
