@@ -40,6 +40,8 @@
    - prop: FarmPlantsTimerMul
      type: float
      description: Turn this up for more challenge?
+   - prop: ForceStartPlanetToHaveScrap
+     type: bool
    - prop: ForceStartSystemAbandoned
      type: bool
    - prop: GameMode
@@ -52,6 +54,8 @@
      type: float
      description: Turn this up for more challenge?
    - prop: MustCraftInBases
+     type: bool
+   - prop: NeverAllowShipPurchases
      type: bool
    - prop: ResetSaveOnDeath
      type: bool
