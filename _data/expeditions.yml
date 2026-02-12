@@ -547,3 +547,11 @@
       json: E20_BREACH_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1767189600
       redux: 1
+- id: e021
+  name: '21: Remnant'
+  description: The one with the trash
+  image: e21_remnant.png
+  versions:
+    - id: e21r00
+      json: E21_REMNANT_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1770818400
