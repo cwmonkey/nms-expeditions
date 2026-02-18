@@ -1,0 +1,32 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        {
+          "Mission": "^GOT_PEARLS",
+          "Title": "^UI_EXPED_S15_PEARL_NAME",
+          "TitleUpper": "^UI_EXPED_S15_PEARL_NAME_U",
+          "Description": "^UI_EXPED_PEARL_DESC",
+          "DescriptionDone": "^UI_EXPED_PEARL_DESC",
+          "Amount": 7,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.GETPEARLS.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.OFF.DDS"
+          }
+        }
+      ]
+    }
+  ]
+}

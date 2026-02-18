@@ -1,0 +1,35 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^FEED_GROUP",
+          "Title": "^UI_EXPED_CRE_FEED_GROUP_NAME",
+          "TitleUpper": "^UI_EXPED_CRE_FEED_GROUP_NAME_U",
+          "Description": "^UI_EXPED_CRE_FEED_GROUP_DESC",
+          "DescriptionDone": "^UI_EXPED_CRE_FEED_GROUP_DESC_D",
+          "Amount": 6,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturefeed.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}

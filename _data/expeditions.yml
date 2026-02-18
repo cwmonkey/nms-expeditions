@@ -223,11 +223,25 @@
       date: 1645700400
       notes: 0-5 good
       notice: >
+        * In a recent patch, HG made all animals constipated. A patch has been created to replace the poop-related milestone.
+
         * **Not fully tested, but should work.**
+      patches:
+        - id: 05_original_exobiology_replace_got_poop_milestone
+          json: 05_original_exobiology.replace_got_poop_milestone.patch.json
+          description: Replace dung collection milestone (Recommended)
+          checked: 1
     - id: e05r01
       json: E05_EXOBIOLOGY_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1669287600
       redux: 1
+      notice: >
+        * In a recent patch, HG made all animals constipated. A patch has been created to replace the poop-related milestone.
+      patches:
+        - id: 05_redux_exobiology_replace_got_poop_milestone
+          json: 05_redux_exobiology.replace_got_poop_milestone.patch.json
+          description: Replace dung collection milestone (Recommended)
+          checked: 1
 - id: e06
   name: '06: The Blighted'
   description: The one about pirates
@@ -508,6 +522,13 @@
   name: '18: Relics'
   description: The one with bones
   image: e18_relics.png
+  notice: >
+    * In a recent patch, HG made all animals constipated. A patch has been created to replace the poop-related milestone.
+  patches:
+    - id: 18_relics_replace_got_poop_milestone
+      json: 18_relics.replace_got_poop_milestone.patch.json
+      description: Replace dung collection milestone (Recommended)
+      checked: 1
   versions:
     - id: e18r00
       json: E18_RELICS_ORIGINAL_SEASON_DATA_CACHE.JSON

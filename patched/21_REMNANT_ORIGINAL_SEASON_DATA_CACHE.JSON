@@ -3,7 +3,7 @@
   "SeasonId": 45,
   "StartTimeUTC": 1770818400,
   "EndTimeUTC": 2893423600,
-  "Hash": 4042443379,
+  "Hash": 548861178,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
   "Description": "UI_EXPED21_MAIN_DESC",
@@ -3248,7 +3248,7 @@
           "IsRendezvous": false,
           "IsStageControl": false,
           "BlockRendezvousMilestoneSeed": -1,
-          "DontAttemptFallbackTextSubs": false,
+          "DontAttemptFallbackTextSubs": true,
           "Encryption": {
             "IsEncrypted": false,
             "TitleUpper": "^",
