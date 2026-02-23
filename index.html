@@ -393,30 +393,32 @@ site_title_override: No Man's Sky Expedition Generator
     <div class="cms">
       <p>Save to the appropriate directory:</p>
 
-      <dl>
-        <dt><img src="{{site.baseurl}}/images/icon_steam.png" class="platform_icon" alt="Steam logo"> Steam PC:</dt>
-        <dd>%APPDATA%\HelloGames\NMS\{steam id}\cache</dd>
+      <div id="generic_instructions">
+        <dl>
+          <dt><img src="{{site.baseurl}}/images/icon_steam.png" class="platform_icon" alt="Steam logo"> Steam PC:</dt>
+          <dd>%APPDATA%\HelloGames\NMS\{steam id}\cache</dd>
 
-        <dt><img src="{{site.baseurl}}/images/icon_steam.png" class="platform_icon" alt="Steam logo"> Steam Mac:</dt>
-        <dd>~/Library/Application Support/HelloGames/NMS/cache</dd>
+          <dt><img src="{{site.baseurl}}/images/icon_steam.png" class="platform_icon" alt="Steam logo"> Steam Mac:</dt>
+          <dd>~/Library/Application Support/HelloGames/NMS/cache</dd>
 
-        <dt><img src="{{site.baseurl}}/images/icon_msstore.png" class="platform_icon" alt="MS Store logo"> MS Store / <img src="{{site.baseurl}}/images/icon_gog.png" class="platform_icon" alt="GOG logo"> GOG / <img src="{{site.baseurl}}/images/icon_gamepass.png" class="platform_icon" alt="PC Gamepass logo"> PC Game Pass:</dt>
-        <dd>%APPDATA%\HelloGames\NMS\cache</dd>
+          <dt><img src="{{site.baseurl}}/images/icon_msstore.png" class="platform_icon" alt="MS Store logo"> MS Store / <img src="{{site.baseurl}}/images/icon_gog.png" class="platform_icon" alt="GOG logo"> GOG / <img src="{{site.baseurl}}/images/icon_gamepass.png" class="platform_icon" alt="PC Gamepass logo"> PC Game Pass:</dt>
+          <dd>%APPDATA%\HelloGames\NMS\cache</dd>
 
-        <dt><img src="{{site.baseurl}}/images/icon_steamdeck.png" class="platform_icon"> Steam Deck:</dt>
-        <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/{steam id}/cache</dd>
+          <dt><img src="{{site.baseurl}}/images/icon_steamdeck.png" class="platform_icon"> Steam Deck:</dt>
+          <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/{steam id}/cache</dd>
 
-        <dt><img src="{{site.baseurl}}/images/icon_switch.png" class="platform_icon"> Nintendo Switch:</dt>
-        <dd class="non_path">Thanks to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/36" target="_blank">gusklein</a> for figuring this out: Using DBI.nro (or similar), open game saves, look for the No Mans Sky SD.Cache folder</dd>
-      </dl>
+          <dt><img src="{{site.baseurl}}/images/icon_switch.png" class="platform_icon"> Nintendo Switch:</dt>
+          <dd class="non_path">Thanks to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/36" target="_blank">gusklein</a> for figuring this out: Using DBI.nro (or similar), open game saves, look for the No Mans Sky SD.Cache folder</dd>
+        </dl>
 
-      <p>Note: These directories may be somewhat different on your machine.</p>
+        <p>Note: These directories may be somewhat different on your machine.</p>
 
-      <p>Note 2: The file MUST be named exactly <code>SEASON_DATA_CACHE.JSON</code> (names like <code>SEASON_DATA_CACHE (1).JSON</code> will not work).</p>
+        <p>Note 2: The file MUST be named exactly <code>SEASON_DATA_CACHE.JSON</code> (names like <code>SEASON_DATA_CACHE (1).JSON</code> will not work).</p>
 
-      <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
+        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
 
-      <p>Note 3: I recommend <strong>backing up your NMS saves often</strong>, including before starting an expedition.</p>
+        <p>Note 3: I recommend <strong>backing up your NMS saves often</strong>, including before starting an expedition.</p>
+      </div>
     </div>
 
     <div class="download_container">
@@ -430,6 +432,10 @@ site_title_override: No Man's Sky Expedition Generator
 
         <section>
           <button type="button" id="download_all">Download All</button>
+        </section>
+
+        <section>
+          <button type="button" id="download_all_nexus">Download All Nexus</button>
         </section>
 
         <section>
