@@ -19,11 +19,11 @@
       notes: 0-5 good
       redux: 1
       notice: >
-        * An update changed the system from a yellow star system to a green star system. A patch has been created to start players in a nearby yellow star system.
+        * You start in a green star system instead of a yellow star system. This is likely an oversight by HG in the redux. An optional patch has been created to start you on a yellow star system instead.
       patches:
         - id: e01r01_pioneers_change_start_system
           json: e01r01_pioneers.change_start_system.patch.json
-          description: Change starter system to nearby yellow star system (Recommended)
+          description: Change starter system to nearby yellow star system
           checked: 1
 - id: e02
   name: '02: Beachhead'
