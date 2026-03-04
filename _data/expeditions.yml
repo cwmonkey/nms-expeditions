@@ -41,7 +41,7 @@
 
         * Starting freighters have been changed to not have an Indium Hyperdrive, so it cannot be summoned to the starting system. A patch has been created to change the starting system to a nearby yellow system.
 
-        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+        * As of the last redux, you cannot buy a `Myth Beacon` from the QuickSilver vendor offline. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
 
         * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
           For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
@@ -73,7 +73,7 @@
       notice: >
         * **Not fully tested, but should work.**
 
-        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+        * As of the last redux, you cannot buy a `Myth Beacon` from the QuickSilver vendor offline. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
 
         * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away.
           A patch has been created to give portal glyphs as a reward.
@@ -99,7 +99,7 @@
 
         * The 2024 re-redux changed the rewards to some that are already available through this tool. A patch has been created to restore the old rewards.
 
-        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+        * As of the last redux, you cannot buy a `Myth Beacon` from the QuickSilver vendor offline. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
 
         * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away. A patch has been created to give portal glyphs as a reward.
           For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
@@ -123,7 +123,7 @@
       date: 1762437600
       redux: 1
       notice: >
-        * When the community event is active, you cannot buy a `Myth Beacon` from the QuickSilver vendor. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
+        * As of the last redux, you cannot buy a `Myth Beacon` from the QuickSilver vendor offline. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
       patches:
         - id: e02r00-r03_beachhead_give_myth_beacon
           json: e02r00-r03_beachhead.give_myth_beacon.patch.json
