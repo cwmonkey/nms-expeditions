@@ -255,8 +255,10 @@ label {
 
 .cust_tool {
   @include ghost-button();
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: inline-block;
+  line-height: 2;
 
   &.selected {
     border-color: yellow;
@@ -379,6 +381,14 @@ label {
   .cust_tool_section {
     display: flex;
     justify-content: space-between;
+
+    > :first-child {
+      margin-left: 0;
+    }
+
+    > :not(:first-child) {
+      margin-right: 0;
+    }
   }
 
   .cust_import {
