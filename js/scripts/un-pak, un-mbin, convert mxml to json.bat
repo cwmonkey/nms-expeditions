@@ -40,6 +40,7 @@ set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_
 set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcrecipetable.mbin "
 set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gcsubstancetable.mbin "
 set "ENTRIES=!ENTRIES!metadata\reality\tables|.MBIN|metadata\reality\tables\nms_reality_gctechnologytable.mbin "
+set "ENTRIES=!ENTRIES!metadata\gamestate|.MBIN|metadata\gamestate\defaultseasonaldata.mbin "
 set "ENTRIES=!ENTRIES!metadata\gamestate\playerdata|.MBIN|metadata\gamestate\playerdata\playertitledata.mbin "
 
 :: ========================================================
