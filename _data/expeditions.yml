@@ -576,3 +576,13 @@
     - id: e21r00
       json: E21_REMNANT_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1770818400
+- id: e022
+  name: '22: The Swarm'
+  description: The one with The Swarm
+  image: e22_swarm.png
+  versions:
+    - id: e22r00
+      json: E22_SWARM_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1779886800
+  notice: >
+    * This expedition cannot be completed offline. I will replace the online-required milestones shortly...

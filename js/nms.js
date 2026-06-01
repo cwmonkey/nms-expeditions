@@ -494,7 +494,7 @@ $download.on('click', () => {
   if (!exp) return;
   const json = getExpeditionJson();
 
-  download('SEASON_DATA_CACHE.JSON', json);
+  download('SEASON_DATA_CACHE_E22.JSON', json);
 });
 
 $('#copy').on('click', () => {
@@ -677,8 +677,8 @@ $('#download_all_nexus').on('click', async () => {
       // If content is object, serialize to JSON
       const text = typeof content === "object" ? JSON.stringify(content, null, 2) : String(content);
 
-      zip.file(`${prepend1}${prepend2}/SEASON_DATA_CACHE.JSON`, text);
-      console.log(`Added: ${prepend1}${prepend2}/SEASON_DATA_CACHE.JSON`);
+      zip.file(`${prepend1}${prepend2}/SEASON_DATA_CACHE_E22.JSON`, text);
+      console.log(`Added: ${prepend1}${prepend2}/SEASON_DATA_CACHE_E22.JSON`);
 
       if ($notice.length) {
         const notice = htmlToTxt($notice.html());
@@ -700,9 +700,9 @@ $('#download_all_nexus').on('click', async () => {
   let instructions = $('#generic_instructions').html();
   instructions = htmlToTxt(instructions);
   const notes = htmlToTxt($('.notes_section .cms').html());
-  instructions = `You can use the SEASON_DATA_CACHE.JSON files in this zip file to replay past No Man's Sky expeditions on PC/Mac/SteamDeck (and any other systems which allow you access to the filesystem).
+  instructions = `You can use the SEASON_DATA_CACHE_E22.JSON files in this zip file to replay past No Man's Sky expeditions on PC/Mac/SteamDeck (and any other systems which allow you access to the filesystem).
 
-After unzipping the files, choose the directory with the name corresponding to the expedition you wish to play and copy the SEASON_DATA_CACHE.JSON to your NMS cache directory:
+After unzipping the files, choose the directory with the name corresponding to the expedition you wish to play and copy the SEASON_DATA_CACHE_E22.JSON to your NMS cache directory:
 
 ${instructions}
 
