@@ -101,9 +101,15 @@
    - prop: AllowSaveContextMultitoolTransfer
      type: bool
      description: Allow Multi-Tool to be transfered TO expedition
+   - prop: NeverAllowCorvettePurchases
+     type: bool
+     description: Disallow making corvettes
    - prop: AllowSaveContextShipTransfer
      type: bool
-     description: Allow Ship to be transfered TO expedition
+     description: Allow Ship to be copied TO expedition
+   - prop: AllowSaveContextCorvetteTransfer
+     type: bool
+     description: Allow Corvette to be copied TO expedition<br>**(This setting is broken, corvettes cannot be copied)**
 - name: Difficulty Minimums
   id: DifficultyMinimums
   prop: DifficultyMinimums
