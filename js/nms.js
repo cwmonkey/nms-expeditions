@@ -548,7 +548,7 @@ $('#download_all').on('click', async () => {
     const expVersion = radio.dataset.version;
     const expName    = radio.dataset.name;
     const expLatest  = radio.dataset.latest;
-    const prepend1   = expName.replace(': ', '_').toUpperCase() + '_';
+    const prepend1   = expName.replace(': ', '_').toUpperCase().replace(/ /g, '_') + '_';
     const prepend2   = ((expVersion === '0') ? 'ORIGINAL' : 'REDUX_' + expVersion) + '_';
 
     radio.click(); // trigger the selection
