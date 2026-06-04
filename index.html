@@ -29,7 +29,7 @@ site_title_override: No Man's Sky Expedition Generator
     <div class="content cms">
       <h2 class="visibly-hidden">Introduction</h2>
       <p>
-        You can use this app to customize and generate <code>SEASON_DATA_CACHE_S22.JSON</code> to play No Man's Sky expeditions <strong>offline</strong> on PC/Mac/SteamDeck (and Switch with some work).
+        You can use this app to customize and generate <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> to play No Man's Sky expeditions <strong>offline</strong> on PC/Mac/SteamDeck (and Switch with some work).
         Any rewards you unlock, as well as ships/multitools/items you transfer, will remain on your account/saves after going back online.
         If you JUST want the rewards, <a href="#expedition_notes_just_unlocks">see below</a> for more info.
       </p>
@@ -413,9 +413,9 @@ site_title_override: No Man's Sky Expedition Generator
 
         <p>Note: These directories may be somewhat different on your machine.</p>
 
-        <p>Note 2: The file MUST be named exactly <code>SEASON_DATA_CACHE_S22.JSON</code> (names like <code>SEASON_DATA_CACHE_S22 (1).JSON</code> will not work).</p>
+        <p>Note 2: The file MUST be named exactly <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> (names like <code>SEASON_DATA_CACHE_S22 (1).JSON</code> will not work).</p>
 
-        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>) when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
+        <p>You must be <strong>OFFLINE</strong> (meaning Steam needs to be in offline mode, or you need to disconnect from the internet, or you need to <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>), or <strong class="new">NEW</strong> use <a href="https://www.nexusmods.com/nomanssky/mods/4251" target="_blank">Grouch's "Offline Mode" mod</a> when you start NMS for this to work. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
 
         <p>Note 3: I recommend <strong>backing up your NMS saves often</strong>, including before starting an expedition.</p>
       </div>
@@ -476,6 +476,7 @@ site_title_override: No Man's Sky Expedition Generator
       <h3><a href="#expedition_notes_general">General</a></h3>
 
       <ul>
+        <li><strong class="new">NEW</strong> Instead of going fully offline, you can now use <a href="https://www.nexusmods.com/nomanssky/mods/4251" target="_blank">Grouch's "Offline Mode" mod</a> to play past expeditions with friends.</li>
         <li>Some expeditions start with tech in inventory slots. You need to move them.</li>
         <li>If you need Polo to show you Atlas stations, he won't do it UNLESS you also ask him to show you black holes. Then you will see both on your galaxy map.</li>
         <li>To summon the Anomaly after your first warp jump you must now enter then exit the space station (this may be a bug).</li>
@@ -489,7 +490,7 @@ site_title_override: No Man's Sky Expedition Generator
 
       <ul>
         <li>If NMS is <strong>not</strong> running, you can go online without any consequences.</li>
-        <li>If you start NMS in online mode, you may play NON-expedition saves, however you will need to close the game, go offline and re-download the appropriate expedition <code>SEASON_DATA_CACHE_S22.JSON</code> file before loading your expedition save.</li>
+        <li>If you start NMS in online mode, you may play NON-expedition saves, however you will need to close the game, go offline and re-download the appropriate expedition <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> file before loading your expedition save.</li>
         <li>If you start NMS in online mode and load an expedition save while on an expedition, you will be taken to the Anomaly and the expedition will end. If you do not save before closing the game, you may be able to go offline, re-download the expedition JSON and resume the expedition.</li>
       </ul>
 
@@ -499,7 +500,7 @@ site_title_override: No Man's Sky Expedition Generator
         <li>Click <code>Return to Primary Save</code> in the <code>OPTIONS</code> menu</li>
         <li>Once your primary save is loaded, close the game, go online, and open the game again</li>
         <li>Do whatever you need to do online, save your game, then close it</li>
-        <li>Go offline, restore the <code>SEASON_DATA_CACHE_S22.JSON</code> for the expedition you were on, then load your game</li>
+        <li>Go offline, restore the <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> for the expedition you were on, then load your game</li>
         <li>Resume the expedition at the expedition terminal on the Anomaly</li>
       </ol>
 
@@ -530,10 +531,10 @@ site_title_override: No Man's Sky Expedition Generator
       <p>You can replay expeditions you've already completed, however you cannot play the same expedition twice in a row (without a little work). If you want to play the same expedition again, or if you need to restart an expedition, you must do the following:</p>
 
       <ol>
-        <li>With NMS closed, download the <code>SEASON_DATA_CACHE_S22.JSON</code> for a <strong>different</strong> expedition and put it in your cache folder (make sure to override the old one if it's still there)</li>
+        <li>With NMS closed, download the <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> for a <strong>different</strong> expedition and put it in your cache folder (make sure to override the old one if it's still there)</li>
         <li>Open NMS, load your game and start the new expedition from the terminal</li>
         <li>Save (either by entering and exiting your ship or waiting for an auto save to happen), then close NMS</li>
-        <li>Download the <code>SEASON_DATA_CACHE_S22.JSON</code> for the expedition you want to play and put it in your cache folder</li>
+        <li>Download the <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> for the expedition you want to play and put it in your cache folder</li>
       </ol>
 
       <p>You should now be able to replay/restart your desired expedition.</p>
@@ -597,7 +598,7 @@ site_title_override: No Man's Sky Expedition Generator
     <section id="expedition_notes_static_files">
       <h3><a href="#expedition_notes_static_files">Static Expedition Config Files for Developers</a></h3>
 
-      <p>This GitHub repository now has static <code>SEASON_DATA_CACHE_S22.JSON</code> files with all the recommended patches. I don't require anything if you want to use these files, but credit is always appreciated.</p>
+      <p>This GitHub repository now has static <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> files with all the recommended patches. I don't require anything if you want to use these files, but credit is always appreciated.</p>
 
       <p>You can access these files with Git or, you can link to them using the "raw" github links (<a href="https://raw.githubusercontent.com/cwmonkey/nms-expeditions/refs/heads/main/patched/01_PIONEERS_LATEST_SEASON_DATA_CACHE.JSON" target="_blank">Example link for Expedition 1, Pioneers</a>).</p>
 

@@ -77,6 +77,14 @@ label {
     background: rgba(0, 0, 0, .8);
     color: #e4e4e4;
   }
+
+  .new {
+    display: inline-block;
+    background: yellow;
+    padding: 1px 4px 0 4px;
+    color: #000;
+    border-radius: 3px;
+  }
 }
 
 .content {
