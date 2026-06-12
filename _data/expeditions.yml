@@ -556,7 +556,7 @@
       json: E21_REMNANT_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1770818400
 - id: e022
-  name: '22: The Swarm'
+  name: '22: Swarm'
   description: The one with The Swarm
   image: e22_swarm.png
   versions:
