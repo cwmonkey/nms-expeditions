@@ -156,6 +156,10 @@ label {
   background: #1b002b url(../images/box-vtile--purple.jpg);
   background-size: contain;
 
+  img {
+    max-width: 100%;
+  }
+
   .content {
     padding-top: 40px;
   }

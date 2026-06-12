@@ -637,7 +637,7 @@ site_title_override: No Man's Sky Expedition Generator
           {% for version in exp.versions %}
             {% if version.notice %}
               <h4>{% if version.redux %}Redux{% else %}Original{% endif %} <span class="date">- {{ version.date | date: "%b, %Y" }}</span></h4>
-              {{ version.notice | markdownify }}
+              {{ version.notice | replace: ":g0", site.data.glyphs.g0 | replace: ":g1", site.data.glyphs.g1 | replace: ":g2", site.data.glyphs.g2 | replace: ":g3", site.data.glyphs.g3 | replace: ":g4", site.data.glyphs.g4 | replace: ":g5", site.data.glyphs.g5 | replace: ":g6", site.data.glyphs.g6 | replace: ":g7", site.data.glyphs.g7 | replace: ":g8", site.data.glyphs.g8 | replace: ":g9", site.data.glyphs.g9 | replace: ":ga", site.data.glyphs.gA | replace: ":gb", site.data.glyphs.gB | replace: ":gc", site.data.glyphs.gC | replace: ":gd", site.data.glyphs.gD | replace: ":ge", site.data.glyphs.gE | replace: ":gf", site.data.glyphs.gF | replace: ":sunset", site.data.glyphs.sunset | replace: ":bird", site.data.glyphs.bird | replace: ":face", site.data.glyphs.face | replace: ":diplo", site.data.glyphs.diplo | replace: ":eclipse", site.data.glyphs.eclipse | replace: ":balloon", site.data.glyphs.balloon | replace: ":boat", site.data.glyphs.boat | replace: ":bug", site.data.glyphs.bug | replace: ":dragonfly", site.data.glyphs.dragonfly | replace: ":galaxy", site.data.glyphs.galaxy | replace: ":voxel", site.data.glyphs.voxel | replace: ":fish", site.data.glyphs.fish | replace: ":tent", site.data.glyphs.tent | replace: ":rocket", site.data.glyphs.rocket | replace: ":tree", site.data.glyphs.tree | replace: ":atlas", site.data.glyphs.atlas | markdownify }}
             {% endif %}
           {% endfor %}
         </section>
