@@ -29,7 +29,7 @@ site_title_override: No Man's Sky Expedition Generator
     <div class="content cms">
       <h2 class="visibly-hidden">Introduction</h2>
       <p>
-        You can use this app to customize and generate <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> to play No Man's Sky expeditions <strong>offline</strong> on PC/Mac/SteamDeck (and Switch with some work).
+        Follow the instructions below to play No Man's Sky expeditions <strong>offline*</strong> on PC/Mac/SteamDeck/Linux (and Switch with some work).
         Any rewards you unlock, as well as ships/multitools/items you transfer, will remain on your account/saves after going back online.
         If you JUST want the rewards, <a href="#expedition_notes_just_unlocks">see below</a> for more info.
       </p>
@@ -408,14 +408,14 @@ site_title_override: No Man's Sky Expedition Generator
           <dd>/home/deck/.steam/steam/steamapps/compatdata/275850/pfx/drive_c/Users/SteamUser/AppData/Roaming/HelloGames/NMS/{steam id}/cache</dd>
 
           <dt><img src="{{site.baseurl}}/images/icon_switch.png" class="platform_icon"> Nintendo Switch:</dt>
-          <dd class="non_path">Thanks to <a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/36" target="_blank">gusklein</a> for figuring this out: Using DBI.nro (or similar), open game saves, look for the No Mans Sky SD.Cache folder</dd>
+          <dd class="non_path"><a href="https://github.com/leodium/leodium-ReLive-NoMansSky-Expeditions-Offline/discussions/36" target="_blank">From gusklein's post</a>: Using DBI.nro (or similar), open game saves, look for the No Mans Sky SD.Cache folder</dd>
         </dl>
 
         <p>Note: These directories may be somewhat different on your machine.</p>
 
         <p>Note 2: The file MUST be named exactly <code>{% include SEASON_DATA_CACHE_FILENAME %}</code> (names like <code>SEASON_DATA_CACHE_S22 (1).JSON</code> will not work).</p>
 
-        <p>You must be <strong>OFFLINE</strong> (set Steam to "Offline" mode, or exit GoG Galaxy, or disconnect from the internet, or <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>, or <strong class="new">NEW</strong> use <a href="https://www.nexusmods.com/nomanssky/mods/4251" target="_blank">Grouch's "Offline Mode" mod</a>) when you start NMS. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
+        <p>*You must be <strong>OFFLINE</strong> (set Steam to "Offline" mode, or exit GoG Galaxy, or disconnect from the internet, or <a href="#expedition_notes_block_nms_with_firewall">block NMS via a firewall</a>, or <strong class="new">NEW</strong> use <a href="https://www.nexusmods.com/nomanssky/mods/4251" target="_blank">Grouch's "Offline Mode" mod</a>) when you start NMS. For more information see <a href="#expedition_notes_online">When Can I Go Online?</a> below.</p>
 
         <p>Note 3: I recommend <strong>backing up your NMS saves often</strong>, including before starting an expedition.</p>
       </div>
@@ -423,6 +423,10 @@ site_title_override: No Man's Sky Expedition Generator
 
     <div class="download_container">
       <button type="button" class="download" disabled>DOWNLOAD</button>
+    </div>
+
+    <div class="download_more_info">
+        For a visual guide, see <a href="https://www.youtube.com/watch?v=PxlHUhzLLU8" target="_blank"><img src="{{site.baseurl}}/images/youtube.png" class="platform_icon"> Lyfpoints's YouTube Guide</a>
     </div>
 
     <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
