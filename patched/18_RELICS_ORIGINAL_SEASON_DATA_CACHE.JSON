@@ -3301,31 +3301,31 @@
           }
         },
         {
-          "Mission": "^FEED_GROUP",
-          "Title": "^UI_EXPED_CRE_FEED_GROUP_NAME",
-          "TitleUpper": "^UI_EXPED_CRE_FEED_GROUP_NAME_U",
-          "Description": "^UI_EXPED_CRE_FEED_GROUP_DESC",
-          "DescriptionDone": "^UI_EXPED_CRE_FEED_GROUP_DESC_D",
+          "Mission": "^GOT_POOP",
+          "Title": "^UI_EXPED18_GOT_POOP_NAME",
+          "TitleUpper": "^UI_EXPED18_GOT_POOP_NAME_U",
+          "Description": "^UI_EXPED_POOP_DESC",
+          "DescriptionDone": "^UI_EXPED_POOP_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 6,
+          "Amount": 20,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturefeed.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.CREATUREDIG.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.POOP.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.POOP.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.crescan.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.POOP.OFF.DDS"
           },
           "Reward": "^RS_S18_S5M4",
           "RewardSwitchAlt": "^",

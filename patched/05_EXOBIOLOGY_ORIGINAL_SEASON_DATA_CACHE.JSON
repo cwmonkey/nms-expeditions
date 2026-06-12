@@ -1862,31 +1862,31 @@
           }
         },
         {
-          "Mission": "^GOT_PEARLS",
-          "Title": "^UI_EXPED_S15_PEARL_NAME",
-          "TitleUpper": "^UI_EXPED_S15_PEARL_NAME_U",
-          "Description": "^UI_EXPED_PEARL_DESC",
-          "DescriptionDone": "^UI_EXPED_PEARL_DESC",
+          "Mission": "^GOT_POOP",
+          "Title": "^UI_EXPED_POOP_NAME",
+          "TitleUpper": "^UI_EXPED_POOP_NAME_U",
+          "Description": "^UI_EXPED_POOP_DESC",
+          "DescriptionDone": "^UI_EXPED_POOP_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Id": "^",
-          "Amount": 7,
+          "Amount": 50,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.GETPEARLS.DDS"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturedig.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.WATER.OFF.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.off.dds"
           },
           "Reward": "^RS_S5_S2M4",
           "RewardDescription": "",
