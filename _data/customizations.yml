@@ -110,6 +110,36 @@
    - prop: AllowSaveContextCorvetteTransfer
      type: bool
      description: Allow Corvette to be copied TO expedition<br>**(This setting is broken, corvettes cannot be copied)**
+   - prop: CachedPlayerCommunityTeam
+     subprop: CommunityTeam
+     type: CommunityTeam
+     description: Swarm Faction
+     options:
+      - value: Red
+        text: Royals
+      - value: Blue
+        text: Weavers
+      - value: Green
+        text: Sages
+   - prop: ForcePlayerRace
+     subprop: AlienRace
+     type: AlienRace
+     description: Forced Starting Race
+     options:
+      - value: None
+        text: Random?
+      - value: Explorers
+        text: Anomaly
+      - value: Traders
+        text: Gek
+      - value: Warriors
+        text: Vy'keen
+      - value: Robots
+        text: Korvax
+      - value: Diplomats
+        text: Traveller
+      - value: Builders
+        text: Autophage
 - name: Difficulty Minimums
   id: DifficultyMinimums
   prop: DifficultyMinimums
