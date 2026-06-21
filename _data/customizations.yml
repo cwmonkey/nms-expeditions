@@ -121,6 +121,9 @@
         text: Weavers
       - value: Green
         text: Sages
+   - prop: SwarmMonumentActive
+     type: bool
+     description: Turn the Core in the Anomaly off so you can run regular Nexus quests
    - prop: ForcePlayerRace
      subprop: AlienRace
      type: AlienRace
