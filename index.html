@@ -22,7 +22,7 @@ site_title_override: No Man's Sky Expedition Generator
 {block=intro_content}
   <section class="intro">
     <div class="intro_toggle_container">
-      <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section_{% for post in site.posts limit: 1 %}{{ post.url | slugify }}{% endfor %}" data-toggle-off-text="Show More Info" data-toggle-target="#header">
+      <button class="intro_toggle_button" type="button" data-toggler data-toggle-name="toggle_intro_section_{% for post in site.posts limit: 1 %}{{ post.url | slugify }}{% endfor %}" data-toggle-off-text="Show More Info" data-toggle-on-text="Hide" data-toggle-target="#header">
         Hide
       </button>
     </div>
@@ -162,7 +162,7 @@ site_title_override: No Man's Sky Expedition Generator
     <div class="general_patches">
       <div class="cust_section">
         <h4 class="cust_headline">
-          <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-general_patches" data-toggle-off-text="+ General Patches" data-toggle-target="#general_patches-table" data-toggle-text-target="#general_patches-text">
+          <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-general_patches" data-toggle-off-text="+ General Patches" data-toggle-on-text="- General Patches" data-toggle-target="#general_patches-table" data-toggle-text-target="#general_patches-text">
             <span id="general_patches-text">- General Patches</span>
             <span id="general_patches-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
           </button>
@@ -205,7 +205,7 @@ site_title_override: No Man's Sky Expedition Generator
       {% for csection in site.data.customizations %}
         <li class="cust_section">
           <h4 class="cust_headline">
-            <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
+            <button class="cust_headline_text" type="button" data-toggler data-toggle-name="customization-section-{{ csection.id }}" data-toggle-off-text="+ {{ csection.name }}" data-toggle-on-text="- {{ csection.name }}" data-toggle-target="#{{ csection.id }}-table" data-toggle-text-target="#{{ csection.id }}-text">
               <span id="{{ csection.id }}-text">- {{ csection.name }}</span>
               <span id="{{ csection.id }}-count" data-count-template-0="" data-count-template-1="(1 option selected)" data-count-template-other="(%n options selected)"></span>
             </button>
@@ -430,7 +430,7 @@ site_title_override: No Man's Sky Expedition Generator
     </div>
 
     <div class="debug" id="debug_container" data-toggle-container data-toggle-default="off">
-      <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-target="#debug_container">Hide Debug</button>
+      <button type="button" class="toggle_debug" data-toggler data-toggle-name="debug" data-toggle-off-text="Show Debug" data-toggle-off-text="Hide Debug" data-toggle-target="#debug_container">Hide Debug</button>
       <section class="debug_panel">
         <h4>Debug Info/Tools</h4>
 
