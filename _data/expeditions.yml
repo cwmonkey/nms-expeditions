@@ -559,9 +559,14 @@
   name: '22: Swarm'
   description: The one with The Swarm
   image: e22_swarm.png
+  patches:
+    - id: e22_swarm_offline_fixes
+      json: e22_swarm.offline_fixes.patch.json
+      description: Update milestones and settings to be playable offline (Recommended)
+      checked: 1
   versions:
     - id: e22r00
       json: E22_SWARM_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1779886800
   notice: >
-    * This expedition cannot be completed offline. I will replace the online-required milestones shortly...
+    * This expedition required some heavy editing to make it work offline. A patch has been created to replace all the Phase 3 milestones.

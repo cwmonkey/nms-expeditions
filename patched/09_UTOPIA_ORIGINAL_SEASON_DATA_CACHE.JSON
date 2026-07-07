@@ -114,7 +114,7 @@
     "^PRODFUEL2"
   ],
   "StartingSuitSlots": 26,
-  "StartingSuitTechSlots": 18,
+  "StartingSuitTechSlots": 12,
   "StartingSuitCargoSlots": 0,
   "WeaponSeed": [
     false,

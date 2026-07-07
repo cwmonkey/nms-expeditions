@@ -1,0 +1,602 @@
+{
+  "AdditionalKnownProducts": [
+    null,
+    null,
+    null,
+    null,
+    "^F_WALL",
+    "^F_DOOR",
+    "^F_FLOOR",
+    "^F_ROOF7"
+  ],
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        {
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^GOT_POOP",
+          "Title": "^UI_EXPED_POOP_NAME",
+          "TitleUpper": "^UI_EXPED_POOP_NAME_U",
+          "Description": "^UI_EXPED_POOP_DESC",
+          "DescriptionDone": "^UI_EXPED_POOP_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Amount": 10,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.creaturedig.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.poop.off.dds"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_MAKE_SIG",
+          "Title": "^UI_S22_MAKE_SIGNATURE_NAME",
+          "TitleUpper": "^UI_S22_MAKE_SIGNATURE_NAME_U",
+          "Description": "^UI_S22_MAKE_SIGNATURE_DESC",
+          "DescriptionDone": "^UI_S22_MAKE_SIGNATURE_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.FORGED.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.REPAIR.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_REPAIR_SHIP",
+          "Title": "^UI_S22_REPAIR_SHIP_NAME",
+          "TitleUpper": "^UI_S22_REPAIR_SHIP_NAME_U",
+          "Description": "^UI_S22_REPAIR_SHIP_DESC",
+          "DescriptionDone": "^UI_S22_REPAIR_SHIP_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.HIVECONTACT.DDS"
+          }
+        },
+        {
+          "Mission": "^S22_HIVE_CHASE",
+          "Title": "^UI_S22_HIVE_CHASE_NAME",
+          "TitleUpper": "^UI_S22_HIVE_CHASE_NAME_U",
+          "Description": "^UI_S22_HIVE_CHASE_DESC",
+          "DescriptionDone": "^UI_S22_HIVE_CHASE_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.HIVE1.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Amount": 15,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SHIPSHOOT.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVEPLANET.OFF.DDS"
+          },
+          "IsRendezvous": false,
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^GOT_ROBO_SHARDS",
+          "Title": "^UI_EXPED_ROBO_SHARDS_NAME",
+          "TitleUpper": "^UI_EXPED_ROBO_SHARDS_NAME_U",
+          "Description": "^UI_EXPED_ROBO_SHARDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ROBO_SHARDS_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DRONESHARD.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PORTAL.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PORTAL.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.PORTAL.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^CORRUPT_KILL",
+          "Title": "^UI_EXPED_CORRUPT_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_CORRUPT_KILL_NAME_U",
+          "Description": "^UI_EXPED_CORRUPT_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_CORRUPT_KILL_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Amount": 5,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.COUNTERFIRE.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^SENTINEL_SHIP",
+          "Title": "^UI_EXPED_SENTINEL_SHIP_NAME",
+          "TitleUpper": "^UI_EXPED_SENTINEL_SHIP_NAME_U",
+          "Description": "^UI_EXPED_SENTINEL_SHIP_DESC",
+          "DescriptionDone": "^UI_S10_IGNITION_B_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "IdToUseInMissionData": "^S10_REMIX_ALL",
+          "Amount": 2.5,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINELSHIP.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.SHIP.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^BUILD_BASE",
+          "Title": "^UI_EXPED_BUILD_BASE_NAME",
+          "TitleUpper": "^UI_EXPED_BUILD_BASE_NAME_U",
+          "Description": "^UI_EXPED_BUILD_BASE_DESC",
+          "DescriptionDone": "^UI_EXPED_BUILD_BASE_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BASESIZE1.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.base.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.base.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.base.off.dds"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_REPORT1",
+          "Title": "^UI_S22_REPORT1_NAME",
+          "TitleUpper": "^UI_S22_REPORT1_NAME_U",
+          "Description": "^UI_S22_REPORT1_DESC",
+          "DescriptionDone": "^UI_S22_REPORT1_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.POLOCHAT.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^S22_PARTY",
+          "Title": "^UI_S22_PARTY_PLANET_NAME",
+          "TitleUpper": "^UI_S22_PARTY_PLANET_NAME_U",
+          "Description": "^UI_S22_PARTY_PLANET_DESC",
+          "DescriptionDone": "^UI_S22_PARTY_PLANET_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.RENDEZVOUS.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+          },
+          "IsRendezvous": true,
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          },
+          "TeamOverrides": [
+            "[[removed]]",
+            "[[removed]]",
+            "[[removed]]"
+          ]
+        },
+        {
+          "Mission": "^S22_SWARM_FOOT",
+          "Title": "^UI_S22_SWARM_FOOT_NAME",
+          "TitleUpper": "^UI_S22_SWARM_FOOT_NAME_U",
+          "Description": "^UI_S22_SWARM_FOOT_DESC",
+          "DescriptionDone": "^UI_S22_SWARM_FOOT_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DRONECRASH.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARM.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARM.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARM.ON.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          },
+          "TeamOverrides": [
+            "[[removed]]",
+            "[[removed]]",
+            "[[removed]]"
+          ]
+        },
+        {
+          "Mission": "^GOT_PETS",
+          "Title": "^UI_EXPED_GOT_PETS_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_PETS_NAME_U",
+          "Description": "^UI_EXPED_GOT_PETS_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_PETS_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.getpet.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.pets.off.dds"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          },
+          "TeamOverrides": [
+            "[[removed]]",
+            "[[removed]]",
+            "[[removed]]"
+          ]
+        },
+        {
+          "Mission": "^WALKER",
+          "Title": "^UI_EXPED_WALKER_NAME",
+          "TitleUpper": "^UI_EXPED_WALKER_NAME_U",
+          "Description": "^UI_EXPED_WALKER_DESC",
+          "DescriptionDone": "^UI_EXPED_WALKER_DESC_D",
+          "LogDescOverride": "[[removed]]",
+          "IdToUseInMissionData": "^",
+          "Amount": 2500,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.walker.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.planets.off.dds"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_ATLAS1",
+          "Title": "^UI_S22_ATLAS1_NAME",
+          "TitleUpper": "^UI_S22_ATLAS1_NAME_U",
+          "Description": "^UI_S22_ATLAS1_DESC",
+          "DescriptionDone": "^UI_S22_ATLAS1_DESC_D",
+          "Amount": 16,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.ATLASSTATION5.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ATLAS.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ATLAS.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ATLAS.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_HIVE_FIGHT",
+          "Title": "^UI_S22_HIVE_FIGHT_NAME",
+          "TitleUpper": "^UI_S22_HIVE_FIGHT_NAME_U",
+          "Description": "^UI_S22_HIVE_FIGHT_DESC",
+          "DescriptionDone": "^UI_S22_HIVE_FIGHT_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.HIVE2.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        },
+        {
+          "Mission": "^S22_GLASS",
+          "Title": "^UI_S22_GLASS_NAME",
+          "TitleUpper": "^UI_S22_GLASS_NAME_U",
+          "Description": "^UI_S22_GLASS_DESC",
+          "DescriptionDone": "^UI_S22_GLASS_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.DARKNESS.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SWARMHIVE.OFF.DDS"
+          },
+          "Encryption": {
+            "IsEncrypted": false,
+            "TitleUpper": "^",
+            "Subtitle": "^",
+            "Description": "^",
+            "Patch": {
+              "Filename": ""
+            },
+            "HoverPopupIcon": {
+              "Filename": ""
+            },
+            "DecryptMissionId": "^"
+          }
+        }
+      ]
+    }
+  ],
+  "BlockShipPurchasesUntilMilestoneWithSeedComplete": [
+    false,
+    "0x0"
+  ],
+  "SwarmMissionsActive": false,
+  "SwarmMonumentActive": false,
+  "SwarmMonumentShowWhenMissionComplete": "^"
+}

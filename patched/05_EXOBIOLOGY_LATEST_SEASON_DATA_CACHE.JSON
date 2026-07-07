@@ -108,7 +108,7 @@
   "AdditionalTradeProducts": [],
   "NeverTradeProducts": [],
   "StartingSuitSlots": 24,
-  "StartingSuitTechSlots": 18,
+  "StartingSuitTechSlots": 12,
   "StartingSuitCargoSlots": 0,
   "WeaponSeed": [
     false,
