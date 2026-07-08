@@ -134,6 +134,8 @@
   description: The one where you're stuck on the first planet
   image: e03_cartographers.png
   notice: >
+    * HG made it so you cannot build bases at a starting POI. This means you cannot build a base by your ship - you will need to go ~700 units away.
+
     * If you start the expedition with `BlockStormsAtStart` set to `true` you will not be able to complete all the milestones. Simply set it to `false` below and re-download the json.
   warnings:
     - prop: BlockStormsAtStart
