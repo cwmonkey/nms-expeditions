@@ -340,7 +340,12 @@ label {
     background: rgba(255,255,255,.25);
   }
 
-  .default,
+  .default {
+    width: 1px;
+    min-width: 100px;
+    overflow-wrap: anywhere;
+  }
+
   .override {
     width: 1px;
     white-space: nowrap;
@@ -377,6 +382,24 @@ label {
 
   .type_float .override:before {
     content: "float";
+    transform: rotate(-90deg);
+    vertical-align: bottom;
+  }
+
+  .type_seed .override:before {
+    content: "0x...";
+    transform: rotate(-90deg);
+    vertical-align: bottom;
+  }
+
+  .type_ua .override:before {
+    content: "UA";
+    transform: rotate(-90deg);
+    vertical-align: bottom;
+  }
+
+  .type_str .override:before {
+    content: "str";
     transform: rotate(-90deg);
     vertical-align: bottom;
   }

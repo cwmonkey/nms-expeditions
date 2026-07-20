@@ -131,6 +131,7 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
     }
 
     if (defaultValue !== '--' && type === 'float') defaultValue = parseFloat(defaultValue).toFixed(2);
+    if (defaultValue !== '--' && type === 'seed') defaultValue = defaultValue[1];
 
     const $defaultEl = $el.closest('.cust_item').find('.default');
 
@@ -214,6 +215,7 @@ function updateProps() {
 
   $props.each((index, el) => {
     const $el = $(el);
+    const type = $el.data('type');
     const sectionId = $el.data('section-id');
     const $row = $el.closest('.cust_item');
     let value = $el.val();
@@ -236,8 +238,9 @@ function updateProps() {
 
     if (value === 'true') value = true;
     if (value === 'false') value = false;
-    if (/^[0-9]+$/.test(value)) value = parseInt(value);
-    if (/^[0-9.]+$/.test(value)) value = parseFloat(value);
+    if (type !== 'str' && /^(0|([1-9][0-9]*))$/.test(value)) value = parseInt(value);
+    if (type !== 'ua' && type !== 'str' && /^[0-9.]+$/.test(value)) value = parseFloat(value);
+    if (type === 'seed') value = (value === '0x0' ? [false, value] : [true, value]);
 
     hasUpdates = true;
 

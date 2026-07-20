@@ -2,6 +2,12 @@
   id: general
   defaultoff: 1
   customizations:
+   - prop: SeasonalUAOverride
+     type: str
+     description: "Starting planet UA<br>0 for random yellow star planet<br>Example: 00516b00fea97478"
+   - prop: UAOverrideValue
+     type: ua
+     description: "Starting planet UA (must match SeasonalUAOverride)<br>0 for random yellow star planet<br>Example: 0x516B00FEA97478"
    - prop: AbandonedFreighterHazardProtectionMul
      type: float
      description: Turn this down for more challenge?
@@ -64,6 +70,12 @@
    - prop: ShipStartsDamaged
      type: bool
      warning: If you set this to true and start on a freighter, you will be stuck
+   - prop: WeaponSeed
+     type: seed
+     description: "Waveform Focuser N56-P: 0x55907B79D95B675B<br>Random: 0x0"
+   - prop: ShipSeed
+     type: seed
+     description: "Radiant Pillar BC1: 0xA547AB958C97E439<br>Rasamama S36: 0x867BFFC553B294A8<br>Random: 0x0"
    - prop: ShipType
      subprop: ShipClass
      type: ShipClass
@@ -71,8 +83,22 @@
      type: bool
    - prop: StartingSuitSlots
      type: int
+     description: "New game default: 24"
    - prop: StartingSuitTechSlots
      type: int
+     description: "New game default: 10"
+   - prop: WeaponInventoryLayout
+     subprop: Slots
+     type: int
+     description: "New game default: 8"
+   - prop: ShipInventoryLayout
+     subprop: Slots
+     type: int
+     description: "New game default: 25"
+   - prop: ShipTechInventoryLayout
+     subprop: Slots
+     type: int
+     description: "New game default: 13"
    - prop: StartNextToShip
      type: bool
    - prop: StartWithFreighter
