@@ -333,14 +333,10 @@
   description: The one where you rebuild one solar system
   image: e09_utopia.png
   notice: >
-    * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones (ignore the milestone hint about needing a `Visceral Synthesiser`).
+    * The base-building/uploading milestones can only be completed online. A patch has been created to replace those milestones.
 
     * When starting this expedition from an existing save, The Anomaly will not show up after the expedition is completed. A patch has been created to fix this issue.
   patches:
-    - id: 09_redux_utopia_replace_online_base_building
-      json: 09_redux_utopia.replace_online_base_building.patch.json
-      description: Replace online-only milestones (Recommended)
-      checked: 1
     - id: add_nexus_reward
       json: 09_redux_utopia.add_nexus_reward.patch.json
       description: Change the final milestone's reward to unlock The Anomaly (recommended if you are staring this expedition from an existing save)
@@ -349,10 +345,20 @@
     - id: e09r00
       json: E09_UTOPIA_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1677067200
+      patches:
+        - id: e09r00_utopia_replace_online_base_building
+          json: e09r00_utopia.replace_online_base_building.patch.json
+          description: Replace online-only milestones (Recommended)
+          checked: 1
     - id: e09r01
       json: E09_UTOPIA_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1702044000
       redux: 1
+      patches:
+        - id: e09r01_utopia_replace_online_base_building
+          json: e09r01_utopia.replace_online_base_building.patch.json
+          description: Replace online-only milestones (Recommended)
+          checked: 1
 - id: e010
   name: '10: Singularity'
   description: The one about Harmonic entities

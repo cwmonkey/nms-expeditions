@@ -2670,30 +2670,30 @@
           }
         },
         {
-          "Mission": "^SPOOKY_EGG",
-          "Title": "^UI_EXPED_WORM19_NAME",
-          "TitleUpper": "^UI_EXPED_WORM19_NAME_U",
-          "Description": "^UI_EXPED_WORM19_DESC",
-          "DescriptionDone": "^UI_EXPED_WORM19_DESC_D",
+          "Mission": "^MINIWORMS",
+          "Title": "^UI_EXPED_S9_MINIWORMS_NAME",
+          "TitleUpper": "^UI_EXPED_S9_MINIWORMS_NAME_U",
+          "Description": "^UI_EXPED_MINIWORMS_DESC",
+          "DescriptionDone": "^UI_EXPED_MINIWORMS_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/spookworm/patch.spooky.wormeggs.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/spookworm/patch.spooky.library.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.worm.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.worm.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.fiend.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.worm.off.dds"
           },
           "Reward": "^RS_S9_S4M2",
           "RewardDescription": "",
@@ -2916,31 +2916,31 @@
           }
         },
         {
-          "Mission": "^MINIWORMS",
-          "Title": "^UI_EXPED_S9_MINIWORMS_NAME",
-          "TitleUpper": "^UI_EXPED_S9_MINIWORMS_NAME_U",
-          "Description": "^UI_EXPED_MINIWORMS_DESC",
-          "DescriptionDone": "^UI_EXPED_MINIWORMS_DESC_D",
+          "Mission": "^FIEND_KILL",
+          "Title": "^UI_EXPED14_FIEND_KILL_NAME",
+          "TitleUpper": "^UI_EXPED14_FIEND_KILL_NAME_U",
+          "Description": "^UI_EXPED_FIEND_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 3,
+          "Amount": 6,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/spookworm/patch.spooky.library.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/SPOOKWORM/PATCH.SPOOKY.FIENDEGG.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.worm.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.worm.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.worm.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.OFF.DDS"
           },
           "Reward": "^RS_S9_S4M6",
           "RewardSwitchAlt": "^",
