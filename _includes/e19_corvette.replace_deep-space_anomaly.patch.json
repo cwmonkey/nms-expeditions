@@ -1,0 +1,33 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        {
+          "Mission": "^STAR_GREEN",
+          "Title": "^UI_EXPED_STAR_GREEN_NAME",
+          "TitleUpper": "^UI_EXPED_STAR_GREEN_NAME_U",
+          "Description": "^UI_EXPED_STAR_GREEN_DESC",
+          "DescriptionDone": "^UI_EXPED_STAR_GREEN_DESC_D",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.greensystem.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
+          }
+        }
+      ]
+    }
+  ]
+}
