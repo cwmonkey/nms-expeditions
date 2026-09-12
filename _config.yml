@@ -25,3 +25,4 @@ author:
   email: monkey@mysmilies.com
 plugins_dir:
  - jekyll-github-metadata
+data_dir: _includes
