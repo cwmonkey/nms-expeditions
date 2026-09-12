@@ -4,6 +4,8 @@
   image: e01_pioneers.png
   notice: >
     * Some player inventory tech modules and ship inventory tech modules are in the wrong spot. You'll need to move them.
+
+    * A recent patch broke milestones which require finding a deep-space anomaly. A patch has been created to replace the deep-space anomaly milestone.
   versions:
     - id: e01r00
       json: E01_PIONEERS_ORIGINAL_SEASON_DATA_CACHE.JSON
@@ -13,6 +15,11 @@
         * **Not fully tested, but should work.**
 
         * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
+      patches:
+        - id: e01r00_pioneers_replace_deep-space_anomaly
+          json: e01r00_pioneers.replace_deep-space_anomaly.patch.json
+          description: Replace deep-space anomaly milestone (Recommended)
+          checked: 1
     - id: e01r01
       json: E01_PIONEERS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1637762400
@@ -24,6 +31,10 @@
         - id: e01r01_pioneers_change_start_system
           json: e01r01_pioneers.change_start_system.patch.json
           description: Change starter system to nearby yellow star system
+          checked: 1
+        - id: e01r01_pioneers_replace_deep-space_anomaly
+          json: e01r01_pioneers.replace_deep-space_anomaly.patch.json
+          description: Replace deep-space anomaly milestone (Recommended)
           checked: 1
 - id: e02
   name: '02: Beachhead'
@@ -531,7 +542,7 @@
   notice: >
     * The multiplayer and comunity milestones cannot be completed offline. A patch has been created to replace them.
 
-    * A recent patch broke milestones which require finding a deep-space anomaly. A patch has been created to replace the milestone.
+    * A recent patch broke milestones which require finding a deep-space anomaly. A patch has been created to replace the deep-space anomaly milestone.
   patches:
     - id: 19_corvette_replace_community_multiplayer_milestones
       json: 19_corvette.replace_community_multiplayer_milestones.patch.json
