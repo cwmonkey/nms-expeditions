@@ -2,6 +2,8 @@
 
 "use strict";
 
+const season_data_cache_filename = 'SEASON_DATA_CACHE_S22.JSON';
+
 const $body = $(document.body);
 
 ///////////////////////////////
@@ -497,7 +499,7 @@ $download.on('click', () => {
   if (!exp) return;
   const json = getExpeditionJson();
 
-  download('SEASON_DATA_CACHE_S22.JSON', json);
+  download(season_data_cache_filename, json);
 });
 
 $('#copy').on('click', () => {
@@ -661,7 +663,7 @@ $('#download_all_nexus').on('click', async () => {
     const expName    = radio.dataset.name;
     const expId    = radio.dataset.id;
     const expLatest  = radio.dataset.latest;
-    const prepend1   = expName.replace(': ', '_').toUpperCase() + '_';
+    const prepend1   = expName.replace(': ', '_').toUpperCase();
     const prepend2   = ((expVersion === '0') ? 'ORIGINAL' : 'REDUX_' + expVersion);
 
     const $notice = $(`#notice_${expId}`);
@@ -680,13 +682,20 @@ $('#download_all_nexus').on('click', async () => {
       // If content is object, serialize to JSON
       const text = typeof content === "object" ? JSON.stringify(content, null, 2) : String(content);
 
-      zip.file(`${prepend1}${prepend2}/SEASON_DATA_CACHE_S22.JSON`, text);
-      console.log(`Added: ${prepend1}${prepend2}/SEASON_DATA_CACHE_S22.JSON`);
+      if (expLatest) {
+        zip.file(`${prepend1}/${season_data_cache_filename}`, text);
+
+        if ($notice.length) {
+          const notice = htmlToTxt($notice.html());
+          zip.file(`${prepend1}/notes.txt`, notice);
+        }
+      }
+
+      zip.file(`${prepend1}/${prepend2}/${season_data_cache_filename}`, text);
 
       if ($notice.length) {
         const notice = htmlToTxt($notice.html());
-        zip.file(`${prepend1}${prepend2}/notes.txt`, notice);
-        console.log(`Added: ${prepend1}${prepend2}/notes.txt`);
+        zip.file(`${prepend1}/${prepend2}/notes.txt`, notice);
       }
 
       /* if (expLatest) {
