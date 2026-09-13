@@ -3201,11 +3201,11 @@
           }
         },
         {
-          "Mission": "^GAS_POI",
-          "Title": "^UI_EXPED_GAS_BRAIN_NAME",
-          "TitleUpper": "^UI_EXPED_GAS_BRAIN_NAME_U",
-          "Description": "^UI_EXPED_GAS_BRAIN_DESC",
-          "DescriptionDone": "^UI_EXPED_GAS_BRAIN_DESC_D",
+          "Mission": "^BONE_TRADER",
+          "Title": "^UI_EXPED_BONE_TRADER_NAME",
+          "TitleUpper": "^UI_EXPED_BONE_TRADER_NAME_U",
+          "Description": "^UI_EXPED_BONE_TRADER_DESC",
+          "DescriptionDone": "^UI_EXPED_BONE_TRADER_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
           "Amount": 1,
@@ -3213,19 +3213,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.gassentience.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONETRADE.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
           },
           "Reward": "^RS_S5_S5M6",
           "RewardSwitchAlt": "^",

@@ -3317,11 +3317,11 @@
           }
         },
         {
-          "Mission": "^SPACE_POI",
-          "Title": "^UI_S19_SPACE_POI_NAME",
-          "TitleUpper": "^UI_S19_SPACE_POI_NAME_U",
-          "Description": "^UI_EXPED_SPACE_POI_DESC",
-          "DescriptionDone": "^UI_EXPED_SPACE_POI_DESC_D",
+          "Mission": "^STAR_GREEN",
+          "Title": "^UI_EXPED_STAR_GREEN_NAME",
+          "TitleUpper": "^UI_EXPED_STAR_GREEN_NAME_U",
+          "Description": "^UI_EXPED_STAR_GREEN_DESC",
+          "DescriptionDone": "^UI_EXPED_STAR_GREEN_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
           "Amount": 1,
@@ -3329,19 +3329,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SPACEPOISKULL.DDS"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.greensystem.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVESYSTEM.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVESYSTEM.ON.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.LEAVESYSTEM.OFF.DDS"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
           },
           "Reward": "^RS_S19_S5M2",
           "RewardSwitchAlt": "^",

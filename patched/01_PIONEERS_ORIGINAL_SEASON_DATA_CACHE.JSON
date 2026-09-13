@@ -1218,30 +1218,30 @@
           }
         },
         {
-          "Mission": "^SPACE_POI",
-          "Title": "^UI_EXPED_SPACE_POI_NAME",
-          "TitleUpper": "^UI_EXPED_SPACE_POI_NAME_U",
-          "Description": "^UI_EXPED_SPACE_POI_DESC",
-          "DescriptionDone": "^UI_EXPED_SPACE_POI_DESC_D",
+          "Mission": "^FIEND_KILL",
+          "Title": "^UI_S20_FIEND_KILL_NAME",
+          "TitleUpper": "^UI_S20_FIEND_KILL_NAME_U",
+          "Description": "^UI_EXPED_FIEND_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_FIEND_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "Id": "^",
-          "Amount": 5,
+          "Amount": 30,
           "StageIndex": 2,
           "MilestoneIndex": 7,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.galaticcore.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.WHISPERINGEGGS.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.leavesystem.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.FIEND.OFF.DDS"
           },
           "Reward": "^RS_S1_S3M8",
           "RewardDescription": "<DARK_TECH>Supreme Pulse Engine Upgrade<>; <STELLAR>Emergency Broadcast Receiver<>; <DARK_TECH>Supreme Starship Shield Upgrade<>; <STELLAR>Terrifying Sample<>",
