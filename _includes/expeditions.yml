@@ -225,11 +225,12 @@
   notice: >
     * For the "Sightseer" milestone, make sure you do NOT use your freighter's scanner before landing on the required planets.
 
-    * Phase 5, Milestone 7 (Recognisable Life) will bug out if you meet a gaseous sentience **without** using a lure and you will be unable to complete the milestone. If this happens to you, check the optional patch and replace your `SEASON_DATA_CACHE.JSON`.
+    * A recent patch broke milestones which require finding a deep-space anomaly. A patch has been created to replace the deep-space anomaly milestone.
   patches:
-    - id: 05_redux_exobiology_auto_complete_p5m7
-      json: 05_redux_exobiology.auto_complete_p5m7.patch.json
-      description: Auto-complete Phase 5, Milestone 7 - Recognisable Life (Only necessary if you meet a gaseous sentience "naturally" without a lure)
+    - id: e05_exobiology_replace_deep-space_anomaly
+      json: e05_exobiology.replace_deep-space_anomaly.patch.json
+      description: Replace deep-space anomaly milestone (Recommended)
+      checked: 1
   versions:
     - id: e05r00
       json: E05_EXOBIOLOGY_ORIGINAL_SEASON_DATA_CACHE.JSON

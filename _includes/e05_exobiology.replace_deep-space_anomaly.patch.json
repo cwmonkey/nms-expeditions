@@ -1,0 +1,37 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^BONE_TRADER",
+          "Title": "^UI_EXPED_BONE_TRADER_NAME",
+          "TitleUpper": "^UI_EXPED_BONE_TRADER_NAME_U",
+          "Description": "^UI_EXPED_BONE_TRADER_DESC",
+          "DescriptionDone": "^UI_EXPED_BONE_TRADER_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.BONETRADE.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.FOSSIL.OFF.DDS"
+          }
+        }
+      ]
+    }
+  ]
+}
