@@ -290,7 +290,7 @@
   notice: >
     * The community milestones cannot be completed offline. A patch has been created to replace them with other milestones (ignore the message about Vile Spawns, you can collect them at any time). Unfortunately the Memory Fragments never upgrade.
 
-    * A recent patch seems to have broken derelict freighter missions. A patch has been created to replace the derelict freighter mission.
+    * The Cosmos patch has made it so pulsing will not find a derelict freighter. A patch has been created to replace the "A Shattered Past" milestone.
   warnings:
     - id: GameMode_Permadeath
       prop: GameMode
@@ -305,7 +305,7 @@
       checked: 1
     - id: e07_leviathan_replace_derelict_freighter_milestone
       json: e07_leviathan.replace_derelict_freighter_milestone.patch.json
-      description: Replace broken derelict freighter mission (Recommended)
+      description: Replace broken derelict freighter milestone (Recommended)
       checked: 1
   versions:
     - id: e07r00

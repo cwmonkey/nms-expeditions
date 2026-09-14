@@ -3050,7 +3050,7 @@
           }
         },
         {
-          "Mission": "^ROGUE_FREIGHT",
+          "Mission": "^STAR_BLUE",
           "Title": "^UI_EXPED_ROGUE_FREIGHT_NAME",
           "TitleUpper": "^UI_EXPED_ROGUE_FREIGHT_NAME_U",
           "Description": "^UI_EXPED_ROGUE_FREIGHT_DESC",
@@ -3062,19 +3062,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/Patch.Freighter.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.bluesystem.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
           },
           "Reward": "^RS_S7_S5M3",
           "RewardDescription": "",
@@ -3141,7 +3141,7 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.distress.on.dds"
             },
-            "DecryptMissionId": "^ROGUE_FREIGHT",
+            "DecryptMissionId": "^STAR_BLUE",
             "DecryptMissionSeed": 43
           }
         },
