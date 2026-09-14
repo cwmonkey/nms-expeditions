@@ -1,0 +1,35 @@
+{
+  "Stages": [
+    null,
+    null,
+    null,
+    null,
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        {
+          "Mission": "^STAR_BLUE",
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.bluesystem.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.specialsystem.off.dds"
+          }
+        },
+        {
+          "Encryption": {
+            "DecryptMissionId": "^STAR_BLUE"
+          }
+        }
+      ]
+    }
+  ]
+}
