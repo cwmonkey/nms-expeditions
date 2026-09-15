@@ -1,0 +1,164 @@
+{
+  "Stages": [
+    {
+      "Milestones": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
+          "Amount": 30,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^SMUGGLE_CONTRAB",
+          "Title": "^UI_EXPED_SMUGGLE_CONTRAB_NAME",
+          "TitleUpper": "^UI_EXPED_SMUGGLE_CONTRAB_NAME_U",
+          "Description": "^UI_EXPED_SMUGGLE_CONTRAB_DESC",
+          "DescriptionDone": "^UI_EXPED_SMUGGLE_CONTRAB_DESC_D",
+          "Amount": 500000,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/Patch.Smuggling.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^GOT_PEARLS",
+          "Title": "^UI_EXPED_S9_PEARL_NAME",
+          "TitleUpper": "^UI_EXPED_S9_PEARL_NAME_U",
+          "Description": "^UI_EXPED_PEARL_DESC",
+          "DescriptionDone": "^UI_EXPED_PEARL_DESC_D",
+          "Amount": 3,
+          "Icon": {
+            "Filename": "textures/ui/frontend/icons/expedition/patch.pearl.dds"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^SENTINEL_DISABL",
+          "Title": "^UI_S19_SENT_DISABLE_NAME",
+          "TitleUpper": "^UI_S19_SENT_DISABLE_NAME_U",
+          "Description": "^UI_EXPED_SENT_DISABLE_DESC",
+          "DescriptionDone": "^UI_EXPED_SENT_DISABLE_DESC_D",
+          "Amount": 1,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINEL2.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.OFF.DDS"
+          }
+        },
+        null,
+        null,
+        null,
+        {
+          "Mission": "^GOT_NANITES",
+          "Title": "^UI_EXPED_GOT_NANITES_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_NANITES_NAME_U",
+          "Description": "^UI_EXPED_GOT_NANITES_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_NANITES_DESC_D",
+          "Amount": 3000,
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.NANITES1.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.on.dds"
+          },
+          "MissionIconSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.on.dds"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.off.dds"
+          }
+        }
+      ]
+    },
+    {
+      "Milestones": [
+        {
+          "Mission": "^POLICE_KILL",
+          "Title": "^UI_EXPED_POLICE_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_POLICE_KILL_NAME_U",
+          "Description": "^UI_EXPED_POLICE_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_POLICE_KILL_DESC_D",
+          "Icon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINEL.3.DDS"
+          },
+          "MissionIcon": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.ON.DDS"
+          },
+          "MissionIconSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.ON.DDS"
+          },
+          "MissionIconNotSelected": {
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.OFF.DDS"
+          }
+        },
+        null,
+        null,
+        {
+          "Encryption": {
+            "DecryptMissionId": "^STAR_BLUE",
+            "DecryptMissionSeed": 33
+          }
+        },
+        {
+          "Encryption": {
+            "DecryptMissionId": "^STAR_BLUE",
+            "DecryptMissionSeed": 33
+          }
+        }
+      ]
+    }
+  ]
+}

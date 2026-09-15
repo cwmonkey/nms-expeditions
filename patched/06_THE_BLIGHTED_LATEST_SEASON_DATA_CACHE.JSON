@@ -1538,31 +1538,31 @@
           }
         },
         {
-          "Mission": "^PARTY_PLANET1",
-          "Title": "^UI_EXPED_PARTY_PLANET1_NAME",
-          "TitleUpper": "^UI_EXPED_PARTY_PLANET1_NAME_U",
-          "Description": "^UI_EXPED_PARTY_PLANET1_DESC",
-          "DescriptionDone": "^UI_EXPED_PARTY_PLANET1_DESC_D",
+          "Mission": "^GET_ASTEROIDS",
+          "Title": "^UI_EXPED_ASTEROIDS_NAME",
+          "TitleUpper": "^UI_EXPED_ASTEROIDS_NAME_U",
+          "Description": "^UI_EXPED_ASTEROIDS_DESC",
+          "DescriptionDone": "^UI_EXPED_ASTEROIDS_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 50,
+          "Amount": 30,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.party.1.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.shipshoot.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.bones.off.dds"
           },
           "Reward": "^RS_S6_PARTY1",
           "RewardSwitchAlt": "^",
@@ -1645,31 +1645,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^PARTY_PLANET2",
-          "Title": "^UI_EXPED_PARTY_PLANET2_NAME",
-          "TitleUpper": "^UI_EXPED_PARTY_PLANET2_NAME_U",
-          "Description": "^UI_EXPED_PARTY_PLANET2_DESC",
-          "DescriptionDone": "^UI_EXPED_PARTY_PLANET2_DESC_D",
+          "Mission": "^SMUGGLE_CONTRAB",
+          "Title": "^UI_EXPED_SMUGGLE_CONTRAB_NAME",
+          "TitleUpper": "^UI_EXPED_SMUGGLE_CONTRAB_NAME_U",
+          "Description": "^UI_EXPED_SMUGGLE_CONTRAB_DESC",
+          "DescriptionDone": "^UI_EXPED_SMUGGLE_CONTRAB_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 290,
+          "Amount": 500000,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.party.2.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/Patch.Smuggling.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.money.off.dds"
           },
           "Reward": "^RS_S6_PARTY2",
           "RewardSwitchAlt": "^",
@@ -1948,31 +1948,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^PARTY_PLANET3",
-          "Title": "^UI_EXPED_PARTY_PLANET3_NAME",
-          "TitleUpper": "^UI_EXPED_PARTY_PLANET3_NAME_U",
-          "Description": "^UI_EXPED_PARTY_PLANET3_DESC",
-          "DescriptionDone": "^UI_EXPED_PARTY_PLANET3_DESC_D",
+          "Mission": "^GOT_PEARLS",
+          "Title": "^UI_EXPED_S9_PEARL_NAME",
+          "TitleUpper": "^UI_EXPED_S9_PEARL_NAME_U",
+          "Description": "^UI_EXPED_PEARL_DESC",
+          "DescriptionDone": "^UI_EXPED_PEARL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 300,
+          "Amount": 3,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.party.3.dds"
+            "Filename": "textures/ui/frontend/icons/expedition/patch.pearl.dds"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/mission.collect.off.dds"
           },
           "Reward": "^RS_S6_PARTY3",
           "RewardSwitchAlt": "^",
@@ -2251,31 +2251,31 @@
     {
       "Milestones": [
         {
-          "Mission": "^PARTY_PLANET4",
-          "Title": "^UI_EXPED_PARTY_PLANET4_NAME",
-          "TitleUpper": "^UI_EXPED_PARTY_PLANET4_NAME_U",
-          "Description": "^UI_EXPED_PARTY_PLANET4_DESC",
-          "DescriptionDone": "^UI_EXPED_PARTY_PLANET4_DESC_D",
+          "Mission": "^SENTINEL_DISABL",
+          "Title": "^UI_S19_SENT_DISABLE_NAME",
+          "TitleUpper": "^UI_S19_SENT_DISABLE_NAME_U",
+          "Description": "^UI_EXPED_SENT_DISABLE_DESC",
+          "DescriptionDone": "^UI_EXPED_SENT_DISABLE_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 500,
+          "Amount": 1,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.party.4.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINEL2.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/EXPEDITIONMISSIONS/MISSION.ROBOTKILL.OFF.DDS"
           },
           "Reward": "^RS_S6_PARTY4",
           "RewardSwitchAlt": "^",
@@ -2447,31 +2447,31 @@
           }
         },
         {
-          "Mission": "^PIRATE_PORTAL",
-          "Title": "^UI_EXPED_PIRATE_PORTAL_NAME",
-          "TitleUpper": "^UI_EXPED_PIRATE_PORTAL_NAME_U",
-          "Description": "^UI_EXPED_PIRATE_PORTAL_DESC",
-          "DescriptionDone": "^UI_EXPED_PIRATE_PORTAL_DESC_D",
+          "Mission": "^GOT_NANITES",
+          "Title": "^UI_EXPED_GOT_NANITES_NAME",
+          "TitleUpper": "^UI_EXPED_GOT_NANITES_NAME_U",
+          "Description": "^UI_EXPED_GOT_NANITES_DESC",
+          "DescriptionDone": "^UI_EXPED_GOT_NANITES_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
-          "Amount": 1,
+          "Amount": 3000,
           "StageIndex": 0,
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.mappirate.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.NANITES1.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.collect.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.on.dds"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.collect.on.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.on.dds"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.collect.off.dds"
+            "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.nanites.off.dds"
           },
           "Reward": "^RS_S6_S4M4",
           "RewardSwitchAlt": "^",
@@ -2554,11 +2554,11 @@
     {
       "Milestones": [
         {
-          "Mission": "^PARTY_PLANET5",
-          "Title": "^UI_EXPED_PARTY_PLANET5_NAME",
-          "TitleUpper": "^UI_EXPED_PARTY_PLANET5_NAME_U",
-          "Description": "^UI_EXPED_PARTY_PLANET5_DESC",
-          "DescriptionDone": "^UI_EXPED_PARTY_PLANET5_DESC_DS6",
+          "Mission": "^POLICE_KILL",
+          "Title": "^UI_EXPED_POLICE_KILL_NAME",
+          "TitleUpper": "^UI_EXPED_POLICE_KILL_NAME_U",
+          "Description": "^UI_EXPED_POLICE_KILL_DESC",
+          "DescriptionDone": "^UI_EXPED_POLICE_KILL_DESC_D",
           "CantRewardMessage": "^INTRCT_NOROOM_L",
           "IdToUseInMissionData": "^",
           "Amount": 1,
@@ -2566,19 +2566,19 @@
           "MilestoneIndex": 0,
           "RendezvousIndex": -1,
           "Icon": {
-            "Filename": "textures/ui/frontend/icons/expedition/patch.party.5.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/EXPEDITION/PATCH.SENTINEL.3.DDS"
           },
           "IconGrey": {
             "Filename": ""
           },
           "MissionIcon": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.ON.DDS"
           },
           "MissionIconSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.on.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.ON.DDS"
           },
           "MissionIconNotSelected": {
-            "Filename": "textures/ui/frontend/icons/missions/mission.seasonal.off.dds"
+            "Filename": "TEXTURES/UI/FRONTEND/ICONS/MISSIONS/MISSION.SENTINELCRASH.OFF.DDS"
           },
           "Reward": "^RS_S6_PARTY5",
           "RewardSwitchAlt": "^",
@@ -2745,8 +2745,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PARTY_PLANET5",
-            "DecryptMissionSeed": 40
+            "DecryptMissionId": "^STAR_BLUE",
+            "DecryptMissionSeed": 33
           }
         },
         {
@@ -2794,8 +2794,8 @@
             "HoverPopupIcon": {
               "Filename": "textures/ui/frontend/icons/missions/expeditionmissions/mission.atlas.on.dds"
             },
-            "DecryptMissionId": "^PARTY_PLANET5",
-            "DecryptMissionSeed": 40
+            "DecryptMissionId": "^STAR_BLUE",
+            "DecryptMissionSeed": 33
           }
         },
         {
