@@ -596,3 +596,13 @@
       date: 1779886800
   notice: >
     * This expedition required some heavy editing to make it work offline. A patch has been created to replace all the Phase 3 milestones.
+- id: e023
+  name: '22: Our Journey Continues'
+  description: The one with the long name
+  image: e23_our_journey_continues.png
+  versions:
+    - id: e23r00
+      json: E23_OUR_JOURNEY_CONTINUES_ORIGINAL_SEASON_DATA_CACHE.JSON
+      date: 1789563600
+  notice: >
+    * **UNTESTED** - This is mainly for people who have trouble getting the config from the server for now.
