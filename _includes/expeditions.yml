@@ -597,7 +597,7 @@
   notice: >
     * This expedition required some heavy editing to make it work offline. A patch has been created to replace all the Phase 3 milestones.
 - id: e023
-  name: '22: Our Journey Continues'
+  name: '23: Our Journey Continues'
   description: The one with the long name
   image: e23_our_journey_continues.png
   versions:
