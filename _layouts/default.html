@@ -1,8 +1,17 @@
 {% capture liquid %}
+  {% assign wrapped_content = content %}
+
+  {% comment %} SPECIAL WRAPPERS {% endcomment %}
+  {% if page.category == "guides" %}
+    {% capture wrapped_content %}
+      {% include guides_wrapper.html content=content %}
+    {% endcapture %}
+  {% endif %}
+
+  {% comment %} BLOCKS {% endcomment %}
   {% assign validblocks = "intro_content},top_content},below_footer_content},head_extra_content},below_body_content}" | split: "," %}
 
-  {% assign parts = content | split: "{block=" %}
-  {% assign page_content = "" %}
+  {% assign parts = wrapped_content | split: "{block=" %}
 
   {% if parts[1] %}
     {% for part in parts %}
@@ -44,6 +53,17 @@
 
   <link rel="stylesheet" href="{{site.baseurl}}/css/global.css?{{ site.github.build_revision }}">
   {{head_extra_content}}
+  {% if page.category == "guides" %}
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const pfor = urlParams.get('for');
+      const pformat = urlParams.get('format');
+
+      if (pfor) document.querySelector('html').dataset.for = pfor;
+      if (pformat) document.querySelector('html').dataset.format = pformat;
+    </script>
+  {% endif %}
 </head>
 <body data-touched="false" class="{% if site.local %}local {% else %}public {% endif %}{{page.body_class}}">
 

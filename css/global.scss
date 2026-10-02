@@ -8,12 +8,20 @@
 @import "mixins";
 
 /* More */
+
+html,
+body {
+  min-height: 100vh;
+}
+
 body {
   background: #000;
   color: #ebebeb;
   margin: 0;
   font-family: Raleway, Helvetica, Arial, sans-serif;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -450,6 +458,7 @@ label {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
 
   .image img {
     width: 48px;

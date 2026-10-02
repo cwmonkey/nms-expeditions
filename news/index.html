@@ -12,7 +12,7 @@ metadescription: News about updates to the No Man's Sky Expedition Generator.
   <h2 class="expedition_notes_header">News</h2>
 
   <div class="cms">
-    {% for post in site.posts %}
+    {% for post in site.categories.news %}
       <article id="{{ post.url | slugify }}">
         <h3><a href="#{{ post.url | slugify }}">{{post.title}}</a> - <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b. %d, %Y' }}</time></h3>
         {{ post.excerpt }}

@@ -116,6 +116,9 @@ $body.on('change', 'input[name="expeditions"]', (ev) => {
   $('.notice').removeClass('selected');
   $('#notice_' + expId).addClass('selected');
 
+  $('.guide').removeClass('selected');
+  $('#guide_' + expId).addClass('selected');
+
   $('.warning').removeClass('selected');
   $('#warning_' + expId).addClass('selected');
 
