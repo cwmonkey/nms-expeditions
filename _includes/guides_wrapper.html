@@ -1,0 +1,86 @@
+{block=head_extra_content}
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const pfor = urlParams.get('for');
+    const pformat = urlParams.get('format');
+
+    if (pfor) document.querySelector('html').dataset.for = pfor;
+    if (pformat) document.querySelector('html').dataset.format = pformat;
+  </script>
+  <style>
+    html {
+      &[data-for] {
+        [data-block-for] {
+          display: none;
+        }
+
+        /* nms creative */
+        &[data-for="627059745160953866"] {
+          [data-block-for="627059745160953866"] {
+            display: block;
+          }
+        }
+
+        /* nms */
+        &[data-for="146101654981312513"] {
+          [data-block-for="146101654981312513"] {
+            display: block;
+          }
+        }
+      }
+
+      &:not([data-for]) {
+        [data-block-for]:not([data-block-for=""]) {
+          display: none;
+        }
+      }
+    }
+
+    #markdown_guide {
+      display: none;
+    }
+
+    .guide {
+      &.markdown,
+      p {
+        white-space: break-spaces;
+      }
+
+      blockquote {
+        border-left: 2px solid #fff;
+        padding-left: 1em;
+      }
+    }
+  </style>
+{endblock}
+
+{% capture html_content %}
+  {{ include.content | markdownify }}
+{% endcapture %}
+
+<!--
+<hr data-block-for="" />
+
+<hr data-endblock="" />
+-->
+
+{% capture block_start_start %}
+<hr data-block-for="{% endcapture %}
+{% capture block_start_end %}" />
+{% endcapture %}
+{% capture block_end %}
+<hr data-endblock="" />
+{% endcapture %}
+
+<section class="notes_section"><div class="content">
+  <h2 class="expedition_notes_header">Guide: {{page.title}}</h2>
+
+  <article id="html_guide" class="guide cms">
+    {{ html_content | replace: block_start_start, '<div data-block-for="' | replace: block_end, "</div>" | replace: block_start_end, '">' }}
+  </article>
+
+  <article id="markdown_guide" class="guide markdown">
+    {{ include.content | replace: block_start_start, '<div data-block-for="' | replace: block_end, "</div>" | replace: block_start_end, '">' }}
+  </article>
+</div></section>
