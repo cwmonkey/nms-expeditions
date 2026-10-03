@@ -35,10 +35,21 @@
           display: none;
         }
       }
-    }
 
-    #markdown_guide {
-      display: none;
+      #markdown_guide {
+        display: none;
+        user-select: all;
+      }
+
+      &[data-format="markdown"] {
+        #html_guide {
+          display: none;
+        }
+
+        #markdown_guide {
+          display: block;
+        }
+      }
     }
 
     .guide {
@@ -80,7 +91,5 @@
     {{ html_content | replace: block_start_start, '<div data-block-for="' | replace: block_end, "</div>" | replace: block_start_end, '">' }}
   </article>
 
-  <article id="markdown_guide" class="guide markdown">
-    {{ include.content | replace: block_start_start, '<div data-block-for="' | replace: block_end, "</div>" | replace: block_start_end, '">' }}
-  </article>
+  <article id="markdown_guide" class="guide markdown">{{ include.content | replace: block_start_start, '<div data-block-for="' | replace: block_end, "</div>" | replace: block_start_end, '">' }}</article>
 </div></section>
