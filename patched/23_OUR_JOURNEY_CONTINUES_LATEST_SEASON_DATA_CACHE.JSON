@@ -3,7 +3,7 @@
   "SeasonId": 47,
   "StartTimeUTC": 1789563600,
   "EndTimeUTC": 2893423600,
-  "Hash": 1606279245,
+  "Hash": 2779284432,
   "Title": "GAMEMODE_SEASONAL",
   "Subtitle": "GAMEMODE_SEASONAL_SUBTITLE",
   "Description": "UI_EXPED23_MAIN_DESC",
@@ -240,13 +240,10 @@
       "BuildingClass": "Ruin"
     },
     {
-      "BuildingClass": "Plaque"
+      "BuildingClass": "TreasureRuins"
     },
     {
       "BuildingClass": "Monolith"
-    },
-    {
-      "BuildingClass": "Waypoint"
     }
   ],
   "UseSpawnBuildingNearUDA": "",
@@ -3820,7 +3817,8 @@
     "^HYPERFUEL1"
   ],
   "AdditionalKnownTech": [
-    "^HYPERDRIVE"
+    "^HYPERDRIVE",
+    "^TERRAINEDITOR"
   ],
   "IncreaseXClassTechOddsWithCommTier": false,
   "AbandonedFreighterHazardProtectionMul": 1,
@@ -6477,6 +6475,7 @@
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
+        "ObliterateLingeringCommunityPortalData": false,
         "ClearForcedInteractionOnCompletion": false,
         "BuildingPreventionRadius": 600,
         "BuildingPreventionDisallowBuilding": false,
@@ -6714,6 +6713,7 @@
         "RequiredSpacePoiType": {
           "SpacePoiType": "AsteroidBelt"
         },
+        "AllowedSpacePoiTypes": [],
         "RequiresSpacePoiDiscoveryLevel": false,
         "RequiredSpacePoiDiscoveryLevel": {
           "SpacePoiDiscoveryLevel": "Hidden"
@@ -6748,6 +6748,7 @@
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
+        "ObliterateLingeringCommunityPortalData": false,
         "ClearForcedInteractionOnCompletion": false,
         "BuildingPreventionRadius": 600,
         "BuildingPreventionDisallowBuilding": false,
@@ -6985,6 +6986,7 @@
         "RequiredSpacePoiType": {
           "SpacePoiType": "AsteroidBelt"
         },
+        "AllowedSpacePoiTypes": [],
         "RequiresSpacePoiDiscoveryLevel": false,
         "RequiredSpacePoiDiscoveryLevel": {
           "SpacePoiDiscoveryLevel": "Hidden"
@@ -7019,6 +7021,7 @@
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
+        "ObliterateLingeringCommunityPortalData": false,
         "ClearForcedInteractionOnCompletion": false,
         "BuildingPreventionRadius": 600,
         "BuildingPreventionDisallowBuilding": false,
@@ -7256,6 +7259,7 @@
         "RequiredSpacePoiType": {
           "SpacePoiType": "AsteroidBelt"
         },
+        "AllowedSpacePoiTypes": [],
         "RequiresSpacePoiDiscoveryLevel": false,
         "RequiredSpacePoiDiscoveryLevel": {
           "SpacePoiDiscoveryLevel": "Hidden"
@@ -7290,6 +7294,7 @@
         "ForceOverridesAll": true,
         "ForceOverrideEncounter": "^",
         "IsCommunityPortalOverride": false,
+        "ObliterateLingeringCommunityPortalData": false,
         "ClearForcedInteractionOnCompletion": false,
         "BuildingPreventionRadius": 600,
         "BuildingPreventionDisallowBuilding": false,
@@ -7527,6 +7532,7 @@
         "RequiredSpacePoiType": {
           "SpacePoiType": "AsteroidBelt"
         },
+        "AllowedSpacePoiTypes": [],
         "RequiresSpacePoiDiscoveryLevel": false,
         "RequiredSpacePoiDiscoveryLevel": {
           "SpacePoiDiscoveryLevel": "Hidden"
@@ -7853,6 +7859,124 @@
   "SwarmMonumentActive": false,
   "SwarmMonumentShowWhenMissionComplete": "^",
   "discoveries": [
+    {
+      "PackageType": {
+        "DownloadType": "Discovery"
+      },
+      "Owner": {
+        "LID": "",
+        "UID": "76561197961826889",
+        "USN": "cosm|c t|No",
+        "PTK": "ST",
+        "TS": 1791195686
+      },
+      "Data": {
+        "UniverseAddress": {
+          "RealityIndex": 0,
+          "GalacticAddress": {
+            "VoxelX": 1746,
+            "VoxelY": -8,
+            "VoxelZ": 143,
+            "SolarSystemIndex": 72,
+            "PlanetIndex": 4
+          }
+        },
+        "Type": {
+          "DiscoveryType": "Planet"
+        },
+        "PayloadElements": 2,
+        "Payload": [
+          "0x7DFA64D8C90C061D",
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "Metadata": {
+        "CustomName": ""
+      },
+      "MessageData": {
+        "UniverseAddress": {
+          "RealityIndex": 0,
+          "GalacticAddress": {
+            "VoxelX": 0,
+            "VoxelY": 0,
+            "VoxelZ": 0,
+            "SolarSystemIndex": 0,
+            "PlanetIndex": 0
+          }
+        },
+        "CustomName": "",
+        "Position": [
+          0,
+          0,
+          0
+        ],
+        "ColourIndex": 0
+      },
+      "RID": "EAPXHMy2nMpSu9JD+aQeIZQ/iPdbrlWaEnmhXetys0w=",
+      "PTK": "ST"
+    },
+    {
+      "PackageType": {
+        "DownloadType": "Discovery"
+      },
+      "Owner": {
+        "LID": "",
+        "UID": "76561197972140816",
+        "USN": "Lord Soth",
+        "PTK": "ST",
+        "TS": 1789844647
+      },
+      "Data": {
+        "UniverseAddress": {
+          "RealityIndex": 0,
+          "GalacticAddress": {
+            "VoxelX": 1746,
+            "VoxelY": -8,
+            "VoxelZ": 143,
+            "SolarSystemIndex": 72,
+            "PlanetIndex": 2
+          }
+        },
+        "Type": {
+          "DiscoveryType": "Planet"
+        },
+        "PayloadElements": 2,
+        "Payload": [
+          "0x7AA870AC008FCF0C",
+          65536,
+          0,
+          0,
+          0
+        ]
+      },
+      "Metadata": {
+        "CustomName": "Knightholme"
+      },
+      "MessageData": {
+        "UniverseAddress": {
+          "RealityIndex": 0,
+          "GalacticAddress": {
+            "VoxelX": 0,
+            "VoxelY": 0,
+            "VoxelZ": 0,
+            "SolarSystemIndex": 0,
+            "PlanetIndex": 0
+          }
+        },
+        "CustomName": "",
+        "Position": [
+          0,
+          0,
+          0
+        ],
+        "ColourIndex": 0
+      },
+      "RID": "I4HOF5TMrL6yhkYTsDb0OKvHgJZC9OdZKv4oUPwoeJ8=",
+      "PTK": "ST"
+    },
     {
       "PackageType": {
         "DownloadType": "Discovery"
