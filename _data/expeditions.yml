@@ -159,8 +159,6 @@
       date: 1631106000
       notes: 0-2 good, TODO only 7(+?) plants on planet now (12 required for milestone)
       notice: >
-        * **Not fully tested, but should work.**
-
         * This version of the expedition has the wrong type of hazard protection. A patch has been added to provide the correct hazard protection.
 
         * The starting planet/system has changed somewhat from the original run and some milestones are now outdated. A patch has been created to replace/update the outdated milestones.
