@@ -86,6 +86,8 @@
 
         * As of the last redux, you cannot buy a `Myth Beacon` from the QuickSilver vendor offline. A patch has been created to give a `Myth Beacon` at the start and alter the milestones accordingly.
 
+        * Starting freighters have been changed to not have an Indium Hyperdrive, so it cannot be summoned to the starting system. A patch has been created to change the starting system to a nearby yellow system.
+
         * The final system is hard-coded to be the one from the 2025 redux, which will be **FAR** away.
           A patch has been created to give portal glyphs as a reward.
           For the final milestone you'll want to <a href="#expedition_notes_finding_portals">find a Portal</a> (or put a base down near one of the portals you come across).
@@ -96,6 +98,10 @@
         - id: e02r00-r03_beachhead_give_myth_beacon
           json: e02r00-r03_beachhead.give_myth_beacon.patch.json
           description: Give Myth Beacon at the start (Recommended)
+          checked: 1
+        - id: e02r01_beachhead_change_starting_planet
+          json: e02r01_beachhead.change_starting_planet.patch.json
+          description: Change starting system (Recommended)
           checked: 1
         - id: e02r00-r01_beachhead_portal_glyphs_reward
           description: Replace reward with portal glyphs (Recommended)
