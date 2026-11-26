@@ -489,19 +489,27 @@
   description: The one where you fish a lot
   image: e15_aquarius.png
   notice: >
-    * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
-
     * For the "Ice Cold" milestone, you must catch 5 uncommon **frozen** fish on a frozen planet.
   versions:
     - id: e15r00
       json: E15_AQUARIUS_ORIGINAL_SEASON_DATA_CACHE.JSON
       date: 1725454800
       notice: >
+        * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
+
         * **UNTESTED**
     - id: e15r01
       json: E15_AQUARIUS_REDUX_1_SEASON_DATA_CACHE.JSON
       date: 1736344800
       redux: 1
+      notice: >
+        * Some planets mentioned in milestones no longer have water. For any milestones that ask you to "Land a message from the Angler," fish on any planet with water in the system and make sure to have the milestone selected when catching/opening a Message in a Bottle.
+    - id: e15r02
+      json: E15_AQUARIUS_REDUX_2_SEASON_DATA_CACHE.JSON
+      date: 1795615200
+      redux: 1
+      notice: >
+        * **UNTESTED**
 - id: e016
   name: '16: The Cursed'
   description: The one with the spoooky ghosts
